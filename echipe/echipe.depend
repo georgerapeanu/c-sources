@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1526060777 source:c:\c++\echipe\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+

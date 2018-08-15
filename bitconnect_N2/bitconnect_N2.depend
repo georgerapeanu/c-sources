@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1528466134 source:c:\c++\bitconnect_n2\main.cpp
+	<cstdio>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+

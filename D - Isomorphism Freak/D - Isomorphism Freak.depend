@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1527018243 source:c:\c++\d - isomorphism freak\main.cpp
+	<iostream>
+	<cstring>
+	<algorithm>
+	<vector>
+	<queue>
+	<stack>
+

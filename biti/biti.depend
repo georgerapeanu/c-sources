@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1526314471 source:c:\c++\biti\main.cpp
+	<fstream>
+	<algorithm>
+

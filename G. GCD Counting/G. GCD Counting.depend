@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1528825019 source:c:\c++\g. gcd counting\main.cpp
+	<cstdio>
+	<vector>
+	<algorithm>
+

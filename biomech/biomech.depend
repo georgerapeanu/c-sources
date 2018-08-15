@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1525970625 source:c:\c++\biomech\main.cpp
+	<cstdio>
+	<queue>
+

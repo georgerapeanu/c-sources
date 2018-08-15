@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1528620953 source:c:\c++\d - choosing points\main.cpp
+	<iostream>
+	<cmath>
+	<algorithm>
+	<queue>
+	<vector>
+

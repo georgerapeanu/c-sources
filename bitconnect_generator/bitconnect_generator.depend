@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1528218406 source:c:\c++\bitconnect_generator\main.cpp
+	<cstdio>
+	<cstdlib>
+	<ctime>
+	<algorithm>
+	<set>
+

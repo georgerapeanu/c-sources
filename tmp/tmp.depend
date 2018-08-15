@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1534069505 source:c:\c++\tmp\main.cpp
+	<cstdio>
+	<cassert>
+	<iostream>
+	<algorithm>
+	<cmath>
+	<vector>
+

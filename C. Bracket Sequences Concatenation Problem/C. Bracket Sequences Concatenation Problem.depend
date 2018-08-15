@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1528698782 source:c:\c++\c. bracket sequences concatenation problem\main.cpp
+	<iostream>
+	<algorithm>
+	<map>
+
