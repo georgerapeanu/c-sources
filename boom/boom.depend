@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1502730563 source:e:\c++\boom\main.cpp
+	<cstdio>
+	<vector>
+	<cstring>
+	<queue>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1511199849 source:e:\c++\d. ralph and his tour in binary country\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+

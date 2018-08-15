@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1399103878 source:c:\c++\cozonaci\cozonaci.cpp
+	<fstream>
+

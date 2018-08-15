@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1452418992 source:c:\c++\drenaj\main.cpp
+	<cstdio>
+	<queue>
+

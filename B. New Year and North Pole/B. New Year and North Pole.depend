@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1483108556 source:e:\c++\b. new year and north pole\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1450950437 source:c:\c++\muzeu\main.cpp
+	<queue>
+	<cstdio>
+	<algorithm>
+

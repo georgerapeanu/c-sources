@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1486051922 source:e:\c++\melc\main.cpp
+	<cstdio>
+	<cmath>
+	<algorithm>
+

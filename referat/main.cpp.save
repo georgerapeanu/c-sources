@@ -1,0 +1,60 @@
+#include <cstdio>
+#include <iostream>
+#define suma first
+#define ind second
+using namespace std;
+FILE *f=fopen("referat.in","r");
+FILE *g=fopen("referat.out","w");
+int N,T,L,P,i,j,S[100001],l,c;
+int I[100001][11]
+pair <int,int> s[100001];
+int trb[100001];
+int V[100001];
+int main()
+{
+    fscanf(f,"%d %d %d",&N,&L,&T);
+    l=c=1;
+    for(i=1;i<=N;i++)
+    {
+        fscanf(f,"%d",&V[i]);
+        if(S[l]+V[i]<=L)
+        {
+            S[l]+=V[i];
+            I[l][c]=i;
+            c++;
+        }
+        else
+        {
+            I[l][0]=c-1;
+            c=1;
+            l++;
+            S[l]=V[i];
+            I[l][c]=i;
+            c++;
+        }
+    }
+    I[l][0]=c-1;
+    i=c-1;
+    while(s[l].suma<L-S[l]&&i>0)
+    {
+        s[l].suma+=V[i];
+        i--;
+    }
+    s[l].ind=i+1;
+    for(i=l;i>0;i--)
+    {
+        for(j=I[i][0];j>0;j--)
+        {
+            if(j==I[i][0])
+            {
+              trb[I[i][j]]=L-S[i];
+              if(s[l].suma)
+            }
+            else
+            {
+                    ;
+            }
+        }
+    }
+    return 0;
+}

@@ -1,0 +1,68 @@
+#include <iostream>
+#include <cstring>
+#define mij(A,B) (A+B)/2
+#define inf 1000000000
+using namespace std;
+int cnt[600][600],Z[600][600],i,j,N,k,K,cj=1;
+pair<int,int> P[600][600];
+char C[600],cuvant[600];
+void af(int n,int k)
+{
+    if(!k)
+        return ;
+    af(n-P[n][k].first,P[][K].second);
+    int i=N-P[N][K].first+1;
+    int j=N;
+    while(i<=j)
+    {
+        if(i!=j)
+            C[i]=C[j];
+            i++;
+            j--;
+    }
+    for(i=N-P[N][K].first+1;i<=N;i++)
+        cout<<C[i];
+    cout<<'+';
+}
+int main()
+{
+    C[0]='.';
+    cin.getline(C+1,600);
+    cin>>K;
+    N=strlen(C)-1;
+    for(i=1;i<=N;i++)
+    {
+        for(j=i+1;j<=N;j++)
+            {
+                for(k=i;k<=mij(i,j);k++)
+                    if(C[k]==C[j-(k-i+1)+1])
+                        ;
+                    else
+                        cnt[i][j]++;
+            }
+    }
+    for(i=0;i<=N;i++)
+        for(j=0;j<=K;j++)
+            Z[i][j]=inf;
+    Z[0][0]=0;
+    for(i=1;i<=N;i++)
+    {
+        for(j=1;j<=K;j++)
+        {
+            for(k=1;k<=i;k++)
+            {
+                if(Z[i-k][j-1]+cnt[i-k+1][i]<Z[i][j])
+                {
+                    Z[i][j]=Z[i-k][j-1]+cnt[i-k+1][i];
+                    P[i][j]=make_pair(k,j-1);
+                }
+            }
+        }
+    }
+    for(i=1;i<=K;i++)
+        if(Z[N][cj]>Z[N][i])
+            cj=i;
+    cout<<Z[N][cj]<<"\n";
+    af(N,cj);
+    return 0;
+}

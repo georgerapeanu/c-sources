@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1457632443 source:c:\c++\calndrinon\main.cpp
+	<cstdio>
+	<algorithm>
+	<deque>
+

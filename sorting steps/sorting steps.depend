@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1502897348 source:e:\c++\sorting steps\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+

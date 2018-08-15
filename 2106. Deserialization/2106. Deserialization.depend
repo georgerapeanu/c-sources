@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1481210433 source:e:\c++\2106. deserialization\main.cpp
+	<iostream>
+	<cstdio>
+	<map>
+	<vector>
+

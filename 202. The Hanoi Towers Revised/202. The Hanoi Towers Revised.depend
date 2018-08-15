@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1526413923 source:c:\c++\202. the hanoi towers revised\main.cpp
+	<iostream>
+	<cassert>
+	<vector>
+

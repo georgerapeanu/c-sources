@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1457690656 source:c:\c++\arc\main.cpp
+	<cstdio>
+	<iostream>
+	<algorithm>
+

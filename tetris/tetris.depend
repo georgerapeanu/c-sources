@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1427136027 source:c:\c++\tetris\main.cpp
+	<fstream>
+

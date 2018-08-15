@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1491842636 source:e:\c++\b. find the bone\main.cpp
+	<iostream>
+	<bitset>
+

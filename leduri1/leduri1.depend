@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1438867246 source:c:\c++\leduri1\main.cpp
+	<cstdio>
+	<cstring>
+

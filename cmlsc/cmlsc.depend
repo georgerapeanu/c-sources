@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1453836770 source:c:\c++\cmlsc\main.cpp
+	<cstdio>
+	<algorithm>
+

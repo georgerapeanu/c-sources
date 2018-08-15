@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1503674883 source:e:\c++\h. palindrome number\main.cpp
+	<cstdio>
+	<cstring>
+

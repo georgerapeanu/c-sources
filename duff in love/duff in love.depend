@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1444928748 source:c:\c++\duff in love\main.cpp
+	<iostream>
+	<cmath>
+

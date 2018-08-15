@@ -1,0 +1,61 @@
+#include <algorithm>
+#include <cstdio>
+#define mij(A,B) (A+B)/2
+using namespace std;
+FILE *f=fopen("arbint.in","r");
+FILE *g=fopen("arbint.out","w");
+int start,finish,val,V[10000000],i,N,M,poz;
+bool c;
+void update(int nod,int st,int dr)
+{
+    if(st==dr)
+        V[nod]=max(V[nod],val);
+    else 
+    {
+        if(st<=poz&&poz<=(st+dr)/2)
+            update(nod*2,st,(st+dr)/2);
+        else
+            update(nod*2+1,(st+dr)/2+1,dr);
+        V[nod]=max(V[nod],val);
+    }
+}
+int answer(int nod,int st,int dr)
+{
+    if(start<=st&&dr<=finish)
+        return V[nod];
+    else
+    {
+        if(mij(st,dr)<finish)
+            if(mij(st,dr)>=start)
+                return max(answer(nod*2,st,mij(st,dr)),answer(nod*2+1,mij(st,dr)+1,dr);
+            else
+                return answer(nod*2+1,mij(st,dr)+1,dr);
+        else
+            return answer(nod*2,st,mij(st,dr));
+
+    }
+}
+int main()
+{
+    fscanf(f,"%d %d",&N,&M);
+    for(i=1;i<=N;i++)
+    {
+        fscanf(f,"%d",&val);
+        poz=i;
+        update(1,1,N);
+    }
+    for(i=1;i<=M;i++)
+    {
+        fscanf(f,"%d",c);
+        if(!c)
+        {
+            fscanf(f,"%d %d",&start,&finish);
+            fprintf(g,"%d\n",answer(1,1,N));
+        }
+        else
+        {
+            fscanf(f,"%d %d",)
+        }
+    }
+    return 0;
+}

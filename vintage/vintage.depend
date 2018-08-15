@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1410352913 source:c:\c++\vintage\main.cpp
+	<fstream>
+	<algorithm>
+	<iostream>
+

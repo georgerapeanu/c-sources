@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1500622841 source:e:\c++\jboi\2014\big circle\main.cpp
+	<cstdio>
+	<algorithm>
+	<cmath>
+

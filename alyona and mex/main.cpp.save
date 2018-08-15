@@ -1,0 +1,8 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int mex=1,i,N,V[100005];
+int main()
+{
+    f
+}

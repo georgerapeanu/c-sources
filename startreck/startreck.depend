@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1493706703 source:e:\c++\startreck\main.cpp
+	<cstdio>
+	<algorithm>
+

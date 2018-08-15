@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1448090050 source:c:\c++\sir4\main.cpp
+	<cstdio>
+	<set>
+

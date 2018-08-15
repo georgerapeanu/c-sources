@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1529174026 source:c:\c++\c. careful maneuvering\main.cpp
+	<cstdio>
+	<vector>
+

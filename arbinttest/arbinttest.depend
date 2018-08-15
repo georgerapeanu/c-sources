@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1484071900 source:e:\c++\arbinttest\main.cpp
+	<iostream>
+	<cstdio>
+

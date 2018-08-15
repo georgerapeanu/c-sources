@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1503666454 source:e:\c++\count\main.cpp
+	<cstdio>
+	<algorithm>
+

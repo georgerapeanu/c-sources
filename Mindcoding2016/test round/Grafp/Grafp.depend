@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1500111416 source:e:\c++\grafp\main.cpp
+	<iostream>
+	<vector>
+

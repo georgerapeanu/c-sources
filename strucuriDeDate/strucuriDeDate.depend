@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1495725884 source:e:\c++\strucuridedate\main.cpp
+	<cstdio>
+	<iostream>
+	<algorithm>
+	<cstring>
+	<ctime>
+

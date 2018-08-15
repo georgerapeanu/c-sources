@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1483368262 source:e:\c++\dreptunghiuri4\main.cpp
+	<cstdio>
+	<algorithm>
+	<unordered_map>
+	<set>
+

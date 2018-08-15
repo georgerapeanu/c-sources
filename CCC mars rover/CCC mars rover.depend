@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1508008743 source:e:\c++\ccc mars rover\main.cpp
+	<iostream>
+	<cstdio>
+	<vector>
+	<iomanip>
+	<cmath>
+

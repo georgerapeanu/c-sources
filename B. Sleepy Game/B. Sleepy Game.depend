@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1519658248 source:e:\c++\b. sleepy game\main.cpp
+	<iostream>
+	<vector>
+

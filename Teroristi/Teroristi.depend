@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1504548946 source:e:\c++\teroristi\main.cpp
+	<cstdio>
+	<cstring>
+	<vector>
+	<algorithm>
+	<map>
+

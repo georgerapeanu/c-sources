@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1440703041 source:c:\c++\degrade\main.cpp
+	<cstdio>
+	<cstring>
+

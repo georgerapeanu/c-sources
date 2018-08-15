@@ -1,0 +1,34 @@
+#include<fstream>
+using namespace std;
+ifstream f("subsecvmax.in");
+ofstream g("subsecvmax.out");
+long long i,n,lg,maxim,nr,felem,x;
+int main()
+{
+    f>>n;
+    x=1;
+    for(i=1;i<=n;i++)
+    {
+        f>>nr;
+        if(felem<=nr)
+        {
+            lg++;
+            felem=nr;
+        }
+        else
+        {
+            if(maxim<lg)
+            {
+                maxim=lg;
+                rezx=x;
+            }
+            x=i;
+            lg=1;
+            felem=0;
+        }
+    }
+    g<<maxim;
+    f.close();
+    g.close();
+    return 0;
+}

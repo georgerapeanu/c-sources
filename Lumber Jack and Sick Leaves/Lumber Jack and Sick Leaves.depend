@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1457167195 source:c:\c++\lumber jack and sick leaves\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+

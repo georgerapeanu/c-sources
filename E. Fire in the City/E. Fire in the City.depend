@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1503941279 source:e:\c++\e. fire in the city\main.cpp
+	<iostream>
+	<algorithm>
+	<map>
+	<set>
+	<vector>
+

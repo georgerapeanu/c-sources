@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1506004238 source:e:\c++\critice\main.cpp
+	<cstdio>
+	<cstring>
+	<vector>
+	<set>
+	<algorithm>
+

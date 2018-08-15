@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1512308443 source:e:\c++\c. willem, chtholly and seniorious\main.cpp
+	<iostream>
+	<algorithm>
+	<set>
+	<vector>
+	<cassert>
+

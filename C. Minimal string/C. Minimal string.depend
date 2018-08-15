@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1492269990 source:e:\c++\c. minimal string\main.cpp
+	<iostream>
+	<algorithm>
+	<stack>
+

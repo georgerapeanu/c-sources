@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1461149526 source:c:\c++\puzzle\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+

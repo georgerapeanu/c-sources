@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1482933480 source:e:\c++\dominant\main.cpp
+	<cstdio>
+	<iostream>
+	<cstring>
+	<unordered_map>
+

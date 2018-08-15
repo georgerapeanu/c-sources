@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1506265791 source:e:\c++\c. helga hufflepuff's cup\main.cpp
+	<iostream>
+	<cstring>
+	<vector>
+

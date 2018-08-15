@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1509288499 source:e:\c++\200. cracking rsa\main.cpp
+	<iostream>
+	<vector>
+

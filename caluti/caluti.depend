@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1456940224 source:c:\c++\caluti\main.cpp
+	<cstdio>
+	<algorithm>
+

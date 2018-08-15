@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1492272199 source:e:\c++\d. broken bst\main.cpp
+	<iostream>
+	<vector>
+

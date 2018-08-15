@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1483872148 source:e:\c++\ksplit\main.cpp
+	<cstdio>
+	<cmath>
+

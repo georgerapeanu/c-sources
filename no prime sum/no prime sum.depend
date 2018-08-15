@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1491320386 source:e:\c++\no prime sum\main.cpp
+	<iostream>
+	<vector>
+	<bitset>
+	<algorithm>
+

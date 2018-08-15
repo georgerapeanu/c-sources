@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1495038805 source:e:\c++\odd palindromes\main.cpp
+	<iostream>
+	<cstring>
+

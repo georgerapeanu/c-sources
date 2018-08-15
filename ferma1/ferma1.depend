@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1474643604 source:e:\c++\ferma1\main.cpp
+	<cstdio>
+	<queue>
+	<set>
+

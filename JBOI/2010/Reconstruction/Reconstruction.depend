@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1498650186 source:e:\c++\jboi\2010\reconstruction\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+

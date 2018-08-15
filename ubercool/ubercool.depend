@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1482412474 source:e:\c++\ubercool\main.cpp
+	<cstdio>
+	<cmath>
+	<vector>
+	<unordered_set>
+	<bitset>
+

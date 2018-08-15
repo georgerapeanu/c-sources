@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1500818107 source:e:\c++\c - coins\main.cpp
+	<iostream>
+	<algorithm>
+	<queue>
+

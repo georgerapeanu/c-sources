@@ -1,0 +1,20 @@
+#include <cstdio>
+using namespace std;
+FILE *f=fopen("mayonaka.in","r");
+FILE *g=fopen("mayonaka.out","w");
+long long x[100005],y[100005],salt[100005],greutate[100005],i,j,N,M;
+int main()
+{
+    fscanf(f,"%lld %lld",&N,&M);
+    for(i=1;i<=M;i++)
+    {
+        fscanf(f,"%lld %lld %lld %lld",&x[i],&y[i],&salt[i],&greutate[i]);
+    }
+    for(i=1;i<=N;i++)
+    {
+        val=0;
+        for(j=1;j<=M;j++)
+            if(x[j]<=i&&y[j]<=i&&i-sal)
+    }
+    return 0;
+}

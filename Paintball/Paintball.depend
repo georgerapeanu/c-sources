@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1520965644 source:e:\c++\paintball\main.cpp
+	<cstdio>
+	<algorithm>
+	<vector>
+

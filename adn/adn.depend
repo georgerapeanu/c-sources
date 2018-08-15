@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1497117281 source:e:\c++\adn\main.cpp
+	<cstdio>
+	<cstring>
+	<stack>
+	<bitset>
+

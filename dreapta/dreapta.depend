@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1470924069 source:e:\c++\dreapta\main.cpp
+	<cstdio>
+	<algorithm>
+	<fstream>
+

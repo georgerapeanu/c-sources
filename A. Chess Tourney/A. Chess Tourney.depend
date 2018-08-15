@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1503854631 source:e:\c++\a. chess tourney\main.cpp
+	<algorithm>
+	<iostream>
+

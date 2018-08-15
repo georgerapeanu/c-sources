@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1518444264 source:e:\c++\zoo\main.cpp
+	<cstdio>
+	<vector>
+	<algorithm>
+

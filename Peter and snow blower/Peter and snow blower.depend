@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1453743610 source:c:\c++\peter and snow blower\main.cpp
+	<iostream>
+	<cmath>
+	<algorithm>
+	<climits>
+	<iomanip>
+

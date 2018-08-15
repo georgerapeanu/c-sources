@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1486837487 source:e:\c++\sam\main.cpp
+	<cstdio>
+	<fstream>
+

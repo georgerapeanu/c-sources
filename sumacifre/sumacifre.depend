@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1451736158 source:c:\c++\sumacifre\main.cpp
+	<cstdio>
+	<algorithm>
+

@@ -1,0 +1,30 @@
+#include <fstream>
+#include <cstring>
+using namespace std;
+int K,fr[200],r,N,nr,maxim,i;
+ifstream f("prefix1.in");
+ofstream g("prefix1.out");
+int main()
+{
+    f>
+    fgets(c,100000,f);
+    N=strlen(c);
+    for(i=0;i<N;i++)
+    {
+        r=r*10+c[i]-'0';
+        r%=K;
+        fr[r]++;
+    }
+    for(i=0;i<K;i++)
+    {
+        if(fr[i]>maxim)
+        {
+            maxim=fr[i];
+            nr=i;
+        }
+    }
+    fprintf(g,"%d %d",nr,maxim);
+    fclose(f);
+    fclose(g);
+    return 0;
+}

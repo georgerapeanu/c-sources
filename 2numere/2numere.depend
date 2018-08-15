@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1461163355 source:c:\c++\2numere\main.cpp
+	<cstdio>
+	<algorithm>
+

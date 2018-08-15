@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1405074161 source:c:\c++\felinare\main.cpp
+	<fstream>
+	<iostream>
+
+1502732601 source:e:\c++\felinare\main.cpp
+	<cstdio>
+	<vector>
+	<bitset>
+

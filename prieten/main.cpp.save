@@ -1,0 +1,27 @@
+#include <fstream>
+using namespace std;
+ifstream f("prieten.in");
+ofstream g("prieten.out");
+long long N,K,S,i;
+bool ok;
+int main()
+{
+    f>>N>>K>>S;
+    for(i=1;i<=K;i++)
+        g<<i*(N+1)<<" ";
+    g<<"\n";
+    i=1;
+    while(!ok&&i*(i+1)/2<=S)
+    {
+        if(S%(i*(i+1)/2)==0&&i+1==S/i())
+        {
+            
+        }
+        else
+        i++;
+    }
+    g<<(S/(i*(i+1))-1);
+    f.close();
+    g.close();
+    return 0;
+}

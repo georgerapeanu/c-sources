@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1453136821 source:c:\c++\biaib\main.cpp
+	<fstream>
+

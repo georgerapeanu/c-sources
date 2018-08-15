@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1504682912 source:e:\c++\infasuratoare\main.cpp
+	<cstdio>
+	<iostream>
+	<cmath>
+	<algorithm>
+

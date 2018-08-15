@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1483296221 source:e:\c++\1238. folding\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+

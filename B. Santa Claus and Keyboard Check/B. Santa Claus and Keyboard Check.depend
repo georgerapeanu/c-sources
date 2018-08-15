@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1482658550 source:e:\c++\b. santa claus and keyboard check\main.cpp
+	<iostream>
+	<cstring>
+	<unordered_map>
+	<unordered_set>
+	<vector>
+

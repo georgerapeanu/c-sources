@@ -1,0 +1,32 @@
+#include <cstdio>
+
+using namespace std;
+FILE *f=fopen("schi.in","r");
+FILE *g=fopen("schi.out","w");
+map <int,int> M;
+int N,K,nr,i,maxim,val;
+int main()
+{
+    fscanf(f,"%d",&N);
+    for(i=1;i<=N;i++)
+    {
+        fscanf(f,"%d",&val);
+        if(val<=maxim)
+            nr++;
+        else
+        {
+            M[maxim]=nr;
+            nr=1;
+            maxim=val;
+        }
+    }
+    fscanf(f,"%d",&K);
+    for(i=1;i<=K;i++)
+    {
+        fscanf(f,"%d",&val);
+        fprintf(g,"%d ",M[val]);
+    }
+    fclose(f);
+    fclose(g);
+    return 0;
+}

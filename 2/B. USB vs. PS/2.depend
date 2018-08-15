@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1485356048 source:e:\c++\2\b. usb vs. ps\main.cpp
+	<cstdio>
+	<vector>
+	<algorithm>
+

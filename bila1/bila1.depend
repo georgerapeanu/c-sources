@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1434126032 source:c:\c++\bila1\main.cpp
+	<cstdio>
+	<cstdlib>
+

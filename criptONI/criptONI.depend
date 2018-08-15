@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1456675130 source:c:\c++\criptoni\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+

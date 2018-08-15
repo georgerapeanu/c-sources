@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1517925174 source:e:\c++\d. tanks\main.cpp
+	<iostream>
+	<vector>
+

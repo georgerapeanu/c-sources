@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1432572034 source:c:\c++\tablouribidim\main.cpp
+	<fstream>
+	<cmath>
+

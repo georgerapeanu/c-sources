@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1453626679 source:c:\c++\mayonaka\main.cpp
+	<cstdio>
+
+1490462295 source:e:\c++\mayonaka\main.cpp
+	<cstdio>
+	<vector>
+	<cmath>
+	<map>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="1560" topLine="46" />
+	</File>
+	<File name="maxim.in" open="1" top="0" tabpos="2">
+		<Cursor position="7" topLine="0" />
+	</File>
+	<File name="maxim.out" open="1" top="1" tabpos="3">
+		<Cursor position="0" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

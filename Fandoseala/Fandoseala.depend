@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1520362204 source:e:\c++\fandoseala\main.cpp
+	<cstdio>
+	<cmath>
+	<iostream>
+	<algorithm>
+	<cassert>
+

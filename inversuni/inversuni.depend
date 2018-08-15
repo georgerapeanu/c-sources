@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1488909865 source:e:\c++\inversuni\main.cpp
+	<cstdio>
+	<algorithm>
+

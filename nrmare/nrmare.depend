@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1430485213 source:c:\c++\nrmare\main.cpp
+	<fstream>
+

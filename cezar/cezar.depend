@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1457706266 source:c:\c++\cezar\cezar.cpp
+	<cstdio>
+	<cstring>
+
+1507046318 source:e:\c++\cezar\cezar.cpp
+	<cstdio>
+	<queue>
+

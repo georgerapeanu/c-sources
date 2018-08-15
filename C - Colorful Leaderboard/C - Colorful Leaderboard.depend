@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1497096635 source:e:\c++\c - colorful leaderboard\main.cpp
+	<iostream>
+	<bitset>
+

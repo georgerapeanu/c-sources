@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1502986142 source:e:\c++\add ans subtract\main.cpp
+	<iostream>
+	<cstdio>
+

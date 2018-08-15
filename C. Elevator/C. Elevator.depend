@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1526576673 source:c:\c++\c. elevator\main.cpp
+	<cstdio>
+	<iostream>
+	<algorithm>
+	<vector>
+	<map>
+	<queue>
+

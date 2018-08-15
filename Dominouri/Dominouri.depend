@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1485186582 source:e:\c++\dominouri\main.cpp
+	<cstdio>
+	<algorithm>
+	<vector>
+

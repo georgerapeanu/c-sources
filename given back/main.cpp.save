@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int N,X,i,a;
+int main()
+{
+    cin>>N;
+    for(i=1;i<=N;i++)
+    {
+        cin>>a;
+        if(a!=)
+    }
+    return 0;
+}

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1521566363 source:e:\c++\kgon\main.cpp
+	<cstdio>
+	<cmath>
+	<algorithm>
+

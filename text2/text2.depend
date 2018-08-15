@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1451646818 source:c:\c++\ text2\main.cpp
+	<cstdio>
+	<set>
+

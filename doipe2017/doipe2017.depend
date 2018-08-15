@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1493724696 source:e:\c++\doipe2017\main.cpp
+	<cstdio>
+	<cstring>
+	<iostream>
+

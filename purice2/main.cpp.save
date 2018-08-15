@@ -1,0 +1,26 @@
+#include <cstdio>
+#include <cmath>
+using namespace std;
+FILE *f=fopen("purice.in","r");
+FILE *g=fopen("purice.out","w");
+int T,N,a,rez,i,j,rest,V[60],k;
+int main()
+{
+    fscanf(f,"%d",&T);
+    for(i=1;i<=T;i++)
+    {
+        fscanf(f,"%d",&N);
+        for(j=1;j<=N;j++)
+        {
+            fscanf(f,"%d",&V[j]);
+        }
+        for(j=1;j<=N&&rez!=1;j++)
+        {
+            for(k=j+1;k<=N&&rez!=1;k++)
+            {
+                a=
+            }
+        }
+    }
+    return 0;
+}

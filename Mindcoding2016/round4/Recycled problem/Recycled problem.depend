@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1492105361 source:e:\c++\recycled problem\main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+	<bitset>
+	<vector>
+	<cstdio>
+

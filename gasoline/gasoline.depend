@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1478361433 source:e:\c++\gasoline\main.cpp
+	<iostream>
+	<queue>
+

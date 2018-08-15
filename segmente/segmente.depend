@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1486379437 source:e:\c++\segmente\main.cpp
+	<cstdio>
+	<cmath>
+	<algorithm>
+	<vector>
+

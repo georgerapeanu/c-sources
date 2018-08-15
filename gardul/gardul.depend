@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1387961974 source:d:\c++\gardul\gard.cpp
+	<fstream>
+	<iostream>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1461056468 source:c:\c++\trecere\main.cpp
+	<cstdio>
+	<algorithm>
+

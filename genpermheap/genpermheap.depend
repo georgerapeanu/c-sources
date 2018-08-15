@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1485531268 source:e:\c++\genpermheap\main.cpp
+	<iostream>
+	<bitset>
+

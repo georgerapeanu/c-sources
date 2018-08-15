@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1499854078 source:e:\c++\heritage\main.cpp
+	<iostream>
+	<iomanip>
+	<cmath>
+	<vector>
+

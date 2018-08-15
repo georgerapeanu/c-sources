@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+int N,K;
+int dp[1005][1005];
+int S[1005];
+int s[1005];
+int fact(int val)
+{
+    if(val<=1)return 1;
+    return val*fact(val-1);
+}
+
+int main()
+{
+    cin>>N>>K;
+    dp[0][0]=1;
+    for(int i=1;i<=N;i++)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            for(int l=j-1;l>=max(0,j-K);l--)
+            {
+                dp[i][j]+=dp[j-1][l]*fact(i-1)/fact(j-1);
+            }
+            S[i]+=dp[i][j];
+            if(j>=max(0,i+1-K))s[i]+=dp[i][j];
+        }
+    }
+    for(int i=1;i<=N;i++)
+    {
+        cout<<S[i]<<" "<<s[i]<<"\n";
+    }
+    cout<<"\n\n";
+    for(int i=1;i<=N;i++)
+    {
+        int sum=0;
+        for(int j=1;j<=N;j++)
+        {
+            sum+=dp[i][j];
+            cout<<dp[i][j]<<" ";
+        }
+        cout<<"\n";
+    }
+    int ans=0;
+    for(int i=1;i<=N;i++)
+        ans+=dp[N][i];
+    ///cout<<fact(N)-ans;
+    return 0;
+}

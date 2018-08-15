@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1522071701 source:e:\c++\salsa\main.cpp
+	<cstdio>
+	<vector>
+	<algorithm>
+

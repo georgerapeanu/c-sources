@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1525545586 source:c:\c++\tric\main.cpp
+	<cstdio>
+	<set>
+	<vector>
+

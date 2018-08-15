@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1448192936 source:c:\c++\traseu2\main.cpp
+	<cstdio>
+	<cstring>
+	<map>
+

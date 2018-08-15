@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1402210754 source:c:\c++\sirdesc\sirdesc.cpp
+	<fstream>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1509986933 source:e:\c++\locala\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<set>
+

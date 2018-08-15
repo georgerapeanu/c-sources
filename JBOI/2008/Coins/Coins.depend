@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1498548405 source:e:\c++\jboi\2007\coins\main.cpp
+	<iostream>
+	<bitset>
+

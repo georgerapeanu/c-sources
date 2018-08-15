@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1458484197 source:c:\c++\spioni\main.cpp
+	<fstream>
+	<iostream>
+	<cstring>
+

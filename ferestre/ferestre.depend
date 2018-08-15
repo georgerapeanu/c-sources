@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1430755558 source:c:\c++\ferestre\main.cpp
+	<fstream>
+

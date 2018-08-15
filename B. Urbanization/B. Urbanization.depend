@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1480265226 source:e:\c++\b. urbanization\main.cpp
+	<cstdio>
+	<algorithm>
+

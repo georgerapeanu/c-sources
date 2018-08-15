@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1466003274 source:c:\c++\heap operations\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<queue>
+

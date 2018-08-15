@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1387901874 source:d:\c++\tren\tren.cpp
+	<fstream>
+	<iostream>
+
+1457455122 source:c:\c++\tren\main.cpp
+	<cstdio>
+	<algorithm>
+

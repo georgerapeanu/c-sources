@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1502813952 source:e:\c++\f-prime flip\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+	<algorithm>
+	<set>
+	<bitset>
+

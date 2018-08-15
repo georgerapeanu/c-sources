@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1500913500 source:e:\c++\c. strange radiation\main.cpp
+	<iostream>
+	<iomanip>
+	<algorithm>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1426421942 source:c:\c++\cepe\main.cpp
+	<fstream>
+	<math.h>
+

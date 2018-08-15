@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1521127622 source:e:\c++\norela\main.cpp
+	<iostream>
+	<algorithm>
+	<map>
+	<vector>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1414510751 source:c:\c++\romb\main.cpp
+	<fstream>
+	<iostream>
+	<cstring>
+

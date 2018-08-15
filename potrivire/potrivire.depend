@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1483705917 source:e:\c++\potrivire\main.cpp
+	<cstdio>
+	<vector>
+	<cctype>
+	<cstring>
+

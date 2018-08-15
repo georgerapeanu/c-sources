@@ -1,0 +1,41 @@
+#include <cstdio>
+#include <cmath>
+using namespace std;
+FILE *f,*g;
+int n,m,i,j,x,y,minim;
+double M[60][60];
+int main()
+{
+    f=fopen("ocr.in","r");
+    fscanf(f,"%d %d",&n,&m);
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=m;j++)
+        {
+            fscanf(f,"%f",&nr);
+            M[i][j]=M[i-1][j]+M[i][j-1]-M[i-1][j-1]+nr;
+        }
+    }
+    minim=M[n][m];x=1;
+    for(i=2;i<=n;i++)
+    {
+        if(abs(M[i-1][m]-(M[n][m]-M[i][m]))<minim)
+        {
+            minim=abs(M[i-1][m]-(M[n][m]-M[i][m]));
+            x=i;
+        }
+    }
+    minim=M[n][m];
+    for(i=2;i<=m;i++)
+    {
+        if(abs(M[n][i]-(M[n][m]-M[n][i]))<minim)
+        {
+            minim=
+        }
+    }
+    fclose(f);
+    g=fopen("ocr.out","w");
+    fprintf(g,"%d %d",x,y);
+    fclose(g);
+    return 0;
+}

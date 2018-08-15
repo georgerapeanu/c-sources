@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1482940583 source:e:\c++\tcif\main.cpp
+	<cstdio>
+	<fstream>
+	<algorithm>
+	<cstring>
+

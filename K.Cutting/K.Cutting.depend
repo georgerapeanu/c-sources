@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1492176776 source:e:\c++\k.cutting\main.cpp
+	<iostream>
+	<cstdlib>
+	<set>
+	<cstdio>
+

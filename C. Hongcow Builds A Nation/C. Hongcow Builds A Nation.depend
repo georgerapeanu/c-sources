@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1481996525 source:e:\c++\c. hongcow builds a nation\main.cpp
+	<iostream>
+	<vector>
+	<bitset>
+

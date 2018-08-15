@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1499964049 source:e:\c++\e. cards sorting\main.cpp
+	<iostream>
+	<algorithm>
+

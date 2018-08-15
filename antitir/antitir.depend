@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1460644490 source:c:\c++\antitir\main.cpp
+	<cstdio>
+	<algorithm>
+

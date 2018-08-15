@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1460742385 source:c:\c++\roboti1\main.cpp
+	<cstdio>
+	<fstream>
+	<queue>
+

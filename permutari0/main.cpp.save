@@ -1,0 +1,31 @@
+#include <cstdio>
+#include <cstdio>
+using namespace std;
+FILE *f=fopen("permutari.in","r");
+FILE *g=fopen("permutari.out","w");
+int N;
+bool viz[10];
+int rez[10];
+void backtracking(int pas,int ctr)
+{
+    if(pas<=N)
+    for(int i=1;i<=N;i++)
+    {
+        if(!viz[i])
+        {
+            rez[ctr]=i;
+            backtracking(pas+1,ctr+1);
+        }
+    }
+    else
+    {
+        for(int i=1;i<=N;i++)
+            fprintf(g,"%d ",rez[i]);
+        fprintf(g,"\n");
+    }
+}
+int main()
+{
+    backtracking(1,1);
+    return 0;
+}

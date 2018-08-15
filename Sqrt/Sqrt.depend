@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1495096157 source:e:\c++\sqrt\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+

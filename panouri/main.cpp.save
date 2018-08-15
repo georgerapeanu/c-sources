@@ -1,0 +1,40 @@
+#include <fstream>
+#define minim(A,B
+using namespace std;
+ifstream f("panouri.in");
+ofstream g("panouri.out");
+int N,T,i,j,nrs,frecv[200010],V[2000010],L;
+bool t[200010];
+int main()
+{
+    f>>N>>T;
+    for(i=1;i<=N;i++)
+        f>>V[i];
+    for(i=1;i<=T;i++)
+        {f>>val;t[val]=1;}
+
+    i=j=1;
+    frecv[i]=1;
+    while(j<=N)
+    {
+        if(nrs==T)
+        {
+            L=minim(L,j-i);
+            frecv[V[i]]--;
+            if(frecv[V[i]]<t[V[i]])
+                nrs--;
+            i++;
+        }
+        else
+        {
+            j++;
+            frecv[V[j]]++;
+            if(frecv[V[j]]-1==0&&frecv[V[j]]==t[V[j]])
+                nrs++;
+        }
+    }
+    g<<L;
+    f.close();
+    g.close();
+    return 0;
+}

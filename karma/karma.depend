@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1521363460 source:e:\c++\karma\main.cpp
+	<fstream>
+	<algorithm>
+

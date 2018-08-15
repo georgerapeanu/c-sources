@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1390244410 source:d:\c++\onigim\onigim.cpp
+	<iostream>
+	<fstream>
+	<algorithm>
+

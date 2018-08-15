@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1456597498 source:c:\c++\lasere\main.cpp
+	<cstdio>
+	<queue>
+	<fstream>
+

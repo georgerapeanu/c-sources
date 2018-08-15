@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1486316579 source:e:\c++\colaj\main.cpp
+	<cstdio>
+	<vector>
+	<algorithm>
+	<unordered_map>
+

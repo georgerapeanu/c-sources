@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1399013827 source:c:\c++\numere3\numere.cpp
+	<fstream>
+

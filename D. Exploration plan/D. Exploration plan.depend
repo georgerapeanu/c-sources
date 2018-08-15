@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1504444976 source:e:\c++\d. exploration plan\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<vector>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1508333336 source:e:\c++\array coloring\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+

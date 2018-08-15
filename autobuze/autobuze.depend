@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1462271977 source:c:\c++\autobuze\main.cpp
+	<bits/stdc++.h>
+
+1485086560 source:e:\c++\autobuze\main.cpp
+	<cstdio>
+	<bitset>
+	<algorithm>
+

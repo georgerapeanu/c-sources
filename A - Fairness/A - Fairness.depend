@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1526817903 source:e:\c++\a - fairness\main.cpp
+	<iostream>
+	<algorithm>
+

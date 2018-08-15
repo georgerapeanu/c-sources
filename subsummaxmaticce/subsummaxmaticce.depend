@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1440440168 source:c:\c++\subsummaxmaticce\main.cpp
+	<cstdio>
+	<iostream>
+

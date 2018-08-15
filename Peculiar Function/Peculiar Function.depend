@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1491498687 source:e:\c++\peculiar function\main.cpp
+	<iostream>
+	<algorithm>
+	<bitset>
+

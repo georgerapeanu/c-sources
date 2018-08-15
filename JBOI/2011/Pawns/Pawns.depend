@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1499590198 source:e:\c++\jboi\2011\pawns\pawns\main.cpp
+	<iostream>
+	<queue>
+	<stack>
+

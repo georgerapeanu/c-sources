@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1493056014 source:e:\c++\g. how do spiders walk on water\main.cpp
+	<iostream>
+	<cstdio>
+	<vector>
+

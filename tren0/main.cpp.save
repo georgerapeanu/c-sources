@@ -1,0 +1,11 @@
+#include <cstdio>
+using namespace std;
+FILE *f=fopen("tren.in","r");
+FILE *g=fopen("tren.out","w");
+long long S[50005],dp[50005][50005],i,j,N,M;
+int main()
+{
+    fscanf(f,"%d",&N);
+    for(I)
+    return 0;
+}

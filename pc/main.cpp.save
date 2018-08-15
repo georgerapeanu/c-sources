@@ -1,0 +1,17 @@
+#include <fstream>
+using namespace std;
+ifstream f("pc.in");
+ofstream g("pc.out");
+int G,V;
+int M[100][100],i,j;
+int main()
+{
+    for(i=1;i<=100;i++)
+    {
+        M[i][0]=i;
+    }
+    for(i=1;i<=G;i++)
+        for(j=1;j<=V;j++)
+            M[i][j]=N[i-1][j]+M[i][j-1]+1;
+    return 0;
+}

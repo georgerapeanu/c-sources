@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1490451527 source:e:\c++\d.powerfull array\main.cpp
+	<cstdio>
+	<algorithm>
+	<cmath>
+

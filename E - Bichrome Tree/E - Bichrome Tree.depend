@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1505566929 source:e:\c++\e - bichrome tree\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<vector>
+	<algorithm>
+

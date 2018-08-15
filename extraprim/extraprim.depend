@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1389451876 source:d:\c++\extraprim\extraprim.cpp
+	<iostream>
+	<fstream>
+

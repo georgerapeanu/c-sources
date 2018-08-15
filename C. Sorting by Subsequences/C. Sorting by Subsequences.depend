@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1503989133 source:e:\c++\c. sorting by subsequences\main.cpp
+	<iostream>
+	<vector>
+	<map>
+

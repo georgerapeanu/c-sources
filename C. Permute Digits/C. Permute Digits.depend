@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1515867594 source:e:\c++\c. permute digits\main.cpp
+	<iostream>
+	<cstring>
+	<algorithm>
+

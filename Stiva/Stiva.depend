@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1509303099 source:e:\c++\stiva\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+

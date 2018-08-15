@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1521130143 source:e:\c++\nota\main.cpp
+	<iostream>
+	<set>
+

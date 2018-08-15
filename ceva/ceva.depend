@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1507745095 source:e:\c++\ceva\main.cpp
+	<iostream>
+	<algorithm>
+	<cstdio>
+	<vector>
+

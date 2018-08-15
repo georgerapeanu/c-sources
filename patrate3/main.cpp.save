@@ -1,0 +1,46 @@
+#include <cstdio>
+#include <fstream>
+#include <algorithm>
+using namespace std;
+FILE *f=fopen("patrate3.in","r");
+FILE *g=fopen("patrate3.out","w");
+pair <int,int> V[1005];
+int H,N,i,nr,lnr,Lmax,ci,lci;
+int main()
+{
+    fscanf(f,"%d %d",&N,&H);
+    for(i=1;i<=N;i++)
+    {
+        fscanf(f,"%d %d",&V[2*i-1].first,&V[2*i].first);
+        V[2*i-1].second=1;
+        V[2*i].first+=V[2*i-1].first;
+        V[2*i].second=-1;
+    }
+    sort(V+1,V+1+2*N,cmp);
+    for(i=1;i<=2*N;i++)
+    {
+       nr+=V[i].second;
+       if(nr>=H)
+       {
+           if(ci==0)
+           {
+               lnr=1;
+               lci=1;
+           }
+           else
+            lnr+=V[i].first-V[i-1].first;
+           if(lnr>Lmax)
+           {
+               Lmax=lnr
+           }
+       }
+       else
+       {
+           lnr=ci=0;
+       }
+    }
+    fprintf(g,"%d %d",ci,Lmax);
+    fclose(f);
+    fclose(g);
+    return 0;
+}

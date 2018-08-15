@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1389420672 source:d:\c++\stele\stele.cpp
+	<fstream>
+	<iostream>
+
+1389424272 source:c:\c++\stele\stele.cpp
+	<fstream>
+	<iostream>
+

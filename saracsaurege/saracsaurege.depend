@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1483544064 source:e:\c++\saracsaurege\main.cpp
+	<cstdio>
+	<stack>
+	<algorithm>
+

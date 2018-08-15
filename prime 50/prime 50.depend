@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1455298716 source:c:\c++\prime 50\main.cpp
+	<iostream>
+	<algorithm>
+

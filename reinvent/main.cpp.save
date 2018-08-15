@@ -1,0 +1,48 @@
+#include <cstdio>
+#include <queue>
+#include <vector>
+#define inf 100000000
+using namespace std;
+FILE *f=fopen("reinvent.in","r");
+FILE *g=fopen("reinvent.out","w");
+int N,M,X,i,viz[100000],x,y,dist[100000],rez,n;
+bool ok=1;
+vector <int> V[100000];
+queue <int> noduri;
+int main()
+{
+    fscanf(f,"%d %d %d",&N,&M,&X);
+    for(i=1;i<=M;i++)
+    {fscanf(f,"%d %d",&x,&y);V[x].push_back(y);V[y].push_back(x);}
+    for(i=1;i<=X;i++)
+    {
+        fscanf(f,"%d",&x);
+        noduri.push(x);
+        viz[x]=x;
+    }
+    while(ok)
+    {
+        x=noduri.front();
+        n
+        n=V[x].size();
+        for(i=0;i<n;i++)
+        {
+            if(viz[V[i]]!=viz[x])
+            {
+                if(viz[V[i]]==0)
+                {
+                    viz[V[i]]=viz[x];
+                    dist[V[i]]=dist[x]+1;
+                }
+                else
+                {
+                    ok=0;
+                    rez=dist[x]+1+dist[V[i]]+1;
+                }
+            }
+        }
+    }
+    fclose(f);
+    fclose(g);
+    return 0;
+}

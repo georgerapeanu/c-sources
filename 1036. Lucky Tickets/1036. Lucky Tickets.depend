@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1480577423 source:e:\c++\1036. lucky tickets\main.cpp
+	<iostream>
+	<vector>
+

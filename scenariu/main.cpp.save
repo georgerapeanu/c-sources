@@ -1,0 +1,30 @@
+#include <cstdio>
+using namespace std;
+FILE *f=fopen("scenariu.in","r");
+FILE *g=fopen("scenariu.out","w");
+long long C[10005],S,a,K,N,tmp[10005];
+int i,j;
+int main()
+{
+    fscanf(f,"%d %d",&N,&K);
+    for(i=1;i<=K;i++)
+    {fscanf(f,"%d",&a);S+=a;}
+    C[0]=C[1]=1;
+    for(i=2;i<N;i++)
+    {
+        if(i%2==0)
+        {
+            for(j=1;j<i&&j<S;j++)
+                tmp[j]=(C[j]+C[j-1])%666013;
+        }
+        else
+        {
+           for(j=1;j<i&&j<S;j++)
+                C[j]=([j]+C[j-1])%666013; 
+        }
+    }
+    fprintf(g,"%d",C[S-1]);
+    fclose(f);
+    fclose(g);
+    return 0;
+}

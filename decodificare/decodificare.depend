@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1428511564 source:c:\c++\decodificare\main.cpp
+	<fstream>
+

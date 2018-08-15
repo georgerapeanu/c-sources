@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1489328503 source:e:\c++\tablou\main.cpp
+	<cstdio>
+	<algorithm>
+

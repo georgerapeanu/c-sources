@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1504461755 source:e:\c++\chromatic number\main.cpp
+	<algorithm>
+	<cstdio>
+

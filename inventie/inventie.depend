@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1469884006 source:e:\c++\inventie\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+

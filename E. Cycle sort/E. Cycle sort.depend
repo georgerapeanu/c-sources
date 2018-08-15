@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1533583637 source:e:\c++\e. cycle sort\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<vector>
+	<map>
+

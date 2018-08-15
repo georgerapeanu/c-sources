@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1522771912 source:e:\c++\b. mahmoud and ehab and the message\main.cpp
+	<iostream>
+	<map>
+	<algorithm>
+

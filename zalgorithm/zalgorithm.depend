@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1453541882 source:c:\c++\zalgorithm\main.cpp
+	<iostream>
+	<cstring>
+

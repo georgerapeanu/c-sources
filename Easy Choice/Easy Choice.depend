@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1492093324 source:e:\c++\easy choice\main.cpp
+	<cstdio>
+	<deque>
+	<algorithm>
+

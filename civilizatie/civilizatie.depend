@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1484758693 source:e:\c++\civilizatie\main.cpp
+	<cstdio>
+	<algorithm>
+	<bitset>
+	<vector>
+

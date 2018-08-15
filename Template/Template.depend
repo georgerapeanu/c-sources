@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1496255339 source:e:\c++\template\main.cpp
+	<iostream>
+	<algorithm>
+	<cstring>
+

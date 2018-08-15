@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1481994706 source:e:\c++\b. hongcow solves a puzzle\main.cpp
+	<iostream>
+	<queue>
+

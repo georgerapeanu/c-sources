@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1483023550 source:e:\c++\puncte\main.cpp
+	<cstdio>
+	<fstream>
+	<algorithm>
+

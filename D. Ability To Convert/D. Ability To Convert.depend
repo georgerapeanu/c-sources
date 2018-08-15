@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1484842783 source:e:\c++\d. ability to convert\main.cpp
+	<iostream>
+	<algorithm>
+	<cstring>
+

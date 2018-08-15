@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1519323837 source:e:\c++\batch\main.cpp
+	<set>
+	<cassert>
+	<cmath>
+	<iostream>
+

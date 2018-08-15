@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1490705438 source:e:\c++\hamster\main.cpp
+	<cstdio>
+	<algorithm>
+	<ctype.h>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1456757253 source:c:\c++\cifra4\main.cpp
+	<cstdio>
+	<queue>
+	<vector>
+	<string.h>
+

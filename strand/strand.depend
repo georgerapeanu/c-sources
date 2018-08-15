@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1399105961 source:c:\c++\strand\strand.cpp
+	<fstream>
+

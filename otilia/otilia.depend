@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1498997349 source:e:\c++\otilia\main.cpp
+	<fstream>
+	<iostream>
+	<cstdlib>
+	<stack>
+	<vector>
+

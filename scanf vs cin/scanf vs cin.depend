@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1488387660 source:e:\c++\scanf vs cin\main.cpp
+	<fstream>
+	<cstdio>
+

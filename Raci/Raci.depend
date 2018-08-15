@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1521560238 source:e:\c++\raci\main.cpp
+	<fstream>
+	<algorithm>
+

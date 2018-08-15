@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1457245986 source:c:\c++\matrice4\main.cpp
+	<cstdio>
+	<climits>
+

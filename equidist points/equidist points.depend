@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1496938460 source:e:\c++\equidist points\main.cpp
+	<iostream>
+	<cmath>
+	<iomanip>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1461145167 source:c:\c++\interclasare\main.cpp
+	<cstdio>
+	<vector>
+

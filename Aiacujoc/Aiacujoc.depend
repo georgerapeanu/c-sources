@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1500286220 source:e:\c++\aiacujoc\main.cpp
+	<cstdio>
+	<cstring>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1486218003 source:e:\c++\coinsinfoarena\main.cpp
+	<cstdio>
+	<bitset>
+

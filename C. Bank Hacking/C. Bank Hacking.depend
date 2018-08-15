@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1491848747 source:e:\c++\c. bank hacking\main.cpp
+	<iostream>
+	<bitset>
+	<queue>
+	<set>
+

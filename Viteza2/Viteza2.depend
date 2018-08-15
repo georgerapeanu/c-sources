@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1481815078 source:e:\c++\viteza2\main.cpp
+	<cstdio>
+	<algorithm>
+

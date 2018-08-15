@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1485524559 source:e:\c++\costuri\main.cpp
+	<cstdio>
+	<algorithm>
+	<fstream>
+

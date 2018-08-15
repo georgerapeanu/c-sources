@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1425651540 source:c:\c++\alarma\main.cpp
+	<fstream>
+	<stdlib.h>
+

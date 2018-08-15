@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1504685305 source:e:\c++\secv8\main.cpp
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<ctime>
+	<algorithm>
+

@@ -1,0 +1,32 @@
+#include <iostream>
+#define ull unsigned long long
+using namespace std;
+ull gcd,a[100001],i,n,nr;
+ull GCD(ull x,ull y)
+{
+    if(y==0) return x;
+    return GCD(y,x%y);
+}
+int main()
+{
+    cin>>n;
+    for(i=1;i<=n;i++)
+    {
+        f>>a[i];
+        gcd=GCD(gcd,a[i]);
+    }
+    for(i=1;i<=n;i++)
+    {
+        nr=a[i]/gcd;
+        while(gcd%2==0)
+        gcd/=2;
+        while(gcd%3==0)
+        gcd/=3;
+        if(gcd!=1)
+        {
+            gasit=0;break;
+        }
+    }
+    if(gasit==1)
+    cout<<
+}

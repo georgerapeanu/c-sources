@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1492533403 source:e:\c++\min ends subsequence\main.cpp
+	<iostream>
+	<vector>
+	<stack>
+	<algorithm>
+

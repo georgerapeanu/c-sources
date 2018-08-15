@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1507054411 source:e:\c++\bal\main.cpp
+	<cstdio>
+	<vector>
+	<queue>
+	<cstring>
+	<algorithm>
+

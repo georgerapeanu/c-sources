@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1461152458 source:c:\c++\joc6\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+

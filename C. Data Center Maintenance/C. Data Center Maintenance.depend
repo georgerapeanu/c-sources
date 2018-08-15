@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1520586918 source:e:\c++\c. data center maintenance\main.cpp
+	<cstdio>
+	<algorithm>
+	<vector>
+

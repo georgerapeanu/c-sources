@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1518862873 source:e:\c++\c. convenient for everybody\main.cpp
+	<cstdio>
+	<algorithm>
+

@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1409647561 source:c:\c++\romane\main.cpp
+	<fstream>
+

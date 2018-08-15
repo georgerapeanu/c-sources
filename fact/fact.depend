@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1431024573 source:c:\c++\fact\main.cpp
+	<fstream>
+	<cmath>
+

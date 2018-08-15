@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1491235479 source:e:\c++\fantasy\main.cpp
+	<cstdio>
+	<cstring>
+	<vector>
+	<bitset>
+

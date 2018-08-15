@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1469721058 source:e:\c++\chernel\main.cpp
+	<cstdio>
+	<cmath>
+

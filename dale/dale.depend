@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1451987360 source:c:\c++\dale\main.cpp
+	<cstdio>
+	<vector>
+

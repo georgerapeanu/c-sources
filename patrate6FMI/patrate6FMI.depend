@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1485691111 source:e:\c++\patrate6fmi\main.cpp
+	<cstdio>
+	<unordered_map>
+

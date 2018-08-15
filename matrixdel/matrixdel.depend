@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1393162512 source:d:\c++\matrixdel\matrixdel.cpp
+	<fstream>
+	<iostream>
+

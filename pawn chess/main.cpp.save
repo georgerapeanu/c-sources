@@ -1,0 +1,52 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+short i, j;
+char c[9][9];
+short dir[65],nr;
+short win;
+pair <short,short> v[65];
+int main()
+{
+    for(i=1;i<=8;i++)
+    {
+        for(j=1;j<=8;j++)
+        {
+            cin>>c[i][j];
+            if(c[i][j]=='B')
+            {
+                dir[++nr]=1;
+                v[nr].first=i;
+                v[nr].y=j;
+            }
+            else if(c[i][j]=='W')
+            {
+                dir[++nr]=-1;
+                v[nr].first=i;
+                v[nr].y=j;
+            }
+        }
+    }
+    while(!win)
+    {
+        for(i=1;i<=nr;i++)
+        {
+            if(c[v[nr].first][v[nr].y+dir[nr]]=='.')
+            {
+                c[v[nr].first][v[nr].y+dir[nr]]=c[v[nr].first][v[nr].y];
+                c[v[nr].first][v[nr].y]='.';
+                v[nr].y+=dir[nr];
+            }
+            if(dir[nr]==1&&v[nr.y]==8)
+            {
+                win=min(win,2);
+            }
+            if(dir[nr]==-1&&v[nr.y]==1)
+            {
+                win=1;
+            }
+        }
+    }
+    cout<<(win==1 ? "A":"B");
+    return 0;
+}

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1499956710 source:e:\c++\fences\main.cpp
+	<cstdio>
+	<algorithm>
+	<cstring>
+

@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1426404476 source:c:\c++\covor\main.cpp
+	<fstream>
+

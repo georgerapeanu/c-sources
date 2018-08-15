@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1484841214 source:e:\c++\c. unfair poll\main.cpp
+	<iostream>
+	<vector>
+	<map>
+

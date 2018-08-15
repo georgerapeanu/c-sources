@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1483807327 source:e:\c++\delay\main.cpp
+	<cstdio>
+	<vector>
+

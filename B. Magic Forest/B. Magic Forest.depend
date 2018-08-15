@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1518024230 source:e:\c++\b. magic forest\main.cpp
+	<iostream>
+	<algorithm>
+

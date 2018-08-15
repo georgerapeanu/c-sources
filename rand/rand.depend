@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1442505416 source:c:\c++\rand\main.cpp
+	<iostream>
+	<algorithm>
+

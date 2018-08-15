@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1446918020 source:c:\c++\inginer\main.cpp
+	<cstdio>
+	<queue>
+

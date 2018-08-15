@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1479480774 source:e:\c++\1244. gentlemen\main.cpp
+	<iostream>
+	<set>
+	<algorithm>
+

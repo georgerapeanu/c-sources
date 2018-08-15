@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1498143513 source:e:\c++\trapeze\main.cpp
+	<cstdio>
+	<cstring>
+	<bitset>
+	<algorithm>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1494600104 source:e:\c++\tarabe\main.cpp
+	<cstdio>
+	<queue>
+

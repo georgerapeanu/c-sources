@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1511006922 source:e:\c++\c - train ticket\main.cpp
+	<iostream>
+	<cstdlib>
+

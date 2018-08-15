@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1454243639 source:c:\c++\plalaila2\main.cpp
+	<cstdio>
+	<iostream>
+	<cstring>
+

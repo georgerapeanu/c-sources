@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1438699931 source:c:\c++\spdier\main.cpp
+	<cstdio>
+	<cstdlib>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1456566351 source:c:\c++\custi\main.cpp
+	<cstdio>
+	<algorithm>
+

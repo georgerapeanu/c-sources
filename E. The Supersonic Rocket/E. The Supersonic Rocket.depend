@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1533988250 source:e:\c++\e. the supersonic rocket\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+

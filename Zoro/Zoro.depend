@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1520755901 source:e:\c++\zoro\main.cpp
+	<cstdio>
+	<algorithm>
+

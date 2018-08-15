@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1484924878 source:e:\c++\sequencequerry\main.cpp
+	<cstdio>
+	<algorithm>
+

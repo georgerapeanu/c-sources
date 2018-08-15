@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1451201298 source:c:\c++\kbublesort\main.cpp
+	<cstdio>
+	<algorithm>
+

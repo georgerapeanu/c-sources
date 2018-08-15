@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1483638430 source:e:\c++\e. santa claus and tangerines\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+	<cstdio>
+	<algorithm>
+

@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1410167692 source:c:\c++\nrpomi\main.cpp
+	<fstream>
+

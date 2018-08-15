@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1481461216 source:e:\c++\letter by letter\main.cpp
+	<iostream>
+	<unordered_set>
+	<set>
+	<unordered_map>
+

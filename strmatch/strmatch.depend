@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1497075199 source:e:\c++\strmatch\main.cpp
+	<cstdio>
+	<cstring>
+	<vector>
+

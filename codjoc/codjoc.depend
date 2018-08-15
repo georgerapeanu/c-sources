@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1387959170 source:d:\c++\codjoc\codjoc.cpp
+	<iostream>
+	<fstream>
+

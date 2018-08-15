@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1514750721 source:e:\c++\ghiozdan\main.cpp
+	<cstdio>
+	<cassert>
+	<algorithm>
+	<deque>
+

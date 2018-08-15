@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1504623323 source:e:\c++\combinatorix\main.cpp
+	<cstdio>
+	<algorithm>
+

@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int N;
+long long suma;
+int main()
+{
+    cin>>N;
+    suma=N*(N+1)/2;
+    if(suma%2==0)
+        cout<<15;
+    else
+        
+    return 0;
+}

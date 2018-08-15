@@ -1,0 +1,117 @@
+#include <cstdio>
+#include <cstdlib>
+#include <algorithm>
+#define rad 175
+using namespace std;
+int N,S,A,B,C;
+int invA,rez;
+const int MOD=1000000007;
+struct bucket
+{
+    int l,r;
+    int fstV;
+    int lastV;
+    int maxim;
+    bucket()
+    {
+        l=r=fstV=lastV=maxim=0;
+    }
+}V[rad*100];
+int nxt(int val)
+{
+    return (1LL*val*A+B)%C;
+}
+int ant(int val)
+{
+    return ((1LL*(val-B)*invA)%C+1LL*C)%C;
+}
+int lgpow(int b,int e,int MOD)
+{
+    int p=1;
+    while(e)
+    {
+        if(e&1)p=(1LL*b*p)%MOD;
+        b=(1LL*b*b)%MOD;
+        e>>=1;
+    }
+    return p;
+}
+int sol1()
+{
+    V[1].l=1;V[2].r=min(N,rad);
+    invA=lgpow(A,C-2,C);
+    V[0].lastV=ant(S);
+    int buc,i;
+    for(buc=1,i=1;i<=N;i+=rad,buc++)
+    {
+        V[buc].l=i;V[buc].r=min(i+rad-1,N);
+        V[buc].maxim=V[buc].lastV=V[buc].fstV=nxt(V[buc-1].lastV);
+        for(int j=i+1;j<i+rad;j++)
+        {
+            V[buc].lastV=nxt(V[buc].lastV);
+            V[buc].maxim=max(V[buc].maxim,V[buc].lastV);
+        }
+    }
+    buc--;V[buc+1].l=N+1;
+    int val=S;
+    for(int i=1;i<=buc;i++)
+    {
+        for(int j=V[i].l;j<=V[i].r;j++)
+        {
+            int k=j-1,val2=ant(val);
+            while(k>=V[i].l&&val>val2)
+            {
+                k--;val2=ant(val2);
+            }
+            if(k>=V[i].l)
+            {
+                ;
+            }
+            else
+            {
+                int tmp=i-1;
+                while(tmp&&V[tmp].maxim<val)
+                {
+                    tmp--;
+                }
+                k=V[tmp].r;
+                val2=V[tmp].lastV;
+                while(k&&val2<val)
+                {
+                    k--;val2=ant(val2);
+                }
+            }
+            int l=j+1,val3=nxt(val);
+            while(l<=V[i].r&&val>=val3)
+            {
+                l++;
+                val3=nxt(val3);
+            }
+            if(l<=V[i].r)
+            {
+                ;
+            }
+            else
+            {
+                int tmp=i+1;
+                while(tmp<=buc&&V[tmp].maxim<=val)
+                    tmp++;
+                l=V[tmp].l;val3=V[tmp].fstV;
+                while(l<=N&&val>=val3)
+                {
+                    l++;
+                    val3=nxt(val3);
+                }
+            }
+            rez=(1LL*rez+1LL*((1LL*(j-k)*(l-j))%MOD)*val)%MOD;
+            val=nxt(val);
+        }
+    }
+}
+int main() {
+    scanf("%d %d %d %d %d",&N,&S,&A,&B,&C);
+    sol1();///why not
+    printf("%d",rez);
+    return 0;
+}
+

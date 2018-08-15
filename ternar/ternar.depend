@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1459690702 source:c:\c++\ternar\main.cpp
+	<cstdio>
+	<queue>
+	<algorithm>
+

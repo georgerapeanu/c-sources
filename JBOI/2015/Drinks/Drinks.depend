@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1498633150 source:e:\c++\jboi\2007\drinks\main.cpp
+	<iostream>
+	<cstdio>
+	<unordered_map>
+	<bitset>
+	<vector>
+	<ctime>
+	<cstdlib>
+	<algorithm>
+

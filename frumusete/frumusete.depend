@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1478444238 source:e:\c++\frumusete\main.cpp
+	<cstdio>
+	<cstring>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1432996937 source:c:\c++\plimbare\main.cpp
+	<cstdio>
+	<cmath>
+

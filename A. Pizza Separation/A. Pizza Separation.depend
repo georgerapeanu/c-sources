@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1511712431 source:e:\c++\a. pizza separation\main.cpp
+	<iostream>
+	<cmath>
+	<algorithm>
+

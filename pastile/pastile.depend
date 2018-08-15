@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1495190773 source:e:\c++\pastile\main.cpp
+	<algorithm>
+	<cstdio>
+	<cstring>
+

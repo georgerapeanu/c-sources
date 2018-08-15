@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1424019498 source:c:\c++\talent\main.cpp
+	<fstream>
+

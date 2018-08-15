@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1446892163 source:c:\c++\taxe2\main.cpp
+	<fstream>
+	<queue>
+

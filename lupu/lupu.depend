@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1477324365 source:e:\c++\lupu\main.cpp
+	<cstdio>
+	<fstream>
+	<algorithm>
+

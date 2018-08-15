@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1457701503 source:c:\c++\ordonare\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+

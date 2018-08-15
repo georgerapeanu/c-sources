@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1485081434 source:e:\c++\plicuri\main.cpp
+	<cstdio>
+	<iostream>
+	<algorithm>
+

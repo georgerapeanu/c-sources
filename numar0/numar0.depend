@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1456941647 source:c:\c++\numar0\main.cpp
+	<cstdio>
+	<algorithm>
+	<vector>
+

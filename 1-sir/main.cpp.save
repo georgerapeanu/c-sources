@@ -1,0 +1,36 @@
+#include <cstdio>
+using namespace std;
+FILE *f=fopen("1-sir.in","r");
+FILE *g=fopen("1-sir.out","w");
+int N;
+long long i,j,K,rez;
+long long S;
+int D[3][65550];
+int abs(int x)
+{
+    if(x>0)
+        return x;
+    return -x;
+}
+int main()
+{
+    fscanf(f,"%d %lld",&N,&S);
+    S=abs(S);
+    K=N*(N-1)/2;
+    if(S>K)
+        {fprintf(g,"0");return 0;}
+    D[1][0]=1;
+    for(i=2;i<=N;i++)
+    {
+        for(j=0;j<K;j++)
+        {
+            D[i%2][j]=D[(i+1)%2][abs(j-i+1)]+D[(i+1)%2][abs(j+i-1)];
+            D[i%2][j]%=194767;
+        }
+    }
+    rez=
+    fprintf(g,"%lld",D[N%2][S]);
+    fclose(f);
+    fclose(g);
+    return 0;
+}

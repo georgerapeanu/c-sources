@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1503856134 source:e:\c++\c. two tvs\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+

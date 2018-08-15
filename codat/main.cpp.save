@@ -1,0 +1,36 @@
+#include <cstdio>
+using namespace std;
+FILE *f=fopen("codat.in","r");
+FILE *g=fopen("codat.out","w");
+long long rez[1000005],X[1000005],N,i,S[1000005];
+int main()
+{
+    fscanf(f,"%lld",&N);
+    for(i=1;i<=N;i++)
+    {
+        fscanf(f,"%lld",&X[i]);
+        while(S[0]&&X[i]>=X[S[S[0]]])
+            {S[0]--;}
+        if(S[0]==0)
+            rez[i]=-1;
+        else
+            rez[i]=S[S[0]];
+        S[++S[0]]=i;
+    }
+    S[0]=0;
+    for(i=N;i>0;i--)
+    {
+        while(S[0]&&X[i]>=X[S[S[0]]])
+            {S[0]--;}
+        if(!S[0])
+        {
+            
+        }
+        S[++S[0]]=i;
+    }
+    for(i=1;i<=N;i++)
+        fprintf(g,"%lld ",rez[i]);
+    fclose(f);
+    fclose(g);
+    return 0;
+}

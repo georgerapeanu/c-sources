@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1488471138 source:e:\c++\super string substrings\main.cpp
+	<cmath>
+	<cstdio>
+	<vector>
+	<iostream>
+	<cstring>
+	<unordered_map>
+	<algorithm>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1483545542 source:e:\c++\saracsauregeevaluator\main.cpp
+	<cstdio>
+	<algorithm>
+	<ctime>
+

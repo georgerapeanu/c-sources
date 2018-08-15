@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1457166322 source:c:\c++\carti3\main.cpp
+	<cstdio>
+	<deque>
+

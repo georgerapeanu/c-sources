@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1491759051 source:e:\c++\vagoane\main.cpp
+	<cstdio>
+	<set>
+	<vector>
+	<algorithm>
+

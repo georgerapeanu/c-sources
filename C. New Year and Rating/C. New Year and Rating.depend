@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1483116113 source:e:\c++\c. new year and rating\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+

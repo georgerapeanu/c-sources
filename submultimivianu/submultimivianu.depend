@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1460894930 source:c:\c++\submultimivianu\main.cpp
+	<cstdio>
+	<cstdlib>
+

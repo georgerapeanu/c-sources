@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1436259159 source:c:\c++\exe\main.cpp
+	<cstdio>
+	"set_type.h"
+	"coada.h"
+	"stiva.h"
+
+1436185235 c:\c++\exe\set_type.h
+	<cstdlib>
+	<cstring>
+
+1436252965 c:\c++\exe\coada.h
+
+1436259003 c:\c++\exe\stiva.h
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1512228386 source:e:\c++\b. ithea plays with chtholly\main.cpp
+	<iostream>
+	<cstdio>
+	<cassert>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1486392338 source:e:\c++\magiconi09\main.cpp
+	<cstdio>
+	<cstdlib>
+	<deque>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1457685001 source:c:\c++\cri\main.cpp
+	<cstdio>
+	<algorithm>
+

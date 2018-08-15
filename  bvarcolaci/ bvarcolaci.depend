@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1492856415 source:e:\c++\ bvarcolaci\main.cpp
+	<cstdio>
+	<cstring>
+	<set>
+	<ctime>
+	<cstdlib>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1448464268 source:c:\c++\nrcuv\main.cpp
+	<cstdio>
+	<cstring>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1484838960 source:e:\c++\b. blown garland\main.cpp
+	<iostream>
+	<cstring>
+	<unordered_map>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1488965733 source:e:\c++\ecuatii2\main.cpp
+	<cstdio>
+	<cctype>
+	<algorithm>
+

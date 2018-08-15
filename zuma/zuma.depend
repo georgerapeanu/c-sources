@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1451814047 source:c:\c++\zuma\main.cpp
+	<cstdio>
+	<vector>
+	<cstring>
+

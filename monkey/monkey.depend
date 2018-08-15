@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1448796077 source:c:\c++\monkey\main.cpp
+	<fstream>
+	<iostream>
+

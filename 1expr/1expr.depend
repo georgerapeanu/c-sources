@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1465066959 source:c:\c++\1expr\main.cpp
+	<cstdio>
+	<cstring>
+

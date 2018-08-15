@@ -1,0 +1,92 @@
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+#include <queue>
+using namespace std;
+char C[22];
+struct cmp{bool operator() (int a,int b){return a>b;}};
+priority_queue <int,vector<int>,cmp> H;
+char rez[1000001][22];
+int N,i,nr,M;
+char* t(int nr)
+{
+    char R[11];
+    sprintf(R,"%d",nr);
+    return R;
+}
+char* ccat(char C1[],char C2[])
+{
+    char C3[22];
+    strcpy(C3,C1);
+    strcat(C3,C2);
+    return C3;
+}
+int main()
+{
+    freopen("1.in","r",stdin);
+    freopen("1.out","w",stdout);
+    cin>>N;
+    cin.getline(C,22);
+    while(N--)
+    {
+        cin.getline(C,22);
+        if(C[0]=='i')
+        {
+            i=0;
+            while(C[i]!=' ')
+                i++;
+            i++;
+            nr=0;
+            while('0'<=C[i]&&C[i]<='9')
+            {
+                nr=nr*10+C[i]-'0';
+                i++;
+            }
+            strcpy(rez[M++],C);
+            H.push(nr);
+        }
+        else if(C[0]=='r')
+        {
+            if(H.empty())
+            {
+                strcpy(rez[M++],"insert 0");
+                strcpy(rez[M++],C);
+            }
+            else
+            {
+                strcpy(rez[M++],C);
+                H.pop();
+            }
+        }
+        else
+        {
+           i=0;
+            while(C[i]!=' ')
+                i++;
+            i++;
+            nr=0;
+            while('0'<=C[i]&&C[i]<='9')
+            {
+                nr=nr*10+C[i]-'0';
+                i++;
+            }
+            while(!H.empty()&&H.top()<nr)
+            {
+                H.pop();
+                rez.push_back("removeMin");
+            }
+            if(H.empty()||H.top()!=nr)
+            {
+                rez.push_back(ccat("insert ",t(nr)));
+                rez.push_back(C);
+            }
+        }
+    }
+    cout<<M<<"\n";
+    for(i=0;i<M;i++);
+    {
+
+        cout<<C<<"\n";
+    }
+    return 0;
+}

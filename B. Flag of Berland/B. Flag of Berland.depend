@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1502175544 source:e:\c++\b. flag of berland\main.cpp
+	<cstdio>
+	<algorithm>
+	<cstring>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1488894704 source:e:\c++\pandora\main.cpp
+	<cstdio>
+	<algorithm>
+

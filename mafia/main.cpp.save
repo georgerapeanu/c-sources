@@ -1,0 +1,26 @@
+//#include <cstdio>
+#include <iostream>
+using namespace std;
+//FILE *f=fopen("mafia.in","r");
+//FILE *g=fopen("mafia.out","w");
+int N,a,i;
+long long rez,maxim;
+int main()
+{
+    //fscanf(f,"%d",&N);
+    cin>>N;
+    for(i=1;i<=N;i++)
+    {
+        //fscanf(f,"%d",&a);
+        cin>>a;
+        rez+=a;
+        
+    }
+    if(rez%(N-1)!=0)
+        rez=rez/(N-1)+1;
+    else
+        rez=rez/(N-1);
+    //fprintf(g,"%lld",rez);
+    cout<<rez;
+    return 0;
+}

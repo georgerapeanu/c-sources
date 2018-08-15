@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1500477667 source:e:\c++\bounded difference\main.cpp
+	<iostream>
+	<algorithm>
+

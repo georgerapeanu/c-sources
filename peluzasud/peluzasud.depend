@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1485080256 source:e:\c++\peluzasud\main.cpp
+	<iostream>
+	<bitset>
+

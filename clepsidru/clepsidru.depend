@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1445969611 source:c:\c++\clepsidru\main.cpp
+	<cstdio>
+	<algorithm>
+
+1516290731 source:e:\c++\clepsidru\main.cpp
+	<cstdio>
+	<algorithm>
+	<cstring>
+

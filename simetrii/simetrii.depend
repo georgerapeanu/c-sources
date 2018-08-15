@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1482692305 source:e:\c++\simetrii\main.cpp
+	<cstdio>
+	<algorithm>
+

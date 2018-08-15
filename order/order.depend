@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1492864317 source:e:\c++\order\main.cpp
+	<cstdio>
+	<algorithm>
+

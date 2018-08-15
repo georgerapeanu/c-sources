@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1488734604 source:e:\c++\b. the meeting place cannot be changed\main.cpp
+	<fstream>
+	<iostream>
+	<bitset>
+	<set>
+	<unordered_set>
+	<algorithm>
+	<string>
+	<iomanip>
+	<cmath>
+

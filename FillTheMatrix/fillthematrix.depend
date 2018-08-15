@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1504348905 source:e:\c++\fillthematrix\main.cpp
+	<cstdio>
+	<vector>
+	<algorithm>
+

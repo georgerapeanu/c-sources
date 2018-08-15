@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1457113309 source:c:\c++\cursa\main.cpp
+	<cstdio>
+	<iostream>
+	<algorithm>
+

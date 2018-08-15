@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1494778484 source:e:\c++\1067. disk tree\main.cpp
+	<iostream>
+	<map>
+	<vector>
+	<algorithm>
+	<bitset>
+

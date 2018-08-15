@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1483376818 source:e:\c++\magic number tree\main.cpp
+	<iostream>
+	<vector>
+	<bitset>
+

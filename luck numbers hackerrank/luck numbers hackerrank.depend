@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1486566000 source:e:\c++\luck numbers hackerrank\main.cpp
+	<cmath>
+	<cstdio>
+	<bitset>
+	<vector>
+	<iostream>
+	<algorithm>
+

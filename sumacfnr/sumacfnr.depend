@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1454832043 source:c:\c++\sumacfnr\main.cpp
+	<cstdio>
+	<cstring>
+

@@ -1,0 +1,15 @@
+#include <cstdio>
+using namespace std;
+unsigned long long z1,z2,x,y;
+int main()
+{
+    FILE *f;
+    f=fopen("vapoare.in","r");
+    fscanf(f,"%llu %llu %llu %luu",&x,&y,&z1,&z2);
+    fclose(f);
+    x=(x<<1)*7+z1;
+    y=(y<<1)*7+z2;
+    f=fopen("vapoare.out","w");
+    fprintf
+    return 0;
+}

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1391526854 source:d:\c++\tir\tir.cpp
+	<iostream>
+
+1460792809 source:c:\c++\tir\main.cpp
+	<cstdio>
+	<algorithm>
+

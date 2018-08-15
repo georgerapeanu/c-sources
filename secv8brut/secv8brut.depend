@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1495825488 source:e:\c++\secv8brut\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+

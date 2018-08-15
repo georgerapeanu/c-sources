@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1502025732 source:e:\c++\jboi\2012\squares\main.cpp
+	<iostream>
+	<algorithm>
+	<set>
+	<vector>
+	<map>
+

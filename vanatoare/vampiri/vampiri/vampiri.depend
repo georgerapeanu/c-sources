@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1387367502 source:d:\c++\vampiri\vampiri\vampiri.cpp
+	<fstream>
+	<iostream>
+

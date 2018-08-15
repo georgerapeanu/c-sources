@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1518348119 source:e:\c++\trans\main.cpp
+	<cstdio>
+	<deque>
+	<algorithm>
+

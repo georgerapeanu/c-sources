@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1408874573 source:c:\c++\alfabetar\alfabetar.cpp
+	<fstream>
+	<cstring>
+	<iostream>
+

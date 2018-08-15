@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1508603847 source:e:\c++\robotei\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+

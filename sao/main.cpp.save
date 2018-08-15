@@ -1,0 +1,21 @@
+#include <cstdio>
+using namespace std;
+FILE *f=fopen("sao.in","r");
+FILE *g=fopen("sao.out","w");
+int A,S,cost,a,b,minimcost,N,M,i;
+int main()
+{
+    for(i=1;i<=N;i++)
+    {
+        fscanf(f,"%d %d",a,b);
+        A+=a;
+        S+=S;
+    }
+    for(i=1;i<=M;i++)
+    {
+        fscanf(f,"%d %d %d",&a,&b,&cost);
+        if(a>=A&&b>=S&&cost<minimcost)
+            minimcost=
+    }
+    return 0;
+}

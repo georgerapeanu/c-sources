@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1460999679 source:c:\c++\excel\main.cpp
+	<cstdio>
+	<cstring>
+	<map>
+	<stack>
+

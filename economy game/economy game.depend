@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1466000093 source:c:\c++\economy game\main.cpp
+	<iostream>
+	<bitset>
+	<algorithm>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1499868859 source:e:\c++\spiral 123\main.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+

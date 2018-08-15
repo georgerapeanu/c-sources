@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1482505377 source:e:\c++\1031. railway tickets\main.cpp
+	<iostream>
+	<algorithm>
+

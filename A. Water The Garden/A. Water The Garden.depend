@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1517582477 source:e:\c++\a. water the garden\main.cpp
+	<iostream>
+	<queue>
+

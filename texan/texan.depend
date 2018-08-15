@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1447604393 source:c:\c++\texan\main.cpp
+	<cstdio>
+	<cmath>
+

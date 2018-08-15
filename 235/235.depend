@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1448799180 source:e:\c++\235\main.cpp
+	<cstdio>
+	<vector>
+	<set>
+

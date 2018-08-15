@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1504270490 source:e:\c++\tournamentia\main.cpp
+	<cstdio>
+	<cstring>
+	<vector>
+	<algorithm>
+

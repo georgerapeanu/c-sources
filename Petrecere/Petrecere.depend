@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1489429754 source:e:\c++\petrecere\main.cpp
+	<cstdio>
+	<algorithm>
+

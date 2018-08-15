@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1485355311 source:e:\c++\k-th divisor\main.cpp
+	<iostream>
+	<vector>
+

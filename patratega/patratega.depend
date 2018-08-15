@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1467981732 source:c:\c++\patratega\main.cpp
+	<cstdio>
+	<cmath>
+
+1468929437 source:e:\c++\patratega\main.cpp
+	<cstdio>
+	<fstream>
+	<cmath>
+

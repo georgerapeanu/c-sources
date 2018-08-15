@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1460649956 source:c:\c++\sirag\main.cpp
+	<cstdio>
+	<algorithm>
+

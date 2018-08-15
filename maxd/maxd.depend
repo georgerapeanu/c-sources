@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1485884568 source:e:\c++\maxd\main.cpp
+	<cstdio>
+	<vector>
+	<bitset>
+

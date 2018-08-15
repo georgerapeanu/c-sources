@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1492884338 source:e:\c++\stable neigh-bors\main.cpp
+	<cstdio>
+	<cstdlib>
+	<ctime>
+	<algorithm>
+

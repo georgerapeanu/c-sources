@@ -1,0 +1,69 @@
+#include <bits/stdc++.h>
+#define ushrt unsigned short
+using namespace std;
+FILE *f=fopen("autobuze.in","r");
+FILE *g=fopen("autobuze.out","w");
+ushrt N,i;
+int j,nr;
+bitset <10000005> E;
+int V[50005];
+int A[50005];
+int P[50005],valmax;
+int fi(int x)
+{
+    if(P[x]<0)
+        return x;
+    P[x]=fi(P[x]);
+    return P[x];
+}
+void u(int x,int y)
+{
+    x=fi(x);
+    y=fi(y);
+    if(x!=y)
+    {
+        if(P[x]<P[y])
+        {
+            P[x]+=P[y];
+            P[y]=x;
+            return ;
+        }
+        P[y]+=P[x];
+        P[x]=y;
+    }
+}
+int main()
+{
+    fscanf(f,"%hu",&N);
+    nr=0;
+    for(i=1;i<=N;i++)
+    {
+        fscanf(f,"%d",&V[i]);
+        if(V[i]>valmax)
+            valmax=V[i];
+        P[i]=-1;
+    }
+    sort(V+1,V+1+N);
+    for(i=1;i<=N;i++)
+    {
+        if(E[V[i]])///am atins acest numar inainte cu ceva
+        {
+            for(j=1;j<=nr;j++)///pentru fiecare numar pentru care are rost sa testam
+            {
+                if(V[i]%V[A[j]]==0)
+                    u(i,A[j]);
+            }
+        }
+        else
+        {
+            nr++;///daca nu inseamna ca nu a avut nici un divizor inainte,deci 
+            A[nr]=i;
+            for(j=V[i];j<=valmax;j+=V[i])
+                E[j]=1;
+        }
+    }
+    fprintf(g,"%hu",nr-1);
+    fclose(f);
+    fclose(g);
+    return 0;
+}

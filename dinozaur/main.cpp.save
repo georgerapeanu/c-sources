@@ -1,0 +1,19 @@
+#include <cstdio>
+#include <map>
+using namespace std;
+FILE *f=fopen("dinozaur.in","r");
+FILE *g=fopen("dinozaur.out","w");
+unordered_map <char,int> M;
+int i,N;
+int S[10005];
+int main()
+{
+    fscanf(f,"%d\n",&N);
+    fgets(S,10005,f);
+    for(i=1;i<=N;i++)
+    {
+        M[S[i]]++;
+        if(M[S[i]])
+    }
+    return 0;
+}

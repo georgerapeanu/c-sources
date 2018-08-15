@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1513364736 source:e:\c++\problem 3. milk measurement\main.cpp
+	<iostream>
+	<cstdio>
+	<map>
+	<algorithm>
+

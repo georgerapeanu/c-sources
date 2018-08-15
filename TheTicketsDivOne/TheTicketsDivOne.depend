@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1501248993 source:e:\c++\theticketsdivone\main.cpp
+	<iostream>
+	<cmath>
+	<cstring>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1460472151 source:c:\c++\dreptunghi2\main.cpp
+	<cstdio>
+	<queue>
+

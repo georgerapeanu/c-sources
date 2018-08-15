@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1487006084 source:e:\c++\aho-corasick\main.cpp
+	<cstdio>
+	<vector>
+	<cstring>
+

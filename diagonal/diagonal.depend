@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1426521787 source:c:\c++\diagonal\main.cpp
+	<fstream>
+	<cstring>
+

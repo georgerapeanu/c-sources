@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1503846749 source:e:\c++\coprime\main.cpp
+	<iostream>
+	<cmath>
+	<vector>
+

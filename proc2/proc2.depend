@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1485440573 source:e:\c++\proc2\main.cpp
+	<cstdio>
+	<vector>
+	<algorithm>
+

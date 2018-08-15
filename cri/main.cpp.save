@@ -1,0 +1,131 @@
+#include <cstdio>
+#include <algorithm>
+using namespace std;
+FILE *f=fopen("cri.in","r");
+FILE *g=fopen("cri.out","w");
+long long V[505][505];
+long long min1,min2,min3,min4;
+int i,j,N,M,X,Y,K;
+int Z;
+long long T;
+int main()
+{
+    fscanf(f,"%d %d %d %d",&N,&M,&X,&Y);
+    min1=min2=min3=min4=99999999;
+    for(i=1;i<=N;i++)
+    {
+        for(j=1;j<=M;j++)
+        {
+            fscanf(f,"%lld",&V[i][j]);
+            if(i<=X&&i<=Y&&min1>V[i][j])
+                min1=V[i][j];
+            if(i<=X&&j>=Y&&min2>V[i][j])
+                min2=V[i][j];
+            if(i>=X&&j<=Y&&min3>V[i][j])
+                min3=V[i][j];
+            if(i>=X&&j>=Y)
+                min4=min(min4,V[i][j]);
+            //V[i][j]=V[i-1][j]+V[i][j-1]-V[i-1][j-1]+V[i][j];
+        }
+    }
+    if(X%2==1||Y%2==1)
+    {
+        T=V[X][Y];
+        K=X*Y;
+        Z=1;
+    }
+    else
+    {
+        T=V[X][Y]-min1;
+        K=X*Y-1;
+        Z=1;
+    }
+    if(X%2==1||(M-Y+1)%2==1)
+    {
+        if(V[X][M]-V[X][Y-1]>T)
+        {
+            T=V[X][M]-V[X][Y-1];
+            K=X*(M-Y+1);
+            Z=2;
+        }
+        else if(V[X][M]-V[X][Y-1]==T&&X*(M-Y+1)<K)
+        {
+            Z=2;
+            K=(M-Y+1)*X;
+        }
+    }
+    else
+    {
+       if(V[X][M]-V[X][Y-1]-min2>T)
+        {
+            T=V[X][M]-V[X][Y-1]-min2;
+            K=X*(M-Y+1)-1;
+            Z=2;
+        }
+        else if(V[X][M]-V[X][Y-1]-min2==T&&X*(M-Y+1)-1<K)
+        {
+            Z=2;
+            K=(M-Y+1)*X-1;
+        }
+    }
+    if((N-X+1)%2==1||Y%2==1)
+    {
+        if(V[N][Y]-V[X-1][Y]>T)
+        {
+           T=V[N][Y]-V[X-1][Y];
+           Z=3;
+           K=Y*(N-X+1);
+        }
+        else if(V[N][Y]-V[X-1][Y]==T&&Y*(N-X+1)<K)
+        {
+            K=Y*(N-X+1);
+            Z=3;
+        }
+    }
+    else
+    {
+        if(V[N][Y]-V[X-1][Y]-min3>T)
+        {
+           T=V[N][Y]-V[X-1][Y]-min3;
+           Z=3;
+           K=Y*(N-X+1)-1;
+        }
+        else if(V[N][Y]-V[X-1][Y]-min3==T&&Y*(N-X+1)-1<K)
+        {
+            K=Y*(N-X+1)-1;
+            Z=3;
+        }
+    }
+    if((N-X+1)%2==1||(M-Y+1)%2==1)
+    {
+        if(V[N][M]-V[N][Y-1]-V[X-1][M]+V[X-1][Y-1]>T)
+        {
+            T=V[N][M]-V[N][Y-1]-V[X-1][M]+V[X-1][Y-1];
+            Z=4;
+            K=(N-X+1)*(M-Y+1);
+        }
+        else if(V[N][M]-V[N][Y-1]-V[X-1][M]+V[X-1][Y-1]==T&&(N-X+1)*(M-Y+1)<K)
+        {
+            Z=4;
+            K=(N-X+1)*(M-Y+1);
+        }
+    }
+    else
+    {
+        if(V[N][M]-V[N][Y-1]-V[X-1][M]+V[X-1][Y-1]-min4>T)
+        {
+            T=V[N][M]-V[N][Y-1]-V[X-1][M]+V[X-1][Y-1]-min4;
+            Z=4;
+            K=(N-X+1)*(M-Y+1)-1;
+        }
+        else if(V[N][M]-V[N][Y-1]-V[X-1][M]+V[X-1][Y-1]-min4==T&&(N-X+1)*(M-Y+1)-1<K)
+        {
+            Z=4;
+            K=(N-X+1)*(M-Y+1)-1;
+        }
+    }
+    fprintf(g,"%d %lld %d",Z,T,K);
+    fclose(f);
+    fclose(g);
+    return 0;
+}

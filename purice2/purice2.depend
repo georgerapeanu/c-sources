@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1451460091 source:c:\c++\purice2\main.cpp
+	<cstdio>
+	<cmath>
+

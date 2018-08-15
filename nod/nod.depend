@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1456849021 source:c:\c++\nod\main.cpp
+	<cstdio>
+	<cstring>
+	<map>
+	<fstream>
+

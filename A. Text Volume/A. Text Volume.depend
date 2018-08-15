@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1502174840 source:e:\c++\a. text volume\main.cpp
+	<cstdio>
+	<algorithm>
+

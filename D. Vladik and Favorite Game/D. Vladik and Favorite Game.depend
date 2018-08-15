@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1495882294 source:e:\c++\d. vladik and favorite game\main.cpp
+	<iostream>
+	<queue>
+	<stack>
+

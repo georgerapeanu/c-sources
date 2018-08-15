@@ -1,0 +1,24 @@
+#include <cstdio>
+#include <cmath>
+using namespace std;
+FILE *f=fopen("bile.in","r");
+FILE *g=fopen("bile.out","w");
+int N,S,st,dr,last,mid,setat,maxim,minim=50005;
+long long rez;
+int V[50005],i;
+int main()
+{
+    fscanf(f,"%d",&N);
+    for(i=1;i<=N;i++)
+    {
+        fscanf(f,"%d",&V[i]);
+        if(V[i]<minim) minim=V[i];
+        if(maxim<V[i]) maxim=V[i];
+    }
+    for(i=minm;i<=maxim;i++)
+    {
+        for()
+    }
+    fprintf(g,"%lld",rez);
+    return 0;
+}

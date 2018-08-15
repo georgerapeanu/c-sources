@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1460391310 source:c:\c++\bursa0\main.cpp
+	<cstdio>
+	<fstream>
+

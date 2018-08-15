@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1502787804 source:e:\c++\overlap\main.cpp
+	<cstdio>
+	<cstring>
+	<map>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1510751205 source:e:\c++\manhattan\main.cpp
+	<iostream>
+	<cstdio>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1451809766 source:c:\c++\mxl\main.cpp
+	<cstdio>
+	<cstring>
+

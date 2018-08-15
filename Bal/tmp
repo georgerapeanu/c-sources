@@ -1,0 +1,108 @@
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+using namespace std;
+FILE *f=fopen("bal.in","r");
+FILE *g=fopen("bal.out","w");
+int L[100005];
+int R[100005];
+bool U[100005];
+vector<int> G[100005];
+int N,M;
+const int LEN=10000;
+char buff[LEN];
+int ind=LEN-1;
+int int32()
+{
+    int rez=0;
+    while(buff[ind]<'0'||buff[ind]>'9')
+    {
+        if(++ind>=LEN)
+        {
+            ind=0;
+            fread(buff,1,LEN,f);
+        }
+    }
+    while(buff[ind]>='0'&&buff[ind]<='9')
+    {
+        rez=rez*10+buff[ind]-'0';
+        if(++ind>=LEN)
+        {
+            ind=0;
+            fread(buff,1,LEN,f);
+        }
+    }
+    return rez;
+}
+bool pairup(int nod)
+{
+    if(U[nod])return 0;
+    U[nod]=1;
+    for(auto it:G[nod])
+    {
+        if(!R[it])
+        {
+            L[nod]=it;
+            R[it]=nod;
+            return 1;
+        }
+    }
+    for(auto it:G[nod])
+    {
+        if(pairup(R[it]))
+        {
+            L[nod]=it;
+            R[it]=nod;
+            return 1;
+        }
+    }
+}
+bool dfs(int nod)
+{
+    U[nod]=1;
+    for(auto it:G[nod])
+    {
+        if(L[nod]!=R[it]&&!U[])
+    }
+}
+int main()
+{
+    N=i32();M=i32();
+    for(int i=1;i<=M;i++)
+    {
+        int x,y;
+        x=i32();
+        y=i32();
+        G[x].push_back(y);
+        G[y].push_back(x);
+    }
+    bool ok=1;
+    int c=0;
+    while(ok)
+    {
+        ok=0;
+        memset(U,0,sizeof(U));
+        for(int i=1;i<=N;i++)
+        {
+            if(!L[i]&&pairup(i))
+            {
+                c++;
+                ok=1;
+            }
+        }
+    }
+    if(c<N)fprintf(g,"NU");
+    else
+    {
+        memset(U,0,sizeof(U));
+        for(int i=1;i<=N;i++)
+        {
+            if(!U[i])dfs(i);
+        }
+        fprintf(g,"YES");
+    }
+    fclose(f);
+    fclose(g);
+    return 0;
+}
+

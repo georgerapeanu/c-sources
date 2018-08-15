@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1510147376 source:e:\c++\poligonia\main.cpp
+	<cstdio>
+	<algorithm>
+	<vector>
+

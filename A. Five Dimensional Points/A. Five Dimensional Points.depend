@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1504590946 source:e:\c++\a. five dimensional points\main.cpp
+	<iostream>
+	<deque>
+	<vector>
+

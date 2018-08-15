@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1504278116 source:e:\c++\c. goodbye souvenir\main.cpp
+	<cstdio>
+	<set>
+	<cstring>
+	<algorithm>
+

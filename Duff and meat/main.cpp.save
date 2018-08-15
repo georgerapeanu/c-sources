@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+long long minim,a,p=101,prod,n;
+int main()
+{
+    cin>>n;
+    return 0;
+}

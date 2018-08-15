@@ -1,0 +1,49 @@
+#include <cstdio>
+#include <set>
+using namespace std;
+FILE *f=fopen("monkey.in","r"),*g=fopen("monkey.out","w");
+set <char> s;
+char M[30][30];
+int R,C,i;
+int maximTraseu(int x,int y,int lung)
+{
+    int val1=0,val2=0,val3=0,val4=0;
+    if(s.find(M[x-1][y])!=s.end())
+    {
+        s.insert(M[x-1][y]);
+        val1=maximTraseu(x-1,y,lung+1);
+        s.erase(M[x-1][y]);
+    }
+    if(s.find(M[x][y+1])!=s.end())
+    {
+        s.insert(M[x][y+1]);
+        val2=maximTraseu(x,y+1,lung+1);
+        s.erase(M[x][y+1]);
+    }
+    if(s.find(M[x+1][y])!=s.end())
+    {
+        s.insert(M[x+1][y]);
+        val3=maximTraseu(x+1,y,lung+1);
+        s.erase(M[x+1][y]);
+    }
+    if(s.find(M[x][y-1])!=s.end())
+    {
+        s.insert(M[x][y-1]);
+        val4=maximTraseu(x,y-1,lung+1);
+        s.erase(M[x][y-1]);
+    }
+    if(s.find(M[x][y-1])!=s.end()&&s.find(M[x+1][y])!=s.end()&&s.find(M[x][y+1])!=s.end()&&s.find(M[x-1][y])!=s.end())
+    return lung;
+    return max(max(val1,val2),max(val3,val4));
+}
+int main()
+{
+    s.insert('\0');
+    s.insert('\n');
+    fscanf(f,"%d %d%c",&R);
+    for(i=1;i<=R;i++)
+    {
+        fgets(M[i],30,f);
+    }
+    fprinf(g,"%d",maximTraseu())
+}

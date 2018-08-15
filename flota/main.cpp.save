@@ -1,0 +1,60 @@
+#include <cstdio>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+FILE *f=fopen("flota.in","r");
+FILE *g=fopen("flota.out","w");
+int N,M,K,i,j,nr,a,b;
+int nod[50005],lungimi[100005];
+pair<int,pair<int,int> > muchii[1000005];
+int fi(int x)
+{
+    if(nod[x]<0)
+        return x;
+    else
+        nod[x]=fi(nod[x]);
+    return nod[x];
+}
+void un(int x,int y)
+{
+    if(nod[x]<nod[y])
+    {
+        nod[x]+=nod[y];
+        nod[y]=x;
+    }
+    else
+    {
+        nod[y]+=nod[x];
+        nod[x]=y;
+    }
+}
+int main()
+{
+    fscanf(f,"%d",&N,&M,&K);
+    for(i=1;i<=N;i++) nod[i]=-1;
+    for(i=1;i<=M;i++)
+        fscanf(f,"%d %d %d",&muchii[i].second.first,&muchii[i].second.second,&muchii[i].first);
+    sort(muchii+1,muchii+1+M);
+    for(i=1;i<=K;i++)
+        fscanf(f,"%d",lungimi[i]);
+    sort(lungimi+1,lungimi+K+1);
+    j=M;nr=N;
+    for(i=K;i>0;i--)
+    {
+        while(muchii[j].first>=lungimi[i])
+        {
+            a=fi(muchii.second.first);
+            b=fi(muchii.second.second);
+            if(a!=b)
+            {
+                nr--;
+                un(a,b);
+            }
+            j++;
+        }
+        fprintf(g,"%d")
+    }
+    fclose(f);
+    fclose(g);
+    return 0;
+}

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1518856847 source:e:\c++\e. max history\main.cpp
+	<cstdio>
+	<iostream>
+	<algorithm>
+	<map>
+

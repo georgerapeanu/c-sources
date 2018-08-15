@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1485018682 source:e:\c++\mappingabc2\main.cpp
+	<iostream>
+	<vector>
+	<unordered_map>
+	<bitset>
+

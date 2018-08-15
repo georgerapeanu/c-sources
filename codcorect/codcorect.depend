@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1440620448 source:c:\c++\codcorect\main.cpp
+	<fstream>
+	<iostream>
+

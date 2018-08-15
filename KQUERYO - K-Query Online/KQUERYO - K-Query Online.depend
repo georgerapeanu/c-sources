@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1502393240 source:e:\c++\kqueryo - k-query online\main.cpp
+	<cstdio>
+	<vector>
+	<algorithm>
+

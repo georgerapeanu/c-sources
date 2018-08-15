@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1472197016 source:e:\c++\viteze\main.cpp
+	<cstdio>
+	<ctype.h>
+	<cstring>
+	<algorithm>
+

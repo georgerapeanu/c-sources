@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1489307210 source:e:\c++\blaturi\main.cpp
+	<cstdio>
+	<algorithm>
+

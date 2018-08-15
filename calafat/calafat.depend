@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1504274559 source:e:\c++\calafat\main.cpp
+	<fstream>
+	<cassert>
+	<vector>
+

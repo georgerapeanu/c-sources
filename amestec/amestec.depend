@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1459791542 source:c:\c++\amestec\main.cpp
+	<cstdio>
+	<cctype>
+	<cstring>
+

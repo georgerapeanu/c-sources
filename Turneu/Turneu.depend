@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1507727161 source:e:\c++\turneu\main.cpp
+	<cstdio>
+	<algorithm>
+

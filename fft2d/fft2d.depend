@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1522946423 source:e:\c++\fft2d\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+

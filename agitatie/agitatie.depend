@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1453822107 source:c:\c++\agitatie\main.cpp
+	<cstdio>
+	<algorithm>
+

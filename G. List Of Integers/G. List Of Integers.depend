@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1517588531 source:e:\c++\g. list of integers\main.cpp
+	<cstdio>
+	<vector>
+

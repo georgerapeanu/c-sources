@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1489510283 source:e:\c++\hapsan\main.cpp
+	<cstdio>
+	<set>
+	<vector>
+

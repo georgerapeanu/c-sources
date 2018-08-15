@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1450952469 source:c:\c++\jump\main.cpp
+	<fstream>
+

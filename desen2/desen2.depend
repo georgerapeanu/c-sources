@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1404127982 source:c:\c++\desen2\desen2.cpp
+	<fstream>
+

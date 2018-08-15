@@ -1,0 +1,28 @@
+#include <cstdio>
+#include <cmath>
+using namespace std;
+FILE *f=fopen("patrate.in","r");
+FILE *g=fopen("patrate.out","w");
+int nr,N,M,i,nrmat,a,total,prod,poz,j,rand,coloana;
+int main()
+{
+    fscanf(f,"%d %d",&N,&M);
+    for(i=1;i<=M;i++)
+    {
+        fscanf(f,"%d",&a);
+        nr=nr+(1<<(a-1));
+        if(!nrmat)
+            nrmat=a;
+    }
+    fprintf(g,"%d\n",nr);
+    total=1<<(N-1);
+
+    total=ceil(sqrt(total));
+    poz=((nr>>(nrmat))<<(nrmat))+(nr-((nr>>(nrmat-1))<<(nrmat-1)));
+    rand=;
+    coloana=;
+    fprintf(g,"%d %d",rand,coloana);
+    fclose(f);
+    fclose(g);
+    return 0;
+}

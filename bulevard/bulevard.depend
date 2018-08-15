@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1483988637 source:e:\c++\bulevard\main.cpp
+	<cstdio>
+	<queue>
+

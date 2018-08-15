@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1491923657 source:e:\c++\paranteze2ia\main.cpp
+	<cstdio>
+	<cstring>
+	<stack>
+

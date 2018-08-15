@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1502274871 source:e:\c++\exam\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+

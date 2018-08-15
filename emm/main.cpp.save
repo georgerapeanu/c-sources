@@ -1,0 +1,8 @@
+#include <cstdio>
+using namespace std;
+FILE *f,*g;
+int main()
+{
+    cout << "Hello world!" << endl;
+    return 0;
+}

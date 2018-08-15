@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1486489134 source:e:\c++\c. mahmoud and a message\main.cpp
+	<iostream>
+	<cstring>
+	<unordered_map>
+

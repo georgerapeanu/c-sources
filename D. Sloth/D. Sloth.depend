@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1511362169 source:e:\c++\d. sloth\main.cpp
+	<iostream>
+	<vector>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1498284108 source:e:\c++\point int kgon\main.cpp
+	<iostream>
+	<cmath>
+	<algorithm>
+

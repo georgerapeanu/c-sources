@@ -1,0 +1,26 @@
+#include <fstream>
+using namespace std;
+ifstream f("film.in");
+ofstream g("film.out");
+int F,B,i;
+char c[300];
+int main()
+{
+    f>>F>>B;
+    if(B<=2*F)
+    {
+        k=F-B;
+        for(i=0;i<k;i++)
+        {c[3*i]='f';c[3*i+1]='b';c[3*i+2]='f';}
+        for(i=0;i<k)
+    }
+    else if(F<=2*B)
+    {
+        for(i=0;i<F+B;i++)
+            c[i]=i%2==0 ? 'b':'f';
+    }
+    g<<c;
+    f.close();
+    g.close();
+    return 0;
+}

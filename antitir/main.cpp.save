@@ -1,0 +1,65 @@
+#include <cstdio>
+#include <algorithm>
+using namespace std;
+FILE *f=fopen("antitir.in","r");
+FILE *g=fopen("antitir.out","w");
+long long X[1000005];
+long long Y[1000005];
+int N,i;
+long long test()
+{
+    long long s=0;
+    for(int i=1;i<=N;i++)
+        s+=( X[i]-X[(1+N)/2]<0 ? X[(1+N)/2]-X[i]:X[i]-X[(1+N)/2] )+ ( Y[i]-Y[(1+N)/2]<0 ? Y[(1+N)/2]-Y[i]:Y[i]-Y[(1+N)/2] );
+    return s;
+}
+void qsx(int st,int dr,int poz)
+{
+    int pivot=X[dr],j=st;
+    for (int i=st;i<dr;i++)
+    {
+        if(X[i]<=pivot)
+        {
+            swap(V[i],V[j]);
+            j++;
+        }
+    }
+    swap(V[j],V[dr]);
+    if(j-st+1==poz)
+        ;
+    else if(j-st+1>poz)
+        qs(st,j-1,V,poz);
+    else
+        qs(j+1,dr,V,poz-j+st-1);
+}
+void qsy(int st,int dr,int poz)
+{
+    int pivot=V[dr],j=st;
+    for (int i=st;i<dr;i++)
+    {
+        if(V[i]<=pivot)
+        {
+            swap(V[i],V[j]);
+            j++;
+        }
+    }
+    swap(V[j],V[dr]);
+    if(j-st+1==poz)
+        ;
+    else if(j-st+1>poz)
+        qs(st,j-1,V,poz);
+    else
+        qs(j+1,dr,V,poz-j+st-1);
+}
+int main()
+{
+    fscanf(f,"%lld",&N);
+    for(i=1;i<=N;i++)
+        fscanf(f,"%lld %lld",&X[i],&Y[i]);
+    qs(1,N,X,(N+1)/2);
+    qs(1,N,Y,(N+1)/2);
+    fprintf(g,"%lld",test());
+    fclose(f);
+    fclose(g);
+    return 0;
+}

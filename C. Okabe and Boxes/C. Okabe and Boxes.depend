@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1498409008 source:e:\c++\c. okabe and boxes\main.cpp
+	<iostream>
+	<bitset>
+	<stack>
+

@@ -1,0 +1,32 @@
+#include <iostream>
+#define inf 1000000005
+using namespace std;
+bool m[4001][4001];
+int i,j,k,n,m,a[4001],nr,nrb,rez=inf;
+int main()
+{
+    cin>>n>>m;
+    for(i=1;i<=m;i++)
+    {
+        f>>nr>>nrb;
+        a[nr]++;
+        a[nrb]++;
+        m[nr][nrb]=m[nrb][nr]=1;
+    }
+    for(i=1;i<=n;i++)
+    {
+        for(j=i+1;j<=n;j++)
+        {
+            if(m[i][j]==1)
+            {
+                for(k=j+1;k<=n;k++)
+                {
+                    if(m[j][k]&&m[i][k])
+                    rez=rez<a[i]+a[j]+a[k]
+
+                }
+            }
+        }
+    }
+    return 0;
+}

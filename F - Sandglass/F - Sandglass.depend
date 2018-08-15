@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1504368098 source:e:\c++\f - sandglass\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+

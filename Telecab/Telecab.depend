@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1492601860 source:e:\c++\telecab\main.cpp
+	<cstdio>
+	<iostream>
+	<algorithm>
+	<stack>
+

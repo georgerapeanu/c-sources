@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1478458753 source:e:\c++\appendanddelete\main.cpp
+	<cstdio>
+	<cstring>
+

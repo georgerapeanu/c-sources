@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1494669419 source:e:\c++\b. cutting carrot\main.cpp
+	<iostream>
+	<cmath>
+	<vector>
+	<iomanip>
+

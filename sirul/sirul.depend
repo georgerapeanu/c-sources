@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1403505428 source:c:\c++\sirul\sirul.cpp
+	<fstream>
+	<cstring>
+

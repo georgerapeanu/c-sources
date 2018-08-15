@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1448190587 source:c:\c++\seif1\main.cpp
+	<cstdio>
+	<vector>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1508589310 source:e:\c++\camera\main.cpp
+	<cstdio>
+	<algorithm>
+	<cstring>
+	<iostream>
+

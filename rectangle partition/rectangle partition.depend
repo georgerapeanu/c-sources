@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1503835609 source:e:\c++\rectangle partition\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+

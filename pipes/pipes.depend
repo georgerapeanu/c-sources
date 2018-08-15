@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1463220001 source:c:\c++\pipes\main.cpp
+	<iostream>
+	<stack>
+	<cstring>
+

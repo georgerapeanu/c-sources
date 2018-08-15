@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1502882804 source:e:\c++\popandai\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+

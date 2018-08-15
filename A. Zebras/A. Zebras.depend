@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1520583615 source:e:\c++\a. zebras\main.cpp
+	<iostream>
+	<cstdio>
+	<vector>
+	<algorithm>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1424803695 source:c:\c++\algopedia\numarare\main.cpp
+	<fstream>
+	<cstring>
+

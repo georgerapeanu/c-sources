@@ -1,0 +1,24 @@
+#include <cstdio>
+using namespace std;
+int N,K,i,j;
+int V[155][11200];
+int main()
+{
+    fscanf(f,"%d %d",&N,&K);
+    for(i=0;i<=N;i++)
+    {
+        V[i][0]=1;
+    }
+    for(i=1;i<=N;i++)
+    {
+        for(j=1;j<=(i-1)*i/2;j++)
+        {
+            if(j>i)
+                V[i][j]=(V[i][j-1]+V[i-1][j]-V[i-1][j-i];
+            else
+                V[i][j]=V[i][j-1]+V[i-1][j];
+        }
+    }
+    fprintf(g,"%d",V[N][K]);
+    return 0;
+}

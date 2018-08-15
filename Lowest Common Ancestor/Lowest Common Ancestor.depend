@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1483803238 source:e:\c++\lowest common ancestor\main.cpp
+	<cstdio>
+	<vector>
+	<bitset>
+

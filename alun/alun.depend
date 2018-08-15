@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1410530033 source:c:\c++\alun\main.cpp
+	<fstream>
+	<iostream>
+

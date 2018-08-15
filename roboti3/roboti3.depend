@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1491406844 source:e:\c++\roboti3\main.cpp
+	<cstdio>
+	<algorithm>
+	<queue>
+

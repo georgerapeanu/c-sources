@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1471010633 source:e:\c++\sumfact\main.cpp
+	<cstdio>
+	<algorithm>
+

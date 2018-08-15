@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1452928447 source:c:\c++\reinvent\main.cpp
+	<cstdio>
+	<queue>
+	<vector>
+

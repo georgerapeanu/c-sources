@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1484063051 source:e:\c++\obmax\main.cpp
+	<cstdio>
+	<vector>
+

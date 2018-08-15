@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1491318809 source:e:\c++\fast travel\main.cpp
+	<bitset>
+	<iostream>
+	<algorithm>
+

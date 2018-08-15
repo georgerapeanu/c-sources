@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1488801693 source:e:\c++\1326. bottle taps\main.cpp
+	<iostream>
+	<cstring>
+	<cstdlib>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1530098218 source:e:\c++\problem h hidden hierarchy\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+

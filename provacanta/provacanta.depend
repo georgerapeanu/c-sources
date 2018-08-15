@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1490547196 source:e:\c++\provacanta\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+

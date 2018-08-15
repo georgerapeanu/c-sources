@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1489925140 source:e:\c++\alohomora\main.cpp
+	<cstdio>
+	<algorithm>
+	<set>
+

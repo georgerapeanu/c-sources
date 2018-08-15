@@ -1,0 +1,27 @@
+#include<fstream>
+#include<cmath>
+using namespace std;
+ifstream f("culegere.in");
+ofstream g("culegere.out");
+long long P,N,M,nt,pow10=1,x,nrcif,nr;
+int main()
+{
+
+   f>>P>>N;
+    M=sqrt(double(N));
+    while(M*(M+1)/2<N)
+        M++;
+    nt=N*(N+1)/2;
+    x=nt;
+    while(x)
+    {
+        nrcif++;x/=10;
+    }
+    while(i<nrci)
+    {
+        nr=nr+
+        nrcif--;
+    }
+   f.close();g.close();
+   return 0;
+}

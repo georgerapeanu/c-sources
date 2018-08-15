@@ -1,0 +1,17 @@
+#include <fstream>
+using namespace std;
+ifstream f("grupe.in");
+ofstream g("grupe.out");
+int n,fib[100];
+long long nr,i;
+int main()
+{
+    fib[0]=1;
+    fib[1]=1;
+    f>>n;
+    
+    g<<nr;
+    f.close();
+    g.close();
+    return 0;
+}

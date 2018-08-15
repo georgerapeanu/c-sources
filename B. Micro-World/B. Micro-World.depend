@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1528653906 source:c:\c++\b. micro-world\main.cpp
+	<iostream>
+	<algorithm>
+

@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int linie[3000],N,M,X,i,j,a,ctr=1,k;
+int main()
+{
+    cin>>N>>M>>X;
+    for(i=1;i<=N;i++)
+    {
+        for(j=1;j<=M;j++)
+        {
+            cin>>linie;
+            for(k=ctr;k<ctr+x;k++)
+                linie[k]=a;
+        }
+    }
+    return 0;
+}

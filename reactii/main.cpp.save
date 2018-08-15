@@ -1,0 +1,37 @@
+#include <cstdio>
+#include <stack>
+#include <iostream>
+using namespace std;
+FILE *f=fopen("reactii.in","r");
+FILE *g=fopen("reactii.out","w");
+int N,M;
+typedef pair<int,int> interval;
+stack<interval> s;
+interval rez;
+bool can(interval st,interval dr)
+{
+    if(st.second+1==dr.first||dr.second+1==st.first)
+    return 1;
+    return 0;
+}
+interval pereche(interval st,interval dr)
+{
+     return interval(min(st.first,dr.first),max(st.second,dr.second));
+}
+bool substanta()
+{
+    
+    return 1;
+    return 0;
+}
+int main()
+{
+    fscanf(f,"%d%d",&N,&M);
+    for(int i=1;i<=M;i++)
+    {
+            fprintf(g,"%d\n",substanta());
+    }
+    fclose(f);
+    fclose(g);
+    return 0;
+}

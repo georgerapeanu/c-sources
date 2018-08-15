@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1489913825 source:e:\c++\wall\main.cpp
+	<cstdio>
+	<algorithm>
+

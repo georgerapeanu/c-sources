@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1489425728 source:e:\c++\lost\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+

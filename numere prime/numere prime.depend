@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1388476944 source:d:\c++\numere prime\numere prime.cpp
+	<iostream>
+
+1526803660 source:e:\c++\numere prime\main.cpp
+	<cstdio>
+	<vector>
+

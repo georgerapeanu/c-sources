@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1530179492 source:e:\c++\f. one occurrence\main.cpp
+	<cstdio>
+	<algorithm>
+	<vector>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1511719254 source:e:\c++\e. eyes closed\main.cpp
+	<iostream>
+	<iomanip>
+	<algorithm>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1399914893 source:c:\c++\transformare vectorului in multime\t.cpp
+	<fstream>
+	<iostream>
+

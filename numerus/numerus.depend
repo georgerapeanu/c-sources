@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1387710858 source:d:\c++\numerus\numerus.cpp
+	<fstream>
+	<iostream>
+

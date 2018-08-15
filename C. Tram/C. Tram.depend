@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1482081371 source:e:\c++\c. tram\main.cpp
+	<iostream>
+	<algorithm>
+

@@ -1,0 +1,58 @@
+Incepem cu X[n-1]
+ii putem pune 4 continuari valide:
+_ _
+   |
+   |
+- -
+_ _
+ | |
+   |
+- -
+_ _
+   |
+ | |
+- -
+_ _
+  _|
+   |
+- -
+bun.mai urmeaza sa demonstram ca nr celor invalide de lungime N-1 care isi revin daca punem sufixul corect este egal cu X[N-1]-2*X[n-2];
+la acestea incorecte,e clar ca coloana adaugata va fi fara linii rosii
+e clar ca,ar trebui ca penultima coloana(a N-1) sa fie
+_ _
+  _|
+ | |
+- -
+sau
+_ _
+ |_|
+   |
+- -
+deci aici vin X[n-1] si "schimbam" linia(o trasam)
+_ _
+  _|
+   |
+- -
+din variantele astea trebuie sa le scadem pe alea in care trasarea linie nu afecteaza,si anume candlinia era deja trasata,
+sau nici una dintre liniile
+_ _
+   |
+ | |
+- -
+sau
+_ _
+ | |
+   |
+- -
+este trasata
+si acestea sunt 2*X[N-2].deoarece lka oricare dintre cele de N-2 putem anexa
+_ _
+  _|
+   |
+- -
+si
+
+_ _
+   |
+   |
+- -

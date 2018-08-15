@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1478460155 source:e:\c++\baby step,giant step\main.cpp
+	<iostream>
+	<algorithm>
+

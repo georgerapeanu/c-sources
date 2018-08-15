@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1433054783 source:c:\c++\trigrame\main.cpp
+	<cstdio>
+	<cstring>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1430149814 source:c:\c++\recapitularea9a\main.cpp
+	<fstream>
+	<cmath>
+

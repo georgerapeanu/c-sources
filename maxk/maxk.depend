@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1457544467 source:c:\c++\maxk\main.cpp
+	<cstdio>
+	<stack>
+

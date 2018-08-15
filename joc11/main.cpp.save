@@ -1,0 +1,19 @@
+#include <cstdio>
+#include <algorithm>
+using namespace std;
+FILE *f=fopen("joc11.in","r");
+FILE *g=fopen("joc11.out","w");
+int d,i,N,K,a,b;
+int main()
+{
+    fscanf(f,"%d%d",&N,&K);
+    for(i=1;i<=N;i++)
+    {
+        fscanf(f,"%d %d",&a,&b);
+        d=max(d-min(a,d),0)+b;
+    }
+    fprintf(g,"%d",K-d);
+    fclose(f);
+    fclose(g);
+    return 0;
+}
