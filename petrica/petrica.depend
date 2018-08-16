@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1526486086 source:c:\c++\petrica\main.cpp
-	<cstdio>
-	<vector>
-	<algorithm>
-

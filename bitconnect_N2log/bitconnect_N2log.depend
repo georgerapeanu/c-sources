@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1528217440 source:c:\c++\bitconnect_n2log\main.cpp
-	<cstdio>
-	<vector>
-	<map>
-	<set>
-
