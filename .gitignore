@@ -1,0 +1,7 @@
+# Compiled source #
+###################
+*.exe
+*.o
+.layout
+.depend
+.save
