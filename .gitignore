@@ -12,6 +12,7 @@
 *.ok
 in
 out
+ok
 input
 output
 c-sources
