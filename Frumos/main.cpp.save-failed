@@ -1,0 +1,69 @@
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
+using namespace std;
+FILE *f = fopen("frumos.in","r");
+FILE *g = fopen("frumos.out","w");
+const int OFF = 30;
+int dp[105][105][60][30];
+const int MOD = 666013;
+int bonus[30];
+int N,K;
+void adun(int &a,int b){
+    a += b;
+    if(a >= MOD){
+        a -= MOD;
+    }
+}
+void scad(int &a,int b){
+    a -= b;
+    if(a < 0){
+        a += MOD;
+    }
+}
+int main(){
+    fscanf(f,"%d %d",&N,&K);
+    for(int i = 1;i <= 26 + OFF;i++){
+        if(i == OFF){
+            continue;
+        }
+        for(int j = 1;j <= 26;j++){
+            dp[2][1][i][j] = (j - (i - OFF) <= 26 && j - (i - OFF) > 0);
+        }
+    }
+    for(int i = 2;i <= N;i++){
+        for(int j = 1;j <= i;j++){
+            for(int k = 1;k <= 26 + OFF;k++){
+                if(k == OFF){
+                    continue;
+                }
+                for(int l = 1;l <= 26;l++){
+                    if(l + k - OFF > 0 && l + k - OFF <= 26){
+                        adun(dp[i + 1][j][k][l + k - OFF],dp[i][j][k][l]);
+                    }
+                    for(int nl = 1;nl <= 26;nl++){
+                        dp[i + 1][j + 1][OFF][nl] += (nl != l && nl != l + k - OFF) * dp[i][j][k][l];
+                    }
+                }
+            }
+            for(int nk = 1;nk <= 26 + OFF;nk++){
+                if(nk == OFF){
+                    continue;
+                }
+                for(int nl = 1;nl <= 26;nl++){
+                    adun(dp[i + 1][j][nk][nl],(nl - (nk - OFF) > 0 && nl - (nk - OFF) <= 26) * dp[i][j][OFF][nl]);
+                }
+            }
+        }
+    }
+    int rez = 0;
+    for(int i = 1;i <= 26 + OFF;i++){
+        for(int j = 1;j <= 26;j++){
+            adun(rez,dp[N][K][i][j]);
+        }
+    }
+    fprintf(g,"%d",rez);
+    fclose(f);
+    fclose(g);
+    return 0;
+}

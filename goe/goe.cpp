@@ -1,0 +1,123 @@
+#include<fstream>
+#include<iostream>
+using namespace std;
+ifstream f("goe.in");
+ofstream g("goe.out");
+int main()
+{
+    long u,y=0,s,h,d,k,t=0,p,n,i,uc,q,l=0,a,maxim=0;
+    f>>k>>p>>n;
+    d=k*10-1;
+    for(i=1;i<=d;i++)
+    {
+        l=0;
+        q=i;
+        while(q!=0)
+        {
+            uc=q%10;
+            q=q/10;
+            if(uc==2)
+                {l=1;}
+            if(uc==4)
+               {l=1;}
+            if(uc==5)
+                {l=1;}
+            if(uc==7)
+                {l=1;}
+
+        }
+        if(l==0)
+        {
+            if(i%10!=0)
+            {
+                t++;
+            }
+        }
+
+    }
+    g<<t<<"\n";
+    t=0;
+    for(i=1;i<=999999;i++)
+    {
+        q=i;
+        a=i;
+        l=0;
+        while(q!=0)
+        {
+            uc=q%10;
+            q=q/10;
+            if(uc==2)
+                {l=1;}
+            if(uc==4)
+               {l=1;}
+            if(uc==5)
+                {l=1;}
+            if(uc==7)
+                {l=1;}
+            if(uc==6)
+                {l=1;}
+
+             if(uc==9)
+                {l=1;}
+        }
+        if(l==0&&i%10!=0)
+        {
+            s=0;
+            while(a!=0)
+            {
+                uc=a%10;a=a/10;s=s*10+uc;
+            }
+                if(s==i)
+                {
+                    t++;
+                }
+            if(t==p&&y==0)
+            {
+                y++;
+                g<<s<<"\n";
+            }
+        }
+    }
+    d=n*10-1;
+    for(i=1;i<=d;i++)
+    {
+        l=0;
+        q=i;
+        a=i;
+        while(q!=0)
+        {
+            uc=q%10;
+            q=q/10;
+            if(uc==2)
+                {l=1;}
+            if(uc==4)
+               {l=1;}
+            if(uc==5)
+                {l=1;}
+            if(uc==7)
+                {l=1;}
+
+        }
+        if(l==0)
+        {
+            s=0;
+            while(a!=0)
+            {
+                uc=a%10;
+                u=uc;
+                a=a/10;
+                if(uc==6)
+                {
+                    u=9;
+                }
+                if(uc==9)
+                    u=6;
+                s=s*10+u;
+            }
+            if(s>maxim)
+                maxim=s;
+        }
+    }
+    g<<maxim;
+    return 0;
+}

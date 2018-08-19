@@ -1,0 +1,39 @@
+#include <cstdio>
+using namespace std;
+bool dp[10005][62];
+int N=10000;
+bool ok=1;
+int main()
+{
+    freopen("out","w",stdout);
+    dp[1][0]=1;
+    int nr=0;
+    int tmp=0;
+    for(int i=2;i<=N;i++)
+    {
+        nr=0;
+        int fst=-1,lst=-1;
+        for(int j=1;j<=30;j++)
+        {
+            for(int k=2;k<=9;k++)
+            {
+                if(i%k==0)
+                    dp[i][j]|=dp[i/k][j-1];
+            }
+            nr+=dp[i][j];
+            tmp+=dp[i][j];
+            if(dp[i][j]==1)
+            {
+                if(fst==-1)fst=j;
+                else if(lst==-1);
+                else ok=0;
+            }
+            else
+            {
+                if(fst!=-1&&lst==-1)lst=j;
+            }
+        }
+        printf("%d\n",nr);
+    }
+    return 0;
+}

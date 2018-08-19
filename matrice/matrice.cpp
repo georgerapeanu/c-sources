@@ -1,0 +1,120 @@
+#include<fstream>
+#include<cstring>
+using namespace std;
+ifstream f("matrice.in");
+ofstream g("matrice.out");
+long long n,m,a[3200][3200],i,j,temp,temp2,k;
+char c[10000];
+int main()
+{
+    f>>n>>m;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            f>>a[i][j];
+        }
+    }
+    f.getline(c,10000);
+    for(i=0;i<strlen(c);i++)
+    {
+        if(c[i]=='I')
+        {
+            if(c[i+1]=='O')
+            {
+                for(j=0;j<n/2;j++)
+                {
+                    for(k=0;k<m;k++)
+                    {
+                        temp=a[j][k];
+                        a[j][k]=a[n-j][m-k];
+                        a[n-j][m-k]=temp;
+                    }
+                }
+            }
+            else
+            {
+                for(j=0;j<m/2;j++)
+                {
+                    for(k=0;k<n;k++)
+                    {
+                        temp=a[j][k];
+                        a[j][k]=a[n-j][m-k];
+                        a[n-j][m-k]=temp;
+                    }
+                }
+            }
+        }
+        else
+        {
+            if(c[i+1]=='O')
+            {
+                        for(j=0;j<m;j++)
+                {
+                    for(k=0;k<n;k++)
+                    {
+                        if(j==0)
+                        {
+                        temp=a[1][k];
+                        a[1][k]=a[0][k];
+                        }
+                        else if(j!=0&&(j+1)!=n)
+                        {
+                            temp2=a[j+1][k];
+                            a[j+1][k]=a[j][k];
+                            a[j][k]=temp;
+                            temp=temp2;
+                        }
+                        else
+                            {
+                            temp2=a[0][k];
+                            a[0][k]=a[n-1][k];
+                            a[n-1][k]=temp;
+                            temp=temp2;
+                            }
+                }
+                }
+            }
+            else
+            {
+                for(j=0;j<m;j++)
+                {
+                    for(k=0;k<n;k++)
+                    {
+                        if(j==0)
+                        {
+                        temp=a[1][k];
+                        a[1][k]=a[0][k];
+                        }
+                        else if(j!=0&&(j+1)!=n)
+                        {
+                            temp2=a[j+1][k];
+                            a[j+1][k]=a[j][k];
+                            a[j][k]=temp;
+                            temp=temp2;
+                        }
+                        else
+                            {
+                            temp2=a[0][k];
+                            a[0][k]=a[n-1][k];
+                            a[n-1][k]=temp;
+                            temp=temp2;
+                            }
+                    }
+                }
+            }
+        }
+        i++;
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            g<<a[i][j]<<" ";
+        }
+        g<<"\n";
+    }
+    f.close();g.close();
+    return 0;
+}
+

@@ -1,0 +1,40 @@
+#include <cstdio>
+using namespace std;
+bool dp[10005][62];
+long long N=10000;
+bool ok=1;
+int most(long long i)
+{
+    if(i==1)return 0;
+    if(i%2==0)return 1+most(i/2);
+    if(i%3==0)return 1+most(i/3);
+    if(i%5==0)return 1+most(i/5);
+    if(i%7==0)return 1+most(i/7);
+    return -10000;
+}
+int least(long long i)
+{
+    if(i==1)return 0;
+    if(i%8==0)return 1+least(i/8);
+    if(i%9==0)return 1+least(i/9);
+    if(i%6==0)return 1+least(i/6);
+    if(i%4==0)return 1+least(i/4);
+    if(i%7==0)return 1+least(i/7);
+    if(i%5==0)return 1+least(i/5);
+    if(i%3==0)return 1+least(i/3);
+    if(i%2==0)return 1+least(i/2);
+    return 0;
+}
+int main()
+{
+    freopen("out","w",stdout);
+    int nr=0;
+    int tmp=0;
+    for(int i=2;i<=N;i++)
+    {
+        int dr=most(i),st=least(i);
+        if(dr>0)printf("%d\n",dr-st+1);
+        else printf("%d\n",0);
+    }
+    return 0;
+}
