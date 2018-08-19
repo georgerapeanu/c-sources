@@ -1,0 +1,120 @@
+
+#include <cstdio>
+#include <iostream>
+#include <algorithm>
+#include <cstring>
+using namespace std;
+FILE *f=fopen("camera.in","r");
+FILE *g=fopen("camera.out","w");
+struct punct
+{
+    double x,y;
+    punct()
+    {
+        ;
+    }
+    punct(double X,double Y)
+    {
+        x=X;
+        y=Y;
+    }
+    bool operator < (const punct &other)const
+    {
+        if(x!=other.x)return x<other.x;
+        return y<other.y;
+    }
+};
+struct dreapta
+{
+    double a,b,c;
+    dreapta()
+    {
+        ;
+    }
+    dreapta(punct P1,punct P2)
+    {
+        a=P2.y-P1.y;
+        b=P1.x-P2.x;
+        c=P2.x*P1.y-P1.x*P2.y;
+    }
+    punct n(dreapta &other)
+    {
+        punct rez;
+        rez.y=(c*other.a-other.c*a)/(other.b*a-b*other.a);
+        if(a)rez.x=(-c-b*rez.y)/a;
+        else rez.x=(-other.c-other.b*rez.y)/other.a;
+        return rez;
+    }
+};
+struct semiplan
+{
+    int sign;
+    dreapta d;
+    semiplan()
+    {
+        ;
+    }
+    semiplan(dreapta D,int sens)
+    {
+        sign=sens;
+        d=D;
+    }
+};
+double det(punct a,punct b,punct c)
+{
+    return a.x*b.y-a.x*c.y+b.x*c.y-b.x*a.y+c.x*a.y-c.x*b.y;
+}
+int N,M=4;
+punct V[2005];
+punct P[2005];
+punct tmp[2005];
+semiplan S[2005];
+int main()
+{
+    P[1]={-1e5,-1e5};
+    P[2]={1e5,-1e5};
+    P[3]={1e5,1e5};
+    P[4]={-1e5,1e5};
+    cin>>N;
+    for(int i=1;i<=N;i++)
+    {
+        cin>>V[i].x>>V[i].y;
+    }
+    double area=0;for(int i=1;i<=N;i++)area+=det({0,0},V[i],V[i%N+1]);
+    reverse(V+1,V+1+N);
+    for(int i=1;i<=N;i++)
+    {
+        if(i)S[i-1]=semiplan(dreapta(V[(i-2+N)%N+1],V[i]),-1);
+    }
+    S[N]=semiplan(dreapta(V[N],V[1]),-1);
+    for(int i=1;i<=N;i++)
+    {
+        int ind=0;
+        for(int j=1;j<=M;j++)
+        {
+            dreapta D(P[j],P[(j-2)%M+1]);
+            double a,b;
+            b=S[i].d.a*P[j].x+S[i].d.b*P[j].y+S[i].d.c;
+            a=S[i].d.a*P[(j-2+M)%M+1].x+S[i].d.b*P[(j-2+M)%M+1].y+S[i].d.c;
+            if(b*S[i].sign>0)
+            {
+                if(a*S[i].sign<=0)
+                {
+                    tmp[++ind]=D.n(S[i].d);
+                }
+                tmp[++ind]=P[j];
+            }
+            else
+            {
+                if(a*S[i].sign>0)
+                {
+                    tmp[++ind]=D.n(S[i].d);
+                }
+            }
+        }
+        M=ind;
+        memcpy(P,tmp,sizeof(tmp));
+        for(int i=1;i<=M;i++)cout<<P[i].x<<" "<<P[i].y<<"\n";cout<<"\n\n";
+    }
+    return 0;
+}

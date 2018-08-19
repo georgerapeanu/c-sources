@@ -1,0 +1,10 @@
+http://www.infoarena.ro/problema/sistem
+DP[i]-care grafuri cu prop din enunt sunt formate din i noduri
+DP[i]=DP[i-K]*C(i-1,k-1)*(k-1)!/2
+incercam sa desprindem k noduri si sa facem o noua configuratie
+luam toate configuratiile fara K noduri
+si inmultim cu cate putem face.mai intai selectam nodurile noii configuratii,C(i-1,k-1).nodul i il avem deja in configuratie,deci mai cautam k-1 noduri din i-1 noduri
+cum am obs,daca avem un lant de k noduri si il bagam pe al k+1-lea,atunci o sa fie care variante o fost la k*inca k var de inserare a noului nod
+deci inmultim cu 3*4*5*....*(k-1)=(K-1)!/2
+3<=K<=i,deoarece nu putem forma graf pt K<3
+DP[0]=1;

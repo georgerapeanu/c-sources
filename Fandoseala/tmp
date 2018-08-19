@@ -1,0 +1,66 @@
+#include <cstdio>
+#include <algorithm>
+using namespace std;
+FILE *f = fopen("fandoseala.in","r");
+FILE *g = fopen("fandoseala.out","w");
+int T;
+int N,K;
+int ord[305];
+pair<int,int> P[305];
+int dist(pair<int,int> a,pair<int,int> b){
+    return (a.first - b.first) * (a.first - b.first) + (a.second - b.second) * (a.second - b.second);
+}
+int det(pair<int,int> a,pair<int,int> b,pair<int,int> c){
+    return a.first * (b.second - c.second) + b.first * (c.second - a.second) + c.first * (a.second - b.second);
+}
+bool cmp(int a,int b){
+    return abs(det(P[1],P[2],P[a])) < abs(det(P[1],P[2],P[b]));
+}
+int main()
+{
+    fscanf(f,"%d",&T);
+    while(T--){
+        fscanf(f,"%d %d",&N,&K);
+        pair<int,int> lowest = {1 << 30,1 << 30};
+        int tmp = 1;
+        for(int i = 1;i <= N;i++){
+            ord[i] = i;
+            fscanf(f,"%d %d",&P[i].first,&P[i].second);
+            if(P[i] < lowest){
+                lowest = P[i];
+                tmp = i;
+            }
+        }
+        swap(ord[1],ord[tmp]);
+        swap(P[1],P[tmp]);
+        int wh = 2;
+        for(int i = 2;i <= N;i++){
+            if(det(P[1],P[wh],P[i]) < 0){
+                wh = i;
+            }
+        }
+        swap(ord[2],ord[wh]);
+        swap(P[2],P[wh]);
+        nth_element(ord + 3,ord + K,ord + N + 1,cmp);
+        if(ord[1] > ord[2]){
+            swap(ord[1],ord[2]);
+        }
+        if(ord[2] > ord[K]){
+            swap(ord[2],ord[K]);
+            if(ord[1] > ord[2]){
+                swap(ord[1],ord[2]);
+            }
+        }
+        if(ord[1] > ord[K]){
+            swap(ord[1],ord[K]);
+            if(ord[1] > ord[2]){
+                swap(ord[1],ord[2]);
+            }
+        }
+        fprintf(g,"%d %d %d\n",ord[1],ord[2],ord[K]);
+    }
+    fclose(f);
+    fclose(g);
+    return 0;
+}
+

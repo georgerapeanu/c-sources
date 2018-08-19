@@ -1,0 +1,61 @@
+#include <cstdio>
+#include <vector>
+#define MOD 1000000007
+using namespace std;
+int N;
+vector<int> G[100005];
+int d1[100005][2];
+int d2[100005][2];
+void dfs1(int nod,int tata)
+{
+    for(auto it:G[nod])
+    {
+        if(it!=tata)dfs1(it,nod);
+    }
+    int t1=G[nod].size()>(tata!=0),t2=1;
+    for(auto it:G[nod])
+    {
+        if(it==tata)continue;
+        t1=(1LL*d1[it][0]*t1)%MOD;
+        t2=(1LL*d1[it][1]*t2)%MOD;
+    }
+    d1[nod][0]=d1[nod][1]=(t1+t2)%MOD;
+}
+void dfs2(int nod,int tata)
+{
+    int t1=1,t2=1;
+    for(auto it:G[nod])
+    {
+        if(it==tata)continue;
+        t1=(1LL*d1[it][0]*t1)%MOD;
+        t2=(1LL*d1[it][1]*t2)%MOD;
+    }
+    d2[nod][0]=d2[nod][1]=(1LL*d2[tata][0]*t1+1LL*d2[tata][1]*t2)%MOD;
+    for(auto it:G[nod])
+    {
+        if(it!=tata)dfs2(it,nod);
+    }
+}
+int main()
+{
+    d2[0][0]=d2[0][1]=1;
+    scanf("%d",&N);
+    for(int i=2;i<=N;i++)
+    {
+        int x,y;
+        scanf("%d %d",&x,&y);
+        G[x].push_back(y);
+        G[y].push_back(x);
+    }
+    dfs1(1,0);
+    dfs2(1,0);
+    int rez=0;
+    for(int i=1;i<=N;i++)
+    {
+        rez+=d2[i][0];
+        if(rez>=MOD)rez-=MOD;
+    }
+    printf("%d",rez);
+    return 0;
+}
+

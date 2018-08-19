@@ -10,9 +10,9 @@
 *.cbp
 *.out
 *.ok
-ok
 in
 out
+ok
 input
 output
 c-sources

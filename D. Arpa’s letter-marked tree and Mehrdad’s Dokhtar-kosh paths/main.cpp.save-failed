@@ -1,0 +1,74 @@
+#include <cstdio>
+#include <algorithm>
+#include <map>
+
+using namespace std;
+
+int N;
+map<int,int> dp[500005];
+vector< pair<int,char> > G[500005];
+int modifier[500005];
+int ans[500005];
+
+void dfs(int nod){
+    dp[nod][0] = 0;
+    modifier[nod] = 0;
+
+    int bigChild = -1;
+    char c;
+
+    for(auto it:G[nod]){
+        dfs(it);
+        ans[nod] = max(ans[it],ans[nod]);
+        if(bigChild == -1 || dp[it.first].size() > dp[bigChild].size()){
+            bigChild = it.first;
+            c = it.second;
+        }
+    }
+
+    if(bigChild != -1){
+        swap(dp[nod],dp[bigChild]);
+        modifier[nod] = modifier[bigChild] ^ (1 << (c - 'a'));
+        dp[nod][modifier[nod]] = 0;
+    }
+
+    for(auto it:G[nod]){
+        if(it != bigChild){
+            for(auto it2:dp[it.first]){
+                int real_value = it2.second ^ modifier[it.first] ^ (1 << (it.second - 'a'));
+                for(int target_state = 1;target_state <= (1 << ('z' - 'a'));target_state *= 2){
+                    int target_value = real_value ^ modifier[nod] ^ target_state;
+                    ans[nod] = max(ans[nod],(dp[nod].count(target_value) ? dp[nod][target_value]:1) + it2.second);
+                }
+            }
+            int target_value = real_value ^ modifier[nod];
+            ans[nod] = max(ans[nod],(dp[nod].count(target_value) ? dp[nod][target_value]:1) + it2.second);
+
+            for(auto it2:dp[it.first]){
+                int real_value = it2.second ^ modifier[it.first] ^ (1 << (it.second - 'a'));
+                int target_value = real_value ^ modifier[nod];
+                dp[nod][target_value] = max(dp[nod][target_value],1 + it2.second);
+            }
+        }
+    }
+}
+
+int main(){
+
+    scanf("%d\n",&N);
+
+    for(int i = 2;i <= N;i++){
+        int p;
+        char c;
+        scanf("%d %c\n",&p,&c);
+        G[p].push_back({i,c});
+    }
+
+    dfs(1);
+
+    for(int i = 1;i <= N;i++){
+        printf("%d ",ans[i]);
+    }
+
+    return 0;
+}

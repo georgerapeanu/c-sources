@@ -1,0 +1,5 @@
+D[i][j]=in cate moduri pot pune i muncitori in j ture
+o sa iau un p,care inseamna ca cu exact p muncitori vreau sa fac o noua tura
+DP[i][j]=DP[i-p][j-1]*C(p,N)
+inmultim cu C(p,N) deoarece vrem sa ne selectam muncitorii
+si restul o sa fie dati in ordine celor care ar trebui sa fie(de ex avem tura 1:1,tura 2:2 si o combinare ar fi 2,ramanem cu muncitorii 1,3 si o sa fie tura 1:1,tura 2:3 )
