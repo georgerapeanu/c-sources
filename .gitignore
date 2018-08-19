@@ -9,7 +9,9 @@
 *.out
 *.cbp
 *.out
+*.ok
 in
+ok
 out
 input
 output
