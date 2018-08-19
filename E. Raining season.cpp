@@ -1,13 +1,14 @@
 #include <cstdio>
+#include <cassert>
 #include <algorithm>
 #include <vector>
+#include <queue>
 #include <set>
 
 using namespace std;
 
-const long long QUERY_NUM = 1LL << 62;
-const int NMAX = 200000;
-const int MMAX = 1000000;
+const int NMAX = 2e5;
+const int MMAX = 1e6;
 
 class LinearFunction{
 public:
@@ -23,7 +24,7 @@ public:
 		this->b = b;
 	}
 
-	LinearFunction operator + (const LinearFunction &other)const{
+    LinearFunction operator + (const LinearFunction &other)const{
 		return LinearFunction(a + other.a,b + other.b);
 	}
 
@@ -31,164 +32,146 @@ public:
 		return LinearFunction(a - other.a,b - other.b);
 	}
 
-	pair<double,double> sect(const LinearFunction &other)const{
-		double x = ((double)other.b - this->b) / (this->a - other.a);
-		double y = a * x + b;
-		return make_pair(x,y);
-	}
-
-	bool paralel(const LinearFunction &other)const{
-		return this->a == other.a;
-	}
-
-	long long operator () (int x)const{
+	long long operator () (long long x)const{
 		return a * x + b;
 	}
-};
 
-///ads comparator between functions and the posibility of queries
-///a query has a = QUERY_NUM and b is the query's searched x
-///in case of overflow change to double divisions in DedicatedLinearFunction comparator and isBad in DynamicConvexHull
-class DedicatedLinearFunction:public LinearFunction{
-
-public:
-
-	mutable set<DedicatedLinearFunction>::iterator nxt;
-	mutable bool isLast;
-
-	DedicatedLinearFunction(){
-		a = b = 0;
+	bool operator < (const LinearFunction &other)const{
+        if(a != other.a){
+            return a < other.a;
+        }
+        return b < other.b;
 	}
-
-	DedicatedLinearFunction(long long a,long long b){
-		this->a = a;
-		this->b = b;
-	}
-
-	bool isQuery()const{
-		return this->a == QUERY_NUM;
-	}
-
-	bool operator < (const DedicatedLinearFunction &other)const{
-		if(!this->isQuery() && !other.isQuery()){
-			if(this->a != other.a){
-                return this->a < other.a;
-			}
-			return this->b < other.b;
-		}
-
-		else if(this->isQuery()){
-			if(other.isLast){
-				return 1;
-			}
-
-			long long delta_b = other.nxt->b - other.b;
-			long long delta_a = other.a - other.nxt->a;
-
-			if(delta_a < 0){
-                delta_a *= -1;
-                delta_b *= -1;
-			}
-
-			return delta_b < this->b * delta_a;
-		}
-
-		else{
-			if(this->isLast){
-				return 0;
-			}
-
-			long long delta_b = this->nxt->b - this->b;
-			long long delta_a = this->a - this->nxt->a;
-
-			if(delta_a < 0){
-                delta_a *= -1;
-                delta_b *= -1;
-			}
-
-			return delta_b < other.b * delta_a;
-		}
-	}
-
 };
 
 ///max convex hull
-class DynamicConvexHull:public set<DedicatedLinearFunction>{
+class DynamicConvexHull{
 private:
-
-	bool isBad(set<DedicatedLinearFunction>::iterator it){
-		if((int)size() == 1){
-			return 0;
-		}
-		if(it == begin()){
-			set<DedicatedLinearFunction>::iterator nxt = next(it);
-			return it->b <= nxt->b;
-		}
-
-		if(next(it) == end()){
-			set<DedicatedLinearFunction>::iterator ant = prev(it);
-			return ant->a == it->a && ant->b >= it->b;
-		}
-
-		set<DedicatedLinearFunction>::iterator nxt = next(it);
-		set<DedicatedLinearFunction>::iterator ant = prev(it);
-
-		if(it->paralel(*ant) && ant->b >= it->b){
-			return 1;
-		}
-
-		if(it->paralel(*nxt) && nxt->b >= it->b){
-			return 1;
-		}
-
-		return (ant->b - it->b) * (nxt->a - it->a) >= (it->b - nxt->b) * (it->a - ant->a);
-	}
-
+    vector<LinearFunction> fun;
 public:
 
-	void add(DedicatedLinearFunction f){
-		set<DedicatedLinearFunction>::iterator it = insert(f).first;
-		if(isBad(it)){
-			erase(it);
-			return ;
-		}
+    DynamicConvexHull(){
+        fun.clear();
+    }
 
-
-		while(it != begin() && isBad(prev(it))){
-			erase(prev(it));
-		}
-
-		if(it != begin()){
-			prev(it)->nxt = it;
-			prev(it)->isLast = 0;
-		}
-
-		while(next(it) != end() && isBad(next(it))){
-			erase(next(it));
-		}
-
-		it->nxt = next(it);
-		it->isLast = (it->nxt == end());
-
+	void add(LinearFunction f){
+        fun.push_back(f);
 	}
+
+	void build(){
+        sort(fun.begin(),fun.end());
+        int ind = 0;
+        for(int i = 1; i < (int)fun.size();i++){
+            while(ind >= 0 && fun[ind].a == fun[i].a && fun[ind].b <= fun[i].b){
+                ind--;
+            }
+
+            while(ind >= 1 && (fun[ind].b - fun[i].b) * (fun[ind].a - fun[ind - 1].a) <= (fun[ind - 1].b - fun[ind].b) * (fun[i].a - fun[ind].a)){
+                ind--;
+            }
+
+            fun[++ind] = fun[i];
+        }
+        fun.resize(ind + 1);
+	}
+
 	long long operator () (long long x){
-	    set<DedicatedLinearFunction> :: iterator f = (lower_bound(DedicatedLinearFunction(QUERY_NUM,x)));
-		return (*f)(x);
+
+	    if(fun.empty()){
+            return 0;
+	    }
+
+        int st = 0,dr = (int)fun.size() - 1;
+        while(dr - st > 1){
+            int mid = (st + dr) / 2;
+            if(fun[mid].b - fun[mid + 1].b <= x * (fun[mid + 1].a - fun[mid].a)){
+                st = mid;
+            }
+            else{
+                dr = mid;
+            }
+        }
+
+        if(st + 1 < (int)fun.size() && fun[st].b - fun[st + 1].b <= x * (fun[st + 1].a - fun[st].a)){
+           st++;
+        }
+
+        return fun[st](x);
 	}
+
+    void merge_with(const DynamicConvexHull &other,bool rebuild){
+        for(auto it:other.fun){
+            this->add(it);
+        }
+        if(rebuild){
+            this->build();
+        }
+    }
+
+    int sz(){
+        return fun.size();
+    }
+
+    void compose(const DynamicConvexHull &other,bool rebuild){
+        DynamicConvexHull ans;
+        int i = 0;
+        int j = 0;
+        while(i < (int)fun.size() - 1 || j < (int)other.fun.size() - 1){
+            ans.add(fun[i] + other.fun[j]);
+
+            if(i == (int)fun.size() - 1){
+                j++;
+                continue;
+            }
+
+            if(j == (int)other.fun.size() - 1){
+                i++;
+                continue;
+            }
+
+            if((fun[i].b - fun[i + 1].b) * (other.fun[j + 1].a - other.fun[j].a) <= (other.fun[j].b - other.fun[j + 1].b) *  (fun[i + 1].a - fun[i].a)){
+                i++;
+            }
+            else{
+                j++;
+            }
+        }
+        ans.add(fun[i] + other.fun[j]);
+        if(rebuild){
+            ans.build();
+        }
+        *this = ans;
+    }
+
+    void compose(LinearFunction &a){
+        for(auto &it:fun){
+            it = it + a;
+        }
+    }
+
+    void write(int st,int dr){///[st,dr)
+        int id = 0;
+        for(int i = st;i < dr;i++){
+            while(id != (int)fun.size() - 1 && fun[id].b - fun[id + 1].b <= i * (fun[id + 1].a - fun[id].a)){
+                id++;
+            }
+            fprintf(stdout,"%I64d ",fun[id](i));
+        }
+    }
 };
 
 struct edge_t{
 	int to;
 	int id;
-	DedicatedLinearFunction cost;
-	
+	LinearFunction cost;
+
 	edge_t(){
 		to = 0;
-		cost = DedicatedLinearFunction();
+		cost = LinearFunction();
 		id = 0;
 	}
-	
-	edge_t(int to, DedicatedLinearFunction cost,int id){
+
+	edge_t(int to, LinearFunction cost,int id){
 		this->to = to;
 		this->cost = cost;
 		this->id = id;
@@ -196,11 +179,11 @@ struct edge_t{
 };
 
 int n,m;
-int weight[NMAX + 5];
-vector<edge_t> graph[NMAX + 5];
+int weight[2 * NMAX + 5];
+vector<edge_t> graph[2 * NMAX + 5];
 int last_edge_id;
-
-long long ans[MMAX + 5];
+LinearFunction edge_cost[2 * NMAX + 5];
+DynamicConvexHull ans;
 
 void predfs(int nod,int tata){
 
@@ -210,7 +193,7 @@ void predfs(int nod,int tata){
 			break;
 		}
 	}
-	
+
 	for(auto it:graph[nod]){
 		if(it.to != tata){
 			predfs(it.to,nod);
@@ -220,87 +203,187 @@ void predfs(int nod,int tata){
 }
 
 void remake_tree(int nod,int tata){
-	if((int)graph[nod].size() > 3){
-		swap(graph[nod],graph[++n]);
-		graph[nod].push_back(graph[n].back());///father
-		graph[n].pop_back();
-		graph[nod].push_back(graph[n].back());///random vertex
-		graph[n].pop_back();
-		graph[nod].push_back(edge_t(n,DedicatedLinearFunction(),++last_edge_id));
-		graph[n].push_back(edge_t(nod,DedicatedLinearFunction(),last_edge_id));
-	}
-	
-	for(auto it:graph[nod]){
-		if(it.to != tata){
-			remake_tree(it.to,nod);
-		}
-	}		
+    queue< pair<int,int> > nodes;
+    nodes.push({nod,tata});
+    while(!nodes.empty()){
+        int nod = nodes.front().first;
+        int tata = nodes.front().second;
+        nodes.pop();
+
+        if((int)graph[nod].size() > 2 + (tata == 0)){
+            graph[nod].swap(graph[++n]);
+            if(tata){
+                graph[nod].push_back(graph[n].back());///father
+                graph[n].pop_back();
+            }
+            graph[nod].push_back(graph[n].back());///random vertex
+            graph[n].pop_back();
+            graph[nod].push_back(edge_t(n,LinearFunction(),++last_edge_id));
+            graph[n].push_back(edge_t(nod,LinearFunction(),last_edge_id));
+            edge_cost[last_edge_id] = LinearFunction();
+            if(tata){
+                swap(graph[nod][(int)graph[nod].size() - 3],graph[nod].back());
+            }
+            for(auto it:graph[n]){
+                if(it.to != nod){
+                    graph[it.to].back().to = n;
+                }
+            }
+        }
+
+        for(auto it:graph[nod]){
+            if(it.to != tata){
+                nodes.push({it.to,nod});
+            }
+        }
+
+    }
 }
 
-bool viz[100005];
+bool viz[2 * NMAX + 5];
 
 void centroid_weight_dfs(int nod){
-	weight[nod] = 1;
+    weight[nod] = 0;
 	for(auto it:graph[nod]){
 		if(!viz[it.id]){
 			viz[it.id] = 1;
-			centroid_predfs(it.to,nod);
+			centroid_weight_dfs(it.to);
 			viz[it.id] = 0;
-			weight[nod] += weight[it.to];
+			weight[nod] += weight[it.to] + 1;
 		}
 	}
 }
 
-void get_hull(int nod,DynamicConvexHull &hull,DedicatedLinearFunction &start){
-	
+void get_hull(int nod,DynamicConvexHull &hull,LinearFunction &start){
+    int num = 0;
+	for(auto it:graph[nod]){
+		if(!viz[it.id]){
+            num++;
+			viz[it.id] = 1;
+			start.a += it.cost.a;
+			start.b += it.cost.b;
+
+			get_hull(it.to,hull,start);
+
+			viz[it.id] = 0;
+			start.a -= it.cost.a;
+			start.b -= it.cost.b;
+		}
+	}
+
+	if(!num){
+        hull.add(start);
+	}
+
 }
 
 void centroid_dfs(int nod){
-	
+
 	centroid_weight_dfs(nod);
-	
+
 	int sz = weight[nod];
+
+	if(sz == 0){
+        return ;
+	}
+
 	int centroid_u = nod,centroid_v = 0,id = 0;
 	for(auto it:graph[nod]){
-		if(!viz[it.id] && (!centroid_v || weight[centroid_v] < weight[it.to]){
+		if(!viz[it.id] && (!centroid_v || weight[centroid_v] < weight[it.to])){
 			centroid_v = it.to;
 			id = it.id;
 		}
 	}
-	
-	while(weight[centroid_w] > sz / 2){
+
+	while(weight[centroid_v] > sz / 2){
+        int best_continue = 0;
 		for(auto it:graph[centroid_v]){
-			if(!viz[it.id] && it.to != centroid_u && weight[it.to] > sz / 2){
-				centroid_u = centroid_v;
-				centroid_v = it.to;
+			if(!viz[it.id] && it.to != centroid_u && weight[it.to] >= weight[best_continue]){
+				best_continue = it.to;
 				id = it.id;
-				break;
-			}				
+			}
 		}
+        centroid_u = centroid_v;
+        centroid_v = best_continue;
 	}
-	
+
 	viz[id] = 1;
-	
-	if(sz != 2){
+
+	if(sz != 1){
 		centroid_dfs(centroid_u);
 		centroid_dfs(centroid_v);
 	}
-	
+
 	DynamicConvexHull fst,snd;
-	
-	get_hull(centroid_u,fst,DedicatedLinearFunction());
-	get_hull(centroid_v,snd,DedicatedLinearFunction());
-	
-	for(int t = 0;t < m;t++){
-		ans[t] = max(ans[t],fst(t) + snd(t));
-	}
-	
+
+	LinearFunction a(0,0),b(0,0);
+
+	get_hull(centroid_u,fst,a);
+	get_hull(centroid_v,snd,b);
+	fst.build();
+	snd.build();
+    fst.compose(edge_cost[id]);
+    fst.compose(snd,0);
+
+    ans.merge_with(fst,0);
+
 	viz[id] = 0;
 }
 
+/*const int LEN = 1e7;
+char buff[LEN];
+int ind = LEN - 1;
+
+int i32(){
+    int ans = 0;
+
+    while(buff[ind] < '0' || buff[ind] > '9'){
+        if(++ind >= LEN){
+            ind = 0;
+            fread(buff,1,LEN,stdin);
+        }
+    }
+
+    while('0' <= buff[ind] && buff[ind] <= '9'){
+        ans = ans * 10 + buff[ind] - '0';
+        if(++ind >= LEN){
+            ind = 0;
+            fread(buff,1,LEN,stdin);
+        }
+    }
+    return ans;
+}*/
+
+int i32(){
+    int ans;
+    fscanf(stdin,"%d",&ans);
+    return ans;
+}
+
 int main(){
-	
-	
-	
+
+	n = i32();
+	m = i32();
+
+	for(int i = 1;i < n;i++){
+		int u,v,a,b;
+		u = i32();v = i32();a = i32();b = i32();
+		graph[u].push_back(edge_t(v,LinearFunction(a,b),++last_edge_id));
+		graph[v].push_back(edge_t(u,LinearFunction(a,b),last_edge_id));
+		edge_cost[last_edge_id] = LinearFunction(a,b);
+	}
+
+	predfs(1,0);
+
+	remake_tree(1,0);
+
+    assert(n != 1e5);
+
+
+	centroid_dfs(1);
+
+	ans.build();
+
+	ans.write(0,m);
 	return 0;
 }
