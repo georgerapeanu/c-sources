@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1453541441 source:c:\c++\panouri\main.cpp
-	<fstream>
-	<algorithm>
-

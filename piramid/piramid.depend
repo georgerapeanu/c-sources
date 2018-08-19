@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1526308686 source:c:\c++\piramid\main.cpp
-	<cstdio>
-	<cstring>
-	<algorithm>
-

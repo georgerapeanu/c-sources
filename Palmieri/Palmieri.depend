@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1491925942 source:e:\c++\palmieri\main.cpp
-	<cstdio>
-	<algorithm>
-	<deque>
-

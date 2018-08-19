@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1488472107 source:e:\c++\maxmindiff\main.cpp
-	<cmath>
-	<cstdio>
-	<vector>
-	<iostream>
-	<algorithm>
-	<set>
-

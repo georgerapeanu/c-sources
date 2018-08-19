@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1485960363 source:e:\c++\lanterna\main.cpp
-	<cstdio>
-	<vector>
-	<queue>
-

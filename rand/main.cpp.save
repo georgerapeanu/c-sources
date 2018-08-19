@@ -1,7 +1,0 @@
-#include <iostream>
-using namespace std;
-int main()
-{
-    cout<<rand()%81<<"\n"
-    return 0;
-}

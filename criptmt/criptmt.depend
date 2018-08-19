@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1408807516 source:c:\c++\criptmt\main.cpp
-	<fstream>
-	<iostream>
-	<cstring>
-

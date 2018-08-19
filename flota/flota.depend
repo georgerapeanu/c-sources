@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1458217140 source:c:\c++\flota\main.cpp
-	<cstdio>
-	<iostream>
-	<algorithm>
-

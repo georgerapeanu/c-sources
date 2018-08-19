@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1503752877 source:e:\c++\pscpld\main.cpp
-	<cstdio>
-	<algorithm>
-	<cstring>
-

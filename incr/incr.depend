@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1432752547 source:c:\c++\incr\main.cpp
-	<fstream>
-	<cmath>
-

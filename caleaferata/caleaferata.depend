@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1189864956 source:c:\c++\caleaferata\main.cpp
-	<iostream>
-
-1422892047 source:c:\c++\caleaferata\caleaferata.cpp
-	<fstream>
-	<iostream>
-

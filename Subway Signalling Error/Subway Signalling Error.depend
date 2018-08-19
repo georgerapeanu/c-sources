@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1531056270 source:e:\c++\subway signalling error\main.cpp
-	<iostream>
-	<iomanip>
-	<deque>
-	<algorithm>
-	<vector>
-

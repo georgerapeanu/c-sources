@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1486667045 source:e:\c++\statiuni\main.cpp
-	<cstdio>
-	<vector>
-	<queue>
-	<bitset>
-

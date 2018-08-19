@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1485269486 source:e:\c++\immortal\main.cpp
-	<cstdio>
-	<cstdlib>
-	<fstream>
-

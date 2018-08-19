@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1459967219 source:c:\c++\scadere\main.cpp
-	<cstdio>
-	<cstring>
-	<cctype>
-	<stack>
-

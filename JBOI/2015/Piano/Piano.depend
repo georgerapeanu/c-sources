@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1500732189 source:e:\c++\jboi\2015\piano\main.cpp
-	<cstdio>
-	<algorithm>
-	<cstring>
-	<queue>
-

@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1483101260 source:e:\c++\arie\main.cpp
-	<cstdio>
-	<cmath>
-	<algorithm>
-	<vector>
-	<fstream>
-

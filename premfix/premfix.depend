@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1402131384 source:c:\c++\premfix\premfix.cpp
-	<fstream>
-	<algorithm>
-

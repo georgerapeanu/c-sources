@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1404893260 source:c:\c++\subsecvmax\main.cpp
-	<fstream>
-	<iostream>
-
-1448118844 source:c:\c++\subsecvmax\subsecvmax.cpp
-	<fstream>
-

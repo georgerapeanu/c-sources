@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1446889620 source:c:\c++\rj\main.cpp
-	<fstream>
-	<cstring>
-	<queue>
-

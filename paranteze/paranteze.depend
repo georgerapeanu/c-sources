@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1413017425 source:c:\c++\paranteze\parenteze.cpp
-	<fstream>
-
-1432904947 source:c:\c++\paranteze\main.cpp
-	<cstdio>
-

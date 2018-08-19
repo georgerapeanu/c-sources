@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1449398933 source:c:\c++\subit\main.cpp
-	<cstdio>
-	<cstring>
-	<vector>
-

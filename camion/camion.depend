@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1498991402 source:e:\c++\camion\main.cpp
-	<fstream>
-	<vector>
-	<algorithm>
-

@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1389363992 source:d:\c++\culegere\culegere.cpp
-	<fstream>
-	<iostream>
-
-1448990549 source:c:\c++\culegere\culegere.cpp
-	<fstream>
-	<cmath>
-

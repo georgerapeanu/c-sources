@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1409375666 source:c:\c++\figura\figura.cpp
-	<fstream>
-	<iostream>
-

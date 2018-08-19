@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1502392386 source:e:\c++\posters - election posters\main.cpp
-	<iostream>
-	<cstring>
-	<set>
-	<map>
-

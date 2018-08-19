@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1492673665 source:e:\c++\mz\main.cpp
-	<cstdio>
-	<iostream>
-	<vector>
-	<queue>
-

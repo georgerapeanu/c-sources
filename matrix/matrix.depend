@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1425577309 source:c:\c++\matrix\main.cpp
-	<fstream>
-	<cstring>
-

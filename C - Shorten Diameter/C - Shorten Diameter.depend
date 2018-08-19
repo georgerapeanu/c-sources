@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1498818920 source:e:\c++\jboi\2010\c - shorten diameter\main.cpp
-	<iostream>
-	<cstring>
-	<algorithm>
-	<vector>
-

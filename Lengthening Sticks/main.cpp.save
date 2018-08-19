@@ -1,9 +1,0 @@
-#include <fstream>
-
-using namespace std;
-long long var,a,b,c,la,lb,lc,l;
-int main()
-{
-    f>>a>>b>>c>>l;
-    var=(l+1)*(l+2)*(l+3);
-}

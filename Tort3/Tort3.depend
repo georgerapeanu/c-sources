@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1500389996 source:e:\c++\tort3\main.cpp
-	<cstdio>
-	<algorithm>
-	<queue>
-	<vector>
-	<bitset>
-

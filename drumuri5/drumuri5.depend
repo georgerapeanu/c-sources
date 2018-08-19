@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1507911817 source:e:\c++\drumuri5\main.cpp
-	<cstdio>
-	<vector>
-	<queue>
-	<algorithm>
-

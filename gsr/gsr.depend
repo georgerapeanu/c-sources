@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1470929600 source:e:\c++\gsr\main.cpp
-	<cstdio>
-	<iostream>
-	<bitset>
-	<cstring>
-

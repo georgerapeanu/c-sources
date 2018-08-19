@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1459451560 source:c:\c++\android\main.cpp
-	<cstdio>
-	<algorithm>
-
-1459448054 source:e:\c++\android\main.cpp
-	<cstdio>
-	<algorithm>
-

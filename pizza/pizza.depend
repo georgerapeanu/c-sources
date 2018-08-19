@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1422621177 source:c:\c++\pizza\main.cpp
-	<fstream>
-	<iostream>
-

@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1405698724 source:c:\c++\cladiri2\main.cpp
-	<fstream>
-	<stdlib.h>
-	<math.h>
-

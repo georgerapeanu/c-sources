@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1399208782 source:c:\c++\cifregm\main.cpp
-	<fstream>
-	<iostream>
-

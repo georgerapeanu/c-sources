@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1445676669 source:c:\c++\vector\main.cpp
-	<iostream>
-	<set>
-	<ctime>
-	<cstdio>
-	<algorithm>
-

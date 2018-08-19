@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1388663674 source:d:\c++\numere2\numere2.cpp
-	<iostream>
-
-1425315428 source:c:\c++\numere2\main.cpp
-	<fstream>
-	<iostream>
-

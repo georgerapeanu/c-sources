@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1501227450 source:e:\c++\tribes\main.cpp
-	<cstdio>
-	<set>
-	<vector>
-	<queue>
-

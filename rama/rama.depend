@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1455360630 source:c:\c++\rama\main.cpp
-	<cstdio>
-
-1487273080 source:e:\c++\rama\main.cpp
-	<cstdio>
-	<algorithm>
-

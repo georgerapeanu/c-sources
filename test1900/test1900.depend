@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1482655561 source:e:\c++\test1900\main.cpp
-	<stdio.h>
-	<cctype>
-	<algorithm>
-	<stack>
-	<vector>
-

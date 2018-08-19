@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1503763481 source:e:\c++\c - fountain walk\main.cpp
-	<iostream>
-	<vector>
-	<algorithm>
-	<iomanip>
-	<cmath>
-

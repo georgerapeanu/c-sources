@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1484157176 source:e:\c++\c. vladik and chat\main.cpp
-	<iostream>
-	<vector>
-	<unordered_map>
-	<unordered_set>
-	<cctype>
-	<stack>
-

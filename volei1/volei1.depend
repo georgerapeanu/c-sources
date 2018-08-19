@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1451909972 source:c:\c++\volei1\main.cpp
-	<cstdio>
-	<vector>
-	<algorithm>
-

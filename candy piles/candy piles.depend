@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1483373092 source:e:\c++\candy piles\main.cpp
-	<cmath>
-	<vector>
-	<iostream>
-	<algorithm>
-

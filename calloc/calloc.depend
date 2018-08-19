@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1463223579 source:c:\c++\calloc\main.cpp
-	<cstdio>
-	<cstring>
-

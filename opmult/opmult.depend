@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1428226586 source:c:\c++\opmult\main.cpp
-	<fstream>
-	<cstring>
-

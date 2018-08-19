@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1492108821 source:e:\c++\c. fox and names\main.cpp
-	<iostream>
-	<vector>
-	<queue>
-	<bitset>
-

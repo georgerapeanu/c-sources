@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1500019811 source:e:\c++\c. jury marks\main.cpp
-	<iostream>
-	<algorithm>
-	<cstring>
-	<map>
-	<set>
-

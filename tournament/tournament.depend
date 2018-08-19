@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1455291112 source:c:\c++\tournament\main.cpp
-	<iostream>
-	<map>
-	<algorithm>
-	<cstring>
-

@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1492084979 source:e:\c++\nogamenolife\main.cpp
-	<cstdio>
-	<vector>
-	<bitset>
-

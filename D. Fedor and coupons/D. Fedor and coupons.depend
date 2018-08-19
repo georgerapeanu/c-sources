@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1483716602 source:e:\c++\d. fedor and coupons\main.cpp
-	<iostream>
-	<algorithm>
-	<vector>
-	<set>
-	<unordered_set>
-

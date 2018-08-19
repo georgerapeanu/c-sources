@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1506850798 source:e:\c++\flux maxim\main.cpp
-	<cstdio>
-	<cstring>
-	<vector>
-	<algorithm>
-

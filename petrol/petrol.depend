@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1457264594 source:c:\c++\petrol\main.cpp
-	<cstdio>
-	<iostream>
-	<algorithm>
-

@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1520763168 source:e:\c++\zorogen\main.cpp
-	<cstdio>
-	<algorithm>
-	<vector>
-	<cstdlib>
-	<ctime>
-

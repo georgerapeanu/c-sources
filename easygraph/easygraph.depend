@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1464799459 source:c:\c++\easygraph\main.cpp
-	<cstdio>
-	<queue>
-	<vector>
-	<map>
-

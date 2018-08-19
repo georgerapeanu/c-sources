@@ -1,8 +1,0 @@
-#include <iostream>
-#include <io>
-using namespace std;
-int main()
-{
-    cout<<M_PI;
-    return 0;
-}

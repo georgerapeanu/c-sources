@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1500742467 source:e:\c++\jboi\2015\flood\main.cpp
-	<iostream>
-	<queue>
-	<cstring>
-

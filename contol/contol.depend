@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1408101884 source:c:\c++\contol\main.cpp
-	<math.h>
-	<fstream>
-	<algorithm>
-

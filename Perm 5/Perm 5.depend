@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1510414358 source:e:\c++\perm 5\main.cpp
-	<cstdio>
-	<vector>
-	<algorithm>
-	<cmath>
-

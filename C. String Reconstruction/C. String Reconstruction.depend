@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1499793355 source:e:\c++\c. string reconstruction\main.cpp
-	<iostream>
-	<vector>
-	<algorithm>
-	<set>
-

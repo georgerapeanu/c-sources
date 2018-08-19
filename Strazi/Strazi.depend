@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1509298823 source:e:\c++\strazi\main.cpp
-	<cstdio>
-	<cstring>
-	<algorithm>
-	<vector>
-

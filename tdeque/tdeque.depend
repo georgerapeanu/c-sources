@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1485686485 source:e:\c++\tdeque\main.cpp
-	<cstdio>
-	<iostream>
-	<deque>
-

@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1491496220 source:e:\c++\keyboard\main.cpp
-	<iostream>
-	<cmath>
-	<cstring>
-	<map>
-

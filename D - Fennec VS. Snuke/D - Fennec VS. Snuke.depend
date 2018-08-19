@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1500120970 source:e:\c++\d - fennec vs. snuke\main.cpp
-	<iostream>
-	<cstdlib>
-	<vector>
-	<queue>
-

@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1486494065 source:e:\c++\d. mahmoud and a dictionary\main.cpp
-	<iostream>
-	<unordered_set>
-	<unordered_map>
-

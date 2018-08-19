@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1494754821 source:e:\c++\elmer\main.cpp
-	<cstdlib>
-	<cstdio>
-	<vector>
-	<deque>
-	<algorithm>
-

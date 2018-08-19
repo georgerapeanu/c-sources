@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1520775213 source:e:\c++\delfin\main.cpp
-	<cstdio>
-	<cassert>
-	<algorithm>
-	<queue>
-

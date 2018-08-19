@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1440613761 source:c:\c++\tablita\main.cpp
-	<fstream>
-	<cmath>
-

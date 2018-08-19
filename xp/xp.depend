@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1490899328 source:e:\c++\xp\main.cpp
-	<cstdio>
-	<iostream>
-	<vector>
-	<cmath>
-

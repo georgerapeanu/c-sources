@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1500535023 source:e:\c++\jboi\2012\boxes\main.cpp
-	<cstdio>
-	<ctime>
-	<bitset>
-	<algorithm>
-

@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1517759203 source:e:\c++\d - forest\main.cpp
-	<iostream>
-	<cassert>
-	<algorithm>
-	<vector>
-	<queue>
-	<set>
-

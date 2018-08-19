@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1426782192 source:c:\c++\cartier1\main.cpp
-	<fstream>
-	<math.h>
-

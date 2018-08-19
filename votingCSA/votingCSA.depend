@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1509481801 source:e:\c++\votingcsa\main.cpp
-	<iostream>
-	<cstdio>
-	<algorithm>
-	<vector>
-

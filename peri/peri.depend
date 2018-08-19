@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1492665660 source:e:\c++\peri\main.cpp
-	<cstdio>
-	<cassert>
-	<algorithm>
-

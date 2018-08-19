@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1411884764 source:c:\c++\piramida\main.cpp
-	<fstream>
-	<cstring>
-

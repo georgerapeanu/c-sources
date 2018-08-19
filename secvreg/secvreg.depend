@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1483557944 source:e:\c++\secvreg\main.cpp
-	<cstdio>
-	<cassert>
-	<cstring>
-	<map>
-	<deque>
-

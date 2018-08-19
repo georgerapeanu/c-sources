@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1431101089 source:c:\c++\gray\main.cpp
-	<fstream>
-	<cmath>
-

@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1522083438 source:e:\c++\restrict\main.cpp
-	<cstdio>
-	<algorithm>
-	<vector>
-	<set>
-

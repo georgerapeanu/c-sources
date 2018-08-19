@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1460734759 source:c:\c++\char\main.cpp
-	<cstdio>
-	<set>
-	<algorithm>
-

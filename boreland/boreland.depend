@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1504518478 source:e:\c++\boreland\main.cpp
-	<cstdio>
-	<iostream>
-	<cstdlib>
-	<algorithm>
-

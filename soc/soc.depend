@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1502011307 source:e:\c++\soc\main.cpp
-	<cstdio>
-	<cstring>
-	<queue>
-	<map>
-

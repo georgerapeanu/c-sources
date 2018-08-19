@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1481481330 source:e:\c++\1427. sms\main.cpp
-	<iostream>
-	<algorithm>
-	<cctype>
-	<cstring>
-

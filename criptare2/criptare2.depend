@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1485687584 source:e:\c++\criptare2\main.cpp
-	<cstdio>
-	<iostream>
-	<unordered_map>
-	<unordered_set>
-

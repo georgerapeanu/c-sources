@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1486922970 source:e:\c++\pinex\main.cpp
-	<iostream>
-	<vector>
-	<bitset>
-	<cstdio>
-

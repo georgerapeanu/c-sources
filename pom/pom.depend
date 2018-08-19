@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1461063736 source:c:\c++\pom\main.cpp
-	<cstdio>
-	<cstring>
-	<cstdlib>
-	<stack>
-

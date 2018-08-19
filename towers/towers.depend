@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1500062797 source:e:\c++\towers\main.cpp
-	<cstdio>
-	<cassert>
-	<vector>
-	<algorithm>
-	<bitset>
-	<stack>
-

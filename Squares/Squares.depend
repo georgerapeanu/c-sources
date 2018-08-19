@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1504087168 source:e:\c++\squares\main.cpp
-	<iostream>
-	<cstdio>
-	<algorithm>
-	<cmath>
-	<vector>
-

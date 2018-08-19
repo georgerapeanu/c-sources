@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1530198782 source:e:\c++\problem g gambling guide\main.cpp
-	<cstdio>
-	<cstring>
-	<algorithm>
-	<vector>
-	<queue>
-

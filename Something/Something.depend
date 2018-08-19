@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1502445859 source:e:\c++\something\main.cpp
-	<cstdlib>
-	<cstdio>
-	<cstring>
-	<vector>
-	<queue>
-

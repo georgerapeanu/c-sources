@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1504617564 source:e:\c++\count gigel matricies\main.cpp
-	<cstdio>
-	<cstring>
-	<queue>
-	<algorithm>
-

@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1402496088 source:c:\c++\joc20\joc20.cpp
-	<fstream>
-	<iostream>
-

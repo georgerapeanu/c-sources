@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1447493090 source:c:\c++\parantezare\main.cpp
-	<cstdio>
-	<cstring>
-	<stack>
-	<map>
-

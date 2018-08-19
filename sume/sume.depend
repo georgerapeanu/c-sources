@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1497107859 source:e:\c++\sume\main.cpp
-	<cmath>
-	<algorithm>
-	<cstdio>
-	<unordered_map>
-

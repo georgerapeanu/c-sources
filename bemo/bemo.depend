@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1486125700 source:e:\c++\bemo\main.cpp
-	<cstdio>
-	<fstream>
-	<algorithm>
-

@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1493737658 source:e:\c++\spirala2\main.cpp
-	<cstdio>
-	<cstdlib>
-	<iostream>
-	<algorithm>
-

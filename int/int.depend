@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1446282029 source:c:\c++\int\main.cpp
-	<cstdio>
-	<cstdlib>
-	<iostream>
-

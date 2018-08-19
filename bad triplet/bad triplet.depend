@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1503839206 source:e:\c++\bad triplet\main.cpp
-	<iostream>
-	<cstdlib>
-	<set>
-	<vector>
-

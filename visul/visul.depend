@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1391449578 source:d:\c++\visul\visul.cpp
-	<fstream>
-	<math.h>
-
-1406386564 source:c:\c++\visul\visul.cpp
-	<fstream>
-	<iostream>
-

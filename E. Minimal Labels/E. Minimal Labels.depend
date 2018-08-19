@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1500276158 source:e:\c++\e. minimal labels\main.cpp
-	<iostream>
-	<bitset>
-	<vector>
-	<queue>
-

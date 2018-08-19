@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1491416536 source:e:\c++\auto\main.cpp
-	<iostream>
-	<fstream>
-	<vector>
-	<queue>
-

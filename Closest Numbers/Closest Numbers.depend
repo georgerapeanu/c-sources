@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1509044854 source:e:\c++\closest numbers\main.cpp
-	<iostream>
-	<vector>
-	<algorithm>
-	<cstring>
-

@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1485444612 source:e:\c++\movingcandies\main.cpp
-	<vector>
-	<iostream>
-	<vector>
-	<iostream>
-	<string>
-

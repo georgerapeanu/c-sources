@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1460801985 source:c:\c++\patrate3\main.cpp
-	<cstdio>
-	<fstream>
-	<algorithm>
-

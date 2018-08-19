@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1508950626 source:e:\c++\acronyms\main.cpp
-	<iostream>
-	<algorithm>
-	<vector>
-	<queue>
-

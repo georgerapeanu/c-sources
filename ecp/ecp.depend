@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1457202544 source:c:\c++\ecp\main.cpp
-	<cstdio>
-	<cstring>
-	<stack>
-

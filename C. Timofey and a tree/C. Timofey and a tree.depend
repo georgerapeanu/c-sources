@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1486047796 source:e:\c++\c. timofey and a tree\main.cpp
-	<iostream>
-	<cstdlib>
-	<vector>
-	<bitset>
-

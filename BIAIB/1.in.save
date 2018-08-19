@@ -1,4 +1,0 @@
- while(isalpha(c[j]))j++;
-            while(isdigit(c[j]))x=x*10+c[j]-'0';j++;
-            while(isdigit(c[j]))y=y*10+c[j]-'0';j++;
-            while(isdigit(c[j]))xx=xx*10+c[j]-'0';j++;

@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1498214136 source:e:\c++\drumuri\main.cpp
-	<cstdio>
-	<vector>
-	<set>
-	<bitset>
-

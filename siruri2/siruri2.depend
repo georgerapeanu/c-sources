@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1460307759 source:c:\c++\siruri2\main.cpp
-	<cstdio>
-	<cstring>
-	<algorithm>
-

@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1515849849 source:e:\c++\ro\main.cpp
-	<cstdio>
-	<cstring>
-	<iostream>
-	<algorithm>
-	<vector>
-	<stack>
-

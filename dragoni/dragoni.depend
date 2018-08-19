@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1474223611 source:e:\c++\dragoni\main.cpp
-	<cstdio>
-	<vector>
-	<queue>
-	<bitset>
-

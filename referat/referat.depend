@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1466330076 source:c:\c++\referat\main.cpp
-	<cstdio>
-
-1490539750 source:e:\c++\referat\main.cpp
-	<cstdio>
-	<iostream>
-	<vector>
-

@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1528830551 source:c:\c++\f. flow control\main.cpp
-	<cstdio>
-	<vector>
-	<algorithm>
-

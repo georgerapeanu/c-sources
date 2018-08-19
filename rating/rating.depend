@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1459275224 source:c:\c++\rating\main.cpp
-	<cstdio>
-	<iostream>
-	<algorithm>
-

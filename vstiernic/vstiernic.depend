@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1406541388 source:c:\c++\vstiernic\main.cpp
-	<fstream>
-	<iostream>
-

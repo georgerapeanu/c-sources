@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1489498404 source:e:\c++\pang bang\main.cpp
-	<cstdio>
-	<vector>
-	<bitset>
-	<cstring>
-

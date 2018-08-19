@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1498381485 source:e:\c++\diametru\main.cpp
-	<iostream>
-	<cstdio>
-	<queue>
-	<set>
-	<cstring>
-	<vector>
-

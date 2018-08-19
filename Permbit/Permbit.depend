@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1521370444 source:e:\c++\permbit\main.cpp
-	<fstream>
-	<algorithm>
-	<vector>
-

@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1504116806 source:e:\c++\admitere\main.cpp
-	<cstdio>
-	<algorithm>
-	<cstring>
-	<cassert>
-

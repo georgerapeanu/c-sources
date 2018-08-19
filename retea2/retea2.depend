@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1455210419 source:c:\c++\retea2\main.cpp
-	<fstream>
-	<cmath>
-	<algorithm>
-

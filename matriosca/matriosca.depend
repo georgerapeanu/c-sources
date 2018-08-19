@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1389199436 source:d:\c++\matriosca\matriosca.cpp
-	<fstream>
-	<iostream>
-
-1389203036 source:c:\c++\matriosca\matriosca.cpp
-	<fstream>
-	<iostream>
-

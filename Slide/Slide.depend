@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1502300482 source:e:\c++\slide\main.cpp
-	<iostream>
-	<cstdio>
-	<vector>
-	<algorithm>
-

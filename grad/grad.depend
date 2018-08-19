@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1411216993 source:c:\c++\grad\main.cpp
-	<iostream>
-	<fstream>
-	<cstring>
-

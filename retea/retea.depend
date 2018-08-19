@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1454249587 source:c:\c++\retea\main.cpp
-	<cstdio>
-	<algorithm>
-	<vector>
-

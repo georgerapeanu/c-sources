@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1460392851 source:c:\c++\patru\patru.cpp
-	<fstream>
-	<math.h>
-

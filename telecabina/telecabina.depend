@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1388145910 source:d:\c++\telecabina\telecabina.cpp
-	<fstream>
-	<iostream>
-

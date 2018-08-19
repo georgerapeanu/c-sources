@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1528466284 source:c:\c++\bitconnect\main.cpp
-	<cstdio>
-	<algorithm>
-	<vector>
-	<cstring>
-

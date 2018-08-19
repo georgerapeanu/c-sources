@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1422461353 source:c:\c++\dartz\main.cpp
-	<fstream>
-	<iostream>
-	<math.h>
-

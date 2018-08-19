@@ -1,8 +1,0 @@
-#include <fstream>
-using namespace std;
-ifstream f("")
-int main()
-{
-    cout << "Hello world!" << endl;
-    return 0;
-}

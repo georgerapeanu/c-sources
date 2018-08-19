@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1500481269 source:e:\c++\tree antichain\main.cpp
-	<iostream>
-	<vector>
-	<algorithm>
-

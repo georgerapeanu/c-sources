@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1509555328 source:e:\c++\matrix palindromes\main.cpp
-	<vector>
-	<iostream>
-	<cstring>
-	<algorithm>
-

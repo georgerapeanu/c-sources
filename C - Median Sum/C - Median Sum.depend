@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1515938877 source:e:\c++\c - median sum\main.cpp
-	<iostream>
-	<ctime>
-	<cstdlib>
-	<algorithm>
-

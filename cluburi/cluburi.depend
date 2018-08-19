@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1388734078 source:d:\c++\cluburi\cluburi.cpp
-	<fstream>
-	<iostream>
-	<algorithm>
-

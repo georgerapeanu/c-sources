@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1449385914 source:c:\c++\heapsort\main.cpp
-	<fstream>
-	<algorithm>
-

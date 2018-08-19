@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1450778645 source:c:\c++\taste\main.cpp
-	<cstdio>
-	<cmath>
-	<vector>
-

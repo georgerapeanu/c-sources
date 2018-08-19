@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1482503238 source:e:\c++\1410. crack\main.cpp
-	<cstdio>
-	<cctype>
-	<algorithm>
-	<cstring>
-

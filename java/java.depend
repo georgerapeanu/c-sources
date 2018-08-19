@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1490201578 source:e:\c++\java\main.cpp
-	<cstdio>
-	<cstring>
-	<vector>
-	<bitset>
-

@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1440610906 source:c:\c++\punctul\main.cpp
-	<fstream>
-	<algorithm>
-

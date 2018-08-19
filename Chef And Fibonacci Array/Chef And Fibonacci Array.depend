@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1502715886 source:e:\c++\chef and fibonacci array\main.cpp
-	<cstring>
-	<cassert>
-	<iostream>
-

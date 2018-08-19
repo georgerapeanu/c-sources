@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1502728536 source:e:\c++\base3\main.cpp
-	<fstream>
-	<iostream>
-	<cassert>
-	<queue>
-

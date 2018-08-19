@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1427297857 source:c:\c++\praslea\main.cpp
-	<fstream>
-	<stdlib.h>
-

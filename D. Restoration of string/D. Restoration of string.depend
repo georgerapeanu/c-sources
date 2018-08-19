@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1510592948 source:e:\c++\d. restoration of string\main.cpp
-	<iostream>
-	<algorithm>
-	<vector>
-	<cstdlib>
-

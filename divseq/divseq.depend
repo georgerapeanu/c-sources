@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1466331006 source:c:\c++\divseq\main.cpp
-	<cstdio>
-	<vector>
-
-1490457659 source:e:\c++\divseq\main.cpp
-	<cstdio>
-	<set>
-

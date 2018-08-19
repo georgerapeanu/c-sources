@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1470747504 source:e:\c++\tunel\main.cpp
-	<cstdio>
-	<iostream>
-	<map>
-	<cstring>
-

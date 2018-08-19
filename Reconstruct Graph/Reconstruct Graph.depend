@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1499881627 source:e:\c++\reconstruct graph\main.cpp
-	<iostream>
-	<algorithm>
-	<vector>
-	<queue>
-

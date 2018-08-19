@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1520181570 source:e:\c++\b. game with string\main.cpp
-	<iostream>
-	<iomanip>
-	<cstring>
-	<vector>
-	<map>
-

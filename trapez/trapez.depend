@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1454232605 source:c:\c++\trapez\main.cpp
-	<cstdio>
-	<iostream>
-	<algorithm>
-

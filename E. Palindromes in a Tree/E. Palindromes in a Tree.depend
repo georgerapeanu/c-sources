@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1516471722 source:e:\c++\e. palindromes in a tree\main.cpp
-	<cstdio>
-	<map>
-	<vector>
-	<algorithm>
-

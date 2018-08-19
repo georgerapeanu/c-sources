@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1506850834 source:e:\c++\ceoi2008 order\main.cpp
-	<vector>
-	<iostream>
-	<cstring>
-

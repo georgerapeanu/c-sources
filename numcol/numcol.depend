@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1485886490 source:e:\c++\numcol\main.cpp
-	<cstdio>
-	<unordered_set>
-

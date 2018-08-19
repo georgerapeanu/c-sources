@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1391186704 source:d:\c++\divider\divider.cpp
-	<fstream>
-	<algorithm>
-
-1448381857 source:c:\c++\divider\divider.cpp
-	<cstdio>
-	<set>
-

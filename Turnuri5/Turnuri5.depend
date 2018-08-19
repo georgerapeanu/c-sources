@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1522134732 source:e:\c++\turnuri5\main.cpp
-	<cstdio>
-	<cassert>
-	<algorithm>
-	<set>
-	<vector>
-

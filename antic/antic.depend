@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1469555842 source:e:\c++\antic\main.cpp
-	<cstdio>
-	<map>
-	<algorithm>
-	<cstring>
-

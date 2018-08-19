@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1424366886 source:c:\c++\treidiv\main.cpp
-	<fstream>
-	<math.h>
-

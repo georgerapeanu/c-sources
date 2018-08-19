@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1432458234 source:c:\c++\patrate\main.cpp
-	<fstream>
-	<math.h>
-	<iostream>
-

@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1506861930 source:e:\c++\invsort\main.cpp
-	<cstdio>
-	<iostream>
-	<algorithm>
-

@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1486656067 source:e:\c++\text4\main.cpp
-	<fstream>
-	<cstdio>
-	<vector>
-

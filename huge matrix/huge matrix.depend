@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1493824679 source:e:\c++\huge matrix\main.cpp
-	<iostream>
-	<cstdio>
-	<algorithm>
-	<vector>
-

@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1508861505 source:e:\c++\c. national property\main.cpp
-	<iostream>
-	<vector>
-	<queue>
-	<algorithm>
-

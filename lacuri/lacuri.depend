@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1447170427 source:c:\c++\lacuri\main.cpp
-	<cstdio>
-	<queue>
-	<cmath>
-	<vector>
-

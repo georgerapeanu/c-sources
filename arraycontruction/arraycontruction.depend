@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1486149123 source:e:\c++\arraycontruction\main.cpp
-	<cmath>
-	<cstdio>
-	<vector>
-	<stack>
-	<iostream>
-	<algorithm>
-

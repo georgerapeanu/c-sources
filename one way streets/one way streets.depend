@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1500554386 source:e:\c++\jboi\one way streets\main.cpp
-	<iostream>
-	<vector>
-	<map>
-	<set>
-

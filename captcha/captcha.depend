@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1487094923 source:e:\c++\captcha\main.cpp
-	<cstdio>
-	<iostream>
-	<queue>
-

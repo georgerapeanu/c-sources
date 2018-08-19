@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1486646827 source:e:\c++\nori\main.cpp
-	<cstdio>
-	<vector>
-	<algorithm>
-	<cmath>
-

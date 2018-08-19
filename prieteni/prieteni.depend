@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1450966421 source:c:\c++\prieteni\main.cpp
-	<cstdio>
-	<vEctor>
-	<cmath>
-	<algorithm>
-

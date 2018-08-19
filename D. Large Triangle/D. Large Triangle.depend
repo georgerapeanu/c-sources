@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1534068998 source:e:\c++\d. large triangle\main.cpp
-	<cstdio>
-	<cassert>
-	<iostream>
-	<algorithm>
-	<cmath>
-	<vector>
-

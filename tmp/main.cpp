@@ -1,175 +1,141 @@
-#include <cstdio>
-#include <cassert>
+///proof of concept source
 #include <iostream>
-#include <algorithm>
-#include <cmath>
+#include <cstring>
 #include <vector>
+#include <algorithm>
+#include <map>
 
 using namespace std;
 
-const double EPS = 1e-7;
+const int MOD = 1e9 + 7;
+int N;
 
-struct point_data_t{
-	int x,y;
+class Int{
+   private:
+   int val;
+   public:
+   Int(){
+      val = 0;
+   }
+   Int(int val){
+      this->val = val;
+   }
+   Int operator +(const Int &other)const{
+      Int ans(val + other.val);
+      if(ans.val >= MOD){
+         ans.val -= MOD;
+      }
+      return ans;
+   }
 
-	point_data_t(int x = 0,int y = 0){
-		this->x = x;
-		this->y = y;
-	}
+   Int operator *(const Int &other)const{
+      Int ans;
+      ans.val = 1LL * val * other.val % MOD;
+      return ans;
+   }
 
-	bool operator == (const point_data_t &other)const{
-		return x == other.x && y == other.y;
-	}
-
-	bool operator != (const point_data_t &other)const{
-		return x != other.x || y != other.y;
-	}
-
-	long long sqr_dist(const point_data_t &other)const{
-		return 1LL * (x - other.x) * (x - other.x) + (y - other.y) * (y - other.y);
-	}
-
-	double dist(const point_data_t &other)const{
-		return sqrt(this->sqr_dist(other));
-	}
-
-	pair<double,double> slope_intercept_form(const point_data_t &other)const{
-		double m = (y - other.y) / (x - other.x);
-		double b = y - x * m;
-		return make_pair(m,b);
-	}
+   int toInt(){
+      return val;
+   }
 };
 
-long long det(point_data_t &a, point_data_t &b, point_data_t &c){
-	return 1LL * a.x * (b.y - c.y) + 1LL * b.x * (c.y - a.y) + 1LL * c.x * (a.y - b.y);
+void operator += (Int &a,Int &b){
+   a = a + b;
+}
+
+Int dp[305][2];
+
+void fix(map<int,int> &tmp,pair<int,int> wut){
+    if(wut.first == 1){
+        tmp[2] += tmp[1] / 2;
+        tmp[1] &= 1;
+        if(tmp[1] == 0){
+            tmp.erase(1);
+        }
+        return;
+    }
+    if(wut.first == 2){
+        int a = (tmp.count(wut.first - 1) ? tmp[wut.first - 1] : 0);
+        int b = wut.second;
+        int t = min(a,b);
+        if(t){
+            tmp[3] += t;
+            tmp[1] -= t;
+            tmp[2] -= t;
+            if(tmp[1] == 0){
+                tmp.erase(1);
+            }
+            if(tmp[2] == 0){
+                tmp.erase(2);
+            }
+        }
+        return;
+    }
+    int a = (tmp.count(wut.first - 1) ? tmp[wut.first - 1] : 0);
+    int b = wut.second;
+    int t = min(a,b);
+    if(t){
+        tmp[wut.first + 1] += t;
+        tmp[wut.first] -= t;
+        tmp[wut.first - 1] -= t;
+        if(tmp[wut.first] == 0){
+            tmp.erase(wut.first);
+        }
+        if(tmp[wut.first] - 1 == 0){
+            tmp.erase(wut.first - 1);
+        }
+    }
+    if(tmp[wut.first] > 1){
+        t = tmp[wut.first] - 1;
+        tmp[wut.first - 2] += t;
+        tmp[wut.first - 1] += t;
+        tmp[wut.first] = 1;
+        fix(tmp,{wut.first - 1,tmp[wut.first - 1]});
+        fix(tmp,{wut.first - 2,tmp[wut.first - 2]});
+    }
+}
+
+vector<int> convert_state(vector<int> &a){
+    map<int,int> tmp;
+    for(auto it:a){
+        tmp[it]++;
+    }
+
+    for(auto it:tmp){
+        if(it.second){
+            fix(tmp,it);
+        }
+    }
+
+    vector<int> ans;
+    for(auto it:tmp){
+        ans.push_back(it.first - 1);
+    }
+
+    return ans;
 }
 
 int n;
-long long s;
+vector<int> v;
 
-vector<point_data_t> points;
-vector<int> points_order;
-vector< pair<int,int> > slopes;
-vector<int> pos;
+int main() {
+    cin >> n;
+    for(int i = 0;i < n;i++){
+       int x = 0;
+       cin >> x;
+       v.push_back(x);
+       vector<int> con = convert_state(v);
+       memset(dp,0,sizeof(dp));
 
-bool cmp(pair<int,int> slope,int a, int b){
-    if(points[slope.first].x > points[slope.second].x){
-        swap(slope.first,slope.second);
+       dp[0][0] = con[0] / 2;
+       dp[0][1] = 1;
+
+       for(int i = 1;i < (int)con.size();i++){
+            dp[i][1] = dp[i - 1][0] + dp[i - 1][1];
+            dp[i][0] = dp[i - 1][0] * Int((con[i] - con[i - 1]) / 2) + dp[i - 1][1] * Int((con[i] - con[i - 1] - 1) / 2);
+       }
+
+       cout << (dp[(int)con.size() - 1][0] + dp[(int)con.size() - 1][1]).toInt() << "\n";
     }
-	return det(points[slope.first],points[slope.second],points[a]) <= det(points[slope.first],points[slope.second],points[b]);
-}
-
-int main(){
-
-	fscanf(stdin,"%d %I64d",&n,&s);
-	points.resize(n);
-	points_order.resize(n);
-	pos.resize(n);
-
-	for(int i = 0; i < n; i++){
-		fscanf(stdin, "%d %d", &points[i].x, &points[i].y);
-		points_order[i] = i;
-	}
-
-	for(int i = 0; i < n; i++){
-		for(int j = i + 1; j < n; j++){
-			if(points[i].x != points[j].x && points[i].y != points[j].y){
-				slopes.push_back({i, j});
-				if(points[i].x > points[j].x){
-					swap(slopes.back().first,slopes.back().second);
-				}
-			}
-		}
-	}
-
-	sort(slopes.begin(),slopes.end(),[&](pair<int,int> a, pair<int,int> b){
-		return points[a.first].slope_intercept_form(points[a.second]) < points[b.first].slope_intercept_form(points[b.second]);
-	});
-
-	int k = 0;
-	for(int i = 1;i < (int)slopes.size();i++){
-		if(points[slopes[k].first].slope_intercept_form(points[slopes[k].second]).first != points[slopes[i].first].slope_intercept_form(points[slopes[i].second]).first){
-			slopes[++k] = slopes[i];
-		}
-	}
-
-	slopes.resize(k + 1);
-
-	if(slopes.empty()){
-		fputs("No\n",stdout);
-		return 0;
-	}
-
-	sort(points_order.begin(),points_order.end(),[&](int a, int b){
-		return det(points[slopes[0].first],points[slopes[0].second],points[a]) < det(points[slopes[0].first],points[slopes[0].second],points[b]);
-	});
-
-	for(int i = 0;i < n;i++){
-		pos[points_order[i]] = i;
-	}
-
-	s *= 2;
-
-	for(int i = 0;i < (int)slopes.size();i++){
-		cout << i << "\n";
-		for(int j = 0;j < n - 1;j++){
-			assert(cmp(slopes[i],points_order[j],points_order[j + 1]) == 1);
-		}
-		int fst = pos[slopes[i].first];
-		int snd = pos[slopes[i].second];
-		if(fst > snd){
-			swap(fst,snd);
-		}
-
-		int st,dr;
-
-		st = 0,dr = n;
-
-		while(dr - st > 1){
-			int mid = (st + dr) / 2;
-			if(det(points[points_order[fst]],points[points_order[snd]],points[points_order[mid]]) <= -s){
-				st = mid;
-			}
-			else{
-				dr = mid;
-			}
-		}
-
-		if(det(points[points_order[fst]],points[points_order[snd]],points[points_order[st]]) == -s){
-			fputs("Yes\n",stdout);
-			fprintf(stdout,"%d %d\n",points[points_order[fst]].x,points[points_order[fst]].y);
-			fprintf(stdout,"%d %d\n",points[points_order[snd]].x,points[points_order[snd]].y);
-			fprintf(stdout,"%d %d\n",points[points_order[st]].x,points[points_order[st]].y);
-			return 0;
-		}
-
-		st = 0,dr = n;
-
-		while(dr - st > 1){
-			int mid = (st + dr) / 2;
-			if(det(points[points_order[fst]],points[points_order[snd]],points[points_order[mid]]) <= s){
-				st = mid;
-			}
-			else{
-				dr = mid;
-			}
-		}
-
-		if(det(points[points_order[fst]],points[points_order[snd]],points[points_order[st]]) == s){
-			fputs("Yes\n",stdout);
-			fprintf(stdout,"%d %d\n",points[points_order[fst]].x,points[points_order[fst]].y);
-			fprintf(stdout,"%d %d\n",points[points_order[snd]].x,points[points_order[snd]].y);
-			fprintf(stdout,"%d %d\n",points[points_order[st]].x,points[points_order[st]].y);
-			return 0;
-		}
-
-		if(i == (int)slopes.size() - 1 || !cmp(slopes[i + 1],points_order[fst],points_order[snd])){
-			swap(points_order[fst],points_order[snd]);
-			swap(pos[slopes[i].first], pos[slopes[i].second]);
-		}
-	}
-
-
-	fputs("No\n",stdout);
-	return 0;
+    return 0;
 }

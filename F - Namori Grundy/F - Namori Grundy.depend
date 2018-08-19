@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1501334943 source:e:\c++\f - namori grundy\main.cpp
-	<iostream>
-	<queue>
-	<vector>
-	<cstring>
-	<vector>
-	<cstdlib>
-

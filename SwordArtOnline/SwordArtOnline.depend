@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1467016949 source:c:\c++\swordartonline\main.cpp
-	<cstdio>
-	<algorithm>
-	<queue>
-
