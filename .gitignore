@@ -7,4 +7,10 @@
 *.save
 *.in
 *.out
+*.cbp
+*.out
+in
+out
+input
+output
 c-sources
