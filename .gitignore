@@ -9,6 +9,8 @@
 *.out
 *.cbp
 *.out
+*.ok
+ok
 in
 out
 input
