@@ -1,0 +1,16 @@
+# Compiled source #
+###################
+*.exe
+*.o
+*.layout
+*.depend
+*.save
+*.in
+*.out
+*.cbp
+*.out
+in
+out
+input
+output
+c-sources
