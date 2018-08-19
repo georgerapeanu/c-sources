@@ -2,6 +2,9 @@
 ###################
 *.exe
 *.o
-.layout
-.depend
-.save
+*.layout
+*.depend
+*.save
+*.in
+*.out
+c-sources

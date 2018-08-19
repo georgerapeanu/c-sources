@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1526760008 source:c:\c++\tort\main.cpp
-	<cstdio>
-	<cstring>
-	<algorithm>
-

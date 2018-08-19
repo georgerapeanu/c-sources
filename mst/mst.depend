@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1526312057 source:c:\c++\mst\main.cpp
-	<cstdio>
-	<cstring>
-	<cmath>
-	<algorithm>
-	<vector>
-
