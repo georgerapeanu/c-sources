@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <iostream>
 #include <cassert>
 #include <algorithm>
 #include <vector>
@@ -184,60 +185,53 @@ vector<edge_t> graph[2 * NMAX + 5];
 int last_edge_id;
 LinearFunction edge_cost[2 * NMAX + 5];
 DynamicConvexHull ans;
-
-void predfs(int nod,int tata){
-
+void remake_tree(int nod,int real_father,int new_father){
+//	cout << nod << "\n";
+	vector<int> nodes;
+	vector<edge_t> sons;
+	edge_t fa = edge_t();
 	for(auto &it:graph[nod]){
-		if(it.to == tata){
-			swap(it,graph[nod].back());
-			break;
+		if(it.to == real_father){
+			it.to = new_father;
+			fa = it;
+		}
+		else{
+			sons.push_back(it);
 		}
 	}
 
-	for(auto it:graph[nod]){
-		if(it.to != tata){
-			predfs(it.to,nod);
+	if(sons.size() <= 2){
+		for(auto it:sons){
+			remake_tree(it.to,nod,nod);
+		}
+		return ;
+	}
+
+	for(int i = 0;i < (int)sons.size();i++){
+		nodes.push_back(++n);
+	}
+
+	if(fa.to){
+		graph[nodes[0]].push_back(fa);
+		for(auto &it:graph[fa.to]){
+            if(it.to == nod){
+                it.to = nodes[0];
+                break;
+            }
 		}
 	}
 
-}
+	for(int i = 1;i < (int)nodes.size();i++){
+		graph[nodes[i - 1]].push_back(edge_t(nodes[i],LinearFunction(),++last_edge_id));
+		graph[nodes[i]].push_back(edge_t(nodes[i - 1],LinearFunction(),last_edge_id));
+	}
+	for(int i = 0;i < (int)nodes.size();i++){
+		graph[nodes[i]].push_back(sons[i]);
+	}
 
-void remake_tree(int nod,int tata){
-    queue< pair<int,int> > nodes;
-    nodes.push({nod,tata});
-    while(!nodes.empty()){
-        int nod = nodes.front().first;
-        int tata = nodes.front().second;
-        nodes.pop();
-
-        if((int)graph[nod].size() > 2 + (tata == 0)){
-            graph[nod].swap(graph[++n]);
-            if(tata){
-                graph[nod].push_back(graph[n].back());///father
-                graph[n].pop_back();
-            }
-            graph[nod].push_back(graph[n].back());///random vertex
-            graph[n].pop_back();
-            graph[nod].push_back(edge_t(n,LinearFunction(),++last_edge_id));
-            graph[n].push_back(edge_t(nod,LinearFunction(),last_edge_id));
-            edge_cost[last_edge_id] = LinearFunction();
-            if(tata){
-                swap(graph[nod][(int)graph[nod].size() - 3],graph[nod].back());
-            }
-            for(auto it:graph[n]){
-                if(it.to != nod){
-                    graph[it.to].back().to = n;
-                }
-            }
-        }
-
-        for(auto it:graph[nod]){
-            if(it.to != tata){
-                nodes.push({it.to,nod});
-            }
-        }
-
-    }
+	for(int i = 0;i < (int)sons.size();i++){
+		remake_tree(sons[i].to,nod,nodes[i]);
+	}
 }
 
 bool viz[2 * NMAX + 5];
@@ -330,7 +324,7 @@ void centroid_dfs(int nod){
 	viz[id] = 0;
 }
 
-/*const int LEN = 1e7;
+const int LEN = 1e7;
 char buff[LEN];
 int ind = LEN - 1;
 
@@ -352,12 +346,9 @@ int i32(){
         }
     }
     return ans;
-}*/
-
-int i32(){
-    int ans;
-    fscanf(stdin,"%d",&ans);
-    return ans;
+	// int ans;
+	// fscanf(stdin,"%d",&ans);
+	// return ans;
 }
 
 int main(){
@@ -373,14 +364,20 @@ int main(){
 		edge_cost[last_edge_id] = LinearFunction(a,b);
 	}
 
-	predfs(1,0);
+	remake_tree(1,0,0);
+	
+	// for(int i = 1;i <= n;i++){
+		// cout << i << "\n";
+		// for(auto it:graph[i]){
+			// cout << it.to << " " << it.cost.a << " " << it.cost.b << " " << it.id << "\n"; 
+		// }
+		// cout << "\n\n\n\n";
+	// }
 
-	remake_tree(1,0);
-
-    assert(n != 1e5);
+    // assert(m != 1e3);
 
 
-	centroid_dfs(1);
+	centroid_dfs(n);
 
 	ans.build();
 

@@ -1,141 +1,378 @@
-///proof of concept source
+#include <cstdio>
 #include <iostream>
-#include <cstring>
-#include <vector>
+#include <cassert>
 #include <algorithm>
-#include <map>
+#include <vector>
+#include <queue>
+#include <set>
 
 using namespace std;
 
-const int MOD = 1e9 + 7;
-int N;
+const int NMAX = 2e5;
+const int MMAX = 1e6;
 
-class Int{
-   private:
-   int val;
-   public:
-   Int(){
-      val = 0;
-   }
-   Int(int val){
-      this->val = val;
-   }
-   Int operator +(const Int &other)const{
-      Int ans(val + other.val);
-      if(ans.val >= MOD){
-         ans.val -= MOD;
-      }
-      return ans;
-   }
+class LinearFunction{
+public:
+	long long a;
+	long long b;
 
-   Int operator *(const Int &other)const{
-      Int ans;
-      ans.val = 1LL * val * other.val % MOD;
-      return ans;
-   }
+	LinearFunction(){
+		a = b = 0;
+	}
 
-   int toInt(){
-      return val;
-   }
+	LinearFunction(long long a, long long b){
+		this->a = a;
+		this->b = b;
+	}
+
+    LinearFunction operator + (const LinearFunction &other)const{
+		return LinearFunction(a + other.a,b + other.b);
+	}
+
+	LinearFunction operator - (const LinearFunction &other)const{
+		return LinearFunction(a - other.a,b - other.b);
+	}
+
+	long long operator () (long long x)const{
+		return a * x + b;
+	}
+
+	bool operator < (const LinearFunction &other)const{
+        if(a != other.a){
+            return a < other.a;
+        }
+        return b < other.b;
+	}
 };
 
-void operator += (Int &a,Int &b){
-   a = a + b;
-}
+///max convex hull
+class DynamicConvexHull{
+private:
+    vector<LinearFunction> fun;
+public:
 
-Int dp[305][2];
-
-void fix(map<int,int> &tmp,pair<int,int> wut){
-    if(wut.first == 1){
-        tmp[2] += tmp[1] / 2;
-        tmp[1] &= 1;
-        if(tmp[1] == 0){
-            tmp.erase(1);
-        }
-        return;
+    DynamicConvexHull(){
+        fun.clear();
     }
-    if(wut.first == 2){
-        int a = (tmp.count(wut.first - 1) ? tmp[wut.first - 1] : 0);
-        int b = wut.second;
-        int t = min(a,b);
-        if(t){
-            tmp[3] += t;
-            tmp[1] -= t;
-            tmp[2] -= t;
-            if(tmp[1] == 0){
-                tmp.erase(1);
+
+	void add(LinearFunction f){
+        fun.push_back(f);
+	}
+
+	void build(){
+        sort(fun.begin(),fun.end());
+        int ind = 0;
+        for(int i = 1; i < (int)fun.size();i++){
+            while(ind >= 0 && fun[ind].a == fun[i].a && fun[ind].b <= fun[i].b){
+                ind--;
             }
-            if(tmp[2] == 0){
-                tmp.erase(2);
+
+            while(ind >= 1 && (fun[ind].b - fun[i].b) * (fun[ind].a - fun[ind - 1].a) <= (fun[ind - 1].b - fun[ind].b) * (fun[i].a - fun[ind].a)){
+                ind--;
+            }
+
+            fun[++ind] = fun[i];
+        }
+        fun.resize(ind + 1);
+	}
+
+	long long operator () (long long x){
+
+	    if(fun.empty()){
+            return 0;
+	    }
+
+        int st = 0,dr = (int)fun.size() - 1;
+        while(dr - st > 1){
+            int mid = (st + dr) / 2;
+            if(fun[mid].b - fun[mid + 1].b <= x * (fun[mid + 1].a - fun[mid].a)){
+                st = mid;
+            }
+            else{
+                dr = mid;
             }
         }
-        return;
-    }
-    int a = (tmp.count(wut.first - 1) ? tmp[wut.first - 1] : 0);
-    int b = wut.second;
-    int t = min(a,b);
-    if(t){
-        tmp[wut.first + 1] += t;
-        tmp[wut.first] -= t;
-        tmp[wut.first - 1] -= t;
-        if(tmp[wut.first] == 0){
-            tmp.erase(wut.first);
+
+        if(st + 1 < (int)fun.size() && fun[st].b - fun[st + 1].b <= x * (fun[st + 1].a - fun[st].a)){
+           st++;
         }
-        if(tmp[wut.first] - 1 == 0){
-            tmp.erase(wut.first - 1);
+
+        return fun[st](x);
+	}
+
+    void merge_with(const DynamicConvexHull &other,bool rebuild){
+        for(auto it:other.fun){
+            this->add(it);
+        }
+        if(rebuild){
+            this->build();
         }
     }
-    if(tmp[wut.first] > 1){
-        t = tmp[wut.first] - 1;
-        tmp[wut.first - 2] += t;
-        tmp[wut.first - 1] += t;
-        tmp[wut.first] = 1;
-        fix(tmp,{wut.first - 1,tmp[wut.first - 1]});
-        fix(tmp,{wut.first - 2,tmp[wut.first - 2]});
+
+    int sz(){
+        return fun.size();
     }
+
+    void compose(const DynamicConvexHull &other,bool rebuild){
+        DynamicConvexHull ans;
+        int i = 0;
+        int j = 0;
+        while(i < (int)fun.size() - 1 || j < (int)other.fun.size() - 1){
+            ans.add(fun[i] + other.fun[j]);
+
+            if(i == (int)fun.size() - 1){
+                j++;
+                continue;
+            }
+
+            if(j == (int)other.fun.size() - 1){
+                i++;
+                continue;
+            }
+
+            if((fun[i].b - fun[i + 1].b) * (other.fun[j + 1].a - other.fun[j].a) <= (other.fun[j].b - other.fun[j + 1].b) *  (fun[i + 1].a - fun[i].a)){
+                i++;
+            }
+            else{
+                j++;
+            }
+        }
+        ans.add(fun[i] + other.fun[j]);
+        if(rebuild){
+            ans.build();
+        }
+        *this = ans;
+    }
+
+    void compose(LinearFunction &a){
+        for(auto &it:fun){
+            it = it + a;
+        }
+    }
+
+    void write(int st,int dr){///[st,dr)
+        int id = 0;
+        for(int i = st;i < dr;i++){
+            while(id != (int)fun.size() - 1 && fun[id].b - fun[id + 1].b <= i * (fun[id + 1].a - fun[id].a)){
+                id++;
+            }
+            fprintf(stdout,"%I64d ",fun[id](i));
+        }
+    }
+};
+
+struct edge_t{
+	int to;
+	int id;
+	LinearFunction cost;
+
+	edge_t(){
+		to = 0;
+		cost = LinearFunction();
+		id = 0;
+	}
+
+	edge_t(int to, LinearFunction cost,int id){
+		this->to = to;
+		this->cost = cost;
+		this->id = id;
+	}
+};
+
+int n,m;
+int weight[2 * NMAX + 5];
+vector<edge_t> graph[2 * NMAX + 5];
+int last_edge_id;
+LinearFunction edge_cost[2 * NMAX + 5];
+DynamicConvexHull ans;
+void remake_tree(int nod,int real_father,int new_father){
+//	cout << nod << "\n";
+	vector<int> nodes;
+	vector<edge_t> sons;
+	edge_t fa = edge_t();
+	for(auto &it:graph[nod]){
+		if(it.to == real_father){
+			it.to = new_father;
+			fa = it;
+		}
+		else{
+			sons.push_back(it);
+		}
+	}
+
+	if(sons.size() <= 2){
+		for(auto it:sons){
+			remake_tree(it.to,nod,nod);
+		}
+		return ;
+	}
+
+	for(int i = 0;i < (int)sons.size();i++){
+		nodes.push_back(++n);
+	}
+
+	if(fa.to){
+		graph[nodes[0]].push_back(fa);
+		for(auto &it:graph[fa.to]){
+            if(it.to == nod){
+                it.to = nodes[0];
+                break;
+            }
+		}
+	}
+
+	for(int i = 1;i < (int)nodes.size();i++){
+		graph[nodes[i - 1]].push_back(edge_t(nodes[i],LinearFunction(),0));
+		graph[nodes[i]].push_back(edge_t(nodes[i - 1],LinearFunction(),0));
+	}
+	for(int i = 0;i < (int)nodes.size();i++){
+		graph[nodes[i]].push_back(sons[i]);
+	}
+
+	for(int i = 0;i < (int)sons.size();i++){
+		remake_tree(sons[i].to,nod,nodes[i]);
+	}
 }
 
-vector<int> convert_state(vector<int> &a){
-    map<int,int> tmp;
-    for(auto it:a){
-        tmp[it]++;
-    }
+bool viz[2 * NMAX + 5];
 
-    for(auto it:tmp){
-        if(it.second){
-            fix(tmp,it);
-        }
-    }
-
-    vector<int> ans;
-    for(auto it:tmp){
-        ans.push_back(it.first - 1);
-    }
-
-    return ans;
+void centroid_weight_dfs(int nod){
+    weight[nod] = 0;
+	for(auto it:graph[nod]){
+		if(!viz[it.id]){
+			viz[it.id] = 1;
+			centroid_weight_dfs(it.to);
+			viz[it.id] = 0;
+			weight[nod] += weight[it.to] + 1;
+		}
+	}
 }
 
-int n;
-vector<int> v;
+void get_hull(int nod,DynamicConvexHull &hull,LinearFunction &start){
+    int num = 0;
+	for(auto it:graph[nod]){
+		if(!viz[it.id]){
+            num++;
+			viz[it.id] = 1;
+			start.a += it.cost.a;
+			start.b += it.cost.b;
 
-int main() {
-    cin >> n;
-    for(int i = 0;i < n;i++){
-       int x = 0;
-       cin >> x;
-       v.push_back(x);
-       vector<int> con = convert_state(v);
-       memset(dp,0,sizeof(dp));
+			get_hull(it.to,hull,start);
 
-       dp[0][0] = con[0] / 2;
-       dp[0][1] = 1;
+			viz[it.id] = 0;
+			start.a -= it.cost.a;
+			start.b -= it.cost.b;
+		}
+	}
 
-       for(int i = 1;i < (int)con.size();i++){
-            dp[i][1] = dp[i - 1][0] + dp[i - 1][1];
-            dp[i][0] = dp[i - 1][0] * Int((con[i] - con[i - 1]) / 2) + dp[i - 1][1] * Int((con[i] - con[i - 1] - 1) / 2);
-       }
+	if(!num){
+        hull.add(start);
+	}
 
-       cout << (dp[(int)con.size() - 1][0] + dp[(int)con.size() - 1][1]).toInt() << "\n";
-    }
-    return 0;
+}
+
+void centroid_dfs(int nod){
+
+	centroid_weight_dfs(nod);
+
+	int sz = weight[nod];
+
+	if(sz == 0){
+        return ;
+	}
+
+	int centroid_u = nod,centroid_v = 0,id = 0;
+	for(auto it:graph[nod]){
+		if(!viz[it.id] && (!centroid_v || weight[centroid_v] < weight[it.to])){
+			centroid_v = it.to;
+			id = it.id;
+		}
+	}
+
+	while(weight[centroid_v] > sz / 2){
+        int best_continue = 0;
+		for(auto it:graph[centroid_v]){
+			if(!viz[it.id] && it.to != centroid_u && weight[it.to] >= weight[best_continue]){
+				best_continue = it.to;
+				id = it.id;
+			}
+		}
+        centroid_u = centroid_v;
+        centroid_v = best_continue;
+	}
+
+	viz[id] = 1;
+
+	if(sz != 1){
+		centroid_dfs(centroid_u);
+		centroid_dfs(centroid_v);
+	}
+
+	DynamicConvexHull fst,snd;
+
+	LinearFunction a(0,0),b(0,0);
+
+	get_hull(centroid_u,fst,a);
+	get_hull(centroid_v,snd,b);
+	fst.build();
+	snd.build();
+    fst.compose(edge_cost[id]);
+    fst.compose(snd,0);
+
+    ans.merge_with(fst,0);
+
+	viz[id] = 0;
+}
+
+const int LEN = 1e7;
+char buff[LEN];
+int ind = LEN - 1;
+
+int i32(){
+    // int ans = 0;
+
+    // while(buff[ind] < '0' || buff[ind] > '9'){
+        // if(++ind >= LEN){
+            // ind = 0;
+            // fread(buff,1,LEN,stdin);
+        // }
+    // }
+
+    // while('0' <= buff[ind] && buff[ind] <= '9'){
+        // ans = ans * 10 + buff[ind] - '0';
+        // if(++ind >= LEN){
+            // ind = 0;
+            // fread(buff,1,LEN,stdin);
+        // }
+    // }
+    // return ans;
+	int ans;
+	fscanf(stdin,"%d",&ans);
+	return ans;
+}
+
+int main(){
+
+	n = i32();
+	m = i32();
+
+	for(int i = 1;i < n;i++){
+		int u,v,a,b;
+		u = i32();v = i32();a = i32();b = i32();
+		graph[u].push_back(edge_t(v,LinearFunction(a,b),++last_edge_id));
+		graph[v].push_back(edge_t(u,LinearFunction(a,b),last_edge_id));
+		edge_cost[last_edge_id] = LinearFunction(a,b);
+	}
+
+	remake_tree(1,0,0);
+
+    assert(m != 1e3);
+
+
+	centroid_dfs(n);
+
+	ans.build();
+
+	ans.write(0,m);
+	return 0;
 }
