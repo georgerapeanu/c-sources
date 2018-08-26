@@ -1,0 +1,37 @@
+#include <cstdio>
+#include <algorithm>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+FILE *g = fopen("copii3.in","w");
+
+const int NMAX = 30;
+const int QMAX = 100;
+
+int main(){
+	
+	srand(time(NULL));
+
+
+	int n = rand() % NMAX;
+	int q = rand() % QMAX;
+
+	fprintf(g,"%d %d\n",n,q);
+
+	for(int i = 1;i <= n;i++){
+		fprintf(g,"%d",rand() & 1);
+	}
+	fprintf(g,"\n");
+	while(q--){
+		int st = rand() % n + 1,dr = rand() % n + 1;
+		if(st > dr){
+			swap(st,dr);
+		}
+		fprintf(g,"%d %d\n",st,dr);
+	}
+
+
+	return 0;
+}
