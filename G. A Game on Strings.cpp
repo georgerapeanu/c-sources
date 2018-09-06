@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cassert>
 #include <vector>
 #include <unordered_map>
 #include <algorithm>
@@ -18,7 +17,7 @@ vector<int> partial_xor[26];
 
 int solve_slow(int l,int r){
 
-	vector<int> xors;
+	int xors = 0;
 
 	for(int c = 0;c < 26;c++){
 		if(pos[c].empty()){
@@ -49,27 +48,22 @@ int solve_slow(int l,int r){
 		}
 
 		for(int i = fstpos;i < lstpos;i++){
-			assert(partial_xor[c][i] != -1);
 			xo ^= partial_xor[c][i];
 		}
 
-		xors.push_back(xo);
+		xors |= 1 << xo;
 	}
 
-	int ans = 0;
-
-	sort(xors.begin(),xors.end());
-
-	for(auto it:xors){
-		ans += (it == ans);
+	for(int i = 0;;i++){
+		if(!((xors >> i) & 1)){
+			return i;
+		}
 	}
-
-	return ans;
 }
 
 int solve_fast(int l,int r){
 
-	vector<int> xors;
+	int xors = 0;
 
 	for(int c = 0;c < 26;c++){
 		if(pos[c].empty()){
@@ -101,18 +95,14 @@ int solve_fast(int l,int r){
 
 		xo ^= (lstpos ? partial_xor[c][lstpos - 1] : 0) ^ (fstpos ? partial_xor[c][fstpos - 1] : 0);
 
-		xors.push_back(xo);
+		xors |= 1 << xo;
 	}
 
-	int ans = 0;
-
-	sort(xors.begin(),xors.end());
-
-	for(auto it:xors){
-		ans += (it == ans);
+	for(int i = 0;;i++){
+		if(!((xors >> i) & 1)){
+			return i;
+		}
 	}
-
-	return ans;
 }
 int main(){
 
@@ -173,7 +163,7 @@ int main(){
 		pair<int,int> a = make_pair(pos[c.first][c.second] + 1,pos[c.first][c.second + 1] - 1);
 		pair<int,int> b = make_pair(pos[d.first][d.second] + 1,pos[d.first][d.second + 1] - 1);
 		if(a.second - a.first != b.first - b.second){
-			return a.second - a.first < b.first - b.second;
+			return a.second - a.first < b.second - b.first;
 		}
 		return a < b;
 	});
@@ -185,8 +175,6 @@ int main(){
 
 	for(int c = 0;c < 26;c++){
 		for(int i = 1;i < (int)partial_xor[c].size();i++){
-			assert(partial_xor[c][i - 1] != -1);
-			assert(partial_xor[c][i] != -1);
 			partial_xor[c][i] ^= partial_xor[c][i - 1];
 		}
 	}
