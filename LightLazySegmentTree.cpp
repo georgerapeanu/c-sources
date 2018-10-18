@@ -9,10 +9,12 @@ FILE *f=fopen("arbint.in","r");
 FILE *g=fopen("arbint.out","w");
  
 ///tested on https://infoarena.ro/problema/arbint
+///tested on https://infoarena.ro/problema/parcele
 ///0-indexed;
 class SegmentTree{
 private:
- 
+
+	bool enforce_throws;
 	int n;
 	vector<int> aint;
 	vector<int> lazy;
@@ -83,34 +85,38 @@ private:
 	
 public:
 	
-	SegmentTree(vector<int> &base){
+	SegmentTree(vector<int> &base,bool enforce_throws = true){
+		this->enforce_throws = enforce_throws;
 		this->n = base.size();
 		aint.resize(4 * n + 1);
 		lazy.resize(4 * n + 1);
 		build(1,0,n - 1,base);
 	}
 	
-	SegmentTree(int n){
+	SegmentTree(int n,bool enforce_throws = true){
+		this->enforce_throws = enforce_throws;
 		this->n = n;
 		aint.resize(4 * n + 1);
 		lazy.resize(4 * n + 1);
-		vector<int> base = vector<int>(n,0);
-		build(1,0,n - 1,base);
 	}
 	
 	void update(int st,int dr,int val){
-		if(st > dr || st < 0 || dr >= n){
+		if(enforce_throws && (st > dr || st < 0 || dr >= n)){
 			throw runtime_error("invalid update");
 		}
 		update(1,0,n - 1,st,dr,val);
 	}
 	
 	int query(int st,int dr){
-		if(st > dr || st < 0 || dr >= n){
+		if(enforce_throws && (st > dr || st < 0 || dr >= n)){
 			throw runtime_error("invalid update");
 		}
 		
 		return query(1,0,n - 1,st,dr);
+	}
+	
+	int overall_max(){
+		return aint[1];
 	}
 	
 	void print(){
