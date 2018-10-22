@@ -6,8 +6,8 @@
 
 using namespace std;
 
-FILE *f = fopen("gauss.in","r");
-FILE *g = fopen("gauss.out","w");
+FILE *f = fopen("minesweeper.in","r");
+FILE *g = fopen("minesweeper.out","w");
 
 ///0-indexed
 class GaussSolver{
@@ -120,7 +120,7 @@ public:
 	void afis(){
 		for(auto it:eq){
 			for(auto it2:it){
-				printf("%.10f ",it2);
+				printf("%.6f ",it2);
 			}
 			printf("\n");
 		}
@@ -134,26 +134,43 @@ int main(){
 	
 	fscanf(f,"%d %d",&n,&m);
 	
-	GaussSolver stuff(m);
+	n *= m;
 	
-	for(int i = 0;i < n;i++){
-		vector<double> eq(m + 1,0);
-		for(int j = 0;j <= m;j++){
-			int val;
-			fscanf(f,"%d",&val);
-			eq[j] = val;
+	GaussSolver stuff((n + 1) * (n + 1));
+	
+	for(int a = 0;a <= n;a++){
+		for(int b = 0;b <= n - a;b++){
+			int c = n - a - b;
+			vector<double> eq((n + 1) * (n + 1) + 1,0);
+			eq[(n + 1) * a + b] = -1;
+			
+			if(b == n){
+				stuff.add(eq);
+				continue;
+			}
+			
+			if(a){
+				eq[(n + 1) * (a - 1) + b + 1] = ((double)a) / n;
+			}
+			
+			if(b){
+				eq[(n + 1) * (a) + b - 1] = ((double)b) / n;
+			}
+			
+			if(c){
+				eq[(n + 1) * (a + 1) + b] = ((double)c) / n;
+			}
+			
+			eq[n] = 0;
+			
+			eq[(n + 1) * (n + 1)] = -1;
+			stuff.add(eq);
 		}
-		stuff.add(eq);
 	}
 	
-	if(!stuff.process()){
-		fprintf(g,"Imposibil");
-		return 0;
-	}
+	stuff.process();
 	
-	for(int i = 0;i < m;i++){
-		fprintf(g,"%.10f ",stuff.get_sol(i));
-	}
+	fprintf(g,"%.8f",stuff.get_sol(0));
 	
 	fclose(f);
 	fclose(g);

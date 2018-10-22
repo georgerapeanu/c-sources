@@ -1,19 +1,23 @@
 #include <iostream>
+#include <cstdio>
 
 using namespace std;
 
 int f[200005];
 
+void modif(int &a){
+	a = 4;
+}
+
 int main(){
 
-	int ans = 0;
-
-	for(int i = 2;i <= 200000;i++){
-		f[i] = 2 * (f[(i + 1) / 2]) + 1;
-		ans = max(ans,f[i] - i);
-	}
+	int a = 5;
+	int &b = a;
 	
-	cout << ans;
+	modif(b);
+	
+	printf("%d\n",scanf("laba%d",&a));
+	printf("%d",a);
 
 	return 0;
 }
