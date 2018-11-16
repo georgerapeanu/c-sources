@@ -1,4 +1,4 @@
-f = open("out","r")
+f = open("ccc.out","r")
 cv = f.readline()
 n,m = cv.split();
 n = int(n)
