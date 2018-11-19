@@ -4,7 +4,7 @@
 using namespace std;
 
 ///tested on http://codeforces.com/contest/1043/problem/F
-///it doesn't say much,but at least there is a problem where it works
+///tested on https://codeforces.com/contest/1078/problem/B
 class BimodularInt{
 
 private:
@@ -118,10 +118,10 @@ public:
 		return p;
 	}
 	
-	operator bool(){
+	bool is0(){
 		return h1 || h2;
 	}
-	
+		
 	void print(){
 		printf("%d %d\n",h1,h2);
 	}
@@ -179,7 +179,7 @@ int main(){
 			}
 		}
 		
-		if(dp[i][1]){
+		if(dp[i][1].is0()){
 			printf("%d",i);
 			return 0;
 		}
