@@ -20,26 +20,29 @@ int solve(int st,int dr){
 	int mid = (st + dr) / 2;
 	
 	ans = max(solve(st,mid),solve(mid + 1,dr));
-	
-	
-	for(int i = mid;i >= st;i--){
-		fr[v[i]] = 0;
-	}
+	int fr_max = 0;
 	
 	for(int i = mid + 1;i <= dr;i++){
 		fr[v[i]]++;
-		rrrrr[v[i]] = max(rrrrr[v[i]],fr[v[i]] - fr[c] + s_fr[n] - s_fr[i]);
+		rrrrr[v[i]] = max(rrrrr[v[i]],fr[v[i]] + s_fr[n] - s_fr[i]);
+		if(rrrrr[v[i]] > rrrrr[fr_max]){
+			fr_max = v[i];
+		}
 	}
-	
-	for(int i = mid + 1;i <= dr;i++){
-		fr[v[i]] = 0;
-	}
-		
-	for(int i = mid;i >= st;i--){
-		fr[v[i]]++;
-		ans = max(ans,s_fr[i - 1] + fr[v[i]] - fr[c] + rrrrr[v[i]]);
-	}		
 
+	for(int i = mid + 1;i <= dr;i++){
+		fr[v[i]] = 0;
+	}
+	
+	
+	for(int i = mid;i >= st;i--){
+		fr[v[i]]++;
+		if(fr[fr_max] + rrrrr[fr_max] < fr[v[i]] + rrrrr[v[i]] ){
+			fr_max = v[i];
+		}
+		ans = max(ans,s_fr[i - 1] + fr[fr_max] + rrrrr[fr_max]);
+	}		
+	
 	for(int i = mid;i >= st;i--){
 		fr[v[i]] = 0;
 	}
@@ -47,7 +50,6 @@ int solve(int st,int dr){
 	for(int i = mid + 1;i <= dr;i++){
 		rrrrr[v[i]] = 0;
 	}	
-	
 	
 	return ans;
 }
