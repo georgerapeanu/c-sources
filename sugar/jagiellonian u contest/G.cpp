@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <algorithm>
 #include <set>
 #include <queue>
 
@@ -9,6 +10,7 @@ char c[30];
 int viz[1 << 20];
 int father[1 << 20];
 int cnt[1 << 20];
+vector<pair<int,int> > edges[21];
 
 int fi(int nod){
 	if(father[nod] < 0){
@@ -50,6 +52,10 @@ int main(){
 			father[i] = -1;
 		}
 		
+		for(int i = 0;i <= 20;i++){
+			edges[i].clear();
+		}
+		
 		int n,m;
 		scanf("%d %d\n",&m,&n);
 		queue<int> q;
@@ -63,9 +69,7 @@ int main(){
 			viz[val] = val;
 			q.push(val);
 		}
-		
-		int cost = 0;
-		
+			
 		while(!q.empty()){
 			int nod = q.front();
 			q.pop();
@@ -74,11 +78,20 @@ int main(){
 					viz[nod ^ (1 << b)] = viz[nod];
 					q.push(nod ^ (1 << b));
 				}
-				else if(viz[nod ^ (1 << b)] != viz[nod] && u(viz[nod ^ (1 << b)],viz[nod])){
-					cost += cnt[viz[nod] ^ viz[nod ^ (1 << b)]];
+				else if(viz[nod ^ (1 << b)] != viz[nod]){
+					edges[cnt[viz[nod] ^ viz[nod ^ (1 << b)]]].push_back({viz[nod],viz[nod ^ (1 << b)]});
 				}
 			}
 		}
+				
+		int cost = 0;
+		
+		for(int x = 0;x <= 20;x++){
+			for(auto it:edges[x]){
+				cost += u(it.first,it.second) * x;
+			}
+		}
+		
 		printf("%d\n",cost);
 	}
 	

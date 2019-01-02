@@ -1,17 +1,11 @@
 #include <cstdio>
 #include <algorithm>
+#include <iostream>
 
 using namespace std;
 
 long long gauss[100000];
-
-void print(long long val){
-	while(val){
-		printf("%d",(val&1));
-		val >>= 1;
-	}
-	printf("\n");
-}
+long long wut[64];
 
 int main(){
 	
@@ -25,6 +19,20 @@ int main(){
 		for(int i = 0;i < n;i++){
 			scanf("%lld",&gauss[i]);
 			total_xor ^= gauss[i];
+		}
+		
+		if(total_xor == 0){
+			printf("%d\n",0);
+			continue;
+		}
+		
+		int msb = 63;
+		while(!(total_xor >> msb)){
+			msb--;
+		}
+
+		for(int i = 0;i < n;i++){
+			gauss[i] &= total_xor;
 		}
 		
 		int lin = 0,col = 63;
@@ -41,6 +49,7 @@ int main(){
 			}
 			
 			if(!found){
+				wut[col] = -1;
 				col--;
 				continue;
 			}
@@ -54,21 +63,11 @@ int main(){
 				}
 			}
 			
+			wut[col] = lin;
 			lin++;col--;
 		}
 		
-		long long ans = 1e18;
-		
-		for(int i = 0;i < lin;i++){
-			ans = min(ans,abs(gauss[i] - (total_xor ^ gauss[i])));
-		}
-		
-		printf("%lld\n",ans);
-		
-		print(total_xor);
-		for(int i = 0;i < lin;i++){
-			print(gauss[i]);
-		}
+		printf("%lld\n",gauss[wut[msb]] - (total_xor ^ gauss[wut[msb]]));
 	}
 	
 	return 0;
