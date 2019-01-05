@@ -1,7 +1,6 @@
 #include <cstdio>
 #include <vector>
 #include <deque>
-#include <cassert>
 
 using namespace std;
 
@@ -64,10 +63,6 @@ void dfs_smen(int nod,int tata,const vector<int> &root_cnt,const vector<int> &ce
                 int lvl_int = (i + 1) - (lvl[nod] - lvl[centroid]);
                 int coef = 0;
                 if(lvl_int > 0) {
-                    if(lvl_int >= (int)centroid_cnt.size()) {
-                        printf("%d %d\n",lvl_int,(int)centroid_cnt.size());
-                        assert(false);
-                    }
                     coef = centroid_cnt[lvl_int] - root_cnt[lvl_int - 1];
                 }
                 else if(lvl_int == 0) {
