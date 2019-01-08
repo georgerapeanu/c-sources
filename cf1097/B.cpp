@@ -5,11 +5,11 @@ using namespace std;
 int n;
 int a[20];
 
-void btr(int pas,int sum){
-    if(pas > n){
-        if(sum % 360 == 0){
-          cout << "YES\n";
-          exit(0);
+void btr(int pas,int sum) {
+    if(pas > n) {
+        if(sum % 360 == 0) {
+            cout << "YES\n";
+            exit(0);
         }
         return ;
     }
@@ -17,11 +17,11 @@ void btr(int pas,int sum){
     btr(pas + 1,sum + a[pas]);
 }
 
-int main(){
+int main() {
 
     cin >> n;
 
-    for(int i = 1;i <= n;i++){
+    for(int i = 1; i <= n; i++) {
         cin >> a[i];
     }
 
