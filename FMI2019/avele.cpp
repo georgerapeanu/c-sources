@@ -14,44 +14,38 @@ FILE *g = stdout;
 #endif
 
 const int NMAX = 1e5;
+const int HMAX = 30;
+const long long inf = 1LL << 60;
 
 int n,a,b;
 
-vector<int> graph[NMAX + 5];
-
-int lvl[NMAX + 5];
+int son[2][NMAX + 5];
+long long dp[NMAX + 5][HMAX + 5];
 int weight[NMAX + 5];
 
-long long ans;
-void predfs(int nod,int tata,int height) {
-    lvl[nod] = 1 + lvl[tata];
+void dfs(int nod) {
+    if(!nod) {
+        return;
+    }
     weight[nod] = 1;
-    for(auto it:graph[nod]) {
-        if(it == tata) {
-            continue;
-        }
-        predfs(it,nod,height);
-    }
-}
 
-void dfs(int nod,int tata,int height) {
-    if(lvl[nod] > height) {
-        ans += 1LL * b * weight[nod];
-        return ;
-    }
+    dfs(son[0][nod]);
+    dfs(son[1][nod]);
 
-    for(auto it:graph[nod]) {
-        if(it == tata) {
-            continue;
-        }
-        dfs(it,nod,height);
-    }
+    int u = son[0][nod];
+    int v = son[1][nod];
 
-    if(graph[nod].empty()) {
-        if(lvl[nod] >= height - 1) {
-            return ;
-        }
-        ans += 1LL * a * ((1LL << (height - 1 - lvl[nod])) - 1);;
+    weight[nod] += weight[u];
+    weight[nod] += weight[v];
+
+    dp[nod][0] = 1LL * weight[nod] * b;
+    dp[nod][1] = 1LL * (weight[nod] - 1) * b;
+
+    for(int i = 2; i <= HMAX; i++) {
+        dp[nod][i] = inf;
+        dp[nod][i] = min(dp[nod][i],dp[u][i - 1] + dp[v][i - 1]);
+        dp[nod][i] = min(dp[nod][i],dp[u][i - 1] + dp[v][i - 2]);
+        dp[nod][i] = min(dp[nod][i],dp[u][i - 2] + dp[v][i - 1]);
     }
 }
 
@@ -59,24 +53,26 @@ int main() {
 
     fscanf(f,"%d %d %d",&n,&a,&b);
 
-    for(int i = 1; i < n; i++) {
-        int x,y;
-        fscanf(f,"%d %d",&x,&y);
-        graph[x].push_back(y);
-        graph[y].push_back(x);
+    for(int i = 1; i <= n; i++) {
+        fscanf(f,"%d %d",&son[0][i],&son[1][i]);
     }
 
-    int height = 100;
+    dp[0][0] = 0;
+    dp[0][1] = a;
 
-    long long tmp_ans = 1LL << 60;
-
-    while(height--) {
-        ans = 0;
-        dfs(1,0,height);
-        tmp_ans = min(ans,tmp_ans);
+    for(int i = 2; i <= HMAX; i++) {
+        dp[0][i] = a + dp[0][i - 1] + dp[0][i - 2];
     }
 
-    fprintf(g,"%lld\n",ans);
+    dfs(1);
+
+    long long ans = inf;
+
+    for(int i = 0; i <= HMAX; i++) {
+        ans = min(ans,dp[1][i]);
+    }
+
+    fprintf(g,"%lld",ans);
 
     return 0;
 }

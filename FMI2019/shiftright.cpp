@@ -1,86 +1,101 @@
-//#define JUDGE
-#include <cstdio>
-#include <cstring>
+#include <fstream>
 #include <vector>
+#include <set>
+#include <algorithm>
 
 using namespace std;
 
-#ifdef JUDGE
-FILE *f = fopen("shiftright.in","r");
-FILE *g = fopen("shiftright.out","w");
-#else
-FILE *f = stdin;
-FILE *g = stdout;
-#endif
+ifstream f("shiftright.in");
+ofstream g("shiftright.out");
 
+const int SIGMA = 26;
 const int NMAX = 1e5;
-const int SIGMA = 30;
 
-int n;
-char a[NMAX + 5];
-char b[NMAX + 5];
+set<int> pos[SIGMA];
 
-vector<pair<int,int> > graph[SIGMA + 5];
-int fr[SIGMA + 5];
-bool taken[NMAX + 5];
-
-vector<int> ciclueuler(int nod) {
-    vector<int> ans;
-    while(graph[nod].size() && taken[graph[nod].back().second]) {
-        graph[nod].pop_back();
-    }
-
-    if(graph[nod].size()) {
-        pair<int,int> to = graph[nod].back();
-        graph[nod].pop_back();
-        taken[to.second] = true;
-        ans = ciclueuler(to.first);
-        ans.push_back(to.second);
-    }
-    return ans;
-}
+int link[NMAX + 5];
+bool viz[NMAX + 5];
 
 int main() {
 
-    fgets(a + 1,NMAX + 2,f);
-    fgets(b + 1,NMAX + 2,f);
+    string init,req;
+    vector<int> fr(SIGMA,0);
 
-    n = strlen(a + 1);
-    n -= (a[n] == '\n');
+    f >> init >> req;
 
-    for(int i = 1; i <= n; i++) {
-        if(a[i] != b[i]) {
-            graph[a[i] - 'a' + 1].push_back({b[i] - 'a' + 1,i - 1});
+    int last = 0;
+    int n = init.size();
+
+    for(auto it:init) {
+        fr[it - 'a']++;
+    }
+    last++;
+    last = 0;
+    for(auto it:req) {
+        fr[it - 'a']--;
+        if(init[last] != req[last]) {
+            pos[it - 'a'].insert(last);
         }
-        fr[a[i] - 'a' + 1]++;
-        fr[b[i] - 'a' + 1]--;
+        last++;
     }
 
-    for(int i = 1; i <= SIGMA; i++) {
-        if(fr[i] != 0) {
-            fprintf(g,"-1\n");
+    for(auto it:fr){
+        if(it != 0) {
+            g << -1;
             return 0;
         }
     }
 
-    vector<vector<int>> ans;
+    for(int i = 0; i < n; i++) {
+        if(init[i] == req[i]) {
+            link[i] = -1;
+            viz[i] = true;
+            continue;
+        }
+        set<int> :: iterator it = pos[init[i] - 'a'].lower_bound(i);
+        if(it == pos[init[i] - 'a'].end()) {
+            it = pos[init[i] - 'a'].begin();
+        }
+        link[i] = *it;
+        pos[init[i] - 'a'].erase(it);
+    }
 
-    for(int i = 1; i <= SIGMA; i++) {
-        vector<int> tmp = ciclueuler(i);
-        if(!tmp.empty()) {
-            ans.push_back(tmp);
+
+    vector< vector<int> > op;
+
+    for(int i = 0; i < n; i++) {
+        if(!viz[i]) {
+            vector<int> cycle;
+
+            for(int nod = i; !viz[nod]; nod = link[nod]) {
+                viz[nod] = true;
+                cycle.push_back(nod);
+            }
+
+            vector<int> curr;
+
+            for(int i = 0; i < (int)cycle.size(); i++) {
+                curr.push_back(cycle[i]);
+                if(i == (int)cycle.size() - 1 || cycle[i + 1] < cycle[i]) {
+                    op.push_back(curr);
+                    while(curr.size() > 1) {
+                        curr.pop_back();
+                    }
+                }
+            }
         }
     }
 
-    fprintf(g,"%d\n",ans.size());
+    g << op.size() << "\n";
 
-    for(auto it:ans) {
-        fprintf(g,"%d ",it.size());
+    for(auto it:op) {
+        g << it.size() << " ";
         for(auto it2:it) {
-            fprintf(g,"%d ",it2);
+            g << it2 << " ";
         }
-        fprintf(g,"\n");
+        g << "\n";
     }
 
     return 0;
 }
+

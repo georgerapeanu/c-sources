@@ -26,93 +26,63 @@ int n,m,l;
 const int dx[] = {-1,0,1,0};
 const int dy[] = {0,1,0,-1};
 
-///1-indexed
-class BipartiteMatcher {
-public:
+bool force_take = false;
 
-    vector<int> L,R;
-    vector< vector<int> > graph;
+void Fill(int x,int y) {
 
-private:
+    if(v[x][y] != 0) {
+        return ;
+    }
 
-    vector<bool> viz;
-    bool pair_up(int nod) {
-        if(viz[nod]) {
-            return 0;
+    vector<int> possible;
+
+    for(int d1 = 0; d1 < 4; d1++) {
+        if(!(x + dx[d1] > 0 && x + dx[d1] <= n && y + dy[d1] > 0 && y + dy[d1] <= m)) {
+            continue;
         }
-        viz[nod] = 1;
-
-        for(auto it:graph[nod]) {
-            if(!R[it]) {
-                R[it] = nod;
-                L[nod] = it;
-                return 1;
+        int a = v[x + dx[d1]][y + dy[d1]];
+        if(a == -1 || a % 2 == 0) {
+            continue;
+        }
+        for(int d2 = d1 + 1; d2 < 4; d2++) {
+            if(!(x + dx[d2] > 0 && x + dx[d2] <= n && y + dy[d2] > 0 && y + dy[d2] <= m)) {
+                continue;
             }
-        }
-
-        for(auto it:graph[nod]) {
-            if(pair_up(R[it])) {
-                R[it] = nod;
-                L[nod] = it;
-                return 1;
+            int b = v[x + dx[d2]][y + dy[d2]];
+            if(b == -1 || b % 2 == 0) {
+                continue;
             }
-        }
-        return 0;
-    }
 
-public:
-
-    BipartiteMatcher(int n,int m) {
-        graph.resize(n + 1);
-        L.resize(n + 1);
-        R.resize(m + 1);
-        viz.resize(n + 1);
-    }
-
-    void add_edge(int u,int v) {
-        graph[u].push_back(v);
-    }
-
-    void reset_match() {
-        fill(L.begin(),L.end(),0);
-        fill(R.begin(),R.end(),0);
-        fill(viz.begin(),viz.end(),0);
-    }
-
-    void reset_full() {
-        fill(L.begin(),L.end(),0);
-        fill(R.begin(),R.end(),0);
-        fill(viz.begin(),viz.end(),0);
-        fill(graph.begin(),graph.end(),vector<int>());
-    }
-
-    int max_match() {
-        int ans = 0;
-        bool ok = 1;
-        while(ok) {
-            ok = 0;
-            fill(viz.begin(),viz.end(),0);
-            for(int i = 1; i < (int)L.size(); i++) {
-                if(!L[i] && pair_up(i)) {
-                    ans++;
-                    ok = 1;
-                }
+            if(a - b != 2 && b - a != 2) {
+                continue;
             }
-        }
-        return ans;
-    }
-};
+            if(pos[(a + b) / 2].x) {
+                continue;
+            }
 
-inline int coord_to_id(int x,int y) {
-    return (x - 1) * m + y;
+            possible.push_back((a + b) / 2);
+        }
+    }
+
+    if((int)possible.size() != 1 && force_take == false) {
+        return;
+    }
+
+    if(possible.size() >= 1) {
+        v[x][y] = possible[0];
+        pos[possible[0]] = {x,y};
+        force_take = false;
+    }
+    else {
+        return;
+    }
+
+    Fill(x + 1,y + 1);
+    Fill(x + 1,y - 1);
+    Fill(x - 1,y + 1);
+    Fill(x - 1,y - 1);
 }
 
-inline pair<int,int> id_to_coord(int id) {
-    int x = (id - 1) / m + 1;
-    int y = id - (x - 1) * m;
-
-    return {x,y};
-}
 
 int main() {
 
@@ -127,76 +97,29 @@ int main() {
         }
     }
 
-    for(int i = 1; i < l; i += 2) {
-        if(pos[i].x == pos[i + 2].x) {
-            v[pos[i].x][(pos[i].y + pos[i + 2].y) / 2] = i + 1;
-            pos[i + 1] = {pos[i].x,(pos[i].y + pos[i + 2].y) / 2};
+    while(true) {
+
+        for(int i = 1; i <= n; i++) {
+            for(int j = 1; j <= m; j++) {
+                Fill(i,j);
+            }
         }
 
-        else if(pos[i].y == pos[i + 2].y) {
-            v[(pos[i].x + pos[i + 2].x) / 2][pos[i].y] = i + 1;
-            pos[i + 1] = {(pos[i].x + pos[i + 2].x) / 2,pos[i].y};
+        bool ok = true;
+
+        for(int i = 1; i <= l; i += 1) {
+            if(!pos[i].x) {
+                ok = false;
+            }
         }
+
+        if(ok) {
+            break;
+        }
+
+        force_take = true;
     }
 
-    /* for(int i = 1;i <= n;i++){
-         for(int j = 1;j <= m;j++){
-             printf("%d ",v[i][j]);
-         }
-         printf("\n");
-     }*/
-
-    BipartiteMatcher solve(l / 2,n * m);
-
-    for(int i = 1; i < l; i++) {
-        if(pos[i + 1].x != 0) {
-            continue;
-        }
-
-        int ind = 0;
-
-        if(pos[i + 2].x == pos[i].x - 1) {
-            if(pos[i + 2].y == pos[i].y - 1) {
-                ind = 3;
-            }
-            else {
-                ind = 0;
-            }
-        }
-        else {
-            if(pos[i + 2].y == pos[i].y - 1) {
-                ind = 2;
-            }
-            else {
-                ind = 1;
-            }
-        }
-
-        // printf("%d %d\n",i + 1,ind);
-
-        int x = pos[i].x;
-        int y = pos[i].y;
-        int xx1 = x + dx[ind],yy1 = y + dy[ind];
-        int xx2 = x + dx[(ind + 1) % 4],yy2 = y + dy[(ind + 1) % 4];
-        if(v[xx1][yy1] == 0)solve.add_edge((i + 1) / 2,coord_to_id(xx1,yy1));
-        if(v[xx2][yy2] == 0)solve.add_edge((i + 1) / 2,coord_to_id(xx2,yy2));
-    }
-
-    solve.max_match();
-
-    for(int i = 1; i <= l / 2; i++) {
-        if(solve.L[i]) {
-            pair<int,int> tmp = id_to_coord(solve.L[i]);
-            v[tmp.first][tmp.second] = 2 * i;
-        }
-    }
-
-    /*for(int i = 1;i <= n;i++){
-        for(int j = 1;j <= m;j++){
-            printf("%d ",v[i][j]);
-        }
-        printf("\n");
-    }*/
     for(int i = 1; i <= n; i++) {
         for(int j = 1; j <= m; j++) {
             fprintf(g,"%d ",v[i][j]);
