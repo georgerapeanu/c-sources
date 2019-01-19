@@ -1,6 +1,4 @@
 #include <cstdio>
-#include <iostream>
-#include <cstring>
 #include <vector>
 #include <algorithm>
 
@@ -9,163 +7,237 @@ using namespace std;
 FILE *f = fopen("amiba.in","r");
 FILE *g = fopen("amiba.out","w");
 
-int T,N,A,B;
+int t,n,a,b;
 
-int play(vector<int> &other,vector<int> &boss){
-	int idx = 0,ans = 0;
-	for(auto it:boss){
-		while(idx < (int)other.size() && other[idx] < it){
-			idx++;
-		}
-		if(idx == (int)other.size()){
-			return ans;
-		}
-		idx++;
-		ans++;
-	}
-	return ans;
+long long solve_individual(vector< pair<int,int> > &boss, 
+                      vector< pair<int,int> > &junior, 
+                      vector< pair<int,int> > &slim,
+                      vector< pair<int,int> > &ans){
+
+    long long cost = 0;
+    vector< pair<int,int> > used(boss.size(),{0,0});
+
+    int x = 0,y = 0;
+
+    for(int i = 0;i < (int)boss.size();i++){
+    
+        while(x < (int)junior.size() && junior[x].first < boss[i].first){
+            x++;
+        }
+        while(y < (int)slim.size() && slim[y].first < boss[i].first){
+            y++;
+        }
+
+        if(x == (int)junior.size() || y == (int)slim.size()){
+            break;
+        }
+
+        used[x].first = true;
+        used[y].second = true;
+
+        ans[boss[i].second].first = junior[x++].first;
+        ans[boss[i].second].second = slim[y++].first;
+    }
+
+    for(int i = 0;i < (int)boss.size();i++){
+
+        if(ans[boss[i].second].first != -1 || ans[boss[i].second].second != -1){
+            continue;
+        }
+
+        while(x < (int)junior.size() && junior[x].first < boss[i].first){
+            x++;
+        }
+        while(y < (int)slim.size() && slim[y].first < boss[i].first){
+            y++;
+        }
+
+        if(x == (int)junior.size() && y == (int)slim.size()){
+            break;
+        }
+        else if(x != (int)junior.size() && (y == (int)slim.size() || junior[x].first < slim[y].first)){
+            used[x].first = true;
+            ans[boss[i].second].first = junior[x++].first;
+        }    
+        else{
+            used[y].second = true;
+            ans[boss[i].second].second = slim[y++].first;
+        }
+    }
+
+    x = 0;y = 0;
+
+    for(int i = 0;i < (int)boss.size();i++){
+        if(ans[boss[i].second].first == -1){
+            while(used[x].first){
+                x++;
+            }
+            ans[boss[i].second].first = junior[x++].first;
+        }
+        if(ans[boss[i].second].second == -1){
+            while(used[y].second){
+                y++;
+            }
+            ans[boss[i].second].second = slim[y++].first;
+        }
+    }
+    
+    for(int i = 0;i < (int)boss.size();i++){
+        int ind = boss[i].second;
+
+        if(ans[ind].first >= boss[i].first && ans[ind].second >= boss[i].first){
+            ;
+        }
+        else if(ans[ind].first >= boss[i].first || ans[ind].second >= boss[i].first){
+            cost += b;
+        }
+        else{
+            cost += a;
+        }
+    }
+
+    return cost;
 }
 
-void fill_rest(vector< pair<int,int> > &ans,vector<int> &junior,vector<int> &skinny,vector<int> &boss){
-	vector<bool> used(3 * N,false);
-	for(int i = 0;i < N;i++){
-		used[boss[i]] = true;
-		if(ans[i].first != -1){
-			used[ans[i].first] = true;
-		}
-		if(ans[i].second != -1){
-			used[ans[i].second] = true;
-		}
-	}
-	int junior_idx = 0;
-	int skinny_idx = 0;
-	for(int i = 0;i < (int)ans.size();i++){
-		if(ans[i].first == -1){
-			while(used[junior[junior_idx]] == true){
-				junior_idx++;
-			}
-			ans[i].first = junior[junior_idx];
-			used[ans[i].first] = true;
-		}
-		if(ans[i].second == -1){
-			while(used[skinny[skinny_idx]] == true){
-				skinny_idx++;
-			}
-			ans[i].second = skinny[skinny_idx];
-			used[ans[i].second] = true;
-		}
-	}
-}
+long long solve_combined(vector< pair<int,int> > &boss, 
+                    vector< pair<int,int> > &junior, 
+                    vector< pair<int,int> > &slim,
+                    vector< pair<int,int> > &ans){
 
-vector<int> ord,tmp;
+    long long cost = 0;
+    vector< pair<int,int> > used(boss.size(),{0,0});
 
-bool cmp(int a,int b){
-	return tmp[a] < tmp[b];
-}
+    int x = 0,y = 0;
 
-void prep_reorder(vector<int> &boss){
-	ord.resize(N);
-	for(int i = 0;i < N;i++){
-		ord[i] = i;
-	}
-	tmp = boss;
-	sort(ord.begin(),ord.end(),cmp);
-}
+    for(int i = 0;i < (int)boss.size();i++){
+    
+        while(x < (int)junior.size() && junior[x].first < boss[i].first){
+            x++;
+        }
+        while(y < (int)slim.size() && slim[y].first < boss[i].first){
+            y++;
+        }
 
-void reorder(vector< pair<int,int> > &a){
-	vector< pair<int,int> > tmp(N);
-	for(int i = 0;i < N;i++){
-		tmp[ord[i]] = a[i];
-	}
-	for(int i = 0;i < N;i++){
-		a[i] = tmp[i];
-	}
+        if(x == (int)junior.size() && y == (int)slim.size()){
+            break;
+        }
+        else if(x != (int)junior.size() && (y == (int)slim.size() || junior[x].first < slim[y].first)){
+            used[x].first = true;
+            ans[boss[i].second].first = junior[x++].first;
+        }    
+        else{
+            used[y].second = true;
+            ans[boss[i].second].second = slim[y++].first;
+        }
+    }
+
+    int st = 0,dr = (int)boss.size() - 1;
+
+    for(int i = (int)boss.size() - 1;i >= 0;i--){
+        if(ans[boss[i].second].first == -1){
+            while(used[st].first){
+                st++;
+            }
+            while(used[dr].first){
+                dr--;
+            }
+            if(junior[dr].first >= boss[i].first){
+                ans[boss[i].second].first = junior[dr--].first;
+            }
+            else{
+                ans[boss[i].second].first = junior[st++].first;
+            }
+        }
+    }
+    
+    st = 0,dr = (int)boss.size() - 1;
+    
+    for(int i = (int)boss.size() - 1;i >= 0;i--){
+        if(ans[boss[i].second].second == -1){
+            while(used[st].second){
+                st++;
+            }
+            while(used[dr].second){
+                dr--;
+            }
+            if(slim[dr].first >= boss[i].first){
+                ans[boss[i].second].second = slim[dr--].first;
+            }
+            else{
+                ans[boss[i].second].second = slim[st++].first;
+            }
+        }
+    }
+
+    for(int i = 0;i < (int)boss.size();i++){
+        int ind = boss[i].second;
+
+        if(ans[ind].first >= boss[i].first && ans[ind].second >= boss[i].first){
+            ;
+        }
+        else if(ans[ind].first >= boss[i].first || ans[ind].second >= boss[i].first){
+            cost += b;
+        }
+        else{
+            cost += a;
+        }
+    }
+
+    return cost;
 }
 
 int main(){
 
-	fscanf(f,"%d",&T);
+    fscanf(f,"%d",&t);
 
-	while(T--){
-		fscanf(f,"%d %d %d",&N,&A,&B);
+    while(t--){
+        
+        fscanf(f,"%d %d %d",&n,&a,&b);
+        vector< pair<int,int> > boss(n,{0,0});
+        vector< pair<int,int> > junior(n,{0,0});
+        vector< pair<int,int> > slim(n,{0,0});
+        vector< pair<int,int> > ans1(n,make_pair(-1,-1));
+        vector< pair<int,int> > ans2(n,make_pair(-1,-1));
 
-		vector<int> boss(N);
-		vector<int> skinny(N);
-		vector<int> junior(N);
-		vector< pair<int,int> > ans(N,{-1,-1});
+        for(int i = 0;i < n;i++){
+            fscanf(f,"%d",&boss[i].first);         
+            boss[i].second = i;
+        }   
+        
+        for(int i = 0;i < n;i++){
+            fscanf(f,"%d",&junior[i].first);     
+            junior[i].second = i;
+        }   
+        
+        for(int i = 0;i < n;i++){
+            fscanf(f,"%d",&slim[i].first);   
+            slim[i].second = i;
+        }   
 
-		for(int i = 0;i < N;i++){
-			fscanf(f,"%d",&boss[i]);
-			boss[i]--;
-		}
+        sort(boss.begin(),boss.end());
+        sort(junior.begin(),junior.end());
+        sort(slim.begin(),slim.end());
+        
+        long long cost1 = solve_combined(boss,junior,slim,ans1);
+        long long cost2 = solve_individual(boss,junior,slim,ans2);
 
-		for(int i = 0;i < N;i++){
-			fscanf(f,"%d",&junior[i]);
-			junior[i]--;
-		}
+        if(cost1 > cost2){
+            swap(ans1,ans2);
+        }
 
-		for(int i = 0;i < N;i++){
-			fscanf(f,"%d",&skinny[i]);
-			skinny[i]--;
-		}
+        for(auto it:ans1){
+            fprintf(g,"%d ",it.first);
+        }
+        fprintf(g,"\n");
 
-		prep_reorder(boss);
+        for(auto it:ans1){
+            fprintf(g,"%d ",it.second);
+        }
+        fprintf(g,"\n");
+     }
 
-		sort(boss.begin(),boss.end());
-		sort(junior.begin(),junior.end());
-		sort(skinny.begin(),skinny.end());
+    fclose(f);
+    fclose(g);
 
-		int junior_wins = play(junior,boss);
-		int skinny_wins = play(skinny,boss);
-
-		if(A <= 2 * B){
-			for(int i = 0;i < junior_wins;i++){
-				ans[i].first = junior[N - junior_wins + i];
-			}
-			for(int i = 0;i < skinny_wins;i++){
-                ans[i].second = skinny[N - skinny_wins + i];
-			}
-			fill_rest(ans,junior,skinny,boss);
-		}
-		else{
-			vector<int> combined;
-			merge(junior.begin(),junior.end(),skinny.begin(),skinny.end(),back_inserter(combined));
-			int total_wins = play(combined,boss);
-			int locul3Boss = junior_wins + skinny_wins - total_wins;
-			for(int i = 0;i < locul3Boss;i++){
-				ans[i].first = junior[N - junior_wins + i];
-				ans[i].second = skinny[N - skinny_wins + i];
-			}
-			int junior_idx = N - junior_wins + locul3Boss;
-			int skinny_idx = N - skinny_wins + locul3Boss;
-			for(int i = locul3Boss;i < total_wins;i++){
-				if(skinny_idx == N || (junior_idx < N && junior[junior_idx] > skinny[skinny_idx])){
-					ans[i].first = junior[junior_idx++];
-				}
-				else{
-					ans[i].second = skinny[skinny_idx++];
-				}
-			}
-			fill_rest(ans,junior,skinny,boss);
-		}
-		reorder(ans);
-
-		for(int i = 0;i < N;i++){
-			fprintf(g,"%d ",ans[i].first + 1);
-		}
-
-		fprintf(g,"\n");
-
-		for(int i = 0;i < N;i++){
-			fprintf(g,"%d ",ans[i].second + 1);
-		}
-
-		fprintf(g,"\n");
-	}
-
-	fclose(f);
-	fclose(g);
-
-	return 0;
-
+    return 0;
 }
