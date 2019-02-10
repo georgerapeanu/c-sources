@@ -2,16 +2,16 @@
 #include <algorithm>
 #include <vector>
 #include <stdexcept>
-
+ 
 using namespace std;
-
+ 
 FILE *f = fopen("parcele.in","r");
 FILE *g = fopen("parcele.out","w");
-
+ 
 ///0-indexed;
 class SegmentTree{
 private:
-
+ 
 	bool enforce_throws;
 	int n;
 	vector<int> aint;
@@ -124,20 +124,20 @@ public:
 		printf("\n");
 	}
 };
-
-
+ 
+ 
 const int NMAX = 1e5;
 const int XMAX = 1.5e5;
-
+ 
 int dx,dy;
 int n;
-
+ 
 vector<int> ev_x[XMAX + 5];
 vector<int> ev_y[XMAX + 5];
-
+ 
 int ans_x[XMAX + 5];
 int ans_y[XMAX + 5];
-
+ 
 void solve(int ans[],int d,int &rez){
 	int left[XMAX + 5];
 	int right[XMAX + 5];
@@ -159,11 +159,11 @@ void solve(int ans[],int d,int &rez){
 		rez = max(rez,right[i] + (i - d >= 0 ? left[i - d]:0));
 	}
 }
-
+ 
 const int LEN = 1 << 14;
 char buff[LEN];
 int ind = LEN - 1;
-
+ 
 int i32(){
 	int ans = 0;
 	
@@ -184,7 +184,7 @@ int i32(){
 	
 	return ans;
 }
-
+ 
 int main(){
 	
 	fscanf(f,"%d %d",&dx,&dy);
@@ -192,7 +192,7 @@ int main(){
 	
 	dx++;
 	dy++;
-
+ 
 	for(int i = 1;i <= n;i++){
 		int x,y;
 		fscanf(f,"%d %d",&x,&y);
