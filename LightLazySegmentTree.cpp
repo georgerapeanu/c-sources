@@ -11,17 +11,44 @@ FILE *g=fopen("arbint.out","w");
 ///tested on https://infoarena.ro/problema/arbint
 ///tested on https://infoarena.ro/problema/parcele
 ///0-indexed;
+template<typename tp>
 class SegmentTree{
 private:
 
 	bool enforce_throws;
 	int n;
-	vector<int> aint;
-	vector<int> lazy;
+	tp neutral_aint;
+	tp neutral_lazy;
+	vector<tp> aint;
+	vector<tp> lazy;
+
+	///change these
 	
-	void build(int nod,int st,int dr,vector<int> &base){
-		lazy[nod] = 0;
-		aint[nod] = 0;
+	tp join(tp a,tp b){
+		return max(a,b);
+	}
+	
+	tp change(tp a,tp b){///change a by operating it with b
+		return a + b;
+	}
+	
+	void propag(int nod,int st,int dr){
+		if(st == dr || lazy[nod] != neutral_lazy){
+			return;
+		}
+		
+		lazy[2 * nod] = change(lazy[2 * nod],lazy[nod]);
+		lazy[2 * nod + 1] = change(lazy[2 * nod + 1],lazy[nod]);
+		aint[2 * nod] = change(aint[2 * nod],lazy[nod]);
+		aint[2 * nod + 1] = change(aint[2 * nod + 1],lazy[nod]);
+		lazy[nod] = neutral_lazy;
+	}
+	
+	///
+	
+	void build(int nod,int st,int dr,vector<tp> &base){
+		lazy[nod] = neutral_lazy;
+		aint[nod] = neutral_aint;
 		
 		if(st == dr){
 			aint[nod] = base[st];
@@ -32,22 +59,11 @@ private:
 		
 		build(nod * 2,st,mid,base);
 		build(nod * 2 + 1,mid + 1,dr,base);
-		aint[nod] = max(aint[2 * nod],aint[2 * nod + 1]);
+		aint[nod] = join(aint[2 * nod],aint[2 * nod + 1]);
 	}
 	
-	void propag(int nod,int st,int dr){
-		if(st == dr || !lazy[nod]){
-			return;
-		}
-		
-		lazy[2 * nod] += lazy[nod];
-		lazy[2 * nod + 1] += lazy[nod];
-		aint[2 * nod] += lazy[nod];
-		aint[2 * nod + 1] += lazy[nod];
-		lazy[nod] = 0;
-	}
 	
-	void update(int nod,int st,int dr,int S,int D,int val){
+	void update(int nod,int st,int dr,int S,int D,tp val){
 		propag(nod,st,dr);
 		
 		if(D < st || S > dr){
@@ -55,8 +71,8 @@ private:
 		}
 		
 		if(S <= st && dr <= D){
-			lazy[nod] += val;
-			aint[nod] += val;
+			lazy[nod] = change(lazy[nod],val);
+			aint[nod] = change(aint[nod],val);
 			return ;
 		}
 		
@@ -65,10 +81,10 @@ private:
 		update(nod * 2,st,mid,S,D,val);
 		update(nod * 2 + 1,mid + 1,dr,S,D,val);
 		
-		aint[nod] = max(aint[2 * nod],aint[2 * nod + 1]);
+		aint[nod] = join(aint[2 * nod],aint[2 * nod + 1]);
 	}
 	
-	int query(int nod,int st,int dr,int S,int D){
+	tp query(int nod,int st,int dr,int S,int D){
 		propag(nod,st,dr);
 		
 		if(D < st || S > dr){
@@ -80,34 +96,38 @@ private:
 		}
 		
 		int mid = (st + dr) / 2;
-		return max(query(nod * 2,st,mid,S,D),query(nod * 2 + 1,mid + 1,dr,S,D));
+		return join(query(nod * 2,st,mid,S,D),query(nod * 2 + 1,mid + 1,dr,S,D));
 	}
 	
 public:
 	
-	SegmentTree(vector<int> &base,bool enforce_throws = true){
+	SegmentTree(vector<tp> &base,tp neutral_aint = 0,tp neutral_lazy = 0,bool enforce_throws = true){
 		this->enforce_throws = enforce_throws;
 		this->n = base.size();
+		this->neutral_aint = neutral_aint;
+		this->neutral_lazy = neutral_lazy;
 		aint.resize(4 * n + 1);
 		lazy.resize(4 * n + 1);
 		build(1,0,n - 1,base);
 	}
 	
-	SegmentTree(int n,bool enforce_throws = true){
+	SegmentTree(int n,tp neutral_aint = 0,tp neutral_lazy = 0,bool enforce_throws = true){
 		this->enforce_throws = enforce_throws;
 		this->n = n;
-		aint.resize(4 * n + 1);
-		lazy.resize(4 * n + 1);
+		this->neutral_aint = neutral_aint;
+		this->neutral_lazy = neutral_lazy;
+		aint = vector<tp>(4 * n + 1,neutral_aint);
+		lazy = vector<tp>(4 * n + 1,neutral_lazy);
 	}
 	
-	void update(int st,int dr,int val){
+	void update(int st,int dr,tp val){
 		if(enforce_throws && (st > dr || st < 0 || dr >= n)){
 			throw runtime_error("invalid update");
 		}
 		update(1,0,n - 1,st,dr,val);
 	}
 	
-	int query(int st,int dr){
+	tp query(int st,int dr){
 		if(enforce_throws && (st > dr || st < 0 || dr >= n)){
 			throw runtime_error("invalid update");
 		}
@@ -115,16 +135,16 @@ public:
 		return query(1,0,n - 1,st,dr);
 	}
 	
-	int overall_max(){
+	tp overall(){
 		return aint[1];
 	}
 	
-	void print(){
-		for(auto it:aint){
-			printf("%d ",it);
-		}
-		printf("\n");
-	}
+	// void print(){
+		// for(auto it:aint){
+			// printf("%d ",it);
+		// }
+		// printf("\n");
+	// }
 };
  
 int n,m;
@@ -139,7 +159,7 @@ int main(){
 		fscanf(f,"%d",&base[i]);		
 	}
 	
-	SegmentTree t(base);
+	SegmentTree<int> t(base);
 	
 	
 	for(int i = 0;i < m;i++){
