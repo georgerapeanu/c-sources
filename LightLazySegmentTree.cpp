@@ -33,7 +33,7 @@ private:
 	}
 	
 	void propag(int nod,int st,int dr){
-		if(st == dr || lazy[nod] != neutral_lazy){
+		if(st == dr || lazy[nod] == neutral_lazy){
 			return;
 		}
 		
