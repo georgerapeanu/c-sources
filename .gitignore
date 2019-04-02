@@ -10,6 +10,8 @@
 *.cbp
 *.out
 *.ok
+*.txt.
+*.txt
 in
 out
 ok
