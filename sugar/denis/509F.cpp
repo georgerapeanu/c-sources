@@ -11,36 +11,36 @@ int e[NMAX + 5][NMAX + 5];
 int n;
 int a[NMAX + 5];
 
-int add(int a, int b){
+int add(int a, int b) {
     a += b;
-    if(a >= MOD){
+    if(a >= MOD) {
         a -= MOD;
     }
     return a;
 }
 
-int mult(int a, int b){
+int mult(int a, int b) {
     return 1LL * a * b % MOD;
 }
 
-int main(){
+int main() {
 
     scanf("%d",&n);
 
-    for(int i = 1;i <= n;i++){
+    for(int i = 1; i <= n; i++) {
         scanf("%d",&a[i]);
     }
 
-    for(int i = 1;i <= n;i++){
+    for(int i = 1; i <= n; i++) {
         dp[i][i] = 1;
         e[i][i] = 1;
     }
 
-    for(int l = 1;l < n;l++){
-        for(int i = 1;i <= n - l;i++){
+    for(int l = 1; l < n; l++) {
+        for(int i = 1; i <= n - l; i++) {
             int j = i + l;
-            for(int k = i;k < j;k++){
-                if(a[k + 1] > a[i]){
+            for(int k = i; k < j; k++) {
+                if(a[k + 1] > a[i]) {
                     e[i][j] = add(e[i][j],mult(dp[i][k],e[k + 1][j]));
                 }
             }
