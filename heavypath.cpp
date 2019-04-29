@@ -1,248 +1,194 @@
 #include <cstdio>
-#include <stdexcept>
-#include <algorithm>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
 FILE *f = fopen("heavypath.in","r");
 FILE *g = fopen("heavypath.out","w");
 
-class SegmentTree{
-private:
-
-	bool enforce_throws;
-	int n;
-	vector<int> aint;
-	vector<int> lazy;
-	
-	void build(int nod,int st,int dr,vector<int> &base){
-		lazy[nod] = 0;
-		aint[nod] = 0;
-		
-		if(st == dr){
-			aint[nod] = base[st];
-			return;
-		}
-		
-		int mid = (st + dr) / 2;
-		
-		build(nod * 2,st,mid,base);
-		build(nod * 2 + 1,mid + 1,dr,base);
-		aint[nod] = max(aint[2 * nod],aint[2 * nod + 1]);
-	}
-	
-	void propag(int nod,int st,int dr){
-		if(st == dr || !lazy[nod]){
-			return;
-		}
-		
-		lazy[2 * nod] += lazy[nod];
-		lazy[2 * nod + 1] += lazy[nod];
-		aint[2 * nod] += lazy[nod];
-		aint[2 * nod + 1] += lazy[nod];
-		lazy[nod] = 0;
-	}
-	
-	void update(int nod,int st,int dr,int S,int D,int val){
-		propag(nod,st,dr);
-		
-		if(D < st || S > dr){
-			return ;
-		}
-		
-		if(S <= st && dr <= D){
-			lazy[nod] += val;
-			aint[nod] += val;
-			return ;
-		}
-		
-		int mid = (st + dr) / 2;
-		
-		update(nod * 2,st,mid,S,D,val);
-		update(nod * 2 + 1,mid + 1,dr,S,D,val);
-		
-		aint[nod] = max(aint[2 * nod],aint[2 * nod + 1]);
-	}
-	
-	int query(int nod,int st,int dr,int S,int D){
-		propag(nod,st,dr);
-		
-		if(D < st || S > dr){
-			return -1;
-		}
-		
-		if(S <= st && dr <= D){
-			return aint[nod];
-		}
-		
-		int mid = (st + dr) / 2;
-		return max(query(nod * 2,st,mid,S,D),query(nod * 2 + 1,mid + 1,dr,S,D));
-	}
-	
-public:
-	
-	SegmentTree(vector<int> &base,bool enforce_throws = true){
-		this->enforce_throws = enforce_throws;
-		this->n = base.size();
-		aint.resize(4 * n + 1);
-		lazy.resize(4 * n + 1);
-		build(1,0,n - 1,base);
-	}
-	
-	SegmentTree(int n,bool enforce_throws = true){
-		this->enforce_throws = enforce_throws;
-		this->n = n;
-		aint.resize(4 * n + 1);
-		lazy.resize(4 * n + 1);
-	}
-	
-	void update(int st,int dr,int val){
-		if(enforce_throws && (st > dr || st < 0 || dr >= n)){
-			throw runtime_error("invalid update");
-		}
-		update(1,0,n - 1,st,dr,val);
-	}
-	
-	int query(int st,int dr){
-		if(enforce_throws && (st > dr || st < 0 || dr >= n)){
-			throw runtime_error("invalid update");
-		}
-		
-		return query(1,0,n - 1,st,dr);
-	}
-	
-	int overall_max(){
-		return aint[1];
-	}
-	
-	void print(){
-		for(auto it:aint){
-			printf("%d ",it);
-		}
-		printf("\n");
-	}
-};
-
 const int NMAX = 1e5;
 
+class SegmentTree{
+private:
+    int n;
+    vector<int> aint;
+   
+    void build(int nod,int st,int dr,const vector<int> &vals){
+        if(st == dr){
+            aint[nod] = vals[st];
+            return ;
+        }
+
+        int mid = (st + dr) / 2;
+
+        build(nod * 2,st,mid,vals);
+        build(nod * 2 + 1,mid + 1,dr,vals);
+
+        aint[nod] = max(aint[nod * 2],aint[nod * 2 + 1]);
+    }
+
+    void update(int nod,int st,int dr,int pos,int val){
+        if(dr < pos || st > pos){
+            return ;
+        }
+        
+        if(st == dr){
+            aint[nod] = val;
+            return ;
+        }
+
+        int mid = (st + dr) / 2;
+
+        update(nod * 2,st,mid,pos,val);
+        update(nod * 2 + 1,mid + 1,dr,pos,val);
+
+        aint[nod] = max(aint[2 * nod],aint[2 * nod + 1]);
+    }
+
+    int query(int nod,int st,int dr,int S,int D){
+        if(dr < S || st > D){
+            return 0;
+        }
+        
+        if(S <= st && dr <= D){
+            return aint[nod];
+        }
+
+        int mid = (st + dr) / 2;
+
+        return max(query(nod * 2,st,mid,S,D),query(nod * 2 + 1,mid + 1,dr,S,D));
+    }
+public:
+ 
+    SegmentTree(int n){
+        this->n = n;
+        this->aint = vector<int>(4 * n + 5,0);
+    }
+
+    SegmentTree(const vector<int> &vals){
+        this->n = (int)vals.size() - 1;
+        this->aint = vector<int>(4 * n + 5,0);
+        this->build(1,1,n,vals);
+    }
+
+    void update(int pos,int val){
+        this->update(1,1,n,pos,val);
+    }
+
+    int query(int l,int r){
+        return this->query(1,1,n,l,r);
+    }
+};
+
+
 int n,q;
+int v[NMAX + 5];
+
+int hpd[NMAX + 5];
+int sz[NMAX + 5];
+int ind[NMAX + 5];
+int lvl[NMAX + 5];
+int weight[NMAX + 5];
+int root[NMAX + 5];
+int father[NMAX + 5];
+vector<SegmentTree> lant;
+int last_comp;
 
 vector<int> graph[NMAX + 5];
 
-int id[NMAX + 5],last_id = -1;
-int sz[NMAX + 5];
-int head[NMAX + 5];
-int pos[NMAX + 5];
-vector<SegmentTree> paths;
-int heavy_son[NMAX + 5];
+void dfs(int nod,int tata){
+    lvl[nod] = lvl[tata] + 1;
+    hpd[nod] = -1;
+    weight[nod] = 1;
+    father[nod] = tata;
 
-int lvl[NMAX + 5];
-int father[NMAX + 5];
+    int bigChild = -1;
 
-int v[NMAX + 5];
-int w[NMAX + 5];
+    for(auto it:graph[nod]){
+        if(it == tata){
+            continue;
+        }
+        dfs(it,nod);
+        weight[nod] += weight[it];
 
-void predfs(int nod,int tata){
-	lvl[nod] = 1 + lvl[tata];
-	w[nod] = 1;
-	father[nod] = tata;
-	
-	for(auto it:graph[nod]){
-		if(it != tata){
-			predfs(it,nod);
-			if(w[it] > w[heavy_son[nod]]){
-				heavy_son[nod] = it;
-			}
-		}
-	}
-	
-	w[tata] += w[nod];
+        if(bigChild == -1 || weight[it] > weight[bigChild]){
+            bigChild = it;
+        }
+    }
+
+    if(bigChild == -1){
+        last_comp++;
+        hpd[nod] = last_comp;
+        sz[last_comp]++;
+        ind[nod] = sz[last_comp];
+        root[last_comp] = nod;
+    }
+    else{
+        hpd[nod] = hpd[bigChild];
+        sz[hpd[nod]]++;
+        ind[nod] = sz[hpd[nod]];
+        root[hpd[nod]] = nod;
+    }
 }
 
-void dfs(int nod,int tata){
-	if(!id[nod]){
-		id[nod] = ++last_id;
-		head[last_id] = nod;
-		pos[nod] = 0;
-	}
-	
-	sz[id[nod]]++;
-	
-	for(auto it:graph[nod]){
-		if(it == tata){
-			continue;
-		}
-		
-		if(it == heavy_son[nod]){
-			id[it] = id[nod];
-			pos[it] = pos[nod] + 1;
-		}
-		
-		dfs(it,nod);
-	}
+int solve(int x,int y){
+    if(lvl[root[hpd[x]]] > lvl[root[hpd[y]]]){
+        swap(x,y);
+    }
+    
+    if(hpd[x] == hpd[y]){
+        if(lvl[x] > lvl[y]){
+            swap(x,y);
+        }
+        return lant[hpd[x]].query(ind[y],ind[x]);
+    }
+    else{
+        return max(lant[hpd[y]].query(ind[y],sz[hpd[y]]),solve(x,father[root[hpd[y]]]));
+    }
 }
 
 int main(){
-	
-	fscanf(f,"%d %d",&n,&q);
-	
-	for(int i = 1;i <= n;i++){
-		fscanf(f,"%d",&v[i]);
-	}
-	
-	for(int i = 1;i < n;i++){
-		int x,y;
-		fscanf(f,"%d %d",&x,&y);
-		graph[x].push_back(y);
-		graph[y].push_back(x);
-	}
-	
-	predfs(1,0);
-	dfs(1,0);
-	
-	for(int i = 0;i <= last_id;i++){
-		paths.push_back(SegmentTree(sz[i]));
-	}
-	
-	for(int i = 1;i <= n;i++){
-		paths[id[i]].update(pos[i],pos[i],v[i]);
-	}
 
-	
-	while(q--){
-		int c,x,y;
-		fscanf(f,"%d %d %d",&c,&x,&y);
-		
-		if(c == 0){
-			paths[id[x]].update(pos[x],pos[x],y - v[x]);
-			v[x] = y;
-		}
+    fscanf(f,"%d %d",&n,&q);
 
-		else{
-			int ans = 0;
-			while(id[x] != id[y]){
-				if(lvl[head[id[x]]] < lvl[head[id[y]]]){
-					ans = max(ans,paths[id[y]].query(0,pos[y]));
-					y = father[head[id[y]]];
-				}
-				else{
-					ans = max(ans,paths[id[x]].query(0,pos[x]));
-					x = father[head[id[x]]];
-				}
-			}
-			
-			if(pos[x] > pos[y]){
-				swap(x,y);
-			}
-			
-			ans = max(ans,paths[id[x]].query(pos[x],pos[y]));
-			fprintf(g,"%d\n",ans);
-		}
-	}
-	
-	fclose(f);
-	fclose(g);
-	
-	return 0;
+    for(int i = 1;i <= n;i++){
+        fscanf(f,"%d",&v[i]);
+    }
+
+    for(int i = 1;i < n;i++){
+        int x,y;
+        fscanf(f,"%d %d",&x,&y);
+        graph[x].push_back(y);
+        graph[y].push_back(x);
+    }
+
+    dfs(1,0);
+
+    lant.push_back(SegmentTree(0));
+
+    for(int i = 1;i <= last_comp;i++){
+        lant.push_back(SegmentTree(sz[i]));
+    }
+
+    for(int i = 1;i <= n;i++){
+        lant[hpd[i]].update(ind[i],v[i]);
+    }
+    
+    while(q--){
+        int t,x,y;
+        fscanf(f,"%d %d %d",&t,&x,&y);
+
+        if(t == 0){
+            lant[hpd[x]].update(ind[x],y);
+        }
+        else{
+            fprintf(g,"%d\n",solve(x,y));
+        }
+    }
+
+    fclose(f);
+    fclose(g);
+
+    return 0;
 }

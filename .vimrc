@@ -1,31 +1,36 @@
+set autoindent
+set cindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set autoindent
-set cindent
 
-" this functions only work for cwd :(
-
-function Compile()
+function Comp()
     :w
-     :!g++ --std=c++11 -o2 -Wall -Wpedantic -o %<.exe %
+    :!g++ --std=c++11 -Wall -O2 -static -o _%< % -lm
 endfunction
 
 function Exec()
+    :w     
+    :!g++ --std=c++11 -Wall -O2 -static -o _%< % -lm && ./_%<
+endfunction
+
+function Debug()
     :w
-     :!(g++ --std=c++11 -o2 -Wall -Wpedantic -o %<.exe % && ./%<.exe)
+    :!g++ --std=c++11 -Wall -O0 -o _%< % -lm -g -fsanitize=address && ./_%<
 endfunction
 
 function Input()
-    :execute ':vs ' . expand('%:r') . ".in"
+    :exec ":vs " . expand("%:r") . ".in"
 endfunction
 
 function Output()
-    :execute ':vs ' . expand('%:r') . ".out"
+    :exec ":vs " . expand("%:r") . ".out"
 endfunction
 
 let mapleader = " "
-map<leader>c :call Compile()<Return>
+
+map<leader>c :call Comp()<Return>
 map<leader>e :call Exec()<Return>
 map<leader>i :call Input()<Return>
 map<leader>o :call Output()<Return>
+map<leader>d :call Debug()<Return>
