@@ -12,16 +12,16 @@ int n,m;
 int v[NMAX + 5];
 int tmp_v[NMAX + 5];
 
-bool ok(int val){
-    for(int i = 1;i <= n;i++){
+bool ok(int val) {
+    for(int i = 1; i <= n; i++) {
         tmp_v[i] = v[i];
-        if(tmp_v[i - 1] > tmp_v[i]){
-            if(tmp_v[i] + val < tmp_v[i - 1]){
+        if(tmp_v[i - 1] > tmp_v[i]) {
+            if(tmp_v[i] + val < tmp_v[i - 1]) {
                 return false;
             }
             tmp_v[i] = tmp_v[i - 1];
         }
-        else{
+        else {
             if(val >= m - tmp_v[i] && (tmp_v[i] + val) % m >= tmp_v[i - 1] && (tmp_v[i] + val) % m <= tmp_v[i]) {
                 tmp_v[i] = tmp_v[i - 1];
             }
@@ -30,24 +30,24 @@ bool ok(int val){
     return true;
 }
 
-int main(){
+int main() {
 
     scanf("%d %d",&n,&m);
 
-    for(int i = 1;i <= n;i++){
+    for(int i = 1; i <= n; i++) {
         scanf("%d",&v[i]);
     }
-    
+
     int st = -1;
     int dr = m;
 
-    while(dr - st > 1){
+    while(dr - st > 1) {
         int mid = (st + dr) / 2;
 
-        if(ok(mid)){
+        if(ok(mid)) {
             dr = mid;
         }
-        else{
+        else {
             st = mid;
         }
     }

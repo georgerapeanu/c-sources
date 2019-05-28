@@ -22,25 +22,25 @@ int last[LGMAX + 1][LGMAX + 1];
 
 void prepare() {
 
-    for(auto &it:last){
+    for(auto &it:last) {
         for(auto &it2:it)it2 = n + 1;
     }
 
-    for(int i = n;i;i--){
-        for(int b = 0;b < LGMAX;b++){
+    for(int i = n; i; i--) {
+        for(int b = 0; b < LGMAX; b++) {
             nxt[i][b] = n + 1;
         }
-        for(int b = 0;b < LGMAX;b++){
-            if((v[i] >> b) & 1){
-                for(int j = 0;j < LGMAX;j++){
+        for(int b = 0; b < LGMAX; b++) {
+            if((v[i] >> b) & 1) {
+                for(int j = 0; j < LGMAX; j++) {
                     nxt[i][j] = min(nxt[i][j],last[b][j]);
                 }
             }
         }
-        for(int b = 0;b < LGMAX;b++){
-            if((v[i] >> b) & 1){
-                for(int bb = 0;bb < LGMAX;bb++){
-                    if((v[i] >> bb) & 1){
+        for(int b = 0; b < LGMAX; b++) {
+            if((v[i] >> b) & 1) {
+                for(int bb = 0; bb < LGMAX; bb++) {
+                    if((v[i] >> bb) & 1) {
                         last[b][bb] = i;
                     }
                 }
@@ -54,16 +54,16 @@ int fst_pos[LGMAX + 5];
 bool inside[LGMAX + 5];
 bool bfs(int pos,int target) {
 
-    for(auto &it:fst_pos){
+    for(auto &it:fst_pos) {
         it = n + 1;
     }
 
-    for(auto &it:inside){
+    for(auto &it:inside) {
         it = false;
     }
 
-    for(int bit = 0;bit < LGMAX;bit++){
-        if((v[pos] >> bit) & 1){
+    for(int bit = 0; bit < LGMAX; bit++) {
+        if((v[pos] >> bit) & 1) {
             fst_pos[bit] = pos;
         }
     }
@@ -72,20 +72,20 @@ bool bfs(int pos,int target) {
 
         int pos = target + 1,b = -1;
 
-        for(int bit = 0;bit < LGMAX;bit++){
-            if(inside[bit] == false && fst_pos[bit] < pos){
+        for(int bit = 0; bit < LGMAX; bit++) {
+            if(inside[bit] == false && fst_pos[bit] < pos) {
                 b = bit;
                 pos = fst_pos[bit];
             }
         }
 
-        if(pos == target + 1){
+        if(pos == target + 1) {
             break;
         }
 
         inside[b] = true;
 
-        if(v[pos] & v[target]){
+        if(v[pos] & v[target]) {
             return true;
         }
 
