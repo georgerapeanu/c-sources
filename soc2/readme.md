@@ -1,0 +1,1 @@
+there are output format differences between brut and soc2 because i didn't check this thing,and by the time i coded it my internet was down
