@@ -100,7 +100,7 @@ public:
 		if(this->h1 != other.h1){
 			return this->h1 < other.h1;
 		}
-		return this->h2 != other.h2;
+		return this->h2 < other.h2;
 	}
 	
 	BimodularInt pw(int e){
