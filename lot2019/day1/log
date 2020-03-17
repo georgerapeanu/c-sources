@@ -1,0 +1,14 @@
+nu am cum sa testez pentru ca nu si-au pus graderele, eventual fac un script pentru asta
+prima in niciun caz nu am cum pentru ca e interactiva
+
+[9:39] solved pisi. un pic cheating pentru ca m-am mai uitat peste ea mai demult, dar asa o sa fie la toate problemele de la barajul acesta(mai putin zombie, la aia din cate stiu nu m-am uitat)
+[10:10] din nou cheating, dar m-am prins de mole
+[10:59] am terminat de codat si testat mole local, dar nu am nicio idee cum sa simulez un sistem de submit, mai ramane doar zombie
+[11:48] m-am prins de niste observatii la zombie, am un singur caz pe care e n^2, am sa implementez asa si ma mai gandesc ce ii pot face la acel caz
+[12:18] ma gandesc cum pot baga codul astfel incat sa imi fie usor sa ma extind pe el, cazul de n^2 putand fii redus(cred) la un set mai dubios
+am tratat cazurile 1,2(paralelxy),3(paralelxy),4. mai raman de trat 2(perpendicularxy) 3(perpendiularxy)
+[12:59] am tratat 2(perpendicularxy) cred,acum testez, urmatorul pas e sa fac n^2-ul la 3(perpendicularxy)
+[13:21] nu prea mai e timp de debug, 100 % nu mai e de scos mai bine de n^2, facem ceva mai brut-ish
+[13:35] poate am terminat brutu,mai bag cateva teste de mana
+[13:47] am cam testat, ma mai uit un pic la cod. se poate ca cazul de 3(perpendicular) sa nu existe, dar oricum e prea tarziu sa incerc sa mai bag cazul de 2(perpendicular) bine
+[13:54] done, nu stiu cum sa le testez

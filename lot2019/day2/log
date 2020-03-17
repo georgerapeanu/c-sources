@@ -1,0 +1,22 @@
+[8:43] cred ca am mai citit problemele astea dar nu prea m-am gandit, deci va fi mai putin cheating decat data trecuta, start at [9:00]
+[8:45] again nu exista gradere sau posibilitate de testare
+#######################################################################################################################################
+[9:00] start
+[9:29] cred ca m-am prins de tango folosind aint persistent, ma mai gandesc un pic daca am o alta alternativa
+[9:38] probabil ca exista o alternativa dar bag aint persistent anyways. la lot probabil as fi facut la fel, si daca lua tle faceam hibrid cu un singur aint dar queryuri offline. totusi cred ca ar trebui sa intre in 0.4s
+[10:19] am scris codul, pare ok, am rulat pe exemeplu. mai vad daca il mai testez, dar cu sistem de submit zic ca ar fi iesit ok.
+[10:34] ok, am facut un test mare, aparent dureaza 3 secunde citirea(ceea ce nu e vina mea) si 3 secunde rularea, ceea ce e un pic cam mult fata de 0.4s.
+[11:25] am uitat sa scriu, dar cred ca m-am prins de bolt si acuma incerc sa o fac
+[11:43] cred ca am scos bolt,adica merge pe exemple bine si is si cateva exemple mai maricele. implementarea chiar a fost draguta, pot vedea cum in conditii de stres de lot devine mai dificil, dar chiar nu a fost cine stie ce problema
+[11:47] fuck am rulat pe un test oficial si nu da bine
+[11:48] nevermind era formatat prost inputu
+[11:50] da pare sa dea bine. mai am 2:10. Am de ales intre a incerca sa gasesc ceva nou la tango sau a incerca sa gasesc ceva la wildcards. cred ca voi incerca sa ma gandesc putin si la wildcards, ca pe tango oricum am asigurat un punctaj decent asa cum e, chiar daca nu maxim
+[12:22] m-am prins de primele 4 subtaskuri la wildcards, trebuie sa vad daca reusesc sa le combin intre elee ca sa le rezolve pe celelalte
+[12:38] m-am prins de al 5lea subtask, de o solutie care le acopera pe toate celelalte subtaskuri mai putin al 6lea. deci as lua cam 68 de puncte cu asta. mai stau pana la [13:00] sa vad daca ma prind cum sa optimizez
+[12:54] m-am prins de o optimizare. sincer nu stiu cat de buna e. imi trebuie un factor de ~3 ca sa ia 100. cred ca are factorul asta.ma gandesc cum sa implementez mai exact
+[13:39] cred ca am terminat, merge pe exemple, ma mai uit o data la cod si bag un test de mana si aia e
+[13:47] am terminat code review-ul, acuma mai fac un test de mana si gata
+[13:54] fixed a bug
+[13:57] am facut un test de mana prea mare ca sa il pot verifica,dar pare ok
+
+expected score: 100(bolt) 60(tango) 68-100(wildcards) => 218-260(total)

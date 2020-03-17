@@ -3,42 +3,83 @@
 #include <stack>
 #define MOD 666013
 using namespace std;
+
 int cul[100006];
 char C[100006];
 int nr=0,N,M;
 int ind=1;
-/*
-reprezinti ca arbore
-incepi de la dinamici proaste
-d1[nod][c1][c2]-colorarea subarborelui nod astfel incat prima paranteza e c1,ultima e c2
-d2[fiu][c1][c2]-colorarea fiilor lui nod pana la nodul fiu,prima paranteza a primului fiu e c1,ultima e c2
-apoi observi ca se repeta valori,si anume o sa obtii 2 valori diferite:
-daca ultima paranteza a fiului e colorata la fel cu prima a tatalui
-si daca nu
-d1[fiu][c1][c2] e constant
-d2[fiu][0]-numarul de variante daca c2!=culoare tata(dinamica veche)
-ies recurentele destul de smecher
-*/
-int dfs()
+
+int invM;
+int invM1;
+
+int add(int a,int b){
+    a += b;
+    if(a >= MOD){
+        a -= MOD;
+    }
+    return a;
+}
+
+int mult(int a,int b){
+    return 1LL * a * b % MOD;
+}
+
+int lgpow(int b,int e){
+    int p = 1;
+
+    while(e){
+        if(e & 1){
+            p = mult(p,b);
+        }
+        b = mult(b,b);
+        e >>= 1;
+    }
+
+    return p;
+}
+
+pair<int,int> compose(pair<int,int> dp,pair<int,int> tmp){
+    pair<int,int> dp2 = {0,0};
+    dp2.second = add(dp2.second,mult(mult(dp.first,tmp.first),mult(M - 1,invM)));
+    dp2.first = add(dp2.first,mult(mult(dp.first,tmp.second),mult(1,invM)));
+    dp2.second = add(dp2.second,mult(mult(dp.first,tmp.second),mult(M - 2,invM)));
+    dp2.first = add(dp2.first,mult(mult(dp.second,tmp.first),mult(1,invM)));
+    dp2.second = add(dp2.second,mult(mult(dp.second,tmp.first),mult(M - 2,invM)));
+    dp2.first = add(dp2.first,mult(mult(dp.second,tmp.second),mult(mult(1,invM),mult(M - 2,invM1))));
+    dp2.second = add(dp2.second,mult(mult(dp.second,tmp.second),mult(mult(1,invM),add(M - 2,invM1))));
+    return dp2;
+}
+
+pair<int,int> dfs()
 {
     if(C[ind]==')')
     {
         ind++;
-        return 1;
+        return {0,mult(M,M - 1)};
     }
-    int d1=0,d2[]={0,1},nd2[2];
+
+    pair<int,int> dp = {-1,-1};
     while(C[ind]!=')')
     {
         ind++;
-        int tmp=dfs();
-        nd2[0]=(1LL*tmp*((1LL*(M-2)*((d2[1]+1LL*d2[0]*(M-2)))%MOD)+1LL*(M-1)*d2[0])%MOD)%MOD;
-        nd2[1]=(((1LL*((1LL*d2[1]+1LL*d2[0]*(M-2))%MOD)*tmp)%MOD)*(M-1))%MOD;
-        d2[0]=nd2[0];
-        d2[1]=nd2[1];
+        pair<int,int> tmp=dfs();
+        if(dp.first == -1){
+            dp = tmp;
+        }
+        else{
+            dp = compose(dp,tmp);
+        }
     }
-    d1=(d2[1]+1LL*d2[0]*(M-2))%MOD;
+
+    pair<int,int> dp2 = {0,0};
+
+    dp2.first = 0;
+    dp2.second = add(dp2.second,mult(mult(M - 2,M - 1),dp.first));
+    dp2.second = add(dp2.second,mult(add(M - 1,mult(M - 2,M - 2)),dp.second));
+    dp = dp2;
+
     ind++;
-    return d1;
+    return dp;
 }
 int main()
 {
@@ -47,16 +88,23 @@ int main()
     cin>>N>>M;
     cin.getline(C+1,1000006);
     cin.getline(C+1,1000006);
-    int rez=1;
     ind=1;
+    invM = lgpow(M,MOD - 2);
+    invM1 = lgpow(M - 1,MOD - 2);
     bool fst=1;
+    pair<int,int> dp = {-1,-1};
     while(ind<=N)
     {
         ind++;
-        int tmp=dfs();
-        rez=(1LL*((1LL*(1LL*(M-(!fst))*(M-1)%MOD)*tmp)%MOD)*rez)%MOD;
-        fst=0;
+        pair<int,int> tmp=dfs();
+        if(dp.first == -1){
+            dp = tmp;
+        }
+        else{
+            dp = compose(dp,tmp);
+        }
+
     }
-    cout<<rez;
+    cout<<add(dp.first,dp.second);
     return 0;
 }

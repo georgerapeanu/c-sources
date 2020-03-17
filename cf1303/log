@@ -1,0 +1,625 @@
+In file included from /usr/include/c++/5/ext/alloc_traits.h:36:0,
+                 from /usr/include/c++/5/bits/stl_construct.h:61,
+                 from /usr/include/c++/5/bits/stl_tempbuf.h:60,
+                 from /usr/include/c++/5/bits/stl_algo.h:62,
+                 from /usr/include/c++/5/algorithm:62,
+                 from F.cpp:2:
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<int, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:88:43: error: no type named ‘value_type’ in ‘struct std::pair<int, int>’
+       typedef typename _Alloc::value_type value_type;
+                                           ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no matching function for call to ‘std::allocator_traits<std::pair<int, int> >::_S_pointer_helper(std::pair<int, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note: candidate: template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<int, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = std::pair<int, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:98:1:   required from ‘struct std::allocator_traits<std::pair<int, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no type named ‘pointer’ in ‘struct std::pair<int, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<int, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no matching function for call to ‘std::allocator_traits<std::pair<int, int> >::_S_pointer_helper(std::pair<int, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note: candidate: template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<int, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = std::pair<int, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:98:1:   required from ‘struct std::allocator_traits<std::pair<int, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no type named ‘pointer’ in ‘struct std::pair<int, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<int, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:107:1: error: no matching function for call to ‘std::allocator_traits<std::pair<int, int> >::_S_const_pointer_helper(std::pair<int, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(const_pointer,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:107:1: note: candidate: template<class _Tp> static typename _Tp::const_pointer std::allocator_traits<_Alloc>::_S_const_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<int, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(const_pointer,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:107:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::const_pointer std::allocator_traits<_Alloc>::_S_const_pointer_helper(_Tp*) [with _Tp = std::pair<int, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:107:1:   required from ‘struct std::allocator_traits<std::pair<int, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:107:1: error: no type named ‘const_pointer’ in ‘struct std::pair<int, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<int, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no matching function for call to ‘std::allocator_traits<std::pair<int, int> >::_S_pointer_helper(std::pair<int, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note: candidate: template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<int, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = std::pair<int, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:98:1:   required from ‘struct std::allocator_traits<std::pair<int, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no type named ‘pointer’ in ‘struct std::pair<int, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<int, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:118:1: error: no matching function for call to ‘std::allocator_traits<std::pair<int, int> >::_S_void_pointer_helper(std::pair<int, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(void_pointer,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:118:1: note: candidate: template<class _Tp> static typename _Tp::void_pointer std::allocator_traits<_Alloc>::_S_void_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<int, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(void_pointer,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:118:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::void_pointer std::allocator_traits<_Alloc>::_S_void_pointer_helper(_Tp*) [with _Tp = std::pair<int, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:118:1:   required from ‘struct std::allocator_traits<std::pair<int, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:118:1: error: no type named ‘void_pointer’ in ‘struct std::pair<int, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<int, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no matching function for call to ‘std::allocator_traits<std::pair<int, int> >::_S_pointer_helper(std::pair<int, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note: candidate: template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<int, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = std::pair<int, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:98:1:   required from ‘struct std::allocator_traits<std::pair<int, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no type named ‘pointer’ in ‘struct std::pair<int, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<int, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:129:1: error: no matching function for call to ‘std::allocator_traits<std::pair<int, int> >::_S_const_void_pointer_helper(std::pair<int, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(const_void_pointer,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:129:1: note: candidate: template<class _Tp> static typename _Tp::const_void_pointer std::allocator_traits<_Alloc>::_S_const_void_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<int, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(const_void_pointer,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:129:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::const_void_pointer std::allocator_traits<_Alloc>::_S_const_void_pointer_helper(_Tp*) [with _Tp = std::pair<int, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:129:1:   required from ‘struct std::allocator_traits<std::pair<int, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:129:1: error: no type named ‘const_void_pointer’ in ‘struct std::pair<int, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<int, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no matching function for call to ‘std::allocator_traits<std::pair<int, int> >::_S_pointer_helper(std::pair<int, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note: candidate: template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<int, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = std::pair<int, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:98:1:   required from ‘struct std::allocator_traits<std::pair<int, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no type named ‘pointer’ in ‘struct std::pair<int, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<int, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:140:1: error: no matching function for call to ‘std::allocator_traits<std::pair<int, int> >::_S_difference_type_helper(std::pair<int, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(difference_type,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:140:1: note: candidate: template<class _Tp> static typename _Tp::difference_type std::allocator_traits<_Alloc>::_S_difference_type_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<int, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(difference_type,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:140:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::difference_type std::allocator_traits<_Alloc>::_S_difference_type_helper(_Tp*) [with _Tp = std::pair<int, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:140:1:   required from ‘struct std::allocator_traits<std::pair<int, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:140:1: error: no type named ‘difference_type’ in ‘struct std::pair<int, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<int, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:140:1: error: no matching function for call to ‘std::allocator_traits<std::pair<int, int> >::_S_difference_type_helper(std::pair<int, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(difference_type,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:140:1: note: candidate: template<class _Tp> static typename _Tp::difference_type std::allocator_traits<_Alloc>::_S_difference_type_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<int, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(difference_type,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:140:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::difference_type std::allocator_traits<_Alloc>::_S_difference_type_helper(_Tp*) [with _Tp = std::pair<int, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:140:1:   required from ‘struct std::allocator_traits<std::pair<int, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:140:1: error: no type named ‘difference_type’ in ‘struct std::pair<int, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<int, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:151:1: error: no matching function for call to ‘std::allocator_traits<std::pair<int, int> >::_S_size_type_helper(std::pair<int, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(size_type,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:151:1: note: candidate: template<class _Tp> static typename _Tp::size_type std::allocator_traits<_Alloc>::_S_size_type_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<int, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(size_type,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:151:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::size_type std::allocator_traits<_Alloc>::_S_size_type_helper(_Tp*) [with _Tp = std::pair<int, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:151:1:   required from ‘struct std::allocator_traits<std::pair<int, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:151:1: error: no type named ‘size_type’ in ‘struct std::pair<int, int>’
+In file included from /usr/include/c++/5/bits/stl_construct.h:61:0,
+                 from /usr/include/c++/5/bits/stl_tempbuf.h:60,
+                 from /usr/include/c++/5/bits/stl_algo.h:62,
+                 from /usr/include/c++/5/algorithm:62,
+                 from F.cpp:2:
+/usr/include/c++/5/ext/alloc_traits.h: In instantiation of ‘struct __gnu_cxx::__alloc_traits<std::pair<int, int> >’:
+/usr/include/c++/5/bits/stl_vector.h:75:28:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/ext/alloc_traits.h:111:23: error: no members matching ‘__gnu_cxx::__alloc_traits<std::pair<int, int> >::_Base_type {aka std::allocator_traits<std::pair<int, int> >}::allocate’ in ‘__gnu_cxx::__alloc_traits<std::pair<int, int> >::_Base_type {aka struct std::allocator_traits<std::pair<int, int> >}’
+     using _Base_type::allocate;
+                       ^
+/usr/include/c++/5/ext/alloc_traits.h:112:23: error: no members matching ‘__gnu_cxx::__alloc_traits<std::pair<int, int> >::_Base_type {aka std::allocator_traits<std::pair<int, int> >}::deallocate’ in ‘__gnu_cxx::__alloc_traits<std::pair<int, int> >::_Base_type {aka struct std::allocator_traits<std::pair<int, int> >}’
+     using _Base_type::deallocate;
+                       ^
+/usr/include/c++/5/ext/alloc_traits.h:115:23: error: no members matching ‘__gnu_cxx::__alloc_traits<std::pair<int, int> >::_Base_type {aka std::allocator_traits<std::pair<int, int> >}::max_size’ in ‘__gnu_cxx::__alloc_traits<std::pair<int, int> >::_Base_type {aka struct std::allocator_traits<std::pair<int, int> >}’
+     using _Base_type::max_size;
+                       ^
+In file included from /usr/include/c++/5/ext/alloc_traits.h:36:0,
+                 from /usr/include/c++/5/bits/stl_construct.h:61,
+                 from /usr/include/c++/5/bits/stl_tempbuf.h:60,
+                 from /usr/include/c++/5/bits/stl_algo.h:62,
+                 from /usr/include/c++/5/algorithm:62,
+                 from F.cpp:2:
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:88:43: error: no type named ‘value_type’ in ‘struct std::pair<std::pair<int, int>, int>’
+       typedef typename _Alloc::value_type value_type;
+                                           ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no matching function for call to ‘std::allocator_traits<std::pair<std::pair<int, int>, int> >::_S_pointer_helper(std::pair<std::pair<int, int>, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note: candidate: template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<std::pair<int, int>, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = std::pair<std::pair<int, int>, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:98:1:   required from ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no type named ‘pointer’ in ‘struct std::pair<std::pair<int, int>, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no matching function for call to ‘std::allocator_traits<std::pair<std::pair<int, int>, int> >::_S_pointer_helper(std::pair<std::pair<int, int>, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note: candidate: template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<std::pair<int, int>, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = std::pair<std::pair<int, int>, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:98:1:   required from ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no type named ‘pointer’ in ‘struct std::pair<std::pair<int, int>, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:107:1: error: no matching function for call to ‘std::allocator_traits<std::pair<std::pair<int, int>, int> >::_S_const_pointer_helper(std::pair<std::pair<int, int>, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(const_pointer,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:107:1: note: candidate: template<class _Tp> static typename _Tp::const_pointer std::allocator_traits<_Alloc>::_S_const_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<std::pair<int, int>, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(const_pointer,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:107:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::const_pointer std::allocator_traits<_Alloc>::_S_const_pointer_helper(_Tp*) [with _Tp = std::pair<std::pair<int, int>, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:107:1:   required from ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:107:1: error: no type named ‘const_pointer’ in ‘struct std::pair<std::pair<int, int>, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no matching function for call to ‘std::allocator_traits<std::pair<std::pair<int, int>, int> >::_S_pointer_helper(std::pair<std::pair<int, int>, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note: candidate: template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<std::pair<int, int>, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = std::pair<std::pair<int, int>, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:98:1:   required from ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no type named ‘pointer’ in ‘struct std::pair<std::pair<int, int>, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:118:1: error: no matching function for call to ‘std::allocator_traits<std::pair<std::pair<int, int>, int> >::_S_void_pointer_helper(std::pair<std::pair<int, int>, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(void_pointer,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:118:1: note: candidate: template<class _Tp> static typename _Tp::void_pointer std::allocator_traits<_Alloc>::_S_void_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<std::pair<int, int>, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(void_pointer,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:118:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::void_pointer std::allocator_traits<_Alloc>::_S_void_pointer_helper(_Tp*) [with _Tp = std::pair<std::pair<int, int>, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:118:1:   required from ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:118:1: error: no type named ‘void_pointer’ in ‘struct std::pair<std::pair<int, int>, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no matching function for call to ‘std::allocator_traits<std::pair<std::pair<int, int>, int> >::_S_pointer_helper(std::pair<std::pair<int, int>, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note: candidate: template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<std::pair<int, int>, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = std::pair<std::pair<int, int>, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:98:1:   required from ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no type named ‘pointer’ in ‘struct std::pair<std::pair<int, int>, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:129:1: error: no matching function for call to ‘std::allocator_traits<std::pair<std::pair<int, int>, int> >::_S_const_void_pointer_helper(std::pair<std::pair<int, int>, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(const_void_pointer,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:129:1: note: candidate: template<class _Tp> static typename _Tp::const_void_pointer std::allocator_traits<_Alloc>::_S_const_void_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<std::pair<int, int>, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(const_void_pointer,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:129:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::const_void_pointer std::allocator_traits<_Alloc>::_S_const_void_pointer_helper(_Tp*) [with _Tp = std::pair<std::pair<int, int>, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:129:1:   required from ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:129:1: error: no type named ‘const_void_pointer’ in ‘struct std::pair<std::pair<int, int>, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no matching function for call to ‘std::allocator_traits<std::pair<std::pair<int, int>, int> >::_S_pointer_helper(std::pair<std::pair<int, int>, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note: candidate: template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<std::pair<int, int>, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(pointer, value_type*)
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:98:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::pointer std::allocator_traits<_Alloc>::_S_pointer_helper(_Tp*) [with _Tp = std::pair<std::pair<int, int>, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:98:1:   required from ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:98:1: error: no type named ‘pointer’ in ‘struct std::pair<std::pair<int, int>, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:140:1: error: no matching function for call to ‘std::allocator_traits<std::pair<std::pair<int, int>, int> >::_S_difference_type_helper(std::pair<std::pair<int, int>, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(difference_type,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:140:1: note: candidate: template<class _Tp> static typename _Tp::difference_type std::allocator_traits<_Alloc>::_S_difference_type_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<std::pair<int, int>, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(difference_type,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:140:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::difference_type std::allocator_traits<_Alloc>::_S_difference_type_helper(_Tp*) [with _Tp = std::pair<std::pair<int, int>, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:140:1:   required from ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:140:1: error: no type named ‘difference_type’ in ‘struct std::pair<std::pair<int, int>, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:140:1: error: no matching function for call to ‘std::allocator_traits<std::pair<std::pair<int, int>, int> >::_S_difference_type_helper(std::pair<std::pair<int, int>, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(difference_type,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:140:1: note: candidate: template<class _Tp> static typename _Tp::difference_type std::allocator_traits<_Alloc>::_S_difference_type_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<std::pair<int, int>, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(difference_type,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:140:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::difference_type std::allocator_traits<_Alloc>::_S_difference_type_helper(_Tp*) [with _Tp = std::pair<std::pair<int, int>, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:140:1:   required from ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:140:1: error: no type named ‘difference_type’ in ‘struct std::pair<std::pair<int, int>, int>’
+/usr/include/c++/5/bits/alloc_traits.h: In instantiation of ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’:
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:151:1: error: no matching function for call to ‘std::allocator_traits<std::pair<std::pair<int, int>, int> >::_S_size_type_helper(std::pair<std::pair<int, int>, int>*)’
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(size_type,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:151:1: note: candidate: template<class _Tp> static typename _Tp::size_type std::allocator_traits<_Alloc>::_S_size_type_helper(_Tp*) [with _Tp = _Tp; _Alloc = std::pair<std::pair<int, int>, int>]
+ _GLIBCXX_ALLOC_TR_NESTED_TYPE(size_type,
+ ^
+/usr/include/c++/5/bits/alloc_traits.h:151:1: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/bits/alloc_traits.h: In substitution of ‘template<class _Tp> static typename _Tp::size_type std::allocator_traits<_Alloc>::_S_size_type_helper(_Tp*) [with _Tp = std::pair<std::pair<int, int>, int>]’:
+/usr/include/c++/5/bits/alloc_traits.h:151:1:   required from ‘struct std::allocator_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/ext/alloc_traits.h:95:10:   required from ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/alloc_traits.h:151:1: error: no type named ‘size_type’ in ‘struct std::pair<std::pair<int, int>, int>’
+In file included from /usr/include/c++/5/bits/stl_construct.h:61:0,
+                 from /usr/include/c++/5/bits/stl_tempbuf.h:60,
+                 from /usr/include/c++/5/bits/stl_algo.h:62,
+                 from /usr/include/c++/5/algorithm:62,
+                 from F.cpp:2:
+/usr/include/c++/5/ext/alloc_traits.h: In instantiation of ‘struct __gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >’:
+/usr/include/c++/5/bits/stl_vector.h:77:9:   required from ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >’
+/usr/include/c++/5/bits/stl_vector.h:214:11:   required from ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’
+F.cpp:13:42:   required from here
+/usr/include/c++/5/ext/alloc_traits.h:111:23: error: no members matching ‘__gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >::_Base_type {aka std::allocator_traits<std::pair<std::pair<int, int>, int> >}::allocate’ in ‘__gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >::_Base_type {aka struct std::allocator_traits<std::pair<std::pair<int, int>, int> >}’
+     using _Base_type::allocate;
+                       ^
+/usr/include/c++/5/ext/alloc_traits.h:112:23: error: no members matching ‘__gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >::_Base_type {aka std::allocator_traits<std::pair<std::pair<int, int>, int> >}::deallocate’ in ‘__gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >::_Base_type {aka struct std::allocator_traits<std::pair<std::pair<int, int>, int> >}’
+     using _Base_type::deallocate;
+                       ^
+/usr/include/c++/5/ext/alloc_traits.h:115:23: error: no members matching ‘__gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >::_Base_type {aka std::allocator_traits<std::pair<std::pair<int, int>, int> >}::max_size’ in ‘__gnu_cxx::__alloc_traits<std::pair<std::pair<int, int>, int> >::_Base_type {aka struct std::allocator_traits<std::pair<std::pair<int, int>, int> >}’
+     using _Base_type::max_size;
+                       ^
+In file included from /usr/include/c++/5/vector:64:0,
+                 from /usr/include/c++/5/bits/random.h:34,
+                 from /usr/include/c++/5/random:49,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from F.cpp:2:
+/usr/include/c++/5/bits/stl_vector.h: In instantiation of ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’:
+F.cpp:13:42:   required from here
+/usr/include/c++/5/bits/stl_vector.h:217:58: error: no type named ‘value_type’ in ‘struct std::pair<int, int>’
+       typedef typename _Alloc::value_type                _Alloc_value_type;
+                                                          ^
+/usr/include/c++/5/bits/stl_vector.h:241:20: error: no members matching ‘std::vector<std::pair<int, int>, std::pair<int, int> >::_Base {aka std::_Vector_base<std::pair<int, int>, std::pair<int, int> >}::_M_allocate’ in ‘std::vector<std::pair<int, int>, std::pair<int, int> >::_Base {aka struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >}’
+       using _Base::_M_allocate;
+                    ^
+/usr/include/c++/5/bits/stl_vector.h:242:20: error: no members matching ‘std::vector<std::pair<int, int>, std::pair<int, int> >::_Base {aka std::_Vector_base<std::pair<int, int>, std::pair<int, int> >}::_M_deallocate’ in ‘std::vector<std::pair<int, int>, std::pair<int, int> >::_Base {aka struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >}’
+       using _Base::_M_deallocate;
+                    ^
+F.cpp: In constructor ‘dsu_t::dsu_t()’:
+F.cpp:16:33: error: ‘memset’ was not declared in this scope
+         memset(dsu,0,sizeof(dsu));
+                                 ^
+F.cpp: In member function ‘std::pair<int, int> dsu_t::fi_root(std::pair<int, int>)’:
+F.cpp:25:46: error: expected ‘)’ before ‘;’ token
+         return fi_root(dsu[a.first][a.second];
+                                              ^
+F.cpp: In member function ‘void dsu_t::unite(std::pair<int, int>, std::pair<int, int>)’:
+F.cpp:32:71: error: no matching function for call to ‘std::vector<std::pair<int, int>, std::pair<int, int> >::push_back(std::pair<std::pair<int, int>, std::pair<int, int> >)’
+             history.push_back(make_pair(make_pair(0,0),make_pair(0,0)));
+                                                                       ^
+In file included from /usr/include/c++/5/vector:64:0,
+                 from /usr/include/c++/5/bits/random.h:34,
+                 from /usr/include/c++/5/random:49,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from F.cpp:2:
+/usr/include/c++/5/bits/stl_vector.h:913:7: note: candidate: void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::pair<int, int>; _Alloc = std::pair<int, int>; std::vector<_Tp, _Alloc>::value_type = std::pair<int, int>]
+       push_back(const value_type& __x)
+       ^
+/usr/include/c++/5/bits/stl_vector.h:913:7: note:   no known conversion for argument 1 from ‘std::pair<std::pair<int, int>, std::pair<int, int> >’ to ‘const value_type& {aka const std::pair<int, int>&}’
+/usr/include/c++/5/bits/stl_vector.h:931:7: note: candidate: void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = std::pair<int, int>; _Alloc = std::pair<int, int>; std::vector<_Tp, _Alloc>::value_type = std::pair<int, int>]
+       push_back(value_type&& __x)
+       ^
+/usr/include/c++/5/bits/stl_vector.h:931:7: note:   no known conversion for argument 1 from ‘std::pair<std::pair<int, int>, std::pair<int, int> >’ to ‘std::vector<std::pair<int, int>, std::pair<int, int> >::value_type&& {aka std::pair<int, int>&&}’
+F.cpp:38:9: error: ‘father’ was not declared in this scope
+         father[b.first][b.second] = a;
+         ^
+F.cpp:39:32: error: no matching function for call to ‘std::vector<std::pair<int, int>, std::pair<int, int> >::push_back(<brace-enclosed initializer list>)’
+         history.push_back({a,b});
+                                ^
+In file included from /usr/include/c++/5/vector:64:0,
+                 from /usr/include/c++/5/bits/random.h:34,
+                 from /usr/include/c++/5/random:49,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from F.cpp:2:
+/usr/include/c++/5/bits/stl_vector.h:913:7: note: candidate: void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::pair<int, int>; _Alloc = std::pair<int, int>; std::vector<_Tp, _Alloc>::value_type = std::pair<int, int>]
+       push_back(const value_type& __x)
+       ^
+/usr/include/c++/5/bits/stl_vector.h:913:7: note:   no known conversion for argument 1 from ‘<brace-enclosed initializer list>’ to ‘const value_type& {aka const std::pair<int, int>&}’
+/usr/include/c++/5/bits/stl_vector.h:931:7: note: candidate: void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = std::pair<int, int>; _Alloc = std::pair<int, int>; std::vector<_Tp, _Alloc>::value_type = std::pair<int, int>]
+       push_back(value_type&& __x)
+       ^
+/usr/include/c++/5/bits/stl_vector.h:931:7: note:   no known conversion for argument 1 from ‘<brace-enclosed initializer list>’ to ‘std::vector<std::pair<int, int>, std::pair<int, int> >::value_type&& {aka std::pair<int, int>&&}’
+F.cpp: In member function ‘void dsu_t::undo()’:
+F.cpp:43:20: error: ‘class std::vector<std::pair<int, int>, std::pair<int, int> >’ has no member named ‘back’
+         if(history.back() != make_pair(make_pair(0,0),make_pair(0,0)){
+                    ^
+F.cpp:43:70: error: expected ‘)’ before ‘{’ token
+         if(history.back() != make_pair(make_pair(0,0),make_pair(0,0)){
+                                                                      ^
+F.cpp: In function ‘int main()’:
+F.cpp:136:53: error: no matching function for call to ‘min(int, double)’
+     vector<dsu_t> stuff(min(1000,(2e6) / (n * m) + 2),dsu());
+                                                     ^
+In file included from /usr/include/c++/5/algorithm:61:0,
+                 from F.cpp:2:
+/usr/include/c++/5/bits/stl_algobase.h:195:5: note: candidate: template<class _Tp> const _Tp& std::min(const _Tp&, const _Tp&)
+     min(const _Tp& __a, const _Tp& __b)
+     ^
+/usr/include/c++/5/bits/stl_algobase.h:195:5: note:   template argument deduction/substitution failed:
+F.cpp:136:53: note:   deduced conflicting types for parameter ‘const _Tp’ (‘int’ and ‘double’)
+     vector<dsu_t> stuff(min(1000,(2e6) / (n * m) + 2),dsu());
+                                                     ^
+In file included from /usr/include/c++/5/algorithm:61:0,
+                 from F.cpp:2:
+/usr/include/c++/5/bits/stl_algobase.h:243:5: note: candidate: template<class _Tp, class _Compare> const _Tp& std::min(const _Tp&, const _Tp&, _Compare)
+     min(const _Tp& __a, const _Tp& __b, _Compare __comp)
+     ^
+/usr/include/c++/5/bits/stl_algobase.h:243:5: note:   template argument deduction/substitution failed:
+F.cpp:136:53: note:   deduced conflicting types for parameter ‘const _Tp’ (‘int’ and ‘double’)
+     vector<dsu_t> stuff(min(1000,(2e6) / (n * m) + 2),dsu());
+                                                     ^
+In file included from /usr/include/c++/5/algorithm:62:0,
+                 from F.cpp:2:
+/usr/include/c++/5/bits/stl_algo.h:3445:5: note: candidate: template<class _Tp> _Tp std::min(std::initializer_list<_Tp>)
+     min(initializer_list<_Tp> __l)
+     ^
+/usr/include/c++/5/bits/stl_algo.h:3445:5: note:   template argument deduction/substitution failed:
+F.cpp:136:53: note:   mismatched types ‘std::initializer_list<_Tp>’ and ‘int’
+     vector<dsu_t> stuff(min(1000,(2e6) / (n * m) + 2),dsu());
+                                                     ^
+In file included from /usr/include/c++/5/algorithm:62:0,
+                 from F.cpp:2:
+/usr/include/c++/5/bits/stl_algo.h:3451:5: note: candidate: template<class _Tp, class _Compare> _Tp std::min(std::initializer_list<_Tp>, _Compare)
+     min(initializer_list<_Tp> __l, _Compare __comp)
+     ^
+/usr/include/c++/5/bits/stl_algo.h:3451:5: note:   template argument deduction/substitution failed:
+F.cpp:136:53: note:   mismatched types ‘std::initializer_list<_Tp>’ and ‘int’
+     vector<dsu_t> stuff(min(1000,(2e6) / (n * m) + 2),dsu());
+                                                     ^
+F.cpp:136:59: error: ‘dsu’ was not declared in this scope
+     vector<dsu_t> stuff(min(1000,(2e6) / (n * m) + 2),dsu());
+                                                           ^
+In file included from /usr/include/c++/5/vector:64:0,
+                 from /usr/include/c++/5/bits/random.h:34,
+                 from /usr/include/c++/5/random:49,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from F.cpp:2:
+/usr/include/c++/5/bits/stl_vector.h: In instantiation of ‘std::vector<_Tp, _Alloc>::~vector() [with _Tp = std::pair<int, int>; _Alloc = std::pair<int, int>]’:
+F.cpp:15:12:   required from here
+/usr/include/c++/5/bits/stl_vector.h:424:22: error: ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >::_Vector_impl’ has no member named ‘_M_start’
+       { std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+                      ^
+/usr/include/c++/5/bits/stl_vector.h:424:22: error: ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >::_Vector_impl’ has no member named ‘_M_finish’
+/usr/include/c++/5/bits/stl_vector.h: In instantiation of ‘void std::vector<_Tp, _Alloc>::clear() [with _Tp = std::pair<int, int>; _Alloc = std::pair<int, int>]’:
+F.cpp:18:23:   required from here
+/usr/include/c++/5/bits/stl_vector.h:1212:24: error: ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >::_Vector_impl’ has no member named ‘_M_start’
+       { _M_erase_at_end(this->_M_impl._M_start); }
+                        ^
+/usr/include/c++/5/bits/stl_vector.h:1212:24: error: ‘_M_erase_at_end’ was not declared in this scope
+/usr/include/c++/5/bits/stl_vector.h: In instantiation of ‘std::_Vector_base<_Tp, _Alloc>::~_Vector_base() [with _Tp = std::pair<int, int>; _Alloc = std::pair<int, int>]’:
+/usr/include/c++/5/bits/stl_vector.h:257:15:   required from ‘std::vector<_Tp, _Alloc>::vector() [with _Tp = std::pair<int, int>; _Alloc = std::pair<int, int>]’
+F.cpp:15:12:   required from here
+/usr/include/c++/5/bits/stl_vector.h:160:22: error: ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >::_Vector_impl’ has no member named ‘_M_start’
+       { _M_deallocate(this->_M_impl._M_start, this->_M_impl._M_end_of_storage
+                      ^
+/usr/include/c++/5/bits/stl_vector.h:161:9: error: ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >::_Vector_impl’ has no member named ‘_M_end_of_storage’
+         - this->_M_impl._M_start); }
+         ^
+/usr/include/c++/5/bits/stl_vector.h:161:9: error: ‘struct std::_Vector_base<std::pair<int, int>, std::pair<int, int> >::_Vector_impl’ has no member named ‘_M_start’
+/usr/include/c++/5/bits/stl_vector.h:160:22: error: ‘_M_deallocate’ was not declared in this scope
+       { _M_deallocate(this->_M_impl._M_start, this->_M_impl._M_end_of_storage
+                      ^
+/usr/include/c++/5/bits/stl_vector.h: In instantiation of ‘std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_Vector_impl() [with _Tp = std::pair<int, int>; _Alloc = std::pair<int, int>]’:
+/usr/include/c++/5/bits/stl_vector.h:125:17:   required from ‘std::_Vector_base<_Tp, _Alloc>::_Vector_base() [with _Tp = std::pair<int, int>; _Alloc = std::pair<int, int>]’
+/usr/include/c++/5/bits/stl_vector.h:257:15:   required from ‘std::vector<_Tp, _Alloc>::vector() [with _Tp = std::pair<int, int>; _Alloc = std::pair<int, int>]’
+F.cpp:15:12:   required from here
+/usr/include/c++/5/bits/stl_vector.h:87:65: error: using invalid field ‘std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_M_start’
+  : _Tp_alloc_type(), _M_start(), _M_finish(), _M_end_of_storage()
+                                                                 ^
+/usr/include/c++/5/bits/stl_vector.h:87:65: error: using invalid field ‘std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_M_finish’
+/usr/include/c++/5/bits/stl_vector.h:87:65: error: using invalid field ‘std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_M_end_of_storage’

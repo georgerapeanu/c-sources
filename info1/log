@@ -1,0 +1,488 @@
+trampoline.cpp: In function ‘int main()’:
+trampoline.cpp:36:28: error: ‘n’ was not declared in this scope
+         for(int i = 1;i <= n;i++){
+                            ^
+trampoline.cpp:57:43: error: no match for ‘operator!=’ (operand types are ‘const std::pair<int, int>’ and ‘int’)
+         if(it == green.end() || it->first != i){
+                                           ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/stl_pair.h:227:5: note: candidate: template<class _T1, class _T2> constexpr bool std::operator!=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/5/bits/stl_pair.h:227:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   mismatched types ‘const std::pair<_T1, _T2>’ and ‘int’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/stl_iterator.h:304:5: note: candidate: template<class _Iterator> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator!=(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/5/bits/stl_iterator.h:304:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/stl_iterator.h:354:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator!=(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/5/bits/stl_iterator.h:354:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/stl_iterator.h:1077:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::move_iterator<_Iterator>&, const std::move_iterator<_IteratorR>&)
+     operator!=(const move_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/5/bits/stl_iterator.h:1077:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::move_iterator<_Iterator>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/stl_iterator.h:1083:5: note: candidate: template<class _Iterator> bool std::operator!=(const std::move_iterator<_Iterator>&, const std::move_iterator<_Iterator>&)
+     operator!=(const move_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/5/bits/stl_iterator.h:1083:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::move_iterator<_Iterator>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/bits/stl_tree.h:64:0,
+                 from /usr/include/c++/5/map:60,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/allocator.h:140:5: note: candidate: template<class _T1, class _T2> bool std::operator!=(const std::allocator<_Tp1>&, const std::allocator<_T2>&)
+     operator!=(const allocator<_T1>&, const allocator<_T2>&)
+     ^
+/usr/include/c++/5/bits/allocator.h:140:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::allocator<_Tp1>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/bits/stl_tree.h:64:0,
+                 from /usr/include/c++/5/map:60,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/allocator.h:146:5: note: candidate: template<class _Tp> bool std::operator!=(const std::allocator<_Tp1>&, const std::allocator<_Tp1>&)
+     operator!=(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^
+/usr/include/c++/5/bits/allocator.h:146:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::allocator<_Tp1>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/map:60:0,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/stl_tree.h:330:5: note: candidate: template<class _Val> bool std::operator!=(const std::_Rb_tree_iterator<_Tp>&, const std::_Rb_tree_const_iterator<_Val>&)
+     operator!=(const _Rb_tree_iterator<_Val>& __x,
+     ^
+/usr/include/c++/5/bits/stl_tree.h:330:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::_Rb_tree_iterator<_Tp>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/map:60:0,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/stl_tree.h:1293:5: note: candidate: template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> bool std::operator!=(const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)
+     operator!=(const _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/5/bits/stl_tree.h:1293:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/bits/char_traits.h:40:0,
+                 from /usr/include/c++/5/string:40,
+                 from /usr/include/c++/5/stdexcept:39,
+                 from /usr/include/c++/5/array:38,
+                 from /usr/include/c++/5/tuple:39,
+                 from /usr/include/c++/5/bits/stl_map.h:63,
+                 from /usr/include/c++/5/map:61,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/postypes.h:221:5: note: candidate: template<class _StateT> bool std::operator!=(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^
+/usr/include/c++/5/bits/postypes.h:221:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::fpos<_StateT>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/string:52:0,
+                 from /usr/include/c++/5/stdexcept:39,
+                 from /usr/include/c++/5/array:38,
+                 from /usr/include/c++/5/tuple:39,
+                 from /usr/include/c++/5/bits/stl_map.h:63,
+                 from /usr/include/c++/5/map:61,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/basic_string.h:4950:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/5/bits/basic_string.h:4950:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/string:52:0,
+                 from /usr/include/c++/5/stdexcept:39,
+                 from /usr/include/c++/5/array:38,
+                 from /usr/include/c++/5/tuple:39,
+                 from /usr/include/c++/5/bits/stl_map.h:63,
+                 from /usr/include/c++/5/map:61,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/basic_string.h:4962:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const _CharT* __lhs,
+     ^
+/usr/include/c++/5/bits/basic_string.h:4962:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   mismatched types ‘const _CharT*’ and ‘std::pair<int, int>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/string:52:0,
+                 from /usr/include/c++/5/stdexcept:39,
+                 from /usr/include/c++/5/array:38,
+                 from /usr/include/c++/5/tuple:39,
+                 from /usr/include/c++/5/bits/stl_map.h:63,
+                 from /usr/include/c++/5/map:61,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/basic_string.h:4974:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/5/bits/basic_string.h:4974:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/tuple:39:0,
+                 from /usr/include/c++/5/bits/stl_map.h:63,
+                 from /usr/include/c++/5/map:61,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/array:245:5: note: candidate: template<class _Tp, long unsigned int _Nm> bool std::operator!=(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)
+     operator!=(const array<_Tp, _Nm>& __one, const array<_Tp, _Nm>& __two)
+     ^
+/usr/include/c++/5/array:245:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::array<_Tp, _Nm>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/bits/stl_map.h:63:0,
+                 from /usr/include/c++/5/map:61,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/tuple:941:5: note: candidate: template<class ... _TElements, class ... _UElements> constexpr bool std::operator!=(const std::tuple<_Args1 ...>&, const std::tuple<_Args2 ...>&)
+     operator!=(const tuple<_TElements...>& __t,
+     ^
+/usr/include/c++/5/tuple:941:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::tuple<_Args1 ...>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/map:61:0,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/stl_map.h:1097:5: note: candidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const std::map<_Key, _Tp, _Compare, _Alloc>&, const std::map<_Key, _Tp, _Compare, _Alloc>&)
+     operator!=(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/5/bits/stl_map.h:1097:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::map<_Key, _Tp, _Compare, _Alloc>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/map:62:0,
+                 from trampoline.cpp:2:
+/usr/include/c++/5/bits/stl_multimap.h:998:5: note: candidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const std::multimap<_Key, _Tp, _Compare, _Alloc>&, const std::multimap<_Key, _Tp, _Compare, _Alloc>&)
+     operator!=(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/5/bits/stl_multimap.h:998:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::multimap<_Key, _Tp, _Compare, _Alloc>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/vector:64:0,
+                 from /usr/include/c++/5/bits/random.h:34,
+                 from /usr/include/c++/5/random:49,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/stl_vector.h:1535:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator!=(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator!=(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^
+/usr/include/c++/5/bits/stl_vector.h:1535:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::vector<_Tp, _Alloc>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:404:5: note: candidate: template<class _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> bool std::operator!=(const std::linear_congruential_engine<_UIntType, __a, __c, __m>&, const std::linear_congruential_engine<_UIntType, __a, __c, __m>&)
+     operator!=(const std::linear_congruential_engine<_UIntType, __a,
+     ^
+/usr/include/c++/5/bits/random.h:404:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::linear_congruential_engine<_UIntType, __a, __c, __m>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:636:5: note: candidate: template<class _UIntType, long unsigned int __w, long unsigned int __n, long unsigned int __m, long unsigned int __r, _UIntType __a, long unsigned int __u, _UIntType __d, long unsigned int __s, _UIntType __b, long unsigned int __t, _UIntType __c, long unsigned int __l, _UIntType __f> bool std::operator!=(const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>&, const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>&)
+     operator!=(const std::mersenne_twister_engine<_UIntType, __w, __n, __m,
+     ^
+/usr/include/c++/5/bits/random.h:636:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:832:5: note: candidate: template<class _UIntType, long unsigned int __w, long unsigned int __s, long unsigned int __r> bool std::operator!=(const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>&, const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>&)
+     operator!=(const std::subtract_with_carry_engine<_UIntType, __w,
+     ^
+/usr/include/c++/5/bits/random.h:832:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:1054:5: note: candidate: template<class _RandomNumberEngine, long unsigned int __p, long unsigned int __r> bool std::operator!=(const std::discard_block_engine<_RandomNumberEngine, __p, __r>&, const std::discard_block_engine<_RandomNumberEngine, __p, __r>&)
+     operator!=(const std::discard_block_engine<_RandomNumberEngine, __p,
+     ^
+/usr/include/c++/5/bits/random.h:1054:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::discard_block_engine<_RandomNumberEngine, __p, __r>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:1250:5: note: candidate: template<class _RandomNumberEngine, long unsigned int __w, class _UIntType> bool std::operator!=(const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>&, const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>&)
+     operator!=(const std::independent_bits_engine<_RandomNumberEngine, __w,
+     ^
+/usr/include/c++/5/bits/random.h:1250:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:1502:5: note: candidate: template<class _RandomNumberEngine, long unsigned int __k> bool std::operator!=(const std::shuffle_order_engine<_RandomNumberEngine, __k>&, const std::shuffle_order_engine<_RandomNumberEngine, __k>&)
+     operator!=(const std::shuffle_order_engine<_RandomNumberEngine,
+     ^
+/usr/include/c++/5/bits/random.h:1502:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::shuffle_order_engine<_RandomNumberEngine, __k>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:1660:5: note: candidate: template<class _IntType> bool std::operator!=(const std::uniform_int_distribution<_IntType>&, const std::uniform_int_distribution<_IntType>&)
+     operator!=(const std::uniform_int_distribution<_IntType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:1660:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::uniform_int_distribution<_IntType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:1869:5: note: candidate: template<class _IntType> bool std::operator!=(const std::uniform_real_distribution<_IntType>&, const std::uniform_real_distribution<_IntType>&)
+     operator!=(const std::uniform_real_distribution<_IntType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:1869:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::uniform_real_distribution<_IntType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:2118:5: note: candidate: template<class _RealType> bool std::operator!=(const std::normal_distribution<_RealType>&, const std::normal_distribution<_RealType>&)
+     operator!=(const std::normal_distribution<_RealType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:2118:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::normal_distribution<_RealType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:2322:5: note: candidate: template<class _RealType> bool std::operator!=(const std::lognormal_distribution<_RealType>&, const std::lognormal_distribution<_RealType>&)
+     operator!=(const std::lognormal_distribution<_RealType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:2322:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::lognormal_distribution<_RealType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:2542:6: note: candidate: template<class _RealType> bool std::operator!=(const std::gamma_distribution<_RealType>&, const std::gamma_distribution<_RealType>&)
+      operator!=(const std::gamma_distribution<_RealType>& __d1,
+      ^
+/usr/include/c++/5/bits/random.h:2542:6: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::gamma_distribution<_RealType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:2752:5: note: candidate: template<class _RealType> bool std::operator!=(const std::chi_squared_distribution<_RealType>&, const std::chi_squared_distribution<_RealType>&)
+     operator!=(const std::chi_squared_distribution<_RealType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:2752:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::chi_squared_distribution<_RealType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:2919:5: note: candidate: template<class _RealType> bool std::operator!=(const std::cauchy_distribution<_RealType>&, const std::cauchy_distribution<_RealType>&)
+     operator!=(const std::cauchy_distribution<_RealType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:2919:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::cauchy_distribution<_RealType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:3175:5: note: candidate: template<class _RealType> bool std::operator!=(const std::fisher_f_distribution<_RealType>&, const std::fisher_f_distribution<_RealType>&)
+     operator!=(const std::fisher_f_distribution<_RealType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:3175:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::fisher_f_distribution<_RealType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:3388:5: note: candidate: template<class _RealType> bool std::operator!=(const std::student_t_distribution<_RealType>&, const std::student_t_distribution<_RealType>&)
+     operator!=(const std::student_t_distribution<_RealType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:3388:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::student_t_distribution<_RealType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:3564:3: note: candidate: bool std::operator!=(const std::bernoulli_distribution&, const std::bernoulli_distribution&)
+   operator!=(const std::bernoulli_distribution& __d1,
+   ^
+/usr/include/c++/5/bits/random.h:3564:3: note:   no known conversion for argument 1 from ‘const std::pair<int, int>’ to ‘const std::bernoulli_distribution&’
+/usr/include/c++/5/bits/random.h:3830:5: note: candidate: template<class _IntType> bool std::operator!=(const std::binomial_distribution<_IntType>&, const std::binomial_distribution<_IntType>&)
+     operator!=(const std::binomial_distribution<_IntType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:3830:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::binomial_distribution<_IntType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:3999:5: note: candidate: template<class _IntType> bool std::operator!=(const std::geometric_distribution<_IntType>&, const std::geometric_distribution<_IntType>&)
+     operator!=(const std::geometric_distribution<_IntType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:3999:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::geometric_distribution<_IntType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:4244:5: note: candidate: template<class _IntType> bool std::operator!=(const std::negative_binomial_distribution<_IntType>&, const std::negative_binomial_distribution<_IntType>&)
+     operator!=(const std::negative_binomial_distribution<_IntType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:4244:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::negative_binomial_distribution<_IntType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:4460:5: note: candidate: template<class _IntType> bool std::operator!=(const std::poisson_distribution<_IntType>&, const std::poisson_distribution<_IntType>&)
+     operator!=(const std::poisson_distribution<_IntType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:4460:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::poisson_distribution<_IntType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:4638:5: note: candidate: template<class _RealType> bool std::operator!=(const std::exponential_distribution<_RealType>&, const std::exponential_distribution<_RealType>&)
+     operator!=(const std::exponential_distribution<_RealType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:4638:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::exponential_distribution<_RealType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:4841:5: note: candidate: template<class _RealType> bool std::operator!=(const std::weibull_distribution<_RealType>&, const std::weibull_distribution<_RealType>&)
+     operator!=(const std::weibull_distribution<_RealType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:4841:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::weibull_distribution<_RealType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:5044:5: note: candidate: template<class _RealType> bool std::operator!=(const std::extreme_value_distribution<_RealType>&, const std::extreme_value_distribution<_RealType>&)
+     operator!=(const std::extreme_value_distribution<_RealType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:5044:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::extreme_value_distribution<_RealType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:5304:5: note: candidate: template<class _IntType> bool std::operator!=(const std::discrete_distribution<_IntType>&, const std::discrete_distribution<_IntType>&)
+     operator!=(const std::discrete_distribution<_IntType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:5304:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::discrete_distribution<_IntType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:5571:5: note: candidate: template<class _RealType> bool std::operator!=(const std::piecewise_constant_distribution<_RealType>&, const std::piecewise_constant_distribution<_RealType>&)
+     operator!=(const std::piecewise_constant_distribution<_RealType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:5571:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::piecewise_constant_distribution<_RealType>’
+         if(it == green.end() || it->first != i){
+                                              ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from trampoline.cpp:3:
+/usr/include/c++/5/bits/random.h:5841:5: note: candidate: template<class _RealType> bool std::operator!=(const std::piecewise_linear_distribution<_RealType>&, const std::piecewise_linear_distribution<_RealType>&)
+     operator!=(const std::piecewise_linear_distribution<_RealType>& __d1,
+     ^
+/usr/include/c++/5/bits/random.h:5841:5: note:   template argument deduction/substitution failed:
+trampoline.cpp:57:46: note:   ‘const std::pair<int, int>’ is not derived from ‘const std::piecewise_linear_distribution<_RealType>’
+         if(it == green.end() || it->first != i){
+                                              ^
