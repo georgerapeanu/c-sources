@@ -1,0 +1,1 @@
+de investigat la puppeteer: inainte in loc de dfs2 aveam un dfs cu dump=false, si pe deasupra mai trimiteam o variabila de write ans. de ce nu e ok?
