@@ -23,12 +23,6 @@
         }
 
         for(var x = 0;x < elevators.length;x++){
-            elevators[x].on("floor_button_pressed", function(floorNum) {
-                this.goToFloor(floorNum);
-            })
-        }
-        
-        for(var x = 0;x < elevators.length;x++){
             (function(x){
                 elevators[x].on("idle", function() {
                     console.log("pressed");
@@ -37,7 +31,7 @@
                     console.log(x);
                     console.log(mode);
                     console.log(mode[x]);
-                    if(true){
+                    if(mode[x] == 0){
                         mode[x] = 1 - mode[x];
                         goingUp = [...new Set(goingUp)].sort();
                         goingDown = [...new Set(goingDown)].sort();
@@ -65,6 +59,20 @@
                         else{
                             this.goToFloor(this.currentFloor());
                             mode[x] = 0;
+                        }
+                    }
+                    else{
+                        console.log("going places");
+                        console.log(x);
+                        mode[x] = 1 - mode[x];
+                        var tmp = this.getPressedFloors().sort();
+                        if(this.currentFloor() - tmp[0] > tmp[tmp.length - 1] - this.currentFloor()){
+                            tmp = tmp.reverse();
+                        }
+                        console.log(this.getPressedFloors());
+                        console.log(tmp);
+                        for(var i = 0;i < tmp.length;i++){
+                            this.goToFloor(tmp[i]);   
                         }
                     }
                 });})(x);    
