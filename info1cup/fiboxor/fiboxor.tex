@@ -1,0 +1,91 @@
+\documentclass[11pt,a4paper,oneside]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[english]{babel}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{mysty-national}
+
+\begin{document}
+
+\problemheader{Problem}{Fiboxor}{Input file}{\texttt{fiboxor.in}}{Output file}{\texttt{fiboxor.out}}
+
+Little Square and Little Triangle are having a fight on Valentine's day again! The reason of this year's fight? Little Square has said that the Fibonacci sequence is way prettier than the sequence of powers of two (Little Triangle's favorite). Recall that the Fibonacci sequence is the sequence that begins with 0 and 1, and where subsequent elements are the sum of the two previous elements:
+\[
+0, 1, 1, 2, 3, 5, 8, 13, \ldots
+\]
+
+Little Triangle likes this sequence particularly because you can easily calculate the bitwise exclusive or (\texttt{XOR}) of any subarray. Thus they told Little Square that if they can successfully answer $Q$ such \texttt{XOR} subarray queries, then they will accept the fact that Fibonacci is better. Little Triangle isn't cruel though, so they agreed to let Little Square tell them only the value of the subarray \texttt{XOR} modulo $2^k$ each query, due to the fact that the Fibonacci sequence grows exponentially.
+
+In the end, Little Square has to answer $Q$ queries, each of which contains three integers $k, l, r$. This query asks us to calculate the \texttt{XOR} of the Fibonacci numbers with indexes in the interval $[l,r]$ inclusive, indexed from $0$, modulo $2^k$.
+
+Little Square asks for your help in order to win this argument, so they can go back at having a good time on Valentine's day.
+
+\mysection{Input data}
+
+The first line contains one integer $Q$.
+
+Then next $Q$ lines contain the descriptions of the queries, with each line containing three integers $k$, $l$ and $r$.
+
+\mysection{Output data}
+
+Output $Q$ lines, each containing the answer to one of the queries, in order.
+
+
+\mysection{Constraints}
+\begin{itemize}
+\item $1 \leq Q \leq 10^{6}$
+\item $0 \leq l \leq r \leq 10^{18}$
+\item $1 \leq k \leq 20$
+\end{itemize}
+
+\mysection{Subtask 1 (9 points)}
+\begin{itemize}
+\item $k = 1$
+\end{itemize}
+
+\mysection{Subtask 2 (18 points)}
+\begin{itemize}
+\item $Q \leq 10^5$ 
+\item $r - l + 1 \leq 10$
+\end{itemize}
+
+\newpage
+\mysection{Subtask 3 (30 points)}
+\begin{itemize}
+\item $r \leq 10^6$
+\end{itemize}
+
+\mysection{Subtask 4 (43 points)}
+\begin{itemize}
+\item No additional constraints
+\end{itemize}
+
+
+\begin{examples}{Example}{input}{output}
+\exmp{
+3
+2 0 3
+4 4 6
+20 100 1000
+}{
+2
+14
+519891
+}%
+\end{examples}
+
+\mysection{Explanation}
+
+Let $a \oplus b$ denote the \texttt{XOR} of $a$ and $b$.
+
+In the first query, $0 \oplus 1 \oplus 1 \oplus 2 \mod 2^2 = 2 \mod 4 = 2$.
+
+In the second query, $3 \oplus 5 \oplus 8 \mod 2^6 = 14 \mod 64 = 14$.
+
+\end{document}
+
