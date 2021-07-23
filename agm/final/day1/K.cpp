@@ -12,10 +12,14 @@ int id[NMAX + 5];
 int low[NMAX + 5];
 bool viz[NMAX + 5];
 int values[NMAX + 5];
+int last_comp;
+int comp[NMAX + 5];
 vector<int> tree[NMAX + 5];
 vector<int> nodes[NMAX + 5];
 
+vector<int> stuff;
 void dfs(int nod,int tata){
+  stuff.push_back(nod);
   viz[nod] = true;
   low[nod] = id[nod] = ++last_id;
   for(auto it:graph[nod]){
@@ -26,6 +30,15 @@ void dfs(int nod,int tata){
       dfs(it,nod);
     }
     low[nod] = min(low[nod],low[it]);
+  }
+  if(low[nod] == id[nod]){
+    ++last_comp;
+    while(stuff.back() != nod){
+      comp[stuff.back()] = last_comp;
+      stuff.pop_back();
+    }
+    comp[stuff.back()] = last_comp;
+    stuff.pop_back();
   }
 }
 
@@ -163,11 +176,11 @@ int main(){
   dfs(1,0);
 
   for(int i = 1;i <= n;i++){
-    nodes[low[i]].push_back(i);
+    nodes[comp[i]].push_back(i);
     for(auto it:graph[i]){
-      if(low[it] != low[i]){
-        tree[low[i]].push_back(low[it]);
-        tree[low[it]].push_back(low[i]);
+      if(comp[it] != comp[i]){
+        tree[comp[i]].push_back(comp[it]);
+        tree[comp[it]].push_back(comp[i]);
       }
     }
   }
@@ -195,8 +208,8 @@ int main(){
     int x,y,v,k;
     scanf("%d %d %d %d",&x,&y,&v,&k);
   //  printf("deb %d %d %d %d\n",x,y,v,k);
-    x = low[x];
-    y = low[y];
+    x = comp[x];
+    y = comp[y];
     int w = lca(x,y);
   //  printf("query %d %d %d %d %d %d\n",x,y,w,father[0][w],v,k);
     printf("%d\n",query(roots[x],roots[y],roots[w],roots[father[0][w]],v,k,LGMAX));
