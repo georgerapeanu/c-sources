@@ -1,0 +1,50 @@
+First solution: brute force
+This is a pretty straight-forward solution. At each step we do the following:
+- if it is a magic operation, we set in O(1) the value at that position
+- if it is a query, we add manually all the values from l to r in O(r - l + 1) = O(n) worst case
+- if it is a cut operation, we exatract the leftmost maximum in r - l + 1 steps and decrease it by one
+Complexity: O(NQ)
+
+Subtask 5:
+Here we have the important restriction that l = 1 and r = n. This means that every element is always inside the query.
+So, because the most "weird" operation is the one to decrease the maximal values, we can keep a heap with pairs of (values, frequency at which they appear). Now, when we have to cut k times, we can extract and pop the current maximum node from the heap.
+Now, let max1 be the current maximum value, and max2 be the second maximum value. Let fr1 be the frequency of max1. 
+If fr1 * (max1 - max2) <= k, then we know we can apply fr1 * (max1 - max2) and decrease all fr values of max1 to the value of max2. This has the same effect with adding to the frequency of max2(the current heap top) the value of fr1. We still have to apply k - fr * (max1 - max2) operations.
+if k < (max1 - max2) * fr, then we should decrease all max1 values with [k / fr]. Now we should decrease only the first k % fr values of max1. So, applying k cut operation in this case on (max1, fr1), has the effect of adding to the heap 2 new nodes, (max1 - [k / fr] - 1, k % fr) and (max1 - [k / fr], fr - (k % fr)).
+Notice that by doing so, on each step we extract a number of nodes and add at most 2 back to the heap. At the start we have maximum N nodes.
+So, we can have at most N + 2Q different nodes in total. Now, each node can be popped exactly once, and we do O(count of popped nodes steps), so we make at most O(N + 2Q) pops from the heap. Due to the complexity of insert/pop on a heap, the final complexity is O((N + 2Q)logN).
+
+
+The idea from subtask 5 isnt a bad one. We could guess that doing some algorithm that takes (number of different values that are affected by the currrent operation) isn't that bad. at the start, the number of different values is at most N. after a magic operation it increases by at most one.
+A cut operation on an interval also creates at most one new value.
+So, in total, we can have at most N + Q different values over all operations. Because for each step on a cut operation, this number decreases by one, we can say that overall all the cut operations take at most N + Q steps. Now, all we have to do is find an algorithm that can achieve (number of different values that are affected by the current operation ) steps.
+
+Complete solution:
+Variant 1.
+We can also guess that probably the stuff that we kept track of at subtask 5(that is, the first 2 maximum values and the frequency of the maximum) are still relevant.
+The whole problem sugests a SegmentTree like structure. So, right now we want to track the follwing things in a SegmentTree node:
+- max1
+- max2
+- fr1
+- sum
+
+The composition of 2 nodes is straight forward. Magic and query operations are implemented trivially.
+For the cut operation, we can first take a query on the subsegment. Like in subtask 5, we can check if fr * (max1 - max2) <= k. 
+
+Case 1. fr1 * (max1 - max2) <= k
+If yes, we should subtract from all the maximum positions max1 - max2. This suggests a lazy propagation, so we should also keep track of it. This propagation should only propagate on the maximum values.
+So, we only propagate from a node to a son if and only if they have the same maximum value (node.max1 == son.max1).
+There is, however, a problem. in the nodes which have the same max2 as the query's, we cannot just propagate lazily, because we dont know what the next different max2 will be. Since we cannot apply lazy, we have to go further down in the Segment tree. So, with these observations, so far the break and apply lazy conditions are as follows:
+break:  node.left > r || node.right < l || k == 0
+lazy: node.left <= l && r <= node.right && node.max1 - k > node.max2
+
+Case 2. fr1 * (max1 - max2) > k
+Like in case1, we can still subtract from all maximum values k / fr1.
+Now, we have to decrease only the first k % fr1 maximum values. In order to do that, on the range update operation we can also keep in mind the number of position we should subtract an "extra" 1 from the maximum. We can keep track of it by first applying the update on the left son and then on the right one. The break and lazy conditions change only slightly.
+
+break:  node.left > r || node.right < l || (k == 0 && extra == 0)
+lazy: node.left <= l && r <= node.right && node.max1 - k - (extra > 0) > node.max2 && extra >= node.fr1
+
+Now the only question that remains is what the complexity of this is. Notice that in the range update operation, in the case when max1 - k == max2, we take some extra steps. But the following observation saves us: let us imagine the number of nodes visited by a normal Segment tree operation(where the break and lazy conditions are not as heavily modified as ours). Now, in our case, for each extra step we take, we know that ***the number of different values in the current subtree decreases***(because we merge the current maximum with the second maximum). So, overall, we take ***at most the sum of the number of different values in each Segment tree node*** extra steps(which is NlogN at the start).
+Now, a magic operation increases this sum by logN at most(it increases it by 1 for each node from the path from the root to the corresponding leaf). A query operation doesnt modify it at all, and an update range operation increases it by at most logN too(because it splits at most 1 value into 2). So, overall, this sum is at most NlogN + QlogN. So, overall, we take at most NlogN + QlogN extra steps(compared to a normal Segment tree)
+Recall that the normal complexity of a Segment tree operation is logN, and that by doing O(the number of distinct values that are affected by cut) operations we make overall N+Q steps, the overall complexity is O((N+Q)logN + NlogN + QlogN)=O((N+Q)logN).

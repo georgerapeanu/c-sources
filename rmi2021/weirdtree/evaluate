@@ -1,0 +1,38 @@
+#!/bin/bash
+
+
+for x in "$@"
+do
+    if ! make -B "$x"
+    then
+        echo "Need make-able solution: $x"
+        exit 1
+    fi
+done
+
+resultfile=$(mktemp)
+
+echo -n "Test" >> "$resultfile"
+
+for x in "$@"
+do
+    echo -n ",$x"  >> "$resultfile"
+done
+
+echo "" >> "$resultfile"
+
+for infile in *.in
+do
+
+    echo -n "$infile" >> "$resultfile"
+
+    for sol in "$@"
+    do
+        printf "Testing %s with %s\r" "$infile" "$sol"
+        thetime=$(/usr/bin/time 2>&1 -f "%e" ./"$sol" < "$infile" > /dev/null)
+        echo -n ",$thetime" >> "$resultfile"
+    done
+    echo "" >> "$resultfile"
+done
+
+column -s, -t < "$resultfile"

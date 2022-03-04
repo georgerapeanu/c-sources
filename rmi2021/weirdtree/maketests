@@ -1,0 +1,74 @@
+#!/bin/bash
+
+if ! CFLAGS="-D TESTING -O3" CPPFLAGS="-D TESTING -O3" make -s solution
+then
+    echo Need make-able solution.
+    exit 1
+fi
+
+if test -f subtasks.csv
+then
+    rowid=0
+    testid=1
+
+    export generator=generator
+    cnt=1
+
+    while IFS=',' read -ra row
+    do
+        if [ $rowid -eq  0 ]
+        then
+            headers=("${row[@]}")
+        else
+            export taskid=$rowid
+            letters=(X {A..Z})
+            groupname=${letters[taskid]}
+
+            for i in "${!headers[@]}"
+            do
+                t=${row[$i]//[[:space:]]/}
+                if [ -n "$t" ]
+                then
+                    if [ "${headers[$i]}" == '#' ]
+                    then
+                        cnt=${row[$i]}
+                    else
+                        export "${headers[$i]}=$t"
+                    fi
+                fi
+            done
+
+            for i in $(seq 1 "$cnt")
+            do
+                echo Making test $testid
+
+                testname="$groupname"_test$testid
+
+                if ! CFLAGS="-D TESTING" CPPFLAGS="-D TESTING" make -s $generator
+                then
+                    echo Need make-able generator.
+                    exit 1
+                fi
+
+                if ! testid=$testid intaskid=$i ./$generator > "$testname".in
+                then
+                    echo 'Test generator failed.'
+                    exit 1
+                fi
+
+                sed -i'' 's/[[:blank:]]*$//' "$testname".in
+
+                if ! testid=$testid intaskid=$i ./solution < "$testname".in > "$testname".ok
+                then
+                    echo 'Solution failed.'
+                fi
+
+                testid=$((testid+1))
+            done
+        fi
+        rowid=$((rowid+1))
+    done < subtasks.csv
+else
+    echo Need subtasks.csv file.
+    exit 1
+fi
