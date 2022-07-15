@@ -1,0 +1,1 @@
+{"id":"9a6471e64861cb1e7d5300ad199408b3","index":23,"scriptPattern":"gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 100000 -k 100000000000000 -vmax 1000000000 ","inputFile":"stdin","outputFile":"stdout","memoryLimit":256,"timeLimit":15000,"totalTimeLimit":120000,"solutionNames":["greedy_grader.cpp"],"description":"","solutionNamesUid":""}

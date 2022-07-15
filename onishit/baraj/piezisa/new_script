@@ -1,0 +1,43 @@
+random_generator -n 500 -q 500 -vmax 511 > $
+random_pref_generator -n 500 -q 500 -vmax 511 > $
+big_length -n 500 -q 500 -vmax 511 > $
+random_generator -n 500 -q 500 -vmax 65535 > $
+random_pref_generator -n 500 -q 500 -vmax 65535 > $
+
+random_generator -n 3000 -q 3000 -vmax 511 > $
+random_pref_generator -n 3000 -q 3000 -vmax 511 > $
+big_length -n 3000 -q 3000 -vmax 511 > $
+random_generator -n 3000 -q 3000 -vmax 65535 > $
+random_pref_generator -n 3000 -q 3000 -vmax 65535 > $
+
+random_generator -n 100000 -q 3000 -vmax 3 > $
+random_pref_generator -n 100000 -q 3000 -vmax 3 > $
+random_generator -n 500000 -q 3000 -vmax 3 > $
+random_pref_generator -n 500000 -q 3000 -vmax 3 > $
+
+
+big_length -n 100000 -vmax 10000 > $
+random_pref_generator -n 100000 -q 500000 -vmax 100 > $
+random_pref_generator -n 100000 -q 500000 -vmax 200 > $
+random_pref_generator -n 100000 -q 500000 -vmax 316 > $
+random_pref_generator -n 100000 -q 500000 -vmax 400 > $
+random_pref_generator -n 100000 -q 500000 -vmax 700 > $
+random_pref_generator -n 100000 -q 500000 -vmax 1000 > $
+random_pref_generator -n 100000 -q 500000 -vmax 10000 > $
+random_pref_generator -n 100000 -q 500000 -vmax 50000 > $
+random_generator -n 100000 -q 500000 -vmax 65535 > $
+big_length -n 500000 -vmax 10000 > $
+random_generator -n 500000 -q 500000 -vmax 65535 > $
+random_pref_generator -n 500000 -q 500000 -vmax 65535 > $
+random_pref_generator -n 500000 -q 500000 -vmax 10000 > $
+random_pref_generator -n 500000 -q 500000 -vmax 2000 > $
+random_pref_generator -n 500000 -q 500000 -vmax 1666 > $
+random_pref_generator -n 500000 -q 500000 -vmax 1428 > $
+random_pref_generator -n 500000 -q 500000 -vmax 1250 > $
+random_pref_generator -n 500000 -q 500000 -vmax 1111 > $
+random_pref_generator -n 500000 -q 500000 -vmax 907 > $
+random_pref_generator -n 500000 -q 500000 -vmax 833 > $
+random_pref_generator -n 500000 -q 500000 -vmax 770 > $
+random_pref_generator -n 500000 -q 500000 -vmax 625 > $
+random_pref_generator -n 500000 -q 500000 -vmax 500 > $
+

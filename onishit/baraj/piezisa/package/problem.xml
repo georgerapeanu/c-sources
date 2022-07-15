@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="31" short-name="piezisa" url="https://polygon.codeforces.com/p0nGFPp/georgerapeanu/piezisa">
+    <names>
+        <name language="english" value="Piezisa"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/english/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/.html/english/problem.html" type="text/html"/>
+        <statement language="english" path="statements/.pdf/english/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>3200</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>38</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test cmd="random_generator -n 500 -q 500 -vmax 511" method="generated"/>
+                <test cmd="random_pref_generator -n 500 -q 500 -vmax 511" method="generated"/>
+                <test cmd="big_length -n 500 -q 500 -vmax 511" method="generated"/>
+                <test cmd="random_generator -n 500 -q 500 -vmax 65535" method="generated"/>
+                <test cmd="random_pref_generator -n 500 -q 500 -vmax 65535" method="generated"/>
+                <test cmd="random_generator -n 3000 -q 3000 -vmax 511" method="generated"/>
+                <test cmd="random_pref_generator -n 3000 -q 3000 -vmax 511" method="generated"/>
+                <test cmd="big_length -n 3000 -q 3000 -vmax 511" method="generated"/>
+                <test cmd="random_generator -n 3000 -q 3000 -vmax 65535" method="generated"/>
+                <test cmd="random_pref_generator -n 3000 -q 3000 -vmax 65535" method="generated"/>
+                <test cmd="random_generator -n 100000 -q 10000 -vmax 3" method="generated"/>
+                <test cmd="random_pref_generator -n 100000 -q 50000 -vmax 3" method="generated"/>
+                <test cmd="random_generator -n 500000 -q 50000 -vmax 3" method="generated"/>
+                <test cmd="random_pref_generator -n 500000 -q 50000 -vmax 3" method="generated"/>
+                <test cmd="big_length -n 100000 -vmax 10000" method="generated"/>
+                <test cmd="random_pref_generator -n 100000 -q 500000 -vmax 100" method="generated"/>
+                <test cmd="random_pref_generator -n 100000 -q 500000 -vmax 200" method="generated"/>
+                <test cmd="random_pref_generator -n 100000 -q 500000 -vmax 316" method="generated"/>
+                <test cmd="random_pref_generator -n 100000 -q 500000 -vmax 400" method="generated"/>
+                <test cmd="random_pref_generator -n 100000 -q 500000 -vmax 700" method="generated"/>
+                <test cmd="random_pref_generator -n 100000 -q 500000 -vmax 1000" method="generated"/>
+                <test cmd="random_pref_generator -n 100000 -q 500000 -vmax 10000" method="generated"/>
+                <test cmd="random_pref_generator -n 100000 -q 500000 -vmax 50000" method="generated"/>
+                <test cmd="random_generator -n 100000 -q 500000 -vmax 65535" method="generated"/>
+                <test cmd="big_length -n 500000 -vmax 10000" method="generated"/>
+                <test cmd="random_generator -n 500000 -q 500000 -vmax 65535" method="generated"/>
+                <test cmd="random_pref_generator -n 500000 -q 500000 -vmax 65535" method="generated"/>
+                <test cmd="random_pref_generator -n 500000 -q 500000 -vmax 10000" method="generated"/>
+                <test cmd="random_pref_generator -n 500000 -q 500000 -vmax 2000" method="generated"/>
+                <test cmd="random_pref_generator -n 500000 -q 500000 -vmax 1666" method="generated"/>
+                <test cmd="random_pref_generator -n 500000 -q 500000 -vmax 1428" method="generated"/>
+                <test cmd="random_pref_generator -n 500000 -q 500000 -vmax 1250" method="generated"/>
+                <test cmd="random_pref_generator -n 500000 -q 500000 -vmax 1111" method="generated"/>
+                <test cmd="random_pref_generator -n 500000 -q 500000 -vmax 907" method="generated"/>
+                <test cmd="random_pref_generator -n 500000 -q 500000 -vmax 833" method="generated"/>
+                <test cmd="random_pref_generator -n 500000 -q 500000 -vmax 770" method="generated"/>
+                <test cmd="random_pref_generator -n 500000 -q 500000 -vmax 625" method="generated"/>
+                <test cmd="random_pref_generator -n 500000 -q 500000 -vmax 500" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/big_length.cpp" type="cpp.g++17"/>
+            <file path="files/grader_comisie.c" type="c.gcc"/>
+            <file for-types="cpp.*" path="files/grader_comisie.cpp" type="cpp.g++17">
+                <stages>
+                    <stage name="compile"/>
+                </stages>
+                <assets>
+                    <asset name="solution"/>
+                </assets>
+            </file>
+            <file path="files/grader_concurent.c" type="c.gcc"/>
+            <file path="files/grader_concurent.cpp" type="cpp.g++17"/>
+            <file path="files/olymp.sty"/>
+            <file path="files/piezisa.h" type="h.g++"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/antilog.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/big_length.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen_gabi.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/random_antimo.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/random_generator.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/random_pref_generator.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::lcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <testset>
+                    <test-count>1</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="rejected">
+                <source path="solutions/gioto_bulaneala.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/gioto_mo.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/gioto_mo_bucksort.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/panaete_nsqrt_sqdecomp_piezisa.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/rapeanu_nsqrt_batog.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/rapeanu_nsqrt_mo.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_10.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_100.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_1000.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_150.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_200.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_250.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_300.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_350.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_400.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_450.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_50.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_500.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_550.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_600.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_650.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_700.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_750.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_800.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_850.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_900.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_950.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_nsqrtlog_aint_normal.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_q_distinct.cpp" type="cpp.g++14"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_qn2.cpp" type="cpp.g++14"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/sitaru_bulan_1.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/sitaru_bulan_2.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/sitaru_bulan_3.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/sitaru_bulan_4.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/tamio_nsqrt_mo.cpp" type="cpp.g++17"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>4</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list>
+            <stress index="5" path="stresses/005"/>
+            <stress index="4" path="stresses/004"/>
+            <stress index="3" path="stresses/003"/>
+            <stress index="1" path="stresses/001"/>
+        </list>
+    </stresses>
+</problem>

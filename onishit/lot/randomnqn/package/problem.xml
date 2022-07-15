@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="3" short-name="randomnqn" url="https://polygon.codeforces.com/p6dem73/georgerapeanu/randomnqn">
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>2000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>65</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test cmd="gen -n 2 -m 998244353" method="generated"/>
+                <test cmd="gen -n 4 -m 666013" method="generated"/>
+                <test cmd="gen -n 5 -m 666013" method="generated"/>
+                <test cmd="gen -n 2 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 6 -m 666013" method="generated"/>
+                <test cmd="gen -n 3 -m 666013" method="generated"/>
+                <test cmd="gen -n 13 -m 997" method="generated"/>
+                <test cmd="gen -n 6 -m 998244353" method="generated"/>
+                <test cmd="gen -n 15 -m 666013" method="generated"/>
+                <test cmd="gen -n 3 -m 23" method="generated"/>
+                <test cmd="gen -n 24 -m 998244353" method="generated"/>
+                <test cmd="gen -n 37 -m 666013" method="generated"/>
+                <test cmd="gen -n 18 -m 998244353" method="generated"/>
+                <test cmd="gen -n 33 -m 53" method="generated"/>
+                <test cmd="gen -n 33 -m 666013" method="generated"/>
+                <test cmd="gen -n 28 -m 998244353" method="generated"/>
+                <test cmd="gen -n 38 -m 23" method="generated"/>
+                <test cmd="gen -n 17 -m 998244353" method="generated"/>
+                <test cmd="gen -n 3 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 10 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 39 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 64 -m 998244353" method="generated"/>
+                <test cmd="gen -n 71 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 82 -m 71" method="generated"/>
+                <test cmd="gen -n 84 -m 666013" method="generated"/>
+                <test cmd="gen -n 58 -m 53" method="generated"/>
+                <test cmd="gen -n 5 -m 997" method="generated"/>
+                <test cmd="gen -n 82 -m 998244353" method="generated"/>
+                <test cmd="gen -n 14 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 61 -m 666013" method="generated"/>
+                <test cmd="gen -n 81 -m 998244353" method="generated"/>
+                <test cmd="gen -n 12 -m 666013" method="generated"/>
+                <test cmd="gen -n 81 -m 71" method="generated"/>
+                <test cmd="gen -n 4 -m 53" method="generated"/>
+                <test cmd="gen -n 37 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 48 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 75 -m 666013" method="generated"/>
+                <test cmd="gen -n 78 -m 23" method="generated"/>
+                <test cmd="gen -n 96 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 21 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 334 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 107 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 389 -m 998244353" method="generated"/>
+                <test cmd="gen -n 137 -m 998244353" method="generated"/>
+                <test cmd="gen -n 196 -m 666013" method="generated"/>
+                <test cmd="gen -n 121 -m 666013" method="generated"/>
+                <test cmd="gen -n 277 -m 997" method="generated"/>
+                <test cmd="gen -n 103 -m 998244353" method="generated"/>
+                <test cmd="gen -n 27 -m 998244353" method="generated"/>
+                <test cmd="gen -n 57 -m 666013" method="generated"/>
+                <test cmd="gen -n 352 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 456 -m 666013" method="generated"/>
+                <test cmd="gen -n 285 -m 998244353" method="generated"/>
+                <test cmd="gen -n 289 -m 666013" method="generated"/>
+                <test cmd="gen -n 475 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 428 -m 666013" method="generated"/>
+                <test cmd="gen -n 227 -m 1000000007" method="generated"/>
+                <test cmd="gen -n 130 -m 666013" method="generated"/>
+                <test cmd="gen -n 203 -m 997" method="generated"/>
+                <test cmd="gen -n 157 -m 998244353" method="generated"/>
+                <test cmd="gen -n 403 -m 997" method="generated"/>
+                <test cmd="gen -n 428 -m 23" method="generated"/>
+                <test cmd="gen -n 126 -m 998244353" method="generated"/>
+                <test cmd="gen -n 72 -m 998244353" method="generated"/>
+                <test cmd="gen -n 302 -m 1000000007" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file for-types="cpp.*" path="files/ghinion.h" type="h.g++">
+                <stages>
+                    <stage name="compile"/>
+                </stages>
+                <assets>
+                    <asset name="solution"/>
+                </assets>
+            </file>
+            <file for-types="cpp.*" path="files/grader.cpp" type="cpp.g++17">
+                <stages>
+                    <stage name="compile"/>
+                </stages>
+                <assets>
+                    <asset name="solution"/>
+                </assets>
+            </file>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/gabi_back.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/giovani_n3_fast.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/giovani_n3_impartiri.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/rapeanu_n3.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/rapeanu_n4.cpp" type="cpp.g++17"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+</problem>

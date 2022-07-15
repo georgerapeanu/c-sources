@@ -1,0 +1,42 @@
+gen_fixed_local_n -t 100 -n 10 -k 1 -vmax 6 > $
+gen_fixed_local_n -t 100 -n 10 -k 10 -vmax 6 > $
+gen_fixed_local_n -t 100 -n 20 -k 10 -vmax 40 > $
+gen_fixed_local_n -t 100 -n 100 -k 40 -vmax 40 > $
+gen_fixed_local_n -t 100 -n 100 -k 80 -vmax 40 > $
+gen_fixed_local_n -t 100 -n 100 -k 200 -vmax 40 > $
+gen_fixed_local_n -t 100 -n 100 -k 140 -vmax 40 > $
+gen_fixed_sum_n -t 10 -n 100 -k 200 -vmax 30 > $
+gen_fixed_sum_n -t 40 -n 100 -k 100 -vmax 30 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 100 -k 100 -vmax 30 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 100 -k 200 -vmax 40 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 100 -n 100 -k 100 -vmax 30 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 100 -n 100 -k 200 -vmax 40 > $
+gen_chestii_sqrt_fixed_sum_n -t 40 -n 100 -k 100 -vmax 30 > $
+gen_chestii_sqrt_fixed_sum_n -t 10 -n 100 -k 200 -vmax 40 > $
+gen_chestii_sqrt_fixed_local_n -t 100 -n 100 -k 100 -vmax 30 > $
+gen_chestii_sqrt_fixed_local_n -t 100 -n 100 -k 200 -vmax 40 > $
+gen_fixed_local_n -t 100 -n 1000 -k 1000000000 -vmax 1000000000 > $
+gen_fixed_sum_n -t 20 -n 1000 -k 1000000000000000000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 1000 -k 1000000000000000000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 20 -n 1000 -k 1000000000000000000 -vmax 1000000000 > $
+gen_chestii_sqrt_fixed_sum_n -t 20 -n 1000 -k 1000000000000000000 -vmax 2000 > $
+gen_chestii_sqrt_fixed_local_n -t 10 -n 1000 -k 1000000000000000000 -vmax 30 > $
+gen_fixed_sum_n_infinite_borders -t 1000 -n 1000000 -k 1000000000000000000 -vmax 1000000000 sagasgas > $
+gen_fixed_sum_n_infinite_borders -t 1000 -n 1000000 -k 1000000000000000000 -vmax 1000000000 > $
+gen_fixed_sum_n_infinite_borders -t 1000 -n 1000000 -k 1000000000000000000 -vmax 1000000000 asasgasgsagasga > $
+gen_fixed_sum_n -t 100 -n 100000 -k 100000000000 -vmax 1000000000 > $
+gen_fixed_sum_n -t 1000 -n 100000 -k 10000000000000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 1000 -n 100000 -k 1000000000000000000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 100 -n 100000 -k 100000000000 -vmax 1000000000 > $
+gen_chestii_sqrt_fixed_sum_n -t 100 -n 100000 -k 10000000 -vmax 1000000 > $
+gen_chestii_sqrt_fixed_sum_n -t 1000 -n 100000 -k 100000000000000 -vmax 1000000000 > $
+gen_fixed_sum_n -t 100 -n 1000000 -k 100000000000 -vmax 1000000000 > $
+gen_fixed_sum_n -t 1000 -n 1000000 -k 1000000000000000000 -vmax 1000000000 > $
+gen_fixed_sum_n -t 100 -n 1000000 -k 1000000000000000000 -vmax 1000000000 > $
+gen_fixed_sum_n -t 1000 -n 1000000 -k 10000000000000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 100 -n 1000000 -k 100000000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 1000 -n 1000000 -k 1000000000000000000 -vmax 1000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 100 -n 1000000 -k 100000000000 -vmax 1000000000 > $
+gen_chestii_sqrt_fixed_sum_n -t 100 -n 1000000 -k 10000000 -vmax 1000000 > $
+gen_chestii_sqrt_fixed_sum_n -t 1000 -n 1000000 -k 100000000000000 -vmax 1000000000 > $
+

@@ -1,0 +1,1 @@
+{"id":"8b9015793fb05f6fe99bed3d13e14ab4","index":4,"scriptPattern":"random_generator -n 200000 -q 500000 -vmax 127","inputFile":"stdin","outputFile":"stdout","memoryLimit":1024,"timeLimit":1000,"totalTimeLimit":120000,"solutionNames":["rapeanu_nsqrtlog.cpp"],"description":"","solutionNamesUid":""}

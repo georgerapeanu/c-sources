@@ -1,0 +1,1 @@
+{"id":"cb19f76aa0ed0044728d6d8202cd2df6","index":1,"scriptPattern":"gen_random -n 15 -k 4 -vmax 512 -qi 2 -qm 100","inputFile":"stdin","outputFile":"stdout","memoryLimit":256,"timeLimit":15000,"totalTimeLimit":120000,"solutionNames":["giovani_back.cpp"],"description":"","solutionNamesUid":""}

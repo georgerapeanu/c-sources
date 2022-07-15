@@ -1,0 +1,85 @@
+gen_fixed_local_n -t 5 -n 10 -k 1 -vmax 6 > $
+gen_fixed_local_n -t 5 -n 10 -k 10 -vmax 6 > $
+gen_fixed_local_n -t 2 -n 20 -k 10 -vmax 40 > $
+
+gen_fixed_local_n -t 5 -n 100 -k 40 -vmax 40 > $
+gen_fixed_local_n -t 5 -n 100 -k 80 -vmax 40 > $
+gen_fixed_local_n -t 5 -n 100 -k 200 -vmax 40 > $
+gen_fixed_local_n -t 50 -n 10 -k 200 -vmax 40 67b7f3d1b28d41ddd18768c10dda24c2 > $
+gen_fixed_local_n -t 5 -n 100 -k 140 -vmax 40 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 50 -n 10 -k 200 -vmax 40 adf68ed2bb08d54ab5fb7e85b9849de3 > $
+gen_chestii_sqrt_fixed_local_n -t 5 -n 100 -k 100 -vmax 30 > $
+gen_chestii_sqrt_fixed_local_n -t 5 -n 100 -k 200 -vmax 40 > $
+gen_chestii_sqrt_fixed_local_n -t 50 -n 10 -k 200 -vmax 40 128d78af6a020295cc0e014636e5728b > $
+
+gen_fixed_local_n -t 10 -n 1000 -k 3000 -vmax 1000 > $
+gen_fixed_local_n -t 10 -n 1000 -k 1000 -vmax 1000 > $
+gen_fixed_local_n -t 10 -n 1000 -k 10000 -vmax 1000 > $
+gen_fixed_local_n -t 10 -n 1000 -k 1000000000 -vmax 100000000 > $
+gen_fixed_local_n -t 10 -n 1000 -k 100000000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 1000 -k 2000 -vmax 1000 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 1000 -k 200000 -vmax 1000 031a3903b03401b180d01339b4a5e641 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 1000 -k 200000 -vmax 1000 31f6ff32899bc7e5f570f18d8d9cb6ba > $
+gen_chestii_sqrt_fixed_local_n -t 10 -n 1000 -k 10000 -vmax 30 > $
+gen_chestii_sqrt_fixed_local_n -t 10 -n 1000 -k 100000 -vmax 10000 > $
+gen_chestii_sqrt_fixed_local_n -t 10 -n 100 -k 100000 -vmax 10000 > $
+gen_chestii_sqrt_fixed_local_n -t 10 -n 100 -k 100000 -vmax 10000 9b0cece1507abe7be5052753d304bef3 > $
+
+gen_fixed_local_n_infinite_borders -t 1 -n 1000000 -k 100000000 -vmax 1000000000 > $
+gen_fixed_local_n_infinite_borders -t 10 -n 100000 -k 100000000000 -vmax 1000000000 > $
+gen_fixed_local_n_infinite_borders -t 5 -n 200000 -k 1000 -vmax 1000000000 > $
+
+
+gen_fixed_local_n -t 100 -n 1000 -k 1000 -vmax 100 > $
+gen_fixed_local_n -t 10 -n 10000 -k 100000 -vmax 100 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 10000 -k 1000000 -vmax 100000 > $
+gen_fixed_local_n -t 10 -n 10000 -k 1000000 -vmax 1000000000 > $
+gen_fixed_local_n -t 10 -n 10000 -k 10000000000000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 10000 -k 10 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 10000 -k 10000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 100 -n 1000 -k 10000000000000 -vmax 1000000000 > $
+gen_fixed_local_n -t 10 -n 10000 -k 100000000000 -vmax 1000000000 > $
+gen_fixed_local_n -t 2 -n 50000 -k 10000000 -vmax 1000000000 > $
+gen_chestii_sqrt_fixed_local_n -t 1 -n 100000 -k 10000000 -vmax 1000000000 > $
+gen_fixed_local_n -t 1 -n 100000 -k 1000000000000 -vmax 1000000000 > $
+gen_chestii_sqrt_fixed_local_n -t 1 -n 100000 -k 1000000000000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 100000 -k 100000000000000 -vmax 1000000000 c066e246e074f5709c360200a218f937 > $
+gen_fixed_sum_n -t 16 -n 100000 -k 100000000000 -vmax 1000000000 > $
+gen_fixed_sum_n -t 20 -n 100000 -k 100000000000000 -vmax 1000000000 > $
+gen_fixed_sum_n -t 200 -n 10000 -k 10000000000000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 100000 -k 10 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 100000 -k 1000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 100000 -k 100000000000000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 100000 -k 100000000000000 -vmax 1000000000 1fccb20a15647966b294d48e2cba30b5 > $
+gen_fixed_sum_n -t 10 -n 100000 -k 1000 -vmax 1000000000 > $
+gen_fixed_sum_n -t 100 -n 10000 -k 1000 -vmax 1000000000 > $
+gen_chestii_sqrt_fixed_sum_n -t 10 -n 100000 -k 1000 -vmax 100000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 100000 -k 1000000000 -vmax 100000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 100000 -k 1000000000 -vmax 1000000000 4b803be83f700754f07360836b2db400 > $
+gen_fixed_sum_n -t 10 -n 100000 -k 1000000000000 -vmax 1000000000 > $
+
+
+gen_fixed_local_n -t 100 -n 10000 -k 1000 -vmax 100 > $
+gen_fixed_local_n -t 10 -n 100000 -k 100000 -vmax 100 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 100000 -k 1000000 -vmax 100000 > $
+gen_fixed_local_n -t 10 -n 100000 -k 1000000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 100000 -k 10 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 100000 -k 10000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 100000 -k 10000000000000 -vmax 1000000000 > $
+gen_fixed_local_n -t 10 -n 100000 -k 10000000000000 -vmax 1000000000 > $
+gen_fixed_local_n -t 2 -n 500000 -k 10000000 -vmax 1000000000 > $
+gen_chestii_sqrt_fixed_local_n -t 1 -n 1000000 -k 10000000 -vmax 1000000000 > $
+gen_fixed_local_n -t 1 -n 1000000 -k 1000000000000 -vmax 1000000000 > $
+gen_chestii_sqrt_fixed_local_n -t 1 -n 1000000 -k 1000000000000 -vmax 1000000000 > $
+gen_fixed_sum_n -t 16 -n 1000000 -k 100000000000 -vmax 1000000000 > $
+gen_fixed_sum_n -t 20 -n 1000000 -k 10000000000000 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 1000000 -k 10 -vmax 1000000000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 1000000 -k 1000 -vmax 1000000000 > $
+gen_fixed_sum_n -t 10 -n 1000000 -k 1000 -vmax 1000000000 > $
+gen_chestii_sqrt_fixed_sum_n -t 10 -n 1000000 -k 1000 -vmax 100000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 1000000 -k 1000000000 -vmax 100000 > $
+gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 1000000 -k 1000000000 -vmax 1000000000 > $
+gen_fixed_sum_n -t 10 -n 1000000 -k 100000000000000 -vmax 1000000000 > $
+gen_fixed_local_n -t 50 -n 10 -k 200 -vmax 40 45e2181b9f1a813aa44af25c0042ebe5 > $
+gen_fixed_local_n -t 50 -n 10 -k 200 -vmax 40 02534f9ab5095289d184fe3df3bec5ff > $
+

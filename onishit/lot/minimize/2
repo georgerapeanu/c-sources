@@ -1,0 +1,42 @@
+check.cpp  problem.xml
+
+files:
+check.cpp		 grader.cpp	  statements.ftl
+gen_bytes_200groups.cpp  grader.cpp.json  testlib.h
+gen_bytes_allgroups.cpp  minimize.h	  validator_multiple_upd.cpp
+gen_bytes_inc.cpp	 olymp.sty	  validator_single_upd.cpp
+gen_random.cpp		 problem.tex
+
+scripts:
+
+solutions:
+compile.sh*		    giovani_pq_bulan.cpp.desc  rapeanu_assert_2.cpp
+giovani_back.cpp	    giovani_pq.cpp	       rapeanu_assert_3.cpp
+giovani_back.cpp.desc	    giovani_pq.cpp.desc        rapeanu_assert_4.cpp
+giovani_brute.cpp	    giovani_pq_prost.cpp       rapeanu_assert_5.cpp
+giovani_brute.cpp.desc	    giovani_pq_prost.cpp.desc  rapeanu_assert_6.cpp
+giovani_pq_bug.cpp	    giovani_set.cpp	       _rapeanu_assert_7*
+giovani_pq_bug.cpp.desc     giovani_set.cpp.desc       rapeanu_assert_7.cpp
+giovani_pq_bulan2.cpp	    grader.cpp		       rapeanu_assert_8.cpp
+giovani_pq_bulan2.cpp.desc  minimize.h		       _rapeanu_assert_9*
+giovani_pq_bulan.cpp	    rapeanu_assert_1.cpp       rapeanu_assert_9.cpp
+
+statements:
+romanian/
+
+statement-sections:
+romanian/
+
+stresses:
+001  002  003  004  005
+
+tests:
+01    05.a  10	  14.a	19    23.a  28	  32.a	37    41.a  46
+01.a  06    10.a  15	19.a  24    28.a  33	37.a  42    46.a
+02    06.a  11	  15.a	20    24.a  29	  33.a	38    42.a  47
+02.a  07    11.a  16	20.a  25    29.a  34	38.a  43    47.a
+03    07.a  12	  16.a	21    25.a  30	  34.a	39    43.a  48
+03.a  08    12.a  17	21.a  26    30.a  35	39.a  44    48.a
+04    08.a  13	  17.a	22    26.a  31	  35.a	40    44.a  subtasks.txt
+04.a  09    13.a  18	22.a  27    31.a  36	40.a  45
+05    09.a  14	  18.a	23    27.a  32	  36.a	41    45.a

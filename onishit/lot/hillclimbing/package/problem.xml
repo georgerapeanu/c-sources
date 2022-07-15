@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="21" short-name="hill-climbing" url="https://polygon.codeforces.com/p7208dL/ipopescu/hill-climbing">
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>2000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>61</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test description="File &quot;back_test.in&quot;" group="1" method="manual" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 5 -n 10 -k 1 -vmax 6" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 5 -n 10 -k 10 -vmax 6" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 3 -n 15 -k 10 -vmax 40" group="1" method="generated" points="5.0"/>
+                <test description="File &quot;staircase.in&quot;" group="2" method="manual" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 50 -n 10 -k 200 -vmax 40 45e2181b9f1a813aa44af25c0042ebe5" group="2" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 50 -n 10 -k 200 -vmax 40 02534f9ab5095289d184fe3df3bec5ff" group="2" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 5 -n 100 -k 40 -vmax 40" group="2" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 5 -n 100 -k 80 -vmax 40" group="2" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 50 -n 10 -k 200 -vmax 40 67b7f3d1b28d41ddd18768c10dda24c2" group="2" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_local_n -t 50 -n 10 -k 200 -vmax 40 adf68ed2bb08d54ab5fb7e85b9849de3" group="2" method="generated" points="0.0"/>
+                <test cmd="gen_chestii_sqrt_fixed_local_n -t 50 -n 10 -k 200 -vmax 40 128d78af6a020295cc0e014636e5728b" group="2" method="generated" points="25.0"/>
+                <test description="File &quot;staircase.in&quot;" group="3" method="manual" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 10 -n 1000 -k 1000 -vmax 1000" group="3" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 10 -n 1000 -k 100000000 -vmax 1000000000" group="3" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 1000 -k 200000 -vmax 1000 031a3903b03401b180d01339b4a5e641" group="3" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 1000 -k 200000 -vmax 1000 31f6ff32899bc7e5f570f18d8d9cb6ba" group="3" method="generated" points="0.0"/>
+                <test cmd="gen_chestii_sqrt_fixed_local_n -t 10 -n 1000 -k 10000 -vmax 30" group="3" method="generated" points="0.0"/>
+                <test cmd="gen_chestii_sqrt_fixed_local_n -t 10 -n 1000 -k 100000 -vmax 10000" group="3" method="generated" points="0.0"/>
+                <test cmd="gen_chestii_sqrt_fixed_local_n -t 10 -n 100 -k 100000 -vmax 10000 9b0cece1507abe7be5052753d304bef3" group="3" method="generated" points="10.0"/>
+                <test description="File &quot;staircase.in&quot;" group="4" method="manual" points="0.0"/>
+                <test cmd="gen_fixed_local_n_infinite_borders -t 1 -n 1000000 -k 100000000 -vmax 1000000000" group="4" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n_infinite_borders -t 10 -n 100000 -k 100000000000 -vmax 1000000000" group="4" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n_infinite_borders -t 5 -n 200000 -k 1000 -vmax 1000000000" group="4" method="generated" points="15.0"/>
+                <test description="File &quot;staircase.in&quot;" group="5" method="manual" points="0.0"/>
+                <test description="File &quot;staircase.in&quot;" group="5" method="manual" points="0.0"/>
+                <test description="File &quot;staircase.in&quot;" group="5" method="manual" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 10 -n 10000 -k 100000 -vmax 100" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 10000 -k 1000000 -vmax 100000" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 10 -n 10000 -k 1000000 -vmax 1000000000" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 10000 -k 10000 -vmax 1000000000" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 10 -n 10000 -k 100000000000 -vmax 1000000000" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 2 -n 50000 -k 10000000 -vmax 1000000000" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_chestii_sqrt_fixed_local_n -t 1 -n 100000 -k 10000000 -vmax 1000000000" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 100000 -k 100000000000000 -vmax 1000000000 c066e246e074f5709c360200a218f937" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 100000 -k 100000000000000 -vmax 1000000000 1fccb20a15647966b294d48e2cba30b5" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_sum_n -t 10 -n 100000 -k 1000 -vmax 1000000000" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_chestii_sqrt_fixed_sum_n -t 10 -n 100000 -k 1000 -vmax 100000" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 100000 -k 1000000000 -vmax 1000000000 4b803be83f700754f07360836b2db400" group="5" method="generated" points="20.0"/>
+                <test description="File &quot;staircase.in&quot;" group="6" method="manual" points="0.0"/>
+                <test description="File &quot;staircase.in&quot;" group="6" method="manual" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 10 -n 100000 -k 100000 -vmax 100" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 100000 -k 1000000 -vmax 100000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 10 -n 100000 -k 1000000 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 100000 -k 10 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 100000 -k 10000 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_local_n -t 10 -n 100000 -k 10000000000000 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 10 -n 100000 -k 10000000000000 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 2 -n 500000 -k 10000000 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_chestii_sqrt_fixed_local_n -t 1 -n 1000000 -k 10000000 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_local_n -t 1 -n 1000000 -k 1000000000000 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_chestii_sqrt_fixed_local_n -t 1 -n 1000000 -k 1000000000000 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_sum_n -t 16 -n 1000000 -k 100000000000 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_sum_n -t 20 -n 1000000 -k 10000000000000 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 1000000 -k 10 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 1000000 -k 1000 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_sum_n -t 10 -n 1000000 -k 1000 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_chestii_sqrt_fixed_sum_n -t 10 -n 1000000 -k 1000 -vmax 100000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 1000000 -k 1000000000 -vmax 100000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 1000000 -k 1000000000 -vmax 1000000000" group="6" method="generated" points="0.0"/>
+                <test cmd="gen_fixed_sum_n -t 10 -n 1000000 -k 100000000000000 -vmax 1000000000" group="6" method="generated" points="25.0"/>
+            </tests>
+            <groups>
+                <group feedback-policy="points" name="1" points="5.0" points-policy="complete-group"/>
+                <group feedback-policy="points" name="2" points="25.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="1"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="points" name="3" points="10.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="1"/>
+                        <dependency group="2"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="points" name="4" points="15.0" points-policy="complete-group"/>
+                <group feedback-policy="points" name="5" points="20.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="1"/>
+                        <dependency group="2"/>
+                        <dependency group="3"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="points" name="6" points="25.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="1"/>
+                        <dependency group="2"/>
+                        <dependency group="3"/>
+                        <dependency group="4"/>
+                        <dependency group="5"/>
+                    </dependencies>
+                </group>
+            </groups>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file for-types="cpp.*" path="files/cetatuie.h" type="h.g++">
+                <stages>
+                    <stage name="compile"/>
+                </stages>
+                <assets>
+                    <asset name="solution"/>
+                </assets>
+            </file>
+            <file for-types="cpp.*" path="files/grader.cpp" type="cpp.g++17">
+                <stages>
+                    <stage name="compile"/>
+                </stages>
+                <assets>
+                    <asset name="solution"/>
+                </assets>
+            </file>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen_chestii_sqrt_fixed_local_n.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen_chestii_sqrt_fixed_sum_n.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen_fixed_local_n.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen_fixed_local_n_infinite_borders.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen_fixed_sum_n.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen_fixed_sum_n_infinite_borders.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen_furat_de_la_bunicu_fixed_local_n.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen_furat_de_la_bunicu_fixed_sum_n.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen_small.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="rejected">
+                <source path="solutions/giovani_dp_grader.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/giovani_greedy.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/giovani_linear.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/giovani_tl.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/greedy_grader.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/rapeanu_assert_1.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/rapeanu_assert_2.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/rapeanu_assert_3.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/rapeanu_assert_4.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/rapeanu_assert_5.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/rapeanu_assert_6.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/rapeanu_back.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/rapeanu_bulan.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/rapeanu_idee_encho_grader.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/rapeanu_idee_panaete_fixed_grader.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/rapeanu_idee_panaete_grader.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/rapeanu_infinite_borders_grader.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/rapeanu_linear_grader.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/rapeanu_vmax2_n_grader.cpp" type="cpp.g++17"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>24</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list>
+            <stress index="24" path="stresses/024"/>
+            <stress index="23" path="stresses/023"/>
+            <stress index="22" path="stresses/022"/>
+            <stress index="21" path="stresses/021"/>
+            <stress index="20" path="stresses/020"/>
+            <stress index="19" path="stresses/019"/>
+            <stress index="18" path="stresses/018"/>
+            <stress index="17" path="stresses/017"/>
+            <stress index="16" path="stresses/016"/>
+            <stress index="15" path="stresses/015"/>
+            <stress index="14" path="stresses/014"/>
+            <stress index="13" path="stresses/013"/>
+            <stress index="12" path="stresses/012"/>
+            <stress index="11" path="stresses/011"/>
+            <stress index="10" path="stresses/010"/>
+            <stress index="9" path="stresses/009"/>
+            <stress index="8" path="stresses/008"/>
+            <stress index="7" path="stresses/007"/>
+            <stress index="6" path="stresses/006"/>
+            <stress index="5" path="stresses/005"/>
+            <stress index="4" path="stresses/004"/>
+            <stress index="3" path="stresses/003"/>
+            <stress index="2" path="stresses/002"/>
+            <stress index="1" path="stresses/001"/>
+        </list>
+    </stresses>
+</problem>

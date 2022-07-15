@@ -1,0 +1,1 @@
+{"id":"d57f5193e3f18b5f17a213ce0280918d","index":16,"scriptPattern":"gen_furat_de_la_bunicu_fixed_sum_n -t 10 -n 100000 -k 1000000000 -vmax 1000000000","inputFile":"stdin","outputFile":"stdout","memoryLimit":256,"timeLimit":15000,"totalTimeLimit":30000,"solutionNames":["greedy_grader.cpp"],"description":"","solutionNamesUid":""}

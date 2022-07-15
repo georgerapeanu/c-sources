@@ -1,0 +1,1 @@
+{"id":"8eb69c5850336c23eaa48bbd0f54736c","index":10,"scriptPattern":"gen_chestii_sqrt_fixed_local_n -t 50 -n 10 -k 200 -vmax 40","inputFile":"stdin","outputFile":"stdout","memoryLimit":256,"timeLimit":15000,"totalTimeLimit":120000,"solutionNames":["greedy_grader.cpp"],"description":"","solutionNamesUid":""}

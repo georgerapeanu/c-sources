@@ -1,0 +1,1 @@
+{"id":"0692be01555d86ea824895b7c3021b03","index":21,"scriptPattern":"gen_fixed_local_n -t 10 -n 100000 -k 10000000000000 -vmax 1000000000","inputFile":"stdin","outputFile":"stdout","memoryLimit":256,"timeLimit":15000,"totalTimeLimit":120000,"solutionNames":["greedy_grader.cpp"],"description":"","solutionNamesUid":""}

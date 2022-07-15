@@ -1,0 +1,1 @@
+{"id":"73c01ebd5fa84469dbb88ab081b61885","index":2,"scriptPattern":"gen_fixed_sum_n_infinite_borders -n 1000000 -k 1000000000000000000 -vmax 1000000000 -t 1000","inputFile":"stdin","outputFile":"stdout","memoryLimit":256,"timeLimit":15000,"totalTimeLimit":120000,"solutionNames":["rapeanu_infinite_borders_grader.cpp"],"description":"","solutionNamesUid":""}

@@ -1,0 +1,1 @@
+{"id":"586ce05386d7ca19eafc73355f0e3602","index":4,"scriptPattern":"gen_fixed_sum_n -n 1000000 -k 1000000000000000000 -vmax 1000000000 -t 1000","inputFile":"stdin","outputFile":"stdout","memoryLimit":256,"timeLimit":15000,"totalTimeLimit":120000,"solutionNames":["rapeanu_idee_encho_grader.cpp","rapeanu_idee_panaete_fixed_grader.cpp"],"description":"","solutionNamesUid":""}

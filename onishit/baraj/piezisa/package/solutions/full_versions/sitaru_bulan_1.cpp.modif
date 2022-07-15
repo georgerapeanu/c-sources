@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const int BLN = 100;
+
+void solve(int N, int v[], int Q, int lft[], int rgt[], int solutions[]) {
+    for(int i = 1; i < N; i++)  v[i] ^= v[i - 1];
+
+    int K;
+    unordered_map<int, int> nrm;
+    K = 1;
+    nrm[0] = 0;
+    for(int i = 0; i < N; i++) {
+        if (!nrm.count(v[i])) {
+            nrm[v[i]] = K++;
+        }
+        v[i] = nrm[ v[i] ];
+    }
+
+    vector<int> pos[K];
+
+    pos[0].push_back(-1);
+    for(int i = 0; i < N; i++)
+        pos[ v[i] ].push_back(i);
+
+    for(int q = 0; q < Q; q++) {
+        int l = lft[q], r = rgt[q];
+
+        int ans = N + 1;
+        for(int j = l - 1; j >= -1 && j >= l - BLN; j--) {
+            int val = j == -1 ? 0 : v[j];
+            auto it = lower_bound(pos[val].begin(), pos[val].end(), r);
+            if(it != pos[val].end()) {
+                ans = min(ans, (*it) - j);
+            }
+        }
+
+        for(int j = r; j < N && j < r + BLN; j++) {
+            int val = v[j];
+            auto it = lower_bound(pos[val].begin(), pos[val].end(), l);
+            if(it != pos[val].begin()) {
+                it--;
+                ans = min(ans, j - (*it));
+            }
+        }
+        if(ans == N + 1)    ans = -1;
+        solutions[q] = ans;
+    }
+}

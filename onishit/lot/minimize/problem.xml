@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="9" short-name="minimize" url="https://polygon.codeforces.com/p1W2MiA/ipopescu/minimize">
+    <names>
+        <name language="romanian" value=""/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="romanian" mathjax="true" path="statements/romanian/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="romanian" mathjax="true" path="statements/.html/romanian/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>15000</time-limit>
+            <memory-limit>536870912</memory-limit>
+            <test-count>48</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test cmd="gen_random -n 15 -k 5 -vmax 2000000000 -qm 50000 -qi 1000" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_random -n 15 -k 7 -vmax 2000000000 -qm 50000 -qi 1000" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_random -n 15 -k 10 -vmax 2000000000 -qm 50000 -qi 1000" group="1" method="generated" points="5.0"/>
+                <test cmd="gen_random -n 1000 -k 20 -vmax 2000000000 -qm 0 -qi 1" group="2" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 1000 -k 20 -qm 0 -qi 1 -nrb 30 -buck_sz 20" group="2" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 1000 -k 20 -qm 0 -qi 1 -nrb 30 -buck_sz 40" group="2" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_200groups -n 1000 -k 20 -qm 0 -qi 1 -nrb 30 -buck_sz 30" group="2" method="generated" points="5.0"/>
+                <test cmd="gen_random -n 100000 -k 20 -vmax 2000000000 -qm 0 -qi 1" group="3" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 100000 -k 20 -qm 0 -qi 1 -nrb 30 -buck_sz 20" group="3" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 100000 -k 20 -qm 0 -qi 1 -nrb 30 -buck_sz 40" group="3" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_200groups -n 100000 -k 20 -qm 0 -qi 1 -nrb 30 -buck_sz 30" group="3" method="generated" points="10.0"/>
+                <test cmd="gen_random -n 1000 -k 20 -vmax 2000000000 -qm 50000 -qi 1000 1" group="4" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_200groups -n 1000 -k 12 -qm 50000 -qi 1000 -nrb 20 -buck_sz 20" group="4" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_200groups -n 1000 -k 14 -qm 50000 -qi 1000 -nrb 25 -buck_sz 40" group="4" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_200groups -n 1000 -k 20 -qm 50000 -qi 1000 -nrb 30 -buck_sz 50" group="4" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_allgroups -n 1000 -k 13 -qm 50000 -qi 1000 -nrb 20 -buck_sz 20" group="4" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_allgroups -n 1000 -k 15 -qm 50000 -qi 1000 -nrb 25 -buck_sz 70" group="4" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_allgroups -n 1000 -k 20 -qm 50000 -qi 1000 -nrb 30 -buck_sz 20" group="4" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 1000 -k 11 -qm 50000 -qi 1000 -nrb 20 -buck_sz 15" group="4" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 1000 -k 16 -qm 50000 -qi 1000 -nrb 30 -buck_sz 27" group="4" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 1000 -k 20 -qm 50000 -qi 1000 -nrb 30 -buck_sz 20" group="4" method="generated" points="10.0"/>
+                <test cmd="gen_random -n 100000 -k 20 -vmax 2000000000 -qm 1000 -qi 1000 1" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 100000 -k 19 -qm 1000 -qi 1000 -nrb 30 -buck_sz 30" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 100000 -k 20 -qm 1000 -qi 1000 -nrb 30 -buck_sz 20" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 100000 -k 20 -qm 1000 -qi 1000 -nrb 30 -buck_sz 40" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_allgroups -n 100000 -k 19 -qm 1000 -qi 1000 -nrb 30 -buck_sz 60" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_allgroups -n 100000 -k 20 -qm 1000 -qi 1000 -nrb 30 -buck_sz 20" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_allgroups -n 100000 -k 20 -qm 1000 -qi 1000 -nrb 30 -buck_sz 90" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_200groups -n 100000 -k 19 -qm 1000 -qi 1000 -nrb 30 -buck_sz 70" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_200groups -n 100000 -k 20 -qm 1000 -qi 1000 -nrb 30 -buck_sz 20" group="5" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_200groups -n 100000 -k 20 -qm 1000 -qi 1000 -nrb 30 -buck_sz 100" group="5" method="generated" points="30.0"/>
+                <test cmd="gen_random -n 100000 -k 1 -vmax 2000000000 -qm 50000 -qi 1000 1" group="6" method="generated" points="2.0"/>
+                <test cmd="gen_random -n 100000 -k 2 -vmax 2000000000 -qm 50000 -qi 1000 1" group="7" method="generated" points="2.0"/>
+                <test cmd="gen_bytes_allgroups -n 100000 -k 10 -qm 50000 -qi 1000 -nrb 30 -buck_sz 12" group="8" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_200groups -n 100000 -k 10 -qm 50000 -qi 1000 -nrb 30 -buck_sz 20" group="8" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 100000 -k 10 -qm 50000 -qi 1000 -nrb 30 -buck_sz 20" group="8" method="generated" points="6.0"/>
+                <test cmd="gen_random -n 100000 -k 20 -vmax 2000000000 -qm 50000 -qi 1000 1" group="9" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 100000 -k 15 -qm 50000 -qi 1000 -nrb 30 -buck_sz 30" group="9" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 100000 -k 18 -qm 50000 -qi 1000 -nrb 30 -buck_sz 330" group="9" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 100000 -k 20 -qm 50000 -qi 1000 -nrb 30 -buck_sz 20" group="9" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_inc -n 100000 -k 20 -qm 50000 -qi 1000 -nrb 30 -buck_sz 400" group="9" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_allgroups -n 100000 -k 16 -qm 50000 -qi 1000 -nrb 30 -buck_sz 37" group="9" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_allgroups -n 100000 -k 20 -qm 50000 -qi 1000 -nrb 30 -buck_sz 20" group="9" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_allgroups -n 100000 -k 19 -qm 50000 -qi 1000 -nrb 30 -buck_sz 250" group="9" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_allgroups -n 100000 -k 20 -qm 50000 -qi 1000 -nrb 30 -buck_sz 450" group="9" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_200groups -n 100000 -k 17 -qm 50000 -qi 1000 -nrb 30 -buck_sz 500" group="9" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_200groups -n 100000 -k 20 -qm 50000 -qi 1000 -nrb 30 -buck_sz 200" group="9" method="generated" points="0.0"/>
+                <test cmd="gen_bytes_200groups -n 100000 -k 20 -qm 50000 -qi 1000 -nrb 30 -buck_sz 30" group="9" method="generated" points="30.0"/>
+            </tests>
+            <groups>
+                <group feedback-policy="points" name="1" points-policy="each-test"/>
+                <group feedback-policy="points" name="2" points-policy="each-test"/>
+                <group feedback-policy="points" name="3" points-policy="each-test">
+                    <dependencies>
+                        <dependency group="2"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="points" name="4" points-policy="each-test">
+                    <dependencies>
+                        <dependency group="1"/>
+                        <dependency group="2"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="points" name="5" points-policy="each-test">
+                    <dependencies>
+                        <dependency group="1"/>
+                        <dependency group="2"/>
+                        <dependency group="3"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="points" name="6" points-policy="each-test"/>
+                <group feedback-policy="points" name="7" points-policy="each-test">
+                    <dependencies>
+                        <dependency group="6"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="points" name="8" points-policy="each-test">
+                    <dependencies>
+                        <dependency group="6"/>
+                        <dependency group="7"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="points" name="9" points-policy="each-test">
+                    <dependencies>
+                        <dependency group="1"/>
+                        <dependency group="2"/>
+                        <dependency group="3"/>
+                        <dependency group="4"/>
+                        <dependency group="5"/>
+                        <dependency group="6"/>
+                        <dependency group="7"/>
+                        <dependency group="8"/>
+                    </dependencies>
+                </group>
+            </groups>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file for-types="cpp.*" path="files/grader.cpp" type="cpp.g++17">
+                <stages>
+                    <stage name="compile"/>
+                </stages>
+                <assets>
+                    <asset name="solution"/>
+                </assets>
+            </file>
+            <file path="files/minimize.h" type="h.g++"/>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen_bytes_200groups.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen_bytes_allgroups.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen_bytes_inc.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen_random.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/validator_multiple_upd.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/validator_single_upd.cpp" type="cpp.g++17"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator_single_upd.cpp" type="cpp.g++17"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/giovani_back.cpp" type="cpp.g++14"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/giovani_brute.cpp" type="cpp.g++14"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/giovani_pq.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/giovani_pq_bug.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/giovani_pq_bulan.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/giovani_pq_bulan2.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/giovani_pq_prost.cpp" type="cpp.g++14"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/giovani_set.cpp" type="cpp.g++17"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>5</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list>
+            <stress index="5" path="stresses/005"/>
+            <stress index="4" path="stresses/004"/>
+            <stress index="3" path="stresses/003"/>
+            <stress index="2" path="stresses/002"/>
+            <stress index="1" path="stresses/001"/>
+        </list>
+    </stresses>
+</problem>

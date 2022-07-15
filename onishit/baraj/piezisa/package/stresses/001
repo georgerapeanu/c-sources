@@ -1,0 +1,1 @@
+{"id":"ea759c966fc98710660dc31a6dfe7e2f","index":1,"scriptPattern":"random_pref_generator -n 500000 -q 500000 -vmax 500","inputFile":"stdin","outputFile":"stdout","memoryLimit":1024,"timeLimit":15000,"totalTimeLimit":120000,"solutionNames":["sitaru_bulan_4.cpp"],"description":"","solutionNamesUid":""}

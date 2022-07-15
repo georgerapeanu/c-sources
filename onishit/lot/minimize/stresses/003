@@ -1,0 +1,1 @@
+{"id":"a3245eb6342b37e6d32f3823a8cd75d6","index":3,"scriptPattern":"gen_random -n 1000 -k 8 -vmax 1000000 -qi 1 -qm 1000","inputFile":"stdin","outputFile":"stdout","memoryLimit":512,"timeLimit":15000,"totalTimeLimit":120000,"solutionNames":["giovani_pq_bulan2.cpp"],"description":"","solutionNamesUid":""}

@@ -1,0 +1,9 @@
+\subsection{Scenariul 1}
+    Următoarele \textit{planuri de recoltare} recoltează 7 ,,dragon fruits'' utilizând un număr minim de cactuși:
+    Planul 1: [1, 2], [4, 4], [6, 7]
+    Planul 2: [1, 1], [2, 2], [4, 4], [6, 7]
+    Planul 3: [1, 2], [4, 4], [6, 6], [7, 7]
+\subsection{Scenariul 2}
+    Nu există niciun \textit{plan de recoltare} în care să fie recoltați 99 ,,dragon fruits''
+\subsection{Scenariul 3}
+    Există un singur  \textit{plan de recoltare} în care să fie recoltate 8 ,,dragon fruits'': [2, 2] 
