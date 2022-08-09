@@ -1,0 +1,37 @@
+random_gen -n 10 -q 20 -u -1 -vmax 100 > $
+random_gen -n 100 -q 200 -u -1 -vmax 100 > $
+random_gen -n 1000 -q 200 -u -1 -vmax 100000 > $
+random_gen -n 1000 -q 2000 -u -1 -vmax 1000000000 > $
+random_gen -n 1000000 -q 200000 -u -1 -vmax 1000000000 > $
+
+random_gen_fixed_height -n 10 -q 20 -u -1 -vmax 100 -h 5 > $
+random_gen_fixed_height -n 100 -q 200 -u -1 -vmax 100 -h 50 > $
+random_gen_fixed_height -n 100 -q 200 -u -1 -vmax 100 -h 10 > $
+random_gen_fixed_height -n 1000 -q 200 -u -1 -vmax 100 -h 2 > $
+random_gen_fixed_height -n 1000 -q 200 -u -1 -vmax 100 -h 200 > $
+random_gen_fixed_height -n 1000000 -q 200000 -u -1 -vmax 1000000000 -h 29 > $
+random_gen_fixed_height -n 1000000 -q 200000 -u -1 -vmax 1000000000 -h 4000 > $
+
+
+
+gen_sqrt_thick -n 1000000 -q 200000 -u 20 -vmax 1000000000 > $
+gen_sqrt_thick -n 1000000 -q 200000 -u 40 -vmax 1000000000 asf > $
+
+
+random_gen -n 10 -q 20 -u 50 -vmax 100 > $
+random_gen -n 100 -q 200 -u 50 -vmax 100 > $
+random_gen -n 1000 -q 200 -u 20 -vmax 100000 > $
+random_gen -n 1000 -q 2000 -u 40 -vmax 1000000000 > $
+random_gen -n 1000000 -q 200000 -u 20 -vmax 1000000000 > $
+
+random_gen_fixed_height -n 10 -q 20 -u 60 -vmax 100 -h 5 > $
+random_gen_fixed_height -n 100 -q 200 -u 50 -vmax 100 -h 50 > $
+random_gen_fixed_height -n 100 -q 200 -u 1 -vmax 100 -h 10 > $
+random_gen_fixed_height -n 1000 -q 200 -u 40 -vmax 100 -h 2 > $
+random_gen_fixed_height -n 1000 -q 200 -u 50 -vmax 100 -h 200 > $
+random_gen_fixed_height -n 1000000 -q 200000 -u 50 -vmax 1000000000 -h 29 > $
+random_gen_fixed_height -n 1000000 -q 200000 -u 50 -vmax 1000000000 -h 4000 > $
+
+
+gen_sqrt_thick -n 1000000 -q 200000 -u 40 -vmax 1000000000 > $
+gen_sqrt_thick -n 1000000 -q 200000 -u 60 -vmax 1000000000 asf > $
