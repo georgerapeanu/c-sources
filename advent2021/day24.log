@@ -1,0 +1,17 @@
+z * (25 * ((z % 26 + 12) !== inp0) + 1) + (inp0 + 4) * ((z % 26 + 12) !== inp0)
+z * (25 * ((z % 26 + 11) !== inp0) + 1) + (inp0 + 10) * ((z % 26 + 11) !== inp0)
+z * (25 * ((z % 26 + 14) !== inp0) + 1) + (inp0 + 12) * ((z % 26 + 14) !== inp0)
+(z / 26) * (25 * ((z % 26 - 6) !== inp0) + 1) + (inp0 + 14) * ((z % 26 - 6) !== inp0)
+z * (25 * ((z % 26 + 15) !== inp0) + 1) + (inp0 + 6) * ((z % 26 + 15) !== inp0)
+z * (25 * ((z % 26 + 12) !== inp0) + 1) + (inp0 + 16) * ((z % 26 + 12) !== inp0)
+(z / 26) * (25 * ((z % 26 - 9) !== inp0) + 1) + (inp0 + 1) * ((z % 26 - 9) !== inp0)
+z * (25 * ((z % 26 + 14) !== inp0) + 1) + (inp0 + 7) * ((z % 26 + 14) !== inp0)
+z * (25 * ((z % 26 + 14) !== inp0) + 1) + (inp0 + 8) * ((z % 26 + 14) !== inp0)
+(z / 26) * (25 * ((z % 26 - 5) !== inp0) + 1) + (inp0 + 11) * ((z % 26 - 5) !== inp0)
+(z / 26) * (25 * ((z % 26 - 9) !== inp0) + 1) + (inp0 + 8) * ((z % 26 - 9) !== inp0)
+(z / 26) * (25 * ((z % 26 - 5) !== inp0) + 1) + (inp0 + 3) * ((z % 26 - 5) !== inp0)
+(z / 26) * (25 * ((z % 26 - 2) !== inp0) + 1) + (inp0 + 1) * ((z % 26 - 2) !== inp0)
+(z / 26) * (25 * ((z % 26 - 7) !== inp0) + 1) + (inp0 + 8) * ((z % 26 - 7) !== inp0)
+ 
+They all look like a shift in base26 and a shift and add on a condition
+the condition always checks the last digit in base26 with the next input, adding them only if they differ.
