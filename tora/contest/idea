@@ -1,0 +1,72 @@
+level1:
+100 ways of splitting budget between speed and strength -> solve TSP for 100 graphs
+level2:
+100^3 ways of splitting budget
+the rest of the problem is not a plain tsp
+it is a tsp on top of a "drilling game"
+it can make sense to visit a planet multiple times if the cargo allows it
+practically it is not realy tsp anymore
+the games will have states of the following nature
+
+{
+  current_time
+  current_profit
+  map<int, int> mined // mined also gives visited
+}
+time limit is 10k, coord limit is 10k
+nearest neighbor could be a great idea
+or nearest k
+maybe randomly improve a path
+
+level3
+the same as level2, but with wormholes(wihch only change the mindists between planets
+some placeable wormholes as well(sucks)
+
+oxygen has no inherit cost, you can just take as much as you can
+cargo capacity hold oxygen too(sucks)
+
+
+I need
+1. A budget placement strategy
+2. A route selection strategy
+3. A route improvement strategy
+
+What is a route?
+level1: an arangmenet of planets
+level2: an array of (planets, mineTime)
+level3: an array of(planets, mineTime, OxygenRefuel)
+
+Possible route alterations: drop an element, insert an element, slightly alter an element
+Possible budge alteration: randomly choose one, randomly increment/decrement some stuff slightly
+
+Having these, everything else is straight forward
+
+1. Has 2 possible solutions:
+  - checking every possible solution
+  - genetic shit for improving parameter, with parent crossover
+2.
+  - nearest neighbor(most straight forward)
+  - randomly
+3.
+  - genetic mutation
+  - genetic crossover
+  
+All these make me go towards a genetic algorithm aproach
+
+
+we need the following states:
+Actually what if i make 3 variants for each possible level combination
+with that I only need initialize(), mutate(), crossover(), clone() on each of them
+I can even implement different strategies
+I also need on the actual solution the following methods
+mutate()
+crossover()
+evaluate()
+initialize()
+
+clone mutate initialize and crossover should be a factory's job
+evaluate should be a level job
+maybe a fix would be great in order to fix broken paths we just take their prefix -> or it should be mutates job to trim an invalid path
+
+I would also need some kind of factory which should contain settings for each
+level3 route also has wormholes
