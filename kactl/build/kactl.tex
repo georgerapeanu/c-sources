@@ -1,0 +1,29 @@
+\documentclass[10pt, a4paper, notitlepage]{report}
+\usepackage{kactlpkg}
+
+\date{\today}
+\edition{"One Last Time" Edition}
+\kactlcontentdir{../content}
+
+\begin{document}
+	\maketeampage{Echipa Misterelor}{Cotor Andrei, Pop Alex-Nicolae, Râpeanu George-Alexandru}{ACM-ICPC European Championship 2024}{March 2024}
+	% \maketitle
+	\begin{multicols*}{3}
+	\setcounter{tocdepth}{0}
+	\thispagestyle{fancy}
+	\kactlchapter{contest}
+	\kactlchapter{math}
+	\kactlchapter{data-structures}
+	\kactlchapter{numerical}
+	\kactlchapter{number-theory}
+	\kactlchapter{combinatorial}
+	\kactlchapter{graph}
+	\kactlchapter{geometry}
+	\kactlchapter{strings}
+	\kactlchapter{various}
+	\end{multicols*}
+
+	\begin{multicols*}{3}
+	\kactlchapter{appendix}
+	\end{multicols*}
+\end{document}

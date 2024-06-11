@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Path Visualizer</title>
+</head>
+<body>
+    <div class="input-region">
+        <div class="description">
+            <div class="description-text">
+                <h1>Path Visualizer</h1>
+                <p>
+                    Paste your lawn and path in the boxes below to get a graphical representation.<br/>
+                    <strong>Disclaimer:</strong>
+                    This visualizer does not validate if your path is correct or incorrect.<br/>
+                    This visualizer was written in JavaScript. Feel free to adapt it however you see fit.
+                </p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="39 48 384 284" width="200" class="codinator">
+                <polygon fill="#fddd00" points="
+                    59.65 53.93 52.5 53.93 52.5 61.08 59.65 61.08 66.8 61.08 66.8 53.93 59.65 53.93
+                "/>
+                <polygon fill="#fddd00" points="
+                    173.98 311.18 173.98 318.33 181.13 318.33
+                    181.13 311.18 181.13 304.04 181.13 296.89
+                    173.98 296.89 173.98 304.04 173.98 311.18
+                "/>
+                <rect fill="#fddd00" x="181.13" y="318.33" width="7.15" height="7.15"/>
+                <polygon fill="#fddd00" points="
+                    409.79 61.08 409.79 53.93 402.65 53.93 395.5 53.93 395.5 61.08 402.65 61.08 409.79 61.08
+                "/>
+                <path fill="#fddd00" d="
+                    m409.79,103.95v-14.29h-7.15v-14.29h-7.15v-14.29h-7.15v7.15h-7.15v14.29h7.15v7.15h7.15v14.29h7.15
+                    v21.44h-7.15v7.15h-7.15v7.15h-71.46v7.15h-21.44v7.15h-14.29v7.15h-7.15v-7.15h-14.29v-7.15h-57.17
+                    v7.15h-14.29v7.15h-7.15v-7.15h-14.29v-7.15h-21.44v-7.15h-71.46v-7.15h-7.15v-7.15h-7.15v-21.44h7.15
+                    v-14.29h7.15v-7.15h7.15v-14.29h-7.15v-7.15h-7.15v14.29h-7.15v14.29h-7.15v14.29h-7.15v42.87h7.15
+                    v7.15h7.15v7.15h35.73v7.15h35.73v7.15h7.15v7.15h7.15v28.58h7.15v7.15h7.15v42.87h7.15v35.73h7.15
+                    v-7.15h7.15v-7.15h28.58v-7.15h14.29v-7.15h14.29v7.15h14.29v7.15h28.58v7.15h7.15v7.15h7.15
+                    v-35.73h7.15v-42.87h7.15v-7.15h7.15v-28.58h7.15v-7.15h7.15v-7.15h35.73v-7.15h35.73v-7.15h7.15
+                    v-7.15h7.15v-42.87h-7.15Zm-128.62,128.62v14.29h-7.15v7.15h-28.58v-14.29h14.29v-7.15h14.29
+                    v-7.15h7.15v7.15Zm-71.46,21.44h-21.44v-7.15h-7.15v-21.44h7.15v7.15h14.29v7.15h14.29v14.29h-7.15Z
+                "/>
+                <polygon fill="#fddd00" points="
+                     281.17 304.04 281.17 311.18 281.17 318.33
+                     288.32 318.33 288.32 311.18 288.32 304.04
+                     288.32 296.89 281.17 296.89 281.17 304.04
+                "/>
+                <rect fill="#fddd00" x="274.02" y="318.33" width="7.15" height="7.15"/>
+            </svg>
+        </div>
+        <div class="input-column">
+            <label for="obstacleBox">Lawn</label>
+            <div class="input-row">
+                <textarea id="obstacleBox" rows="10" cols="81">
+........
+........
+........
+...x....
+........
+........
+........
+........</textarea>
+                <div class="button-column">
+                    <button id="chooseStartButton" class="active-button"
+                    >CHOOSE START&nbsp;CELL</button>
+                    <button id="startAutomaticButton"
+                    >AUTOMATIC START&nbsp;CELL</button>
+                </div>
+            </div>
+        </div>
+        <div class="input-column">
+            <label for="pathBox">Path</label>
+            <textarea id="pathBox" rows="5" cols="96"
+            >AAASDDDSAAASDDSAASDDSAASDDDWWWDSSSDWWWDSSSDWWWWAAAWDDDWAAAWDDD</textarea>
+        </div>
+    </div>
+    <div id="outputBox" class="outputBox">
+        <svg xmlns="http://www.w3.org/2000/svg" width="560" height="560"></svg>
+    </div>
+</body>
+<style>
+    html {
+        color-scheme: dark;
+        background: black;
+        font-family: Arial, serif;
+    }
+
+    body {
+        margin: 0;
+        padding: 2rem 2.5rem;
+    }
+
+    .input-region {
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .description {
+        display: flex;
+    }
+
+    .description-text {
+        flex: 1;
+    }
+
+    .codinator {
+        margin: -2.5rem 0 -2rem 0;
+    }
+
+    h1 {
+        color: #fddd00;
+        margin: 0 0 1.5rem 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .input-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-row {
+        display: flex;
+        gap: 1rem;
+    }
+
+    label {
+        margin: 0 0 0.5rem 0;
+    }
+
+    textarea {
+        background: black;
+        outline: none;
+        border: white solid 2px;
+        border-radius: 5px;
+        padding: 1rem;
+    }
+
+    .button-column {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    button {
+        flex: 1;
+        width: 10rem;
+        background: black;
+        color: #fddd00;
+        border: #fddd00 solid 2px;
+        border-radius: 5px;
+        font-family: monospace;
+        cursor: pointer;
+    }
+
+    .active-button {
+        background: #fddd00;
+        color: black;
+    }
+
+    .outputBox {
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+    }
+</style>
+<script>
+    const baseUnit = 40;
+    let startX = 0;
+    let startY = 0;
+    let startAutomatic = true;
+    let chooseStartMode = false;
+
+    const obstacleBox = document.getElementById('obstacleBox');
+    const chooseStartButton = document.getElementById('chooseStartButton');
+    const startAutomaticButton = document.getElementById('startAutomaticButton');
+    const pathBox = document.getElementById('pathBox');
+    const outputBox = document.getElementById('outputBox');
+
+    recalculate();
+    obstacleBox.addEventListener('input', () => recalculate());
+    pathBox.addEventListener('input', () => recalculate());
+    startAutomaticButton.addEventListener('click', () => setAutomaticMode());
+    chooseStartButton.addEventListener('click', () => setChooseStartMode(!chooseStartMode));
+    outputBox.addEventListener('click', e => outputClick(
+        e.pageX - e.currentTarget.offsetLeft,
+        e.pageY - e.currentTarget.offsetTop,
+    ));
+
+    function setAutomaticMode() {
+        startAutomatic = true;
+        startAutomaticButton.classList.remove('active-button');
+        recalculate();
+    }
+
+    function setChooseStartMode(value) {
+        if (value) {
+            chooseStartMode = true;
+            document.querySelectorAll('*').forEach(element => element.style.cursor = 'crosshair');
+            chooseStartButton.textContent = 'CANCEL';
+            chooseStartButton.classList.remove('active-button');
+        } else {
+            chooseStartMode = false;
+            document.querySelectorAll('*').forEach(element => element.style.cursor = '');
+            chooseStartButton.textContent = 'CHOOSE START\xa0CELL';
+            chooseStartButton.classList.add('active-button');
+        }
+    }
+
+    function outputClick(x, y) {
+        if (chooseStartMode) {
+            startX = Math.floor(x / baseUnit);
+            startY = Math.floor(y / baseUnit);
+            setChooseStartMode(false);
+            startAutomatic = false;
+            startAutomaticButton.classList.add('active-button');
+            recalculate();
+        }
+    }
+
+    function recalculate() {
+        outputBox.replaceChildren(createSVG(obstacleBox.value, pathBox.value));
+    }
+
+    function createSVG(obstacleInput, pathInput) {
+        let pathString = 'M 0 0 ';
+        let currentX = 0;
+        let currentY = 0;
+        let minX = 0;
+        let maxX = 0;
+        let minY = 0;
+        let maxY = 0;
+        let lastDirection = 0;
+
+        for (const command of Array.from(pathInput)) {
+            if (/W/i.test(command)) {
+                pathString += `v ${-baseUnit} `;
+                currentY--;
+                if (currentY < minY) {
+                    minY = currentY;
+                }
+                lastDirection = 0;
+            }
+            if (/S/i.test(command)) {
+                pathString += `v ${baseUnit} `;
+                currentY++;
+                if (currentY > maxY) {
+                    maxY = currentY;
+                }
+                lastDirection = 180;
+            }
+            if (/A/i.test(command)) {
+                pathString += `h ${-baseUnit} `;
+                currentX--;
+                if (currentX < minX) {
+                    minX = currentX;
+                }
+                lastDirection = -90;
+            }
+            if (/D/i.test(command)) {
+                pathString += `h ${baseUnit} `;
+                currentX++;
+                if (currentX > maxX) {
+                    maxX = currentX;
+                }
+                lastDirection = 90;
+            }
+        }
+
+        let sizeX = 1;
+        let sizeY = 1;
+        const obstacleMap = obstacleInput.split(/\n/)
+            .filter(line => line.length > 0 && !/^\d/.test(line))
+            .map(line => Array.from(line));
+        if (obstacleMap.length > 0) {
+            sizeX = Math.max(...obstacleMap.map(line => line.length));
+            sizeY = obstacleMap.length;
+        }
+
+        const svg = createSvgElement('svg', {
+            width: sizeX * baseUnit,
+            height: sizeY * baseUnit,
+        });
+
+        if (startAutomatic) {
+            startX = -minX;
+            startY = -minY;
+        }
+        const endX = startX + currentX;
+        const endY = startY + currentY;
+        for (let iY = 0; iY < sizeY; iY++) {
+            for (let iX = 0; iX < sizeX; iX++) {
+                const x = iX * baseUnit;
+                const y = iY * baseUnit;
+                const color = (iX + iY) % 2 === 0 ? '#69ad11' : '#aace4a';
+                const cell = createSvgElement('rect', {
+                    width: baseUnit,
+                    height: baseUnit,
+                    x: x,
+                    y: y,
+                    fill: color,
+                });
+                svg.appendChild(cell);
+
+                if (obstacleMap.length > 0 && /X/i.test(obstacleMap[iY][iX])) {
+                    const transX = iX * baseUnit + 4;
+                    const transY = iY * baseUnit + 4;
+                    const obstacle = (iX + iY) % 2 === 0
+                        ? createSvgElement('path', {
+                            d: 'M 14.5 33 v -5 h -4.5 a 10 10 0 0 1 -3.93 -19.2 a 10 10 0 0 1 19.86 0 a 10 10 0 0 1 -3.93 19.2 h -4.5 v 5 Z',
+                            transform: `translate(${transX} ${transY})`,
+                            fill: '#ffad01',
+                        })
+                        : createSvgElement('path', {
+                            d: 'M 0 32.55 l 9.4 -13.7 h -4.7 l 13.3 -18.85 l 13.3 18.85 h -4.7 l 9.4 13.7 Z',
+                            transform: `translate(${transX} ${transY}) scale(0.89)`,
+                            fill: '#fefced',
+                        });
+                    svg.appendChild(obstacle);
+                }
+
+                const transX = iX * baseUnit + baseUnit / 2;
+                const transY = iY * baseUnit + baseUnit / 2;
+                if (iX === startX && iY === startY) {
+                    const dot = createSvgElement('circle', {
+                        cx: transX,
+                        cy: transY,
+                        r: 7,
+                        fill: '#000000',
+                    });
+                    svg.appendChild(dot);
+                } else if (iX === endX && iY === endY) {
+                    const triangle = createSvgElement('polygon', {
+                        points: '0,-6 7,6 -7,6',
+                        transform: `translate(${transX} ${transY}) rotate(${lastDirection})`,
+                        fill: '#000000',
+                    });
+                    svg.appendChild(triangle);
+                }
+            }
+        }
+
+        const transX = startX * baseUnit + baseUnit / 2;
+        const transY = startY * baseUnit + baseUnit / 2;
+        const path = createSvgElement('path', {
+            d: pathString,
+            transform: `translate(${transX} ${transY})`,
+            fill: 'none',
+            stroke: '#000000',
+            strokeWidth: '4px',
+            strokeLinecap: 'round',
+            strokeLinejoin: 'round',
+        });
+        svg.appendChild(path);
+
+        return svg;
+    }
+
+    function createSvgElement(name, attributes) {
+        const element = document.createElementNS('http://www.w3.org/2000/svg', name);
+        for (let key in attributes) {
+            const keyKebabCase = key.replace(/[A-Z]/g, upperCaseLetter => '-' + upperCaseLetter.toLowerCase());
+            element.setAttributeNS(null, keyKebabCase, attributes[key]);
+        }
+        return element;
+    }
+</script>
+</html>

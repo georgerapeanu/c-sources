@@ -1,0 +1,173 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const int MAX_SIZE = 1e6 + 1;
+const int MOD = 1e9 + 7;
+
+int add(int a, int b) {
+  a += b;
+  if(a >= MOD) {
+    a -= MOD;
+  }
+  return a;
+}
+
+int sub(int a, int b) {
+  a -= b;
+  if(a < 0) {
+    a += MOD;
+  }
+  return a;
+}
+
+int mult(int a, int b) {
+  return 1LL * a * b % MOD;
+}
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(0);
+  int a, b, k;
+  cin >> a >> b >> k;
+  vector<bool>isprime(MAX_SIZE , true);
+  vector<long long >prime;
+  vector<long long >SPF(MAX_SIZE);
+  vector<int> inv_SPF(MAX_SIZE);
+
+  // function generate all prime number less than N in O(n)
+  auto manipulated_seive = [&](int N)
+  {
+    // 0 and 1 are not prime
+    isprime[0] = isprime[1] = false ;
+
+    // Fill rest of the entries
+    for (long long int i=2; i<N ; i++)
+    {
+      // If isPrime[i] == True then i is
+      // prime number
+      if (isprime[i])
+      {
+        // put i into prime[] vector
+        prime.push_back(i);
+
+        // A prime number is its own smallest
+        // prime factor
+        SPF[i] = i;
+        INV_SPF[i] = i;
+      }
+
+      // Remove all multiples of  i*prime[j] which are
+      // not prime by making isPrime[i*prime[j]] = false
+      // and put smallest prime factor of i*Prime[j] as prime[j]
+      // [ for exp :let  i = 5 , j = 0 , prime[j] = 2 [ i*prime[j] = 10 ]
+      // so smallest prime factor of '10' is '2' that is prime[j] ]
+      // this loop run only one time for number which are not prime
+      for (long long int j=0;
+          j < (int)prime.size() &&
+          i*prime[j] < N && prime[j] <= SPF[i];
+          j++)
+      {
+        isprime[i*prime[j]]=false;
+
+        // put smallest prime factor of i*prime[j]
+        SPF[i*prime[j]] = prime[j] ;
+      }
+    }
+  };
+
+  manipulated_seive(MAX_SIZE);
+  
+  long long total_productish = 1;
+  vector<int> fr(prime.size(), 0);
+  vector<long long> leftovers;
+  for(int i = 1; i <= k; i++) {
+    long long n;
+    cin >> n;
+    
+    if(1LL * a * b / n >= total_productish) {
+      total_productish *= n;
+    } else {
+      total_productish = 1LL * a * b + 1;
+    }
+
+    for(int j = 0; j < (int)prime.size() && n >= MAX_SIZE ; j++) {
+      while(n % prime[j] == 0) {
+        n /= prime[j];
+        fr[j]++;
+      }
+    }
+
+    while(n < MAX_SIZE) {
+    }
+    
+    if(n > 1) {
+      leftovers.push_back(n);
+    }
+  }
+
+  sort(leftovers.begin(), leftovers.end());
+
+  int count = 0 ;
+  int last_leftover = -1;
+
+  for(auto it: leftovers) {
+    if(it != last_leftover) {
+      if(count > 0) {
+        prime.push_back(last_leftover);
+        fr.push_back(count);
+      }
+      count = 0;
+      last_leftover = it;
+    }
+    count++;
+  }
+
+  if(count > 0) {
+    prime.push_back(last_leftover);
+    fr.push_back(count);
+  }
+
+  int count_divs = 1;
+  int answer = 0;
+  int sum_divs_positive = 1;
+
+  for(int i = 0; i < (int)prime.size(); i++) {
+    count_divs = mult(count_divs, add(1, fr[i]));
+    int current_sum = 0;
+    int last_div = 1;
+    for(int j = 0; j <= fr[i]; j++) {
+      current_sum = add(current_sum, last_div);
+      last_div = mult(last_div, prime[i] % MOD);
+    }
+    sum_divs_positive = mult(sum_divs_positive, current_sum);
+  }
+    
+  answer = add(sum_divs_positive, mult(a, count_divs));
+  if(total_productish <= 1LL * a * b) {
+    vector<long long> divs;
+    vector<pair<int, long long> > current;
+    current.push_back({0, 1});
+    while(!current.empty()) {
+      auto tmp = current.back();
+      current.pop_back();
+      if(tmp.first >= (int)prime.size()) {
+        divs.push_back(tmp.second);
+      } else {
+        for(int i = 0; i <= fr[tmp.first]; i++) {
+          current.push_back({tmp.first + 1, tmp.second});
+          tmp.second *= prime[tmp.first];
+        }
+      }
+    }
+    for(auto d: divs) {
+      long long other_d = total_productish / d;
+      if(-d + a > 0 && -other_d + b > 0) {
+        answer = add(answer, sub((a % MOD), (d % MOD))); 
+      }
+    }
+  }
+  cout << answer << "\n";
+
+  return 0;
+}
